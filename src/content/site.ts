@@ -12,10 +12,11 @@ export const site = {
 export const primaryCta = { label: "Book a call", href: "/contact" };
 
 export const nav = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "How we work", href: "/how-we-work" },
   { label: "Integrations", href: "/integrations" },
   { label: "Work", href: "/work" },
   { label: "Pricing", href: "/engagements" },
-  { label: "About", href: "/about" },
 ] as const;

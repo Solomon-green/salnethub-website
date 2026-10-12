@@ -86,7 +86,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
         <div className="container-x flex h-16 items-center gap-8 lg:h-[72px]">
           <Logo />
 
-          <nav aria-label="Main" className="hidden flex-1 items-center gap-1 lg:flex">
+          <nav aria-label="Main" className="ml-10 hidden flex-1 items-center gap-1.5 xl:ml-16 xl:flex">
             {nav.map((item) =>
               item.label === "Services" ? (
                 <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega} className="relative">
@@ -123,7 +123,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
             </Link>
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center lg:hidden"
+              className="flex h-11 w-11 items-center justify-center xl:hidden"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -138,7 +138,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
           id="mega-menu"
           onMouseEnter={openMega}
           onMouseLeave={closeMega}
-          className={`absolute inset-x-0 top-full hidden border-b border-line bg-white transition-[opacity,transform,visibility] duration-250 lg:block ${
+          className={`absolute inset-x-0 top-full hidden border-b border-line bg-white transition-[opacity,transform,visibility] duration-250 xl:block ${
             megaOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
           }`}
         >
@@ -190,39 +190,44 @@ export function Header({ menu }: { menu: MenuItem[] }) {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-30 overflow-y-auto bg-white pt-16 transition-[opacity,visibility] duration-300 lg:hidden ${
+        className={`fixed inset-0 z-30 overflow-y-auto bg-white pt-16 transition-[opacity,visibility] duration-300 xl:hidden ${
           mobileOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         aria-hidden={!mobileOpen}
       >
         <nav aria-label="Mobile" className="container-x flex flex-col pb-[max(2rem,env(safe-area-inset-bottom))] pt-4">
-          <details className="group border-b border-line">
-            <summary className="flex h-14 cursor-pointer list-none items-center justify-between text-lg font-bold">
-              Services
-              <ChevronDown size={20} className="transition-transform group-open:rotate-180" />
-            </summary>
-            <ul className="grid gap-1 pb-4">
-              {groupOrder.flatMap((g) => servicesByGroup(g)).map((s) => (
-                <li key={s.slug}>
-                  <Link href={`/services/${s.slug}`} className="flex items-center gap-3 py-2.5 text-[15px] text-ink">
-                    <ServiceIcon name={s.icon} size={18} /> {s.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link href="/services" className="link-arrow py-2.5 text-[15px]">
-                  All services <ArrowRight size={16} />
-                </Link>
-              </li>
-            </ul>
-          </details>
-          {nav
-            .filter((n) => n.label !== "Services")
-            .map((item) => (
-              <Link key={item.href} href={item.href} className="flex h-14 items-center border-b border-line text-lg font-bold">
+          {nav.map((item) =>
+            item.label === "Services" ? (
+              <details key={item.href} className="group border-b border-line">
+                <summary className="flex h-14 cursor-pointer list-none items-center justify-between text-lg font-bold">
+                  Services
+                  <ChevronDown size={20} className="transition-transform group-open:rotate-180" />
+                </summary>
+                <ul className="grid gap-1 pb-4">
+                  {groupOrder.flatMap((g) => servicesByGroup(g)).map((s) => (
+                    <li key={s.slug}>
+                      <Link href={`/services/${s.slug}`} className="flex items-center gap-3 py-2.5 text-[15px] text-ink">
+                        <ServiceIcon name={s.icon} size={18} /> {s.name}
+                      </Link>
+                    </li>
+                  ))}
+                  <li>
+                    <Link href="/services" className="link-arrow py-2.5 text-[15px]">
+                      All services <ArrowRight size={16} />
+                    </Link>
+                  </li>
+                </ul>
+              </details>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-deep-sage" : ""}`}
+              >
                 {item.label}
               </Link>
-            ))}
+            ),
+          )}
           <Link href={primaryCta.href} className="btn btn-primary mt-8 w-full">
             {primaryCta.label}
           </Link>
