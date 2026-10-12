@@ -27,8 +27,8 @@ export default async function WorkPage() {
       <section className="py-24 lg:py-28">
         <div className="container-x">
           {items.length === 0 ? (
-            <div className="grid gap-10 border border-line bg-paper p-8 md:grid-cols-[auto_1fr] md:items-center md:p-14" data-reveal>
-              <span className="flex h-16 w-16 items-center justify-center border border-ink bg-white">
+            <div className="grid gap-10 border border-line bg-white p-8 md:grid-cols-[auto_1fr] md:items-center md:p-14" data-reveal>
+              <span className="icon-tile !h-16 !w-16">
                 <FolderOpen size={28} strokeWidth={1.5} />
               </span>
               <div>

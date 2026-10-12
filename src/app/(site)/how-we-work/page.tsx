@@ -41,7 +41,7 @@ export default function HowWeWorkPage() {
         <PrimaryCta />
       </PageHero>
 
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <ProcessScroller
             steps={processSteps}
@@ -51,15 +51,18 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-paper py-24 lg:py-32">
-        <div className="container-x">
-          <h2 className="t-h1 max-w-3xl" data-reveal>
+      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+        <div className="container-x relative">
+          <h2 className="t-h1 max-w-3xl text-white" data-reveal>
             What you can count on
           </h2>
-          <div className="mt-14 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px border border-white/20 bg-white/20 md:grid-cols-2 lg:grid-cols-3">
             {commitments.map((c) => (
               <div key={c.title} className="bg-white p-7 md:p-8" data-reveal>
-                <Check size={22} strokeWidth={1.75} className="text-deep-sage" />
+                <span className="icon-tile">
+                  <Check size={22} strokeWidth={1.75} />
+                </span>
                 <h3 className="t-h3 mt-6">{c.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{c.body}</p>
               </div>
@@ -68,7 +71,7 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
+      <section className="iso-grid-sage bg-mist py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
             <h2 className="t-h1" data-reveal>
@@ -89,7 +92,7 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="border-t border-line py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <Faq items={faqs} />
         </div>

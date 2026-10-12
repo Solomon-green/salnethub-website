@@ -35,8 +35,8 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line pt-28 lg:pt-36">
-        <div aria-hidden className="iso-grid iso-fade pointer-events-none absolute inset-0" />
+      <section className="hero-wash relative overflow-hidden pt-28 lg:pt-36">
+        <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
         <div className="container-x relative pb-16">
           <Link href="/work" className="link-arrow text-[14px]">
             <ArrowLeft size={16} /> All work

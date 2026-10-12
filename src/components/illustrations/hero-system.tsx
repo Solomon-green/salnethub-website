@@ -60,7 +60,7 @@ export function HeroSystem({ className = "" }: { className?: string }) {
       const tops = gsap.utils.toArray<SVGPolygonElement>(".blk-top");
       const metas = gsap.utils.toArray<SVGTextElement>(".blk-meta");
       if (prefersReducedMotion()) {
-        gsap.set(tops, { fill: "#E3EBE6" });
+        gsap.set(tops, { fill: "#D4E1D9" });
         gsap.set(".data-module", { opacity: 0 });
         return;
       }
@@ -72,14 +72,14 @@ export function HeroSystem({ className = "" }: { className?: string }) {
       tl.set(".data-module", { opacity: 1 });
       tl.set(tops, { fill: "#FFFFFF" });
       tl.set(metas, { fill: "#5A5D60" });
-      tl.to(tops[0], { fill: "#E3EBE6", duration: 0.25 });
+      tl.to(tops[0], { fill: "#D4E1D9", duration: 0.25 });
       for (let i = 1; i < route.length; i++) {
         tl.to(".data-module", {
           duration: 1.05,
           ease: "power2.inOut",
           motionPath: { path: routeD, start: (i - 1) / (route.length - 1), end: i / (route.length - 1) },
         });
-        tl.to(tops[i], { fill: i === 1 ? "#6C8C7A" : "#E3EBE6", duration: 0.25 }, "<0.8");
+        tl.to(tops[i], { fill: i === 1 ? "#4F6B5C" : "#6C8C7A", duration: 0.25 }, "<0.8");
         tl.to(metas[i], { fill: "#4F6B5C", duration: 0.25 }, "<");
       }
       tl.to(".data-module", { opacity: 0, duration: 0.3 }, "+=0.2");
@@ -107,7 +107,7 @@ export function HeroSystem({ className = "" }: { className?: string }) {
         </mask>
       </defs>
 
-      <g mask="url(#grid-mask)" stroke="#17191C" strokeOpacity="0.09" strokeWidth="1">
+      <g mask="url(#grid-mask)" stroke="#4F6B5C" strokeOpacity="0.18" strokeWidth="1">
         {grid.map((d, i) => (
           <path key={i} d={d} />
         ))}
@@ -127,8 +127,8 @@ export function HeroSystem({ className = "" }: { className?: string }) {
         const [lx, ly] = f.labelAnchor;
         return (
           <g key={b.id} className="blk">
-            <polygon points={f.left} fill="#F2F2F3" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
-            <polygon points={f.right} fill="#E2E4E3" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon points={f.left} fill="#E3EBE6" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon points={f.right} fill="#B9CCC1" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
             <polygon className="blk-top" points={f.top} fill="#FFFFFF" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
             <text x={lx} y={ly - U * 1.62} textAnchor="middle" fontSize="13" fontWeight="700" fill="#17191C">
               {b.label}

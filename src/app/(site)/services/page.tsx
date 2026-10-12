@@ -40,18 +40,22 @@ export default function ServicesPage() {
       {order.map((g, gi) => {
         const list = servicesByGroup(g);
         return (
-          <section key={g} className={`py-24 lg:py-28 ${gi % 2 === 1 ? "border-y border-line bg-paper" : ""}`}>
-            <div className="container-x">
+          <section
+            key={g}
+            className={`relative overflow-hidden py-24 lg:py-28 ${gi === 0 ? "bg-white" : gi === 1 ? "bg-ink text-white" : "iso-grid-sage bg-mist"}`}
+          >
+            {gi === 1 && <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />}
+            <div className="container-x relative">
               <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
                 <h2 className="t-h1" data-reveal>
                   {groups[g].name}
                 </h2>
-                <p className="t-lead max-w-xl" data-reveal>
+                <p className={`t-lead max-w-xl ${gi === 1 ? "!text-on-ink-muted" : ""}`} data-reveal>
                   {groups[g].blurb}
                 </p>
               </div>
               <div
-                className={`mt-12 grid gap-px border border-line bg-line ${
+                className={`mt-12 grid gap-px border ${gi === 1 ? "border-white/20 bg-white/20" : "border-line bg-line"} ${
                   list.length === 1 ? "" : list.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-3"
                 }`}
               >
@@ -86,7 +90,7 @@ export default function ServicesPage() {
         );
       })}
 
-      <section id="fit" className="scroll-mt-20 border-t border-line py-24 lg:py-32">
+      <section id="fit" className="scroll-mt-20 bg-white py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <h2 className="t-h1" data-reveal>

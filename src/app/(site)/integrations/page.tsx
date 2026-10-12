@@ -18,7 +18,7 @@ export default function IntegrationsPage() {
         <PrimaryCta />
       </PageHero>
 
-      <section className="py-24 lg:py-28">
+      <section className="bg-white py-24 lg:py-28">
         <div className="container-x grid gap-20">
           {integrationCategories.map((cat) => (
             <div key={cat} className="grid gap-8 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16">
@@ -30,7 +30,9 @@ export default function IntegrationsPage() {
                   .filter((i) => i.category === cat)
                   .map((i) => (
                     <li key={i.slug} className="flex gap-5 bg-white p-6" data-reveal>
-                      <ToolMark slug={i.slug} size={28} className="mt-0.5 shrink-0 text-ink" />
+                      <span className="icon-tile !h-12 !w-12 shrink-0 !text-ink">
+                        <ToolMark slug={i.slug} size={24} />
+                      </span>
                       <div>
                         <p className="text-[16px] font-bold">{i.name}</p>
                         <p className="mt-1 text-[14px] leading-relaxed text-slate">{i.use}</p>
@@ -43,17 +45,18 @@ export default function IntegrationsPage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-paper py-20">
-        <div className="container-x grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+      <section className="relative overflow-hidden bg-ink py-20 text-white">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />
+        <div className="container-x relative grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <h2 className="t-h2" data-reveal>
               Using something that is not listed?
             </h2>
-            <p className="mt-3 max-w-2xl text-[16px] text-slate" data-reveal>
+            <p className="mt-3 max-w-2xl text-[16px] text-on-ink-muted" data-reveal>
               If it has an API, a webhook, an email notification or even a spreadsheet export, we can usually connect it. We confirm on the first call.
             </p>
           </div>
-          <PrimaryCta />
+          <PrimaryCta light />
         </div>
       </section>
 

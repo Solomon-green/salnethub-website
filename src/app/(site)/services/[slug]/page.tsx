@@ -36,6 +36,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
   const related = services.filter((o) => o.slug !== s.slug && o.group === s.group).slice(0, 3);
   const fill = related.length < 3 ? services.filter((o) => o.group !== s.group).slice(0, 3 - related.length) : [];
   const finalTime = s.timeline[s.timeline.length - 1].duration;
+  const darkFlow = ["flow", "agent", "web"].includes(s.workflow.kind);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -94,7 +95,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       </PageHero>
 
       {/* Problem */}
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <h2 className="t-h1 lg:sticky lg:top-28 lg:self-start" data-reveal>
             {s.problem.title}
@@ -111,29 +112,34 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       </section>
 
       {/* Workflow */}
-      <section id="workflow" className="scroll-mt-20 border-y border-line bg-paper py-24 lg:py-32">
-        <div className="container-x">
+      <section
+        id="workflow"
+        className={`relative scroll-mt-20 overflow-hidden py-24 lg:py-32 ${darkFlow ? "bg-ink text-white" : "iso-grid-sage bg-mist"}`}
+      >
+        {darkFlow && <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />}
+        <div className="container-x relative">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
               {s.workflow.title}
             </h2>
-            <p className="t-lead mt-5" data-reveal>
+            <p className={`t-lead mt-5 ${darkFlow ? "!text-on-ink-muted" : ""}`} data-reveal>
               {s.workflow.caption}
             </p>
           </div>
           <div className="mt-16">
-            <ServiceVisual workflow={s.workflow} />
+            <ServiceVisual workflow={s.workflow} dark={darkFlow} />
           </div>
         </div>
       </section>
 
       {/* Capabilities */}
-      <section className="py-24 lg:py-32">
-        <div className="container-x">
-          <h2 className="t-h1 max-w-3xl" data-reveal>
+      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+        <div className="container-x relative">
+          <h2 className="t-h1 max-w-3xl text-white" data-reveal>
             What we build for you
           </h2>
-          <div className="mt-14 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px border border-white/20 bg-white/20 md:grid-cols-2 lg:grid-cols-3">
             {s.capabilities.map((c) => (
               <div key={c.title} className="bg-white p-7 md:p-8" data-reveal>
                 <span aria-hidden className="block h-2.5 w-2.5 bg-copper" />
@@ -146,31 +152,31 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       </section>
 
       {/* Example */}
-      <section className="relative overflow-hidden bg-ink py-24 text-white lg:py-28">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />
-        <div className="container-x relative">
+      <section className="bg-white py-24 lg:py-28">
+        <div className="container-x">
           <h2 className="t-h2 max-w-3xl" data-reveal>
             {s.example.title}
           </h2>
-          <div className="mt-12 grid gap-px bg-white/15 md:grid-cols-2">
-            <div className="bg-ink p-8 md:p-10" data-reveal>
-              <p className="t-label text-on-ink-muted">Before</p>
-              <p className="mt-5 text-[19px] leading-relaxed text-white/80">{s.example.before}</p>
+          <div className="mt-12 grid md:grid-cols-2">
+            <div className="border border-line bg-paper p-8 md:p-10" data-reveal>
+              <p className="t-label text-slate">Before</p>
+              <p className="mt-5 text-[19px] leading-relaxed text-slate">{s.example.before}</p>
             </div>
-            <div className="bg-ink-2 p-8 md:p-10" data-reveal>
-              <p className="t-label flex items-center gap-2 text-mist">
+            <div className="relative overflow-hidden bg-ink p-8 text-white md:p-10" data-reveal>
+              <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />
+              <p className="t-label relative flex items-center gap-2 text-mist">
                 <span aria-hidden className="h-2 w-2 bg-copper" /> After
               </p>
-              <p className="mt-5 text-[19px] font-bold leading-relaxed">{s.example.after}</p>
+              <p className="relative mt-5 text-[19px] font-bold leading-relaxed">{s.example.after}</p>
             </div>
           </div>
-          <p className="mt-5 text-[13px] text-on-ink-muted">An illustrative example of a typical project.</p>
+          <p className="mt-5 text-[13px] text-slate">An illustrative example of a typical project.</p>
         </div>
       </section>
 
       {/* Safeguards (AI services) */}
       {s.safeguards && (
-        <section className="border-b border-line py-24 lg:py-32">
+        <section className="iso-grid-sage bg-mist py-24 lg:py-32">
           <div className="container-x">
             <div className="max-w-3xl">
               <h2 className="t-h1" data-reveal>
@@ -182,7 +188,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             </div>
             <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {s.safeguards.map((g) => (
-                <div key={g.title} className="border-t border-ink pt-6" data-reveal>
+                <div key={g.title} className="border-t-[3px] border-sage bg-white p-7" data-reveal>
                   <ShieldCheck size={24} strokeWidth={1.5} className="text-deep-sage" />
                   <h3 className="t-h3 mt-5">{g.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-slate">{g.body}</p>
@@ -194,7 +200,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       )}
 
       {/* Tools */}
-      <section className="border-b border-line py-20">
+      <section className="border-t border-line py-20">
         <div className="container-x grid gap-10 lg:grid-cols-[0.6fr_1.4fr] lg:items-center">
           <div>
             <h2 className="t-h2" data-reveal>
@@ -253,29 +259,32 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       </section>
 
       {/* Price */}
-      <section className="border-y border-line bg-paper py-16">
-        <div className="container-x flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <section className="relative overflow-hidden bg-ink py-16 text-white">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-50" />
+        <div className="container-x relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div data-reveal>
-            <p className="text-[15px] text-slate">{s.name}</p>
-            <p className="mt-2 text-[44px] font-bold leading-none tracking-tight">From {s.priceFrom}</p>
-            <p className="mt-3 max-w-xl text-[15px] text-slate">{s.priceNote}</p>
+            <p className="text-[15px] text-on-ink-muted">{s.name}</p>
+            <p className="mt-2 text-[44px] font-bold leading-none tracking-tight">
+              From <span className="text-mist">{s.priceFrom}</span>
+            </p>
+            <p className="mt-3 max-w-xl text-[15px] text-on-ink-muted">{s.priceNote}</p>
           </div>
           <div className="flex flex-wrap gap-3" data-reveal>
-            <PrimaryCta />
-            <Link href="/engagements" className="btn btn-secondary">
+            <PrimaryCta light />
+            <Link href="/engagements" className="btn btn-ghost-light">
               See pricing
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <Faq items={s.faqs} />
         </div>
       </section>
 
-      <section className="border-t border-line bg-paper py-24">
+      <section className="iso-grid-sage bg-mist py-24">
         <div className="container-x">
           <h2 className="t-h2" data-reveal>
             Related services

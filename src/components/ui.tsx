@@ -27,8 +27,8 @@ export function PageHero({
   aside?: React.ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-line pt-28 lg:pt-36">
-      <div aria-hidden className="iso-grid iso-fade pointer-events-none absolute inset-0" />
+    <section className="hero-wash relative overflow-hidden pt-28 lg:pt-36">
+      <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
       <div className={`container-x relative grid gap-12 pb-16 lg:pb-24 ${aside ? "lg:grid-cols-[1.05fr_0.95fr] lg:items-center" : ""}`}>
         <div className="max-w-3xl">
           {label && <p className="t-label mb-5 text-deep-sage">{label}</p>}
@@ -94,10 +94,12 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
     <Link
       href={`/services/${s.slug}`}
       data-reveal
-      className="group relative flex h-full flex-col bg-white p-7 transition-colors duration-300 hover:bg-paper md:p-8"
+      className="group relative flex h-full flex-col bg-white p-7 text-ink transition-colors duration-300 hover:bg-mist md:p-8"
     >
-      <ServiceIcon name={s.icon} size={28} className="text-ink" />
-      <h3 className="t-h3 mt-8 group-hover:text-deep-sage">{s.name}</h3>
+      <span className="icon-tile group-hover:bg-deep-sage group-hover:text-white">
+        <ServiceIcon name={s.icon} size={26} />
+      </span>
+      <h3 className="t-h3 mt-7">{s.name}</h3>
       <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate">{s.short}</p>
       <div className="mt-8 flex items-center justify-between text-[14px]">
         {!compact && <span className="text-slate">From {s.priceFrom}</span>}
@@ -105,19 +107,19 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
           Learn more <ArrowRight size={16} />
         </span>
       </div>
-      <span aria-hidden className="absolute left-0 top-0 h-[3px] w-0 bg-sage transition-[width] duration-500 ease-out group-hover:w-full" />
+      <span aria-hidden className="absolute left-0 top-0 h-[3px] w-0 bg-copper transition-[width] duration-500 ease-out group-hover:w-full" />
     </Link>
   );
 }
 
-export function SectionHead({ title, body, className = "" }: { title: string; body?: string; className?: string }) {
+export function SectionHead({ title, body, className = "", dark = false }: { title: string; body?: string; className?: string; dark?: boolean }) {
   return (
     <div className={`max-w-3xl ${className}`}>
-      <h2 className="t-h1" data-reveal>
+      <h2 className={`t-h1 ${dark ? "text-white" : ""}`} data-reveal>
         {title}
       </h2>
       {body && (
-        <p className="t-lead mt-5" data-reveal>
+        <p className={`t-lead mt-5 ${dark ? "!text-on-sage-muted" : ""}`} data-reveal>
           {body}
         </p>
       )}

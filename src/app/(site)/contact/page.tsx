@@ -17,8 +17,8 @@ const next = [
 
 export default function ContactPage() {
   return (
-    <section className="relative overflow-hidden pt-28 lg:pt-36">
-      <div aria-hidden className="iso-grid iso-fade pointer-events-none absolute inset-0" />
+    <section className="hero-wash relative overflow-hidden pt-28 lg:pt-36">
+      <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
       <div className="container-x relative grid gap-16 pb-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:pb-32">
         <div>
           <h1 className="t-display">Book a call</h1>

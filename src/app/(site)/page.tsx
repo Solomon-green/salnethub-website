@@ -37,8 +37,8 @@ export default async function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pt-24 lg:pt-28">
-        <div aria-hidden className="iso-grid iso-fade pointer-events-none absolute inset-0" />
+      <section className="hero-wash relative overflow-hidden pt-24 lg:pt-28">
+        <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
         <div className="container-x relative grid min-h-[calc(100dvh-7rem)] items-center gap-10 pb-12 lg:grid-cols-[1fr_1.05fr] lg:gap-6">
           <div className="max-w-2xl">
             <p className="t-label mb-6 text-deep-sage">Business process automation</p>
@@ -64,15 +64,15 @@ export default async function Home() {
       </section>
 
       {/* Tools */}
-      <section className="border-y border-line bg-white py-10">
+      <section className="bg-ink py-10 text-white">
         <div className="container-x grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-14">
           <p className="max-w-[15rem] text-[15px] font-bold leading-snug">Built on the tools your team already uses</p>
-          <ToolMarquee />
+          <ToolMarquee dark />
         </div>
       </section>
 
       {/* What changes */}
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <SectionHead
             title="The same work, without the busywork"
@@ -100,15 +100,16 @@ export default async function Home() {
       </section>
 
       {/* Automation services: hairline grid */}
-      <section className="bg-paper py-24 lg:py-32">
-        <div className="container-x">
+      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+        <div className="container-x relative">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHead title="Automation services" body="Five ways we take repetitive work off your team. Each one is fixed-price and documented." />
-            <Link href="/services" className="link-arrow shrink-0" data-reveal>
+            <SectionHead dark title="Automation services" body="Five ways we take repetitive work off your team. Each one is fixed-price and documented." />
+            <Link href="/services" className="link-arrow shrink-0 !text-white" data-reveal>
               Compare all services <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px border border-white/20 bg-white/20 sm:grid-cols-2 lg:grid-cols-3">
             {automation.map((s) => (
               <ServiceCard key={s.slug} s={s} />
             ))}
@@ -132,7 +133,7 @@ export default async function Home() {
       </section>
 
       {/* AI solutions */}
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-20">
           <div>
             <p className="t-label mb-5 text-deep-sage">AI solutions</p>
@@ -146,7 +147,9 @@ export default async function Home() {
               {ai.map((s) => (
                 <li key={s.slug} data-reveal>
                   <Link href={`/services/${s.slug}`} className="group flex items-start gap-5 border-b border-line py-6">
-                    <ServiceIcon name={s.icon} size={24} className="mt-0.5 shrink-0" />
+                    <span className="icon-tile !h-11 !w-11 shrink-0 group-hover:bg-deep-sage group-hover:text-white">
+                      <ServiceIcon name={s.icon} size={22} />
+                    </span>
                     <span className="flex-1">
                       <span className="block text-[18px] font-bold group-hover:text-deep-sage">{s.name}</span>
                       <span className="mt-1 block text-[15px] leading-relaxed text-slate">{s.short}</span>
@@ -191,7 +194,7 @@ export default async function Home() {
       </section>
 
       {/* Process */}
-      <section className="py-24 lg:py-32">
+      <section className="iso-grid-sage relative bg-mist py-24 lg:py-32">
         <div className="container-x">
           <ProcessScroller
             steps={processSteps}
@@ -205,18 +208,20 @@ export default async function Home() {
       </section>
 
       {/* Principles */}
-      <section className="border-y border-line bg-paper py-24 lg:py-28">
+      <section className="bg-white py-24 lg:py-28">
         <div className="container-x">
           <h2 className="t-h1 max-w-2xl" data-reveal>
             How we work with your team
           </h2>
-          <div className="mt-14 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-4">
-            {principles.map((p) => (
-              <div key={p.name} className="bg-paper p-0 md:pr-8 lg:bg-paper" data-reveal>
-                <div className="h-full bg-paper py-6 md:py-2">
-                  <p className="text-[22px] font-bold tracking-tight">{p.name}</p>
-                  <p className="mt-3 text-[15px] leading-relaxed text-slate">{p.body}</p>
-                </div>
+          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {principles.map((p, i) => (
+              <div
+                key={p.name}
+                className={`border-t-[3px] p-7 ${i === 0 ? "border-copper bg-ink text-white" : "border-sage bg-mist"}`}
+                data-reveal
+              >
+                <p className="text-[22px] font-bold tracking-tight">{p.name}</p>
+                <p className={`mt-3 text-[15px] leading-relaxed ${i === 0 ? "text-on-ink-muted" : "text-slate"}`}>{p.body}</p>
               </div>
             ))}
           </div>
@@ -253,7 +258,7 @@ export default async function Home() {
       </section>
 
       {featured.length > 0 && (
-        <section className="border-t border-line bg-paper py-24 lg:py-32">
+        <section className="bg-white py-24 lg:py-32">
           <div className="container-x">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <SectionHead title="Recent work" />
@@ -274,7 +279,7 @@ export default async function Home() {
         </section>
       )}
 
-      <section className="border-t border-line py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <Faq items={homeFaqs} />
         </div>

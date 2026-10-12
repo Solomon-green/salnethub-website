@@ -4,7 +4,7 @@ export const metadata = { title: "Terms of use", alternates: { canonical: "/term
 
 export default function TermsPage() {
   return (
-    <section className="pt-28 lg:pt-36">
+    <section className="bg-white pt-28 lg:pt-36">
       <div className="container-x pb-24">
         <h1 className="t-h1">Terms of use</h1>
         <p className="mt-4 text-[14px] text-slate">Last updated: 12 October 2026</p>

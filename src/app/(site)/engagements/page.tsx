@@ -19,7 +19,7 @@ export default function EngagementsPage() {
       </PageHero>
 
       {/* Entry points */}
-      <section className="py-24 lg:py-28">
+      <section className="bg-white py-24 lg:py-28">
         <div className="container-x">
           <h2 className="t-h1 max-w-3xl" data-reveal>
             Where to start
@@ -45,7 +45,7 @@ export default function EngagementsPage() {
       </section>
 
       {/* Builds */}
-      <section className="border-y border-line bg-paper py-24 lg:py-28">
+      <section className="iso-grid-sage bg-mist py-24 lg:py-28">
         <div className="container-x">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
@@ -57,7 +57,7 @@ export default function EngagementsPage() {
           </div>
           <div className="mt-12 border-t border-ink">
             {builds.map((b) => (
-              <div key={b.name} className="grid gap-3 border-b border-line bg-paper py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10" data-reveal>
+              <div key={b.name} className="grid gap-3 border-b border-line bg-white px-6 py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10" data-reveal>
                 <div>
                   <p className="text-[19px] font-bold">{b.name}</p>
                   <p className="mt-1 text-[13px] text-slate">{b.time}</p>
@@ -113,7 +113,7 @@ export default function EngagementsPage() {
         </div>
       </section>
 
-      <section className="border-t border-line py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x">
           <Faq items={pricingFaqs} title="Pricing questions" />
         </div>

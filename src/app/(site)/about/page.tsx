@@ -33,7 +33,7 @@ export default function AboutPage() {
         <PrimaryCta />
       </PageHero>
 
-      <section className="py-24 lg:py-32">
+      <section className="bg-white py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-2 lg:gap-24">
           <h2 className="t-h1" data-reveal>
             Most teams do not need more software. They need the software they have to work together.
@@ -69,15 +69,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
-        <div className="container-x">
-          <h2 className="t-h1 max-w-3xl" data-reveal>
+      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
+        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+        <div className="container-x relative">
+          <h2 className="t-h1 max-w-3xl text-white" data-reveal>
             Who we work with
           </h2>
-          <p className="t-lead mt-5 max-w-3xl" data-reveal>
+          <p className="t-lead mt-5 max-w-3xl !text-on-sage-muted" data-reveal>
             Small-to-medium teams and businesses, usually between 5 and 200 people, that have outgrown doing everything by hand.
           </p>
-          <div className="mt-12 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-px border border-white/20 bg-white/20 md:grid-cols-2 lg:grid-cols-4">
             {who.map((w) => (
               <div key={w.title} className="bg-white p-7" data-reveal>
                 <h3 className="t-h3">{w.title}</h3>
@@ -88,7 +89,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-paper py-24 lg:py-32">
+      <section className="iso-grid-sage bg-mist py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <h2 className="t-h1" data-reveal>

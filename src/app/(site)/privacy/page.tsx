@@ -4,7 +4,7 @@ export const metadata = { title: "Privacy policy", alternates: { canonical: "/pr
 
 export default function PrivacyPage() {
   return (
-    <section className="pt-28 lg:pt-36">
+    <section className="bg-white pt-28 lg:pt-36">
       <div className="container-x pb-24">
         <h1 className="t-h1">Privacy policy</h1>
         <p className="mt-4 text-[14px] text-slate">Last updated: 12 October 2026</p>
