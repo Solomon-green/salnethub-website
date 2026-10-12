@@ -65,10 +65,12 @@ export default async function Home() {
       </section>
 
       {/* Tools */}
-      <section className="border-b border-line bg-white py-12">
+      <section className="border-y border-white/10 bg-forest py-12 text-white">
         <div className="container-x grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-16">
-          <p className="max-w-[15rem] text-[15px] font-bold leading-snug">Built on the tools your team already uses</p>
-          <ToolMarquee />
+          <p className="max-w-[15rem] text-[15px] font-bold leading-snug">
+            Built on the tools your team <span className="text-mint">already uses</span>
+          </p>
+          <ToolMarquee dark />
         </div>
       </section>
 
