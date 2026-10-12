@@ -61,7 +61,7 @@ export function ProcessScroller({ steps, heading, intro }: { steps: Step[]; head
             key={s.step}
             className={`ps-card border p-7 transition-colors duration-500 md:p-10 ${i === active ? "border-ink bg-white" : "border-line bg-white"}`}
           >
-            <p className="t-label text-deep-sage">{s.step}</p>
+            <p className="t-label text-mint-ink">{s.step}</p>
             <h3 className="t-h2 mt-3">{s.title}</h3>
             <p className="mt-4 max-w-[52ch] text-[16px] leading-relaxed text-slate">{s.body}</p>
             <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-5 text-[14px]">

@@ -56,7 +56,7 @@ function FooterCol({ title, links }: { title: string; links: { label: string; hr
       <ul className="grid gap-0.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-mist">
+            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-mint">
               {l.label}
             </Link>
           </li>

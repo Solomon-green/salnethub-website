@@ -42,12 +42,12 @@ export function ContactForm({ services, email }: { services: string[]; email: st
   if (status === "sent") {
     return (
       <div className="border border-sage bg-mist p-8 md:p-10" role="status">
-        <CircleCheck size={28} strokeWidth={1.5} className="text-deep-sage" />
+        <CircleCheck size={28} strokeWidth={1.5} className="text-mint-ink" />
         <p className="t-h2 mt-5">Message received</p>
         <p className="mt-3 text-[16px] leading-relaxed text-slate">
           Thank you. We read every enquiry and reply within 1 business day, usually with two or three questions and a time for a call.
         </p>
-        <button type="button" onClick={() => setStatus("idle")} className="mt-6 text-[14px] font-bold text-deep-sage">
+        <button type="button" onClick={() => setStatus("idle")} className="mt-6 text-[14px] font-bold text-mint-ink">
           Send another message
         </button>
       </div>

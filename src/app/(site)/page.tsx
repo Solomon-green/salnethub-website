@@ -37,36 +37,38 @@ export default async function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-wash relative overflow-hidden pt-24 lg:pt-28">
-        <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
-        <div className="container-x relative grid min-h-[calc(100dvh-7rem)] items-center gap-10 pb-12 lg:grid-cols-[1fr_1.05fr] lg:gap-6">
-          <div className="max-w-2xl">
-            <h1 className="t-display">
-              Connect your systems.
-              <br />
-              Get your time back.
-            </h1>
-            <p className="t-lead mt-7 max-w-[34rem]">
-              We automate CRM follow-ups, lead routing, reporting and AI assistants for small-to-medium teams, using the tools you already run.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <PrimaryCta />
-              <Link href="/services" className="btn btn-secondary">
-                Explore services
-              </Link>
+      <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
+        <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
+        <div className="container-x relative pb-16 lg:pb-20">
+          <h1 className="t-hero max-w-[15ch] lg:max-w-none">
+            Connect your systems.
+            <br />
+            <span className="text-mint">Get your time back.</span>
+          </h1>
+          <div className="mt-10 grid items-center gap-10 lg:mt-4 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
+            <div className="max-w-xl lg:pb-10">
+              <p className="text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-on-ink-muted">
+                We automate CRM follow-ups, lead routing, reporting and AI assistants for small-to-medium teams, using the tools you already run.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <PrimaryCta tone="mint" />
+                <Link href="/services" className="btn btn-ghost-light">
+                  Explore services
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="relative -mx-4 lg:mx-0">
-            <HeroSystem className="mx-auto w-full max-w-[760px] lg:scale-[1.08]" />
+            <div className="relative -mx-4 lg:-mr-8 lg:mx-0">
+              <HeroSystem className="mx-auto w-full max-w-[780px]" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Tools */}
-      <section className="bg-ink py-10 text-white">
-        <div className="container-x grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-14">
+      <section className="border-b border-line bg-white py-12">
+        <div className="container-x grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-16">
           <p className="max-w-[15rem] text-[15px] font-bold leading-snug">Built on the tools your team already uses</p>
-          <ToolMarquee dark />
+          <ToolMarquee />
         </div>
       </section>
 
@@ -87,8 +89,8 @@ export default async function Home() {
               <div key={c.area} data-reveal className="grid gap-2 border-b border-line py-6 md:grid-cols-[1.1fr_1fr_1fr] md:items-center md:gap-8">
                 <p className="text-[18px] font-bold">{c.area}</p>
                 <p className="text-[16px] text-slate line-through decoration-line decoration-1">{c.before}</p>
-                <p className="flex items-center gap-3 text-[16px] font-bold text-deep-sage">
-                  <span aria-hidden className="h-2 w-2 shrink-0 bg-copper" />
+                <p className="flex items-center gap-3 text-[16px] font-bold text-mint-ink">
+                  <span aria-hidden className="h-2 w-2 shrink-0 bg-mint-ink" />
                   {c.after}
                 </p>
               </div>
@@ -149,7 +151,7 @@ export default async function Home() {
                       <ServiceIcon name={s.icon} size={22} />
                     </span>
                     <span className="flex-1">
-                      <span className="block text-[18px] font-bold group-hover:text-deep-sage">{s.name}</span>
+                      <span className="block text-[18px] font-bold group-hover:text-mint-ink">{s.name}</span>
                       <span className="mt-1 block text-[15px] leading-relaxed text-slate">{s.short}</span>
                     </span>
                     <ArrowRight size={18} className="mt-1 shrink-0 transition-transform group-hover:translate-x-1" />
@@ -215,7 +217,7 @@ export default async function Home() {
             {principles.map((p, i) => (
               <div
                 key={p.name}
-                className={`border-t-[3px] p-7 ${i === 0 ? "border-copper bg-ink text-white" : "border-sage bg-mist"}`}
+                className={`border-t-[3px] p-7 ${i === 0 ? "border-mint bg-ink text-white" : "border-sage bg-mist"}`}
                 data-reveal
               >
                 <p className="text-[22px] font-bold tracking-tight">{p.name}</p>
@@ -268,7 +270,7 @@ export default async function Home() {
               {featured.map(({ slug, entry }) => (
                 <Link key={slug} href={`/work/${slug}`} className="group bg-white p-7" data-reveal>
                   <p className="text-[13px] text-slate">{entry.industry}</p>
-                  <h3 className="t-h3 mt-3 group-hover:text-deep-sage">{entry.title}</h3>
+                  <h3 className="t-h3 mt-3 group-hover:text-mint-ink">{entry.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-slate">{entry.summary}</p>
                 </Link>
               ))}

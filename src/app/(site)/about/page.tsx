@@ -30,7 +30,7 @@ export default function AboutPage() {
         title="We connect systems so teams get their time back"
         sub="SalnetHub is an automation and AI company for small-to-medium teams and businesses. We build the connections between your tools so work moves on its own."
       >
-        <PrimaryCta />
+        <PrimaryCta tone="mint" />
       </PageHero>
 
       <section className="bg-white py-24 lg:py-32">

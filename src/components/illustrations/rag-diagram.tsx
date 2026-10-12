@@ -99,8 +99,8 @@ export function RagDiagram() {
           Tenants must give <strong>60 days&apos; written notice</strong> before the lease end date. Notice is sent to the property manager by email or post.
         </p>
         <div className="mt-4 flex flex-wrap gap-2 text-[12px]">
-          <span className="border border-sage bg-mist px-2 py-1 font-bold text-deep-sage">[1] Lease template, clause 14.2</span>
-          <span className="border border-sage bg-mist px-2 py-1 font-bold text-deep-sage">[2] Maintenance guide, p. 3</span>
+          <span className="border border-sage bg-mist px-2 py-1 font-bold text-mint-ink">[1] Lease template, clause 14.2</span>
+          <span className="border border-sage bg-mist px-2 py-1 font-bold text-mint-ink">[2] Maintenance guide, p. 3</span>
         </div>
       </div>
     </div>

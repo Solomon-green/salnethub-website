@@ -59,7 +59,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
         title={s.hero.title}
         sub={s.hero.sub}
         aside={
-          <div className="border border-ink bg-white" data-reveal>
+          <div className="border border-white/10 bg-white text-ink shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)]" data-reveal>
             <div className="flex items-center gap-4 border-b border-line p-6">
               <span className="flex h-12 w-12 items-center justify-center bg-ink text-white">
                 <ServiceIcon name={s.icon} size={24} />
@@ -88,8 +88,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         }
       >
-        <PrimaryCta />
-        <a href="#workflow" className="btn btn-secondary">
+        <PrimaryCta tone="mint" />
+        <a href="#workflow" className="btn btn-ghost-light">
           See how it works
         </a>
       </PageHero>
@@ -189,7 +189,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {s.safeguards.map((g) => (
                 <div key={g.title} className="border-t-[3px] border-sage bg-white p-7" data-reveal>
-                  <ShieldCheck size={24} strokeWidth={1.5} className="text-deep-sage" />
+                  <ShieldCheck size={24} strokeWidth={1.5} className="text-mint-ink" />
                   <h3 className="t-h3 mt-5">{g.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-slate">{g.body}</p>
                 </div>
@@ -231,7 +231,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             <ul className="mt-10 border-t border-ink">
               {s.deliverables.map((d) => (
                 <li key={d} className="flex gap-4 border-b border-line py-5 text-[16px]" data-reveal>
-                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-deep-sage" />
+                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-mint-ink" />
                   {d}
                 </li>
               ))}

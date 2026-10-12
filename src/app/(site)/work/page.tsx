@@ -21,7 +21,7 @@ export default async function WorkPage() {
         title="Work"
         sub="What we built, why, and what changed for the team. Every case study names the tools and the result."
       >
-        <PrimaryCta />
+        <PrimaryCta tone="mint" />
       </PageHero>
 
       <section className="py-24 lg:py-28">
@@ -60,7 +60,7 @@ export default async function WorkPage() {
                       {entry.client}
                       {entry.industry ? `, ${entry.industry}` : ""}
                     </p>
-                    <h2 className="t-h2 mt-3 group-hover:text-deep-sage">{entry.title}</h2>
+                    <h2 className="t-h2 mt-3 group-hover:text-mint-ink">{entry.title}</h2>
                     <p className="mt-3 text-[15px] leading-relaxed text-slate">{entry.summary}</p>
                     {entry.results.length > 0 && (
                       <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-6">
@@ -75,7 +75,7 @@ export default async function WorkPage() {
                     )}
                     <div className="mt-auto flex flex-wrap items-center gap-2 pt-7">
                       {entry.services.slice(0, 2).map((s) => (
-                        <span key={s} className="bg-mist px-2.5 py-1 text-[12px] font-bold text-deep-sage">
+                        <span key={s} className="bg-mist px-2.5 py-1 text-[12px] font-bold text-mint-ink">
                           {name(s)}
                         </span>
                       ))}

@@ -35,24 +35,24 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
 
   return (
     <>
-      <section className="hero-wash relative overflow-hidden pt-28 lg:pt-36">
-        <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
+      <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
+        <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
         <div className="container-x relative pb-16">
           <Link href="/work" className="link-arrow text-[14px]">
             <ArrowLeft size={16} /> All work
           </Link>
-          <p className="mt-8 text-[15px] text-slate">
+          <p className="mt-8 text-[15px] text-on-ink-muted">
             {e.client}
             {e.industry ? `, ${e.industry}` : ""}
           </p>
           <h1 className="t-h1 mt-3 max-w-4xl">{e.title}</h1>
-          <p className="t-lead mt-6 max-w-3xl">{e.summary}</p>
+          <p className="mt-6 max-w-3xl text-[19px] leading-relaxed text-on-ink-muted">{e.summary}</p>
           {e.results.length > 0 && (
-            <dl className="mt-12 grid max-w-4xl gap-px border border-line bg-line sm:grid-cols-3">
+            <dl className="mt-12 grid max-w-4xl gap-px border border-white/15 bg-white/15 sm:grid-cols-3">
               {e.results.map((r) => (
-                <div key={r.label} className="bg-white p-6">
-                  <dd className="text-[36px] font-bold leading-none tracking-tight">{r.value}</dd>
-                  <dt className="mt-2 text-[14px] text-slate">{r.label}</dt>
+                <div key={r.label} className="bg-ink-2 p-6">
+                  <dd className="text-[36px] font-bold leading-none tracking-tight text-mint">{r.value}</dd>
+                  <dt className="mt-2 text-[14px] text-on-ink-muted">{r.label}</dt>
                 </div>
               ))}
             </dl>
@@ -77,7 +77,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
                 <ul className="mt-3 grid gap-2">
                   {serviceNames.map((s) => (
                     <li key={s!.slug}>
-                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-deep-sage hover:underline">
+                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-mint-ink hover:underline">
                         {s!.name}
                       </Link>
                     </li>

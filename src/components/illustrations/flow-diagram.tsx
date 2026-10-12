@@ -98,13 +98,13 @@ export function FlowDiagram({
   return (
     <div ref={root} className="relative">
       <style>{`
-        .fd-node.is-on .fd-box{background:${dark ? "#2a3a31" : "#E3EBE6"};border-color:${dark ? "#6C8C7A" : "#4F6B5C"}}
+        .fd-node.is-on .fd-box{background:${dark ? "#123a2d" : "#E6F7F0"};border-color:${dark ? "#2EE6A6" : "#0A7350"};box-shadow:${dark ? "0 0 24px -6px rgba(46,230,166,.55)" : "none"}}
         .fd-node.is-approval.is-on .fd-box{background:${dark ? "#3a2a21" : "#F6E7DE"};border-color:#C8754A}
-        .fd-box{transition:background-color .35s ease,border-color .35s ease}
+        .fd-box{transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease}
       `}</style>
       <div className="fd-track relative">
         <div aria-hidden className={`absolute left-[27px] top-[28px] bottom-[28px] w-px md:hidden ${line}`} />
-        <div aria-hidden className="fd-fill absolute left-[27px] top-[28px] bottom-[28px] w-px origin-top bg-sage md:hidden" />
+        <div aria-hidden className={`fd-fill absolute left-[27px] top-[28px] bottom-[28px] w-px origin-top md:hidden ${dark ? "bg-mint" : "bg-mint-ink"}`} />
         <div
           aria-hidden
           className={`absolute top-[27px] hidden h-px md:block ${line}`}
@@ -112,7 +112,7 @@ export function FlowDiagram({
         />
         <div
           aria-hidden
-          className="fd-fill absolute top-[27px] hidden h-px origin-left bg-sage md:block"
+          className={`fd-fill absolute top-[27px] hidden h-px origin-left md:block ${dark ? "bg-mint" : "bg-mint-ink"}`}
           style={{ left: `calc(100% / ${nodes.length} / 2)`, right: `calc(100% / ${nodes.length} / 2)` }}
         />
         <div
@@ -131,7 +131,7 @@ export function FlowDiagram({
                 {i === approvalIndex ? (
                   <Hand size={20} strokeWidth={1.5} className={dark ? "text-copper" : "text-deep-copper"} />
                 ) : (
-                  <Check size={20} strokeWidth={1.75} className={dark ? "text-mist" : "text-deep-sage"} />
+                  <Check size={20} strokeWidth={1.75} className={dark ? "text-mint" : "text-mint-ink"} />
                 )}
               </span>
             </div>

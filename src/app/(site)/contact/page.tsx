@@ -17,22 +17,22 @@ const next = [
 
 export default function ContactPage() {
   return (
-    <section className="hero-wash relative overflow-hidden pt-28 lg:pt-36">
-      <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
+    <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
+      <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
       <div className="container-x relative grid gap-16 pb-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:pb-32">
         <div>
-          <h1 className="t-display">Book a call</h1>
-          <p className="t-lead mt-6 max-w-lg">
+          <h1 className="t-hero">Book a call</h1>
+          <p className="mt-6 max-w-lg text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-on-ink-muted">
             Tell us what takes up your team&apos;s time. We will tell you plainly what we would automate first, and what it would cost.
           </p>
 
-          <ol className="mt-12 border-t border-ink">
+          <ol className="mt-12 border-t border-white/20">
             {next.map((n, i) => (
-              <li key={n.title} className="flex gap-5 border-b border-line py-6">
-                <span className="text-[14px] font-bold text-deep-copper">{i + 1}</span>
+              <li key={n.title} className="flex gap-5 border-b border-white/12 py-6">
+                <span className="text-[14px] font-bold text-mint">{i + 1}</span>
                 <span>
                   <span className="block text-[17px] font-bold">{n.title}</span>
-                  <span className="mt-1 block text-[15px] leading-relaxed text-slate">{n.body}</span>
+                  <span className="mt-1 block text-[15px] leading-relaxed text-on-ink-muted">{n.body}</span>
                 </span>
               </li>
             ))}
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
           <div className="mt-10 grid gap-4">
             {site.bookingUrl && (
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary w-fit">
+              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light w-fit">
                 <CalendarDays size={18} /> Pick a time in the calendar
               </a>
             )}
@@ -50,7 +50,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="border border-ink bg-white p-6 md:p-10">
+        <div className="border border-white/10 bg-white p-6 text-ink shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)] md:p-10">
           <h2 className="t-h2">Tell us about your workflow</h2>
           <p className="mt-2 text-[15px] text-slate">Fields marked * are required.</p>
           <div className="mt-8">

@@ -87,13 +87,13 @@ export function ChatDemo({ className = "" }: { className?: string }) {
             <div className="max-w-[82%]">
               <p className={`px-3.5 py-2.5 text-[14px] leading-relaxed ${m.from === "user" ? "bg-ink text-white" : "bg-paper text-ink"}`}>{m.text}</p>
               {m.source && (
-                <p className="mt-1.5 inline-flex items-center gap-1.5 text-[12px] text-deep-sage">
+                <p className="mt-1.5 inline-flex items-center gap-1.5 text-[12px] text-mint-ink">
                   <FileText size={12} /> Source: {m.source}
                 </p>
               )}
               {m.lead && (
                 <div className="mt-2 border border-sage bg-mist px-3 py-2.5 text-[12px] leading-snug text-ink">
-                  <p className="flex items-center gap-1.5 font-bold text-deep-sage">
+                  <p className="flex items-center gap-1.5 font-bold text-mint-ink">
                     <CircleCheck size={14} /> Lead saved to HubSpot
                   </p>
                   <p className="mt-1 text-slate">Transcript attached. Owner notified by email.</p>
@@ -137,7 +137,7 @@ export function ChatDemo({ className = "" }: { className?: string }) {
             ))}
           </div>
         ) : (
-          <button type="button" onClick={reset} className="text-[13px] font-bold text-deep-sage">
+          <button type="button" onClick={reset} className="text-[13px] font-bold text-mint-ink">
             Start the demo again
           </button>
         )}

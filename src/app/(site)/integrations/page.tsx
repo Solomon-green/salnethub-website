@@ -15,7 +15,7 @@ export default function IntegrationsPage() {
         title="We build on the tools you already pay for"
         sub="No new platform to learn. We connect the software your team uses every day, and add a connector only where one is needed."
       >
-        <PrimaryCta />
+        <PrimaryCta tone="mint" />
       </PageHero>
 
       <section className="bg-white py-24 lg:py-28">

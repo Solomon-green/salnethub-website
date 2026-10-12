@@ -38,7 +38,7 @@ export default function HowWeWorkPage() {
         title="How we work"
         sub="A clear process with fixed prices, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
       >
-        <PrimaryCta />
+        <PrimaryCta tone="mint" />
       </PageHero>
 
       <section className="bg-white py-24 lg:py-32">

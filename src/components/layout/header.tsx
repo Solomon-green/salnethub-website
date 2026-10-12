@@ -17,6 +17,8 @@ type LenisLike = { stop: () => void; start: () => void };
 const lenis = () => (window as unknown as { __lenis?: LenisLike }).__lenis;
 
 const groupOrder: ServiceGroup[] = ["automation", "ai", "web"];
+// Pages whose hero is light; every other page opens on the dark hero.
+const lightHeroRoutes = ["/privacy", "/terms"];
 
 export function Header({ menu }: { menu: MenuItem[] }) {
   const servicesByGroup = (g: ServiceGroup) => menu.filter((m) => m.group === g);
@@ -73,7 +75,10 @@ export function Header({ menu }: { menu: MenuItem[] }) {
   };
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
-  const solid = scrolled || megaOpen;
+  const solid = scrolled || megaOpen || mobileOpen;
+  const overDark = !solid && !lightHeroRoutes.includes(pathname);
+  const linkTone = (active: boolean) =>
+    overDark ? (active ? "text-mint" : "text-white/90 hover:text-white") : active ? "text-mint-ink" : "text-ink hover:text-mint-ink";
 
   return (
     <>
@@ -84,7 +89,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
         }`}
       >
         <div className="container-x flex h-16 items-center gap-8 lg:h-[72px]">
-          <Logo />
+          <Logo variant={overDark ? "white" : "color"} />
 
           <nav aria-label="Main" className="ml-10 hidden flex-1 items-center gap-1.5 xl:ml-16 xl:flex">
             {nav.map((item) =>
@@ -95,9 +100,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                     aria-expanded={megaOpen}
                     aria-controls="mega-menu"
                     onClick={() => setMegaOpen((v) => !v)}
-                    className={`flex h-10 items-center gap-1 px-3 text-[15px] font-medium transition-colors hover:text-deep-sage ${
-                      isActive("/services") ? "text-deep-sage" : "text-ink"
-                    }`}
+                    className={`flex h-10 items-center gap-1 px-3 text-[15px] font-medium transition-colors ${linkTone(isActive("/services"))}`}
                   >
                     Services
                     <ChevronDown size={16} strokeWidth={1.75} className={`transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`} />
@@ -107,9 +110,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex h-10 items-center px-3 text-[15px] font-medium transition-colors hover:text-deep-sage ${
-                    isActive(item.href) ? "text-deep-sage" : "text-ink"
-                  }`}
+                  className={`flex h-10 items-center px-3 text-[15px] font-medium transition-colors ${linkTone(isActive(item.href))}`}
                 >
                   {item.label}
                 </Link>
@@ -118,12 +119,12 @@ export function Header({ menu }: { menu: MenuItem[] }) {
           </nav>
 
           <div className="ml-auto flex items-center gap-3">
-            <Link href={primaryCta.href} className="btn btn-primary hidden !min-h-11 sm:inline-flex">
+            <Link href={primaryCta.href} className={`btn ${overDark ? "btn-mint" : "btn-primary"} hidden !min-h-11 sm:inline-flex`}>
               {primaryCta.label}
             </Link>
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center xl:hidden"
+              className={`flex h-11 w-11 items-center justify-center xl:hidden ${overDark ? "text-white" : "text-ink"}`}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -150,9 +151,9 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                   {servicesByGroup(g).map((s) => (
                     <li key={s.slug}>
                       <Link href={`/services/${s.slug}`} className="group flex gap-4 p-3 transition-colors hover:bg-paper">
-                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-ink" />
+                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-mint-ink" />
                         <span>
-                          <span className="block text-[15px] font-bold leading-snug group-hover:text-deep-sage">{s.name}</span>
+                          <span className="block text-[15px] font-bold leading-snug group-hover:text-mint-ink">{s.name}</span>
                           <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                         </span>
                       </Link>
@@ -166,9 +167,9 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                 <p className="t-label mb-4 text-slate">{groupNames.web}</p>
                 {servicesByGroup("web").map((s) => (
                   <Link key={s.slug} href={`/services/${s.slug}`} className="group flex gap-4 p-3 transition-colors hover:bg-paper">
-                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0" />
+                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-mint-ink" />
                     <span>
-                      <span className="block text-[15px] font-bold group-hover:text-deep-sage">{s.name}</span>
+                      <span className="block text-[15px] font-bold group-hover:text-mint-ink">{s.name}</span>
                       <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                     </span>
                   </Link>
@@ -179,7 +180,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                 <p className="mt-1 text-[13px] leading-relaxed text-on-ink-muted">
                   A 20-minute call is enough to find the first workflow worth automating.
                 </p>
-                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-white hover:text-mist">
+                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-mint hover:text-white">
                   Compare all services <ArrowRight size={16} />
                 </Link>
               </div>
@@ -222,7 +223,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-deep-sage" : ""}`}
+                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-mint-ink" : ""}`}
               >
                 {item.label}
               </Link>

@@ -51,7 +51,7 @@ export function ChartIllustration() {
       <div className="border border-ink bg-white">
         <div className="flex items-center justify-between border-b border-line px-5 py-3">
           <p className="text-[14px] font-bold">Weekly revenue dashboard</p>
-          <p className="text-[12px] text-deep-sage">Live</p>
+          <p className="text-[12px] text-mint-ink">Live</p>
         </div>
         <div className="grid grid-cols-3 border-b border-line">
           <div className="ci-kpi border-r border-line px-5 py-4">

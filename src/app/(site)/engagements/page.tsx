@@ -15,7 +15,7 @@ export default function EngagementsPage() {
         title="Clear prices, published up front"
         sub="Start free, build with a fixed quote, then keep everything running with a monthly care plan. Prices are in US dollars."
       >
-        <PrimaryCta />
+        <PrimaryCta tone="mint" />
       </PageHero>
 
       {/* Entry points */}
@@ -34,7 +34,7 @@ export default function EngagementsPage() {
                 <ul className="mt-6 grid gap-2.5 border-t border-line pt-6">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-3 text-[15px]">
-                      <Check size={18} className="mt-0.5 shrink-0 text-deep-sage" /> {p}
+                      <Check size={18} className="mt-0.5 shrink-0 text-mint-ink" /> {p}
                     </li>
                   ))}
                 </ul>
@@ -92,7 +92,7 @@ export default function EngagementsPage() {
                 className={`relative flex flex-col border p-8 ${p.featured ? "border-ink bg-ink text-white" : "border-line bg-white"}`}
                 data-reveal
               >
-                {p.featured && <span className="t-label absolute right-8 top-8 bg-copper px-2 py-1 text-ink">Most chosen</span>}
+                {p.featured && <span className="t-label absolute right-8 top-8 bg-mint px-2 py-1 text-ink">Most chosen</span>}
                 <p className="text-[19px] font-bold">{p.name}</p>
                 <p className="mt-6 text-[48px] font-bold leading-none tracking-tight">
                   {p.price}
@@ -102,7 +102,7 @@ export default function EngagementsPage() {
                 <ul className={`mt-8 grid gap-3 border-t pt-6 ${p.featured ? "border-white/15" : "border-line"}`}>
                   {p.points.map((pt) => (
                     <li key={pt} className="flex gap-3 text-[15px]">
-                      <Check size={18} className={`mt-0.5 shrink-0 ${p.featured ? "text-mist" : "text-deep-sage"}`} /> {pt}
+                      <Check size={18} className={`mt-0.5 shrink-0 ${p.featured ? "text-mint" : "text-mint-ink"}`} /> {pt}
                     </li>
                   ))}
                 </ul>

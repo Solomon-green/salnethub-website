@@ -60,7 +60,7 @@ export function HeroSystem({ className = "" }: { className?: string }) {
       const tops = gsap.utils.toArray<SVGPolygonElement>(".blk-top");
       const metas = gsap.utils.toArray<SVGTextElement>(".blk-meta");
       if (prefersReducedMotion()) {
-        gsap.set(tops, { fill: "#D4E1D9" });
+        gsap.set(tops, { fill: "#1F8F69" });
         gsap.set(".data-module", { opacity: 0 });
         return;
       }
@@ -70,21 +70,21 @@ export function HeroSystem({ className = "" }: { className?: string }) {
 
       const tl = gsap.timeline({ repeat: -1, delay: 1.4, repeatDelay: 0.4 });
       tl.set(".data-module", { opacity: 1 });
-      tl.set(tops, { fill: "#FFFFFF" });
-      tl.set(metas, { fill: "#5A5D60" });
-      tl.to(tops[0], { fill: "#D4E1D9", duration: 0.25 });
+      tl.set(tops, { fill: "#22342D" });
+      tl.set(metas, { fill: "#A7AAAD" });
+      tl.to(tops[0], { fill: "#1F8F69", duration: 0.25 });
       for (let i = 1; i < route.length; i++) {
         tl.to(".data-module", {
           duration: 1.05,
           ease: "power2.inOut",
           motionPath: { path: routeD, start: (i - 1) / (route.length - 1), end: i / (route.length - 1) },
         });
-        tl.to(tops[i], { fill: i === 1 ? "#4F6B5C" : "#6C8C7A", duration: 0.25 }, "<0.8");
-        tl.to(metas[i], { fill: "#4F6B5C", duration: 0.25 }, "<");
+        tl.to(tops[i], { fill: i === 1 ? "#2EE6A6" : "#1F8F69", duration: 0.25 }, "<0.8");
+        tl.to(metas[i], { fill: "#2EE6A6", duration: 0.25 }, "<");
       }
       tl.to(".data-module", { opacity: 0, duration: 0.3 }, "+=0.2");
-      tl.to(tops, { fill: "#FFFFFF", duration: 0.6, stagger: 0.05 }, "+=1.4");
-      tl.to(metas, { fill: "#5A5D60", duration: 0.4 }, "<");
+      tl.to(tops, { fill: "#22342D", duration: 0.6, stagger: 0.05 }, "+=1.4");
+      tl.to(metas, { fill: "#A7AAAD", duration: 0.4 }, "<");
     },
     { scope: root },
   );
@@ -102,24 +102,38 @@ export function HeroSystem({ className = "" }: { className?: string }) {
           <stop offset="0%" stopColor="#fff" stopOpacity="1" />
           <stop offset="100%" stopColor="#fff" stopOpacity="0" />
         </radialGradient>
+        <filter id="mint-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="4" result="b" />
+          <feMerge>
+            <feMergeNode in="b" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="copper-glow" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="5" result="b" />
+          <feMerge>
+            <feMergeNode in="b" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
         <mask id="grid-mask">
           <rect width="100%" height="100%" fill="url(#grid-fade)" />
         </mask>
       </defs>
 
-      <g mask="url(#grid-mask)" stroke="#4F6B5C" strokeOpacity="0.18" strokeWidth="1">
+      <g mask="url(#grid-mask)" stroke="#2EE6A6" strokeOpacity="0.09" strokeWidth="1">
         {grid.map((d, i) => (
           <path key={i} d={d} />
         ))}
       </g>
 
-      <path className="route-line" d={routeD} fill="none" stroke="#17191C" strokeWidth="1.25" />
+      <path className="route-line" d={routeD} fill="none" stroke="#2EE6A6" strokeWidth="1.6" strokeOpacity="0.9" filter="url(#mint-glow)" />
       {route.map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r="2.5" fill="#17191C" />
+        <circle key={i} cx={x} cy={y} r="3" fill="#2EE6A6" />
       ))}
 
       <g className="data-module" style={{ opacity: 0 }} transform={`translate(${route[0][0]} ${route[0][1]})`}>
-        <polygon points={moduleShape} fill="#C8754A" />
+        <polygon points={moduleShape} fill="#E08A5C" filter="url(#copper-glow)" />
       </g>
 
       {blocks.map((b) => {
@@ -127,13 +141,13 @@ export function HeroSystem({ className = "" }: { className?: string }) {
         const [lx, ly] = f.labelAnchor;
         return (
           <g key={b.id} className="blk">
-            <polygon points={f.left} fill="#E3EBE6" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
-            <polygon points={f.right} fill="#B9CCC1" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
-            <polygon className="blk-top" points={f.top} fill="#FFFFFF" stroke="#17191C" strokeWidth="1.25" strokeLinejoin="round" />
-            <text x={lx} y={ly - U * 1.62} textAnchor="middle" fontSize="13" fontWeight="700" fill="#17191C">
+            <polygon points={f.left} fill="#1A2722" stroke="#2EE6A6" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon points={f.right} fill="#121D19" stroke="#2EE6A6" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon className="blk-top" points={f.top} fill="#22342D" stroke="#2EE6A6" strokeOpacity="0.7" strokeWidth="1.25" strokeLinejoin="round" />
+            <text x={lx} y={ly - U * 1.62} textAnchor="middle" fontSize="13" fontWeight="700" fill="#FFFFFF">
               {b.label}
             </text>
-            <text className="blk-meta" x={lx} y={ly - U * 1.62 + 15} textAnchor="middle" fontSize="11" fill="#5A5D60">
+            <text className="blk-meta" x={lx} y={ly - U * 1.62 + 15} textAnchor="middle" fontSize="11" fill="#A7AAAD">
               {b.meta}
             </text>
           </g>

@@ -31,8 +31,8 @@ export default function ServicesPage() {
         title="Services that take work off your team"
         sub="Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation."
       >
-        <PrimaryCta />
-        <a href="#fit" className="btn btn-secondary">
+        <PrimaryCta tone="mint" />
+        <a href="#fit" className="btn btn-ghost-light">
           Find your starting point
         </a>
       </PageHero>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                   <Link href={`/services/${list[0].slug}`} className="group grid gap-6 bg-white p-8 md:grid-cols-[auto_1fr_auto] md:items-center md:p-10" data-reveal>
                     <ServiceIcon name={list[0].icon} size={32} />
                     <div>
-                      <h3 className="t-h2 group-hover:text-deep-sage">{list[0].name}</h3>
+                      <h3 className="t-h2 group-hover:text-mint-ink">{list[0].name}</h3>
                       <p className="mt-2 max-w-2xl text-[16px] text-slate">{list[0].short}</p>
                     </div>
                     <span className="link-arrow">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
                 <li key={f.slug} data-reveal>
                   <Link href={`/services/${s.slug}`} className="group grid gap-2 border-b border-line py-6 md:grid-cols-[1.2fr_1fr_auto] md:items-center md:gap-8">
                     <span className="text-[18px] font-bold">&ldquo;{f.problem}&rdquo;</span>
-                    <span className="flex items-center gap-3 text-[15px] text-deep-sage">
+                    <span className="flex items-center gap-3 text-[15px] text-mint-ink">
                       <ServiceIcon name={s.icon} size={18} /> {s.name}
                     </span>
                     <ArrowRight size={18} className="hidden transition-transform group-hover:translate-x-1 md:block" />
