@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
   const s = getService(slug);
   if (!s) return {};
   return {
-    title: s.name,
-    description: `${s.hero.sub}`,
+    title: s.seo.title,
+    description: s.seo.description,
     alternates: { canonical: `/services/${s.slug}` },
-    openGraph: { title: `${s.name} | SalnetHub`, description: s.short },
+    openGraph: { title: `${s.seo.title} | SalnetHub`, description: s.seo.description, url: `/services/${s.slug}` },
   };
 }
 
@@ -42,7 +42,9 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
     "@context": "https://schema.org",
     "@type": "Service",
     name: s.name,
-    description: s.hero.sub,
+    description: s.seo.description,
+    serviceType: s.name,
+    areaServed: "Worldwide",
     provider: { "@type": "Organization", name: site.name, url: site.url },
     offers: { "@type": "Offer", priceCurrency: "USD", price: s.priceFrom.replace(/[^0-9]/g, ""), description: `From ${s.priceFrom}` },
   };

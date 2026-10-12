@@ -12,7 +12,8 @@ const company = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function Footer() {
+export function Footer({ hasWork = false }: { hasWork?: boolean }) {
+  const companyLinks = hasWork ? company : company.filter((l) => l.href !== "/work");
   const automation = services.filter((s) => s.group === "automation");
   const other = services.filter((s) => s.group !== "automation");
   return (
@@ -23,7 +24,7 @@ export function Footer() {
           <div className="max-w-sm">
             <Logo variant="white" />
             <p className="mt-6 text-[15px] leading-relaxed text-on-ink-muted">
-              Business automation, AI agents and websites for small-to-medium teams and businesses. Built on the tools you already use.
+              Business automation and AI agents for small businesses. We automate the manual work between the tools you already use.
             </p>
             <a href={`mailto:${site.email}`} className="mt-6 inline-block text-[15px] font-bold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white">
               {site.email}
@@ -31,7 +32,7 @@ export function Footer() {
           </div>
           <FooterCol title="Automation" links={automation.map((s) => ({ label: s.name, href: `/services/${s.slug}` }))} />
           <FooterCol title="AI and web" links={other.map((s) => ({ label: s.name, href: `/services/${s.slug}` }))} />
-          <FooterCol title="Company" links={company} />
+          <FooterCol title="Company" links={companyLinks} />
         </div>
         <div className="flex flex-col gap-4 py-8 text-[13px] text-on-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} SalnetHub. All rights reserved.</p>

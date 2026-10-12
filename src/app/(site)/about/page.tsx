@@ -4,7 +4,7 @@ import { CtaBand, PageHero, PrimaryCta } from "@/components/ui";
 import { principles } from "@/content/process";
 
 export const metadata = {
-  title: "About",
+  title: "About SalnetHub",
   description: "SalnetHub is an automation and AI company for small-to-medium teams and businesses. We connect your systems so your team gets its time back.",
   alternates: { canonical: "/about" },
 };

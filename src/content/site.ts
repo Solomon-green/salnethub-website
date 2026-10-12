@@ -1,11 +1,13 @@
 export const site = {
   name: "SalnetHub",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://salnethub.xyz",
+  // Swap to the custom domain once it points at Vercel (or set NEXT_PUBLIC_SITE_URL there).
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://salnethub-website-ciui.vercel.app",
   email: "hello@salnethub.xyz",
-  tagline: "Connect your systems. Get your time back.",
+  tagline: "Your business runs on manual work between tools. We automate it.",
   description:
-    "SalnetHub builds business automations, AI chatbots, AI agents and RAG systems for small-to-medium teams and businesses, using the tools you already run.",
+    "Business automation and AI agents for small businesses. We automate lead follow-up, CRM updates, reporting and admin across the tools you already use.",
   // Paste a Google Calendar appointment schedule link here (or set NEXT_PUBLIC_BOOKING_URL).
+  proof: "53 client projects since 2023",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "",
 };
 

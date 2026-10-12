@@ -4,7 +4,7 @@ import { services } from "@/content/services";
 import { site } from "@/content/site";
 
 export const metadata = {
-  title: "Book a call",
+  title: "Book a Free Automation Call",
   description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would automate first.",
   alternates: { canonical: "/contact" },
 };

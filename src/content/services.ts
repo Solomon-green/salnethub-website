@@ -7,6 +7,8 @@ export type Service = {
   group: ServiceGroup;
   icon: string; // lucide icon name, resolved in components/icons.tsx
   short: string;
+  // Search-facing title and description (kept under ~60 and ~155 characters).
+  seo: { title: string; description: string };
   hero: { title: string; sub: string };
   problem: { title: string; points: { title: string; body: string }[] };
   capabilities: { title: string; body: string }[];
@@ -44,6 +46,7 @@ export const groups: Record<ServiceGroup, { name: string; blurb: string }> = {
 export const services: Service[] = [
   {
     slug: "marketing-crm-automation",
+    seo: { title: "CRM Automation Services for HubSpot, Zoho & Sheets", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. From $1,500." },
     name: "Marketing & CRM automation",
     group: "automation",
     icon: "users",
@@ -119,6 +122,7 @@ export const services: Service[] = [
   },
   {
     slug: "lead-acquisition-qualification",
+    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes." },
     name: "Lead acquisition & qualification",
     group: "automation",
     icon: "filter",
@@ -185,6 +189,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-reporting-analytics",
+    seo: { title: "Automated Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. From $1,500." },
     name: "Data reporting & analytics",
     group: "automation",
     icon: "bar-chart-3",
@@ -251,6 +256,7 @@ export const services: Service[] = [
   },
   {
     slug: "business-process-automation",
+    seo: { title: "Business Process Automation for Onboarding & Approvals", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step." },
     name: "Business process automation",
     group: "automation",
     icon: "workflow",
@@ -317,13 +323,14 @@ export const services: Service[] = [
   },
   {
     slug: "task-workflow-automation",
+    seo: { title: "Workflow Automation with Make, Zapier & n8n", description: "Automate data entry, reminders, file moves and status updates with Make, Zapier, n8n or Apps Script, and win back hours every week. From $1,500." },
     name: "Task & workflow automation",
     group: "automation",
     icon: "zap",
     short: "Remove the small repetitive tasks that eat your team's day, from data entry to reminders.",
     hero: {
-      title: "The small tasks, handled",
-      sub: "Data entry, reminders, file moves and status updates add up to hours each week. We automate them so your team can do the work they were hired for.",
+      title: "Win back hours every week",
+      sub: "Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.",
     },
     problem: {
       title: "Small tasks, big cost",
@@ -383,6 +390,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-chatbots",
+    seo: { title: "AI Chatbot for Your Website, Trained on Your Content", description: "An AI website chatbot that answers from your own content, qualifies leads and books calls, then hands over to a person when needed." },
     name: "AI chatbots for websites",
     group: "ai",
     icon: "message-square",
@@ -455,6 +463,7 @@ export const services: Service[] = [
   },
   {
     slug: "custom-ai-agents",
+    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. From $5,000." },
     name: "Custom AI agents",
     group: "ai",
     icon: "bot",
@@ -527,6 +536,7 @@ export const services: Service[] = [
   },
   {
     slug: "rag-systems",
+    seo: { title: "RAG Knowledge Assistant: AI That Answers From Your Docs", description: "A private AI assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. From $6,000." },
     name: "RAG knowledge assistants",
     group: "ai",
     icon: "book-open",
@@ -599,6 +609,7 @@ export const services: Service[] = [
   },
   {
     slug: "web-solutions",
+    seo: { title: "Business Websites Connected to Your CRM", description: "Fast websites and landing pages where every form, booking and chat goes straight into your CRM and automations. From $2,500." },
     name: "Web solutions",
     group: "web",
     icon: "globe",

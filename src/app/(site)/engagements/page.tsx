@@ -3,8 +3,8 @@ import { CtaBand, Faq, PageHero, PrimaryCta } from "@/components/ui";
 import { builds, carePlans, entryPoints, pricingFaqs } from "@/content/engagements";
 
 export const metadata = {
-  title: "Pricing",
-  description: "Published starting prices for automation, AI chatbots, AI agents, RAG assistants and websites, plus monthly care plans. Every project gets a fixed written quote.",
+  title: "Automation & AI Pricing",
+  description: "Published starting prices for automation, AI chatbots, AI agents and websites, plus monthly care plans. Every project gets a fixed written quote.",
   alternates: { canonical: "/engagements" },
 };
 

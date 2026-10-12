@@ -20,7 +20,8 @@ const groupOrder: ServiceGroup[] = ["automation", "ai", "web"];
 // Pages whose hero is light; every other page opens on the dark hero.
 const lightHeroRoutes = ["/privacy", "/terms"];
 
-export function Header({ menu }: { menu: MenuItem[] }) {
+export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: boolean }) {
+  const links = hasWork ? nav : nav.filter((item) => item.href !== "/work");
   const servicesByGroup = (g: ServiceGroup) => menu.filter((m) => m.group === g);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -92,7 +93,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
           <Logo variant={overDark ? "white" : "color"} />
 
           <nav aria-label="Main" className="ml-10 hidden flex-1 items-center gap-1.5 xl:ml-16 xl:flex">
-            {nav.map((item) =>
+            {links.map((item) =>
               item.label === "Services" ? (
                 <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega} className="relative">
                   <button
@@ -197,7 +198,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
         aria-hidden={!mobileOpen}
       >
         <nav aria-label="Mobile" className="container-x flex flex-col pb-[max(2rem,env(safe-area-inset-bottom))] pt-4">
-          {nav.map((item) =>
+          {links.map((item) =>
             item.label === "Services" ? (
               <details key={item.href} className="group border-b border-line">
                 <summary className="flex h-14 cursor-pointer list-none items-center justify-between text-lg font-bold">

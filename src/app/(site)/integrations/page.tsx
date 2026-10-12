@@ -3,7 +3,7 @@ import { CtaBand, PageHero, PrimaryCta } from "@/components/ui";
 import { integrationCategories, integrations } from "@/content/integrations";
 
 export const metadata = {
-  title: "Integrations",
+  title: "Integrations: Make, Zapier, n8n, HubSpot & More",
   description: "The tools we connect: Google Workspace, HubSpot, Zoho, Make, Zapier, n8n, OpenAI, Anthropic, QuickBooks, Shopify and more.",
   alternates: { canonical: "/integrations" },
 };

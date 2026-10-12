@@ -11,6 +11,7 @@ import { servicesByGroup } from "@/content/services";
 import { processSteps, principles } from "@/content/process";
 import { entryPoints, builds } from "@/content/engagements";
 import { getCaseStudies } from "@/lib/case-studies";
+import { site } from "@/content/site";
 
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -40,15 +41,14 @@ export default async function Home() {
       <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
         <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
         <div className="container-x relative pb-16 lg:pb-20">
-          <h1 className="t-hero max-w-[15ch] lg:max-w-none">
-            Connect your systems.
-            <br />
-            <span className="text-mint">Get your time back.</span>
+          <h1 className="t-hero max-w-[20ch] [text-wrap:balance]">
+            Your business runs on manual work between tools.{" "}
+            <span className="text-mint">We automate it.</span>
           </h1>
           <div className="mt-10 grid items-center gap-10 lg:mt-4 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
             <div className="max-w-xl lg:pb-10">
               <p className="text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-on-ink-muted">
-                We automate CRM follow-ups, lead routing, reporting and AI assistants for small-to-medium teams, using the tools you already run.
+                SalnetHub builds automations and AI agents that capture leads, update your CRM, send reports and answer routine requests, so your team grows without hiring for busywork.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <PrimaryCta tone="mint" />
@@ -56,6 +56,14 @@ export default async function Home() {
                   Explore services
                 </Link>
               </div>
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-on-ink-muted" aria-label="Why teams choose SalnetHub">
+                {[site.proof, "Fixed-price quotes", "First workflow live in 1 to 2 weeks"].map((p) => (
+                  <li key={p} className="flex items-center gap-2.5">
+                    <span aria-hidden className="h-1.5 w-1.5 shrink-0 bg-mint" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="relative -mx-4 lg:-mr-8 lg:mx-0">
               <HeroSystem className="mx-auto w-full max-w-[780px]" />
@@ -107,7 +115,7 @@ export default async function Home() {
         <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
         <div className="container-x relative">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHead dark title="Automation services" body="Five ways we take repetitive work off your team. Each one is fixed-price and documented." />
+            <SectionHead dark title="Automation that does the work between your tools" body="Five services that take repetitive work off your team for good. Each one is fixed-price and documented." />
             <Link href="/services" className="link-arrow shrink-0 !text-white" data-reveal>
               Compare all services <ArrowRight size={16} />
             </Link>
@@ -213,7 +221,7 @@ export default async function Home() {
       <section className="bg-white py-24 lg:py-28">
         <div className="container-x">
           <h2 className="t-h1 max-w-2xl" data-reveal>
-            How we work with your team
+            Straight talk, real numbers, no drama
           </h2>
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {principles.map((p, i) => (

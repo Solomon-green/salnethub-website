@@ -4,7 +4,7 @@ import { CtaBand, Faq, PageHero, PrimaryCta } from "@/components/ui";
 import { processSteps } from "@/content/process";
 
 export const metadata = {
-  title: "How we work",
+  title: "How Our Automation Projects Work",
   description: "Our five-step process: discover, build, test, hand over and support. Fixed scope, weekly updates and documentation your team can use.",
   alternates: { canonical: "/how-we-work" },
 };

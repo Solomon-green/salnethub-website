@@ -18,7 +18,7 @@ const heros = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SalnetHub | Business automation, AI agents and RAG systems",
+    default: "Business Automation & AI Agents for Small Businesses | SalnetHub",
     template: "%s | SalnetHub",
   },
   description: site.description,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: "SalnetHub | Connect your systems. Get your time back.",
+    title: "SalnetHub | Automate the work between your tools",
     description: site.description,
     url: site.url,
   },

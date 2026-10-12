@@ -5,8 +5,8 @@ import { CtaBand, PageHero, PrimaryCta, ServiceCard } from "@/components/ui";
 import { groups, getService, servicesByGroup, type ServiceGroup } from "@/content/services";
 
 export const metadata = {
-  title: "Services",
-  description: "Nine services across automation, AI and web: CRM automation, lead routing, reporting, process automation, AI chatbots, AI agents, RAG assistants and websites.",
+  title: "Business Automation & AI Services",
+  description: "Nine automation and AI services: CRM automation, lead routing, reporting, process automation, AI chatbots, AI agents, RAG assistants and websites.",
   alternates: { canonical: "/services" },
 };
 

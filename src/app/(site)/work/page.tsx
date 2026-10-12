@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, FolderOpen } from "lucide-react";
@@ -5,11 +6,16 @@ import { CtaBand, PageHero, PrimaryCta } from "@/components/ui";
 import { getCaseStudies } from "@/lib/case-studies";
 import { services } from "@/content/services";
 
-export const metadata = {
-  title: "Work",
-  description: "Case studies of automations, AI agents and websites SalnetHub has built for small-to-medium businesses.",
-  alternates: { canonical: "/work" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const empty = (await getCaseStudies()).length === 0;
+  return {
+    title: "Case studies",
+    description: "Case studies of automations, AI agents and websites SalnetHub has built for small businesses, with the tools used and the results.",
+    alternates: { canonical: "/work" },
+    // Keep the empty placeholder out of search results until real case studies are published.
+    ...(empty && { robots: { index: false, follow: true } }),
+  };
+}
 
 export default async function WorkPage() {
   const items = await getCaseStudies();
