@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+/* TeX Gyre Heros: free Helvetica-metric clone (GUST Font License), so Windows
+   visitors see the brand typeface instead of Arial. */
+@font-face {
+  font-family: "Heros";
+  src: url("./fonts/heros-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heros";
+  src: url("./fonts/heros-bold.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heros";
+  src: url("./fonts/heros-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Brand tokens, straight from the SalnetHub brand kit v1.0 */
+@theme {
+  --color-ink: #17191c;
+  --color-ink-2: #23262a;
+  --color-sage: #6c8c7a;
+  --color-deep-sage: #4f6b5c;
+  --color-copper: #c8754a;
+  --color-deep-copper: #a35a33;
+  --color-paper: #f2f2f3;
+  --color-mist: #e3ebe6;
+  --color-line: #d4d8d6;
+  --color-slate: #5a5d60;
+  --color-white: #ffffff;
+  --color-on-ink-muted: #a7aaad;
+  --color-on-sage-muted: #dfe8e2;
+
+  --font-sans: "Heros", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --radius-none: 0;
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-mist);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+  img,
+  svg {
+    display: block;
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 32px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container-x {
+      padding-inline: 40px;
+    }
+  }
+
+  /* Type scale (brand kit): Display 72 / H1 44 / H2 28 / H3 20 */
+  .t-display {
+    font-size: clamp(2.6rem, 6.2vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+  .t-h1 {
+    font-size: clamp(2.1rem, 4.4vw, 3.25rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  .t-h2 {
+    font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .t-h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  .t-lead {
+    font-size: clamp(1.075rem, 1.4vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-slate);
+  }
+  .t-label {
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* Buttons: square corners, solid Ink primary, Deep Sage hover (brand kit) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 22px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition:
+      background-color 200ms var(--ease-out-quint),
+      color 200ms var(--ease-out-quint),
+      border-color 200ms var(--ease-out-quint),
+      transform 160ms var(--ease-out-quint);
+    user-select: none;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    background: var(--color-ink);
+    color: var(--color-white);
+  }
+  .btn-primary:hover {
+    background: var(--color-deep-sage);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+  .btn-secondary:hover {
+    background: var(--color-ink);
+    color: var(--color-white);
+  }
+  .btn-light {
+    background: var(--color-white);
+    color: var(--color-ink);
+  }
+  .btn-light:hover {
+    background: var(--color-mist);
+  }
+  .btn-ghost-light {
+    background: transparent;
+    color: var(--color-white);
+    border-color: rgb(255 255 255 / 0.4);
+  }
+  .btn-ghost-light:hover {
+    border-color: var(--color-white);
+    background: rgb(255 255 255 / 0.06);
+  }
+  .btn .btn-arrow {
+    transition: transform 240ms var(--ease-out-quint);
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: var(--color-deep-sage);
+  }
+  .link-arrow svg {
+    transition: transform 240ms var(--ease-out-quint);
+  }
+  .link-arrow:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* 30° system grid, the brand's background device */
+  .iso-grid {
+    background-image:
+      repeating-linear-gradient(30deg, rgb(23 25 28 / 0.07) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(150deg, rgb(23 25 28 / 0.07) 0 1px, transparent 1px 34px);
+  }
+  .iso-grid-dark {
+    background-image:
+      repeating-linear-gradient(30deg, rgb(255 255 255 / 0.07) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(150deg, rgb(255 255 255 / 0.07) 0 1px, transparent 1px 34px);
+  }
+  .iso-fade {
+    mask-image: radial-gradient(ellipse 70% 70% at 70% 40%, #000 30%, transparent 75%);
+  }
+
+  .hairline {
+    border-color: var(--color-line);
+  }
+
+  .field-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    color: var(--color-ink);
+    font-size: 16px;
+    transition: border-color 160ms ease;
+  }
+  .field-input::placeholder {
+    color: #6f7276;
+  }
+  .field-input:hover {
+    border-color: #a9aeac;
+  }
+  .field-input:focus {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+    border-color: var(--color-ink);
+  }
+  .field-input[aria-invalid="true"] {
+    border-color: var(--color-deep-copper);
+  }
+
+  /* Long-form prose for case studies and legal pages */
+  .prose-sh {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #2b2e31;
+    max-width: 68ch;
+  }
+  .prose-sh h2 {
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 2.4em 0 0.7em;
+    color: var(--color-ink);
+  }
+  .prose-sh h3 {
+    font-size: 1.2rem;
+    margin: 2em 0 0.5em;
+    color: var(--color-ink);
+  }
+  .prose-sh p,
+  .prose-sh ul,
+  .prose-sh ol {
+    margin: 0 0 1.1em;
+  }
+  .prose-sh ul {
+    list-style: square;
+    padding-left: 1.2em;
+  }
+  .prose-sh ol {
+    list-style: decimal;
+    padding-left: 1.3em;
+  }
+  .prose-sh li {
+    margin: 0.35em 0;
+  }
+  .prose-sh li::marker {
+    color: var(--color-sage);
+  }
+  .prose-sh a {
+    color: var(--color-deep-sage);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-sh strong {
+    color: var(--color-ink);
+  }
+}
+
+/* Elements revealed by GSAP start hidden only when JS has run and motion is allowed */
+html.js-motion [data-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-motion [data-reveal] {
+    opacity: 1 !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

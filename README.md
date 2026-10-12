@@ -1,22 +1,51 @@
-# SalnetHub
+# SalnetHub website
 
-Marketing website for SalnetHub — a business process automation agency (sales process automation, marketing automation, CRM integrations, data reporting & analytics, Google Workspace automation).
+Marketing site for SalnetHub: business automation, AI chatbots, AI agents, RAG systems and web solutions for small-to-medium teams and businesses.
 
-## Structure
+Built with Next.js 16 (App Router, static generation), Tailwind CSS 4, GSAP + ScrollTrigger, Lenis and Keystatic. Everything used is free.
 
-Single static page: `index.html` (no build step, no dependencies).
+## Run it locally
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build
+```
+
+## Where things live
+
+| What | File |
+|---|---|
+| Service pages (all 9, full copy) | `src/content/services.ts` |
+| Prices (every page reads from here) | `src/content/engagements.ts` |
+| Integrations / tool logos | `src/content/integrations.ts` |
+| Process steps and principles | `src/content/process.ts` |
+| Site name, email, booking link | `src/content/site.ts` |
+| Brand tokens (colours, type scale, buttons) | `src/app/globals.css` |
+| Case studies (managed in Keystatic) | `content/case-studies/` + images in `public/case-studies/` |
+
+## Adding case studies
+
+1. Run `npm run dev` and open http://localhost:3000/keystatic.
+2. Click **Case studies → Create**, fill in the form, upload a cover image, untick **Draft**, and save.
+3. Commit and push. Vercel redeploys and the case study appears on `/work` (and on the home page if **Feature on the home page** is ticked).
+
+To edit from the live site instead of your computer, connect Keystatic's GitHub mode: set `NEXT_PUBLIC_KEYSTATIC_STORAGE=github` in Vercel and follow https://keystatic.com/docs/github-mode to create the GitHub App (it adds the `KEYSTATIC_*` env vars).
+
+## Environment variables (Vercel → Settings → Environment Variables)
+
+See `.env.example`. All are optional; the site works without them.
+
+- `NEXT_PUBLIC_SITE_URL`: the live domain, used for SEO tags and the sitemap.
+- `WEB3FORMS_ACCESS_KEY`: free key from https://web3forms.com so the contact form emails you. Without it, the form falls back to opening the visitor's email app.
+- `NEXT_PUBLIC_BOOKING_URL`: a Google Calendar appointment schedule link, shown on the Book a call page.
 
 ## Deploying on Vercel
 
-1. Go to [vercel.com/new](https://vercel.com/new) and import this GitHub repository.
-2. Framework preset: **Other** (static site) — Vercel will serve `index.html` at the root automatically. No build command or output directory needed.
-3. Click **Deploy**.
-4. Once deployed, go to the project's **Settings → Domains** and add the custom domain (e.g. `salnethub.xyz`), then update the domain's DNS records as Vercel instructs.
+Import this repo at https://vercel.com/new. Framework preset: Next.js. No other settings are needed.
 
-## Still to do
+## Fonts and licences
 
-- Swap in real brand colors/fonts once the logo is provided (currently navy `#0B1F3A` + emerald `#0E8F65`).
-- Replace the portfolio placeholders with real case studies.
-- Add testimonials.
-- Connect a Google Calendar appointment schedule in the Contact section (see the HTML comment above the booking box in `index.html` for the exact steps).
-- Confirm the domain spelling (`salnethub.xyz`) and whether the contact email should move to a `@salnethub.xyz` address.
+- Brand typeface is Helvetica. Windows visitors get **TeX Gyre Heros**, a free Helvetica clone (GUST Font License), self-hosted in `src/app/fonts/`.
+- Tool logos come from Simple Icons (CC0) and are trademarks of their owners.
+- GSAP and all its plugins are free for commercial use.
