@@ -71,7 +71,7 @@ export function ChatDemo({ className = "" }: { className?: string }) {
           <p className="text-[14px] font-bold">SalnetHub assistant</p>
           <p className="text-[12px] text-slate">AI assistant. A person can take over anytime.</p>
         </div>
-        <button type="button" onClick={reset} className="ml-auto flex h-9 w-9 items-center justify-center text-slate hover:text-ink" aria-label="Restart demo">
+        <button type="button" onClick={reset} className="ml-auto flex h-11 w-11 items-center justify-center text-slate hover:text-ink" aria-label="Restart demo">
           <RotateCcw size={16} />
         </button>
       </div>
@@ -141,7 +141,7 @@ export function ChatDemo({ className = "" }: { className?: string }) {
             Start the demo again
           </button>
         )}
-        <p className="mt-3 text-[11px] text-slate">Demo with scripted answers. A live chatbot answers any question from your content.</p>
+        <p className="mt-3 text-[12px] text-slate">Demo with scripted answers. A live chatbot answers any question from your content.</p>
       </div>
       <style>{`
         .chat-in{animation:chatIn .35s cubic-bezier(.22,1,.36,1) both}

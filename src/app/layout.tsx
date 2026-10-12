@@ -1,6 +1,19 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { site } from "@/content/site";
 import "./globals.css";
+
+// TeX Gyre Heros: free Helvetica-metric clone (GUST Font License). Preloaded by next/font.
+const heros = localFont({
+  src: [
+    { path: "./fonts/heros-regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/heros-bold.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/heros-italic.woff2", weight: "400", style: "italic" },
+  ],
+  variable: "--font-heros",
+  display: "swap",
+  fallback: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -34,7 +47,7 @@ const motionFlag = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').match
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={heros.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionFlag }} />
       </head>

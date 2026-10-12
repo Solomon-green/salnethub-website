@@ -15,12 +15,14 @@ export function PrimaryCta({ className = "", light = false }: { className?: stri
 
 export function PageHero({
   label,
+  crumbs,
   title,
   sub,
   children,
   aside,
 }: {
   label?: string;
+  crumbs?: { label: string; href?: string }[];
   title: string;
   sub: string;
   children?: React.ReactNode;
@@ -31,6 +33,24 @@ export function PageHero({
       <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
       <div className={`container-x relative grid gap-12 pb-16 lg:pb-24 ${aside ? "lg:grid-cols-[1.05fr_0.95fr] lg:items-center" : ""}`}>
         <div className="max-w-3xl">
+          {crumbs && (
+            <nav aria-label="Breadcrumb" className="mb-6 text-[14px]">
+              <ol className="flex flex-wrap items-center gap-2 text-slate">
+                {crumbs.map((c, i) => (
+                  <li key={c.label} className="flex items-center gap-2">
+                    {i > 0 && <span aria-hidden>/</span>}
+                    {c.href ? (
+                      <Link href={c.href} className="font-medium text-deep-sage hover:underline">
+                        {c.label}
+                      </Link>
+                    ) : (
+                      <span aria-current="page">{c.label}</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
           {label && <p className="t-label mb-5 text-deep-sage">{label}</p>}
           <h1 className="t-display">{title}</h1>
           <p className="t-lead mt-6 max-w-[40rem]">{sub}</p>
@@ -50,7 +70,7 @@ export function CtaBand({
   body?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-sage text-white">
+    <section className="relative overflow-hidden bg-deep-sage text-white">
       <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
       <div className="container-x relative grid gap-10 py-20 md:py-24 lg:grid-cols-[1.4fr_1fr] lg:items-end">
         <div data-reveal>

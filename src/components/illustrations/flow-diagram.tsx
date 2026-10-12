@@ -129,7 +129,7 @@ export function FlowDiagram({
             <div className={`fd-box relative z-[1] flex h-14 w-14 shrink-0 items-center justify-center border ${boxBase}`}>
               <span className="fd-check flex items-center justify-center" style={{ opacity: 0 }}>
                 {i === approvalIndex ? (
-                  <Hand size={20} strokeWidth={1.5} className="text-deep-copper" />
+                  <Hand size={20} strokeWidth={1.5} className={dark ? "text-copper" : "text-deep-copper"} />
                 ) : (
                   <Check size={20} strokeWidth={1.75} className={dark ? "text-mist" : "text-deep-sage"} />
                 )}
@@ -137,7 +137,7 @@ export function FlowDiagram({
             </div>
             <div className="pt-1.5 md:pt-0">
               <p className={`text-[15px] font-bold leading-snug ${dark ? "text-white" : "text-ink"}`}>{n.label}</p>
-              <p className={`mt-0.5 text-[13px] leading-snug ${i === approvalIndex ? "text-deep-copper" : dark ? "text-on-ink-muted" : "text-slate"}`}>
+              <p className={`mt-0.5 text-[13px] leading-snug ${i === approvalIndex ? (dark ? "text-copper" : "text-deep-copper") : dark ? "text-on-ink-muted" : "text-slate"}`}>
                 {n.meta}
               </p>
             </div>

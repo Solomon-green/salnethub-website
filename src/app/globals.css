@@ -1,29 +1,5 @@
 @import "tailwindcss";
 
-/* TeX Gyre Heros: free Helvetica-metric clone (GUST Font License), so Windows
-   visitors see the brand typeface instead of Arial. */
-@font-face {
-  font-family: "Heros";
-  src: url("./fonts/heros-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Heros";
-  src: url("./fonts/heros-bold.woff2") format("woff2");
-  font-weight: 500 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Heros";
-  src: url("./fonts/heros-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
 /* Brand tokens, straight from the SalnetHub brand kit v1.0 */
 @theme {
   --color-ink: #17191c;
@@ -41,7 +17,7 @@
   --color-on-ink-muted: #a7aaad;
   --color-on-sage-muted: #dfe8e2;
 
-  --font-sans: "Heros", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-heros), "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --radius-none: 0;
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);

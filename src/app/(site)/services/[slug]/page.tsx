@@ -55,7 +55,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
   return (
     <>
       <PageHero
-        label={groups[s.group].name}
+        crumbs={[{ label: "Services", href: "/services" }, { label: groups[s.group].name }]}
         title={s.hero.title}
         sub={s.hero.sub}
         aside={

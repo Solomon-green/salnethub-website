@@ -36,10 +36,10 @@ export function Footer() {
         <div className="flex flex-col gap-4 py-8 text-[13px] text-on-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} SalnetHub. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-white">
+            <Link href="/privacy" className="inline-block py-2 hover:text-white">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/terms" className="inline-block py-2 hover:text-white">
               Terms
             </Link>
           </div>
@@ -53,10 +53,10 @@ function FooterCol({ title, links }: { title: string; links: { label: string; hr
   return (
     <div>
       <p className="t-label mb-5 text-on-ink-muted">{title}</p>
-      <ul className="grid gap-3">
+      <ul className="grid gap-0.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="text-[15px] text-white/90 transition-colors hover:text-mist">
+            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-mist">
               {l.label}
             </Link>
           </li>

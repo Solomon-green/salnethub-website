@@ -41,7 +41,6 @@ export default async function Home() {
         <div aria-hidden className="iso-grid-sage iso-fade pointer-events-none absolute inset-0" />
         <div className="container-x relative grid min-h-[calc(100dvh-7rem)] items-center gap-10 pb-12 lg:grid-cols-[1fr_1.05fr] lg:gap-6">
           <div className="max-w-2xl">
-            <p className="t-label mb-6 text-deep-sage">Business process automation</p>
             <h1 className="t-display">
               Connect your systems.
               <br />
@@ -136,7 +135,6 @@ export default async function Home() {
       <section className="bg-white py-24 lg:py-32">
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-20">
           <div>
-            <p className="t-label mb-5 text-deep-sage">AI solutions</p>
             <h2 className="t-h1" data-reveal>
               AI that works from your data, with a person in control
             </h2>

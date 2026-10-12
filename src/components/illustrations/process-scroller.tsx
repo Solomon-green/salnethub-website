@@ -49,7 +49,7 @@ export function ProcessScroller({ steps, heading, intro }: { steps: Step[]; head
                   i === active ? "border-copper bg-copper" : i < active ? "border-ink bg-ink" : "border-line bg-white"
                 }`}
               />
-              <span className={`text-[17px] font-bold transition-colors duration-300 ${i === active ? "text-ink" : "text-slate/70"}`}>{s.step}</span>
+              <span className={`text-[17px] font-bold transition-colors duration-300 ${i === active ? "text-ink" : "text-slate"}`}>{s.step}</span>
             </li>
           ))}
         </ol>
