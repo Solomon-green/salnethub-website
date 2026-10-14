@@ -8,7 +8,7 @@ type Load = { state: "loading" } | { state: "ready"; slots: string[]; duration: 
 type Errors = Partial<Record<"name" | "email", string>>;
 
 // How long the "You're booked" confirmation stays before the calendar comes back.
-const RESET_SECONDS = 15;
+const RESET_SECONDS = 5;
 
 const WEEKDAYS =["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
