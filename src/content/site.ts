@@ -6,12 +6,10 @@ export const site = {
   tagline: "Your business runs on manual work between tools. We automate it.",
   description:
     "Business automation and AI agents for small businesses. We automate lead follow-up, CRM updates, reporting and admin across the tools you already use.",
-  // Paste a Google Calendar appointment schedule link here (or set NEXT_PUBLIC_BOOKING_URL).
   proof: "53 client projects since 2023",
-  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "",
 };
 
-export const primaryCta = { label: "Book a call", href: "/contact" };
+export const primaryCta = { label: "Book a call", href: "/contact#book" };
 
 export const nav = [
   { label: "Home", href: "/" },

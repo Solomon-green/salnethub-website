@@ -32,13 +32,28 @@ npm run build      # production build
 
 To edit from the live site instead of your computer, connect Keystatic's GitHub mode: set `NEXT_PUBLIC_KEYSTATIC_STORAGE=github` in Vercel and follow https://keystatic.com/docs/github-mode to create the GitHub App (it adds the `KEYSTATIC_*` env vars).
 
+## Booking calendar
+
+The Book a call page (`/contact#book`) shows a branded calendar of free times. It reads your Google Calendar's busy times, books the slot as an event with a Google Meet link, and emails both of you from your Gmail.
+
+- Hours, call length, buffer, notice and timezone: `src/content/booking.ts`. Anything on your Google Calendar blocks that time automatically.
+- Server code: `src/lib/booking/` and `src/app/api/booking/`.
+
+One-time setup (about 10 minutes):
+
+1. Go to https://console.cloud.google.com, create a project, and enable the **Google Calendar API** and **Gmail API** (APIs & Services → Library).
+2. **OAuth consent screen**: External, add your app name and email, then click **Publish app** so it is *In production*. In *Testing* mode Google expires the token every 7 days and booking stops working. Google shows an "unverified app" warning when you sign in; that is fine for your own account (click Advanced → Continue).
+3. **Credentials → Create credentials → OAuth client ID → Desktop app**. Copy the client ID and secret.
+4. Run `node scripts/google-auth.mjs <client id> <client secret>`, open the link, sign in with the calendar's Google account and allow access. It prints the refresh token.
+5. In Vercel → Settings → Environment Variables add `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` and `BOOKING_OWNER_EMAIL` (that Google account's address), then redeploy.
+
 ## Environment variables (Vercel → Settings → Environment Variables)
 
 See `.env.example`. All are optional; the site works without them.
 
 - `NEXT_PUBLIC_SITE_URL`: the live domain, used for SEO tags and the sitemap.
 - `WEB3FORMS_ACCESS_KEY`: free key from https://web3forms.com so the contact form emails you. Without it, the form falls back to opening the visitor's email app.
-- `NEXT_PUBLIC_BOOKING_URL`: a Google Calendar appointment schedule link, shown on the Book a call page.
+- `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`, `BOOKING_OWNER_EMAIL`: power the Book a call calendar (below). Without them the calendar shows an "offline" note and points people to the contact form.
 
 ## Deploying on Vercel
 

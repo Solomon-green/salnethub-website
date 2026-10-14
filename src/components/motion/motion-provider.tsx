@@ -29,8 +29,16 @@ export function MotionProvider() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    (window as unknown as { __lenis?: Lenis }).__lenis?.scrollTo(0, { immediate: true });
+    // New pages open at the top, unless the link points at a section (e.g. /contact#book).
+    const lenis = (window as unknown as { __lenis?: Lenis }).__lenis;
+    const target = window.location.hash ? document.getElementById(decodeURIComponent(window.location.hash.slice(1))) : null;
+    if (target) {
+      target.scrollIntoView();
+      lenis?.scrollTo(target, { immediate: true, offset: -96 });
+    } else {
+      window.scrollTo(0, 0);
+      lenis?.scrollTo(0, { immediate: true });
+    }
     if (prefersReducedMotion()) return;
 
     const ctx = gsap.context(() => {
