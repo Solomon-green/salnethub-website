@@ -7,7 +7,10 @@ import { ArrowLeft, ArrowRight, CalendarDays, ChevronLeft, ChevronRight, CircleC
 type Load = { state: "loading" } | { state: "ready"; slots: string[]; duration: number } | { state: "offline" };
 type Errors = Partial<Record<"name" | "email", string>>;
 
-const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+// How long the "You're booked" confirmation stays before the calendar comes back.
+const RESET_SECONDS = 15;
+
+const WEEKDAYS =["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 // The visitor's timezone on the client; UTC during server render (the widget renders a loading state there).
 const noop = () => () => {};
@@ -60,6 +63,33 @@ export function BookingWidget({ email }: { email: string }) {
       live = false;
     };
   }, []);
+
+  const [left, setLeft] = useState(RESET_SECONDS);
+
+  // Back to a fresh calendar (the slot just booked drops out of the refetched times).
+  const reset = useCallback(() => {
+    setStep("pick");
+    setSlot(null);
+    setBooked(null);
+    setLoad({ state: "loading" });
+    fetchSlots();
+  }, [fetchSlots]);
+
+  // The confirmation counts down, then returns to the calendar on its own.
+  useEffect(() => {
+    if (step !== "done") return;
+    const started = Date.now();
+    const timer = window.setInterval(() => {
+      const remaining = RESET_SECONDS - Math.floor((Date.now() - started) / 1000);
+      if (remaining <= 0) {
+        window.clearInterval(timer);
+        reset();
+      } else {
+        setLeft(remaining);
+      }
+    }, 250);
+    return () => window.clearInterval(timer);
+  }, [step, reset]);
 
   // Slots grouped by the visitor's own calendar date.
   const byDay = useMemo(() => {
@@ -114,11 +144,19 @@ export function BookingWidget({ email }: { email: string }) {
         <p className="mt-3 text-[16px] leading-relaxed text-slate">
           The details and a calendar invite are on their way to <span className="font-bold text-ink">{booked.email}</span>.
         </p>
-        {booked.meetLink && (
-          <a href={booked.meetLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-7">
-            <Video size={18} /> Google Meet link
-          </a>
-        )}
+        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
+          {booked.meetLink && (
+            <a href={booked.meetLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <Video size={18} /> Google Meet link
+            </a>
+          )}
+          <button type="button" onClick={reset} className="text-[14px] font-bold text-mint-ink">
+            Book another time
+          </button>
+        </div>
+        <p className="mt-6 text-[13px] text-slate" aria-live="off">
+          Returning to the calendar in {left}s
+        </p>
       </div>
     );
   }
@@ -151,6 +189,7 @@ export function BookingWidget({ email }: { email: string }) {
         }
         if (!res.ok || !json.ok) throw new Error(json.error);
         setBooked({ start: slot!, meetLink: json.meetLink ?? null, email: data.email });
+        setLeft(RESET_SECONDS);
         setStep("done");
         toast.success("Booked. Check your inbox for the details.");
       } catch {

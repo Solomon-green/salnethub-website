@@ -2,7 +2,8 @@
 // Usage: node scripts/google-auth.mjs <GOOGLE_CLIENT_ID> <GOOGLE_CLIENT_SECRET>
 import http from "node:http";
 
-const [clientId, clientSecret] = process.argv.slice(2);
+// Strip whitespace: long IDs often pick up line breaks when pasted into a terminal.
+const [clientId, clientSecret] = process.argv.slice(2).map((s) => s.replace(/\s+/g, ""));
 if (!clientId || !clientSecret) {
   console.error("Usage: node scripts/google-auth.mjs <GOOGLE_CLIENT_ID> <GOOGLE_CLIENT_SECRET>");
   process.exit(1);
