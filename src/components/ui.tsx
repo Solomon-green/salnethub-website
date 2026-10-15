@@ -138,7 +138,7 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
         <ArrowUpRight
           size={20}
           strokeWidth={1.5}
-          className="shrink-0 text-slate transition-[transform,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-mint-ink"
+          className="shrink-0 text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-mint-ink"
         />
       </div>
       <p className="mt-4 flex-1 pl-10 text-[15px] leading-relaxed text-slate">{s.short}</p>

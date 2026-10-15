@@ -140,7 +140,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           id="mega-menu"
           onMouseEnter={openMega}
           onMouseLeave={closeMega}
-          className={`absolute inset-x-0 top-full hidden border-b border-line bg-white transition-[opacity,transform,visibility] duration-250 xl:block ${
+          className={`absolute inset-x-0 top-full hidden border-b border-line bg-white transition-[opacity,translate,visibility] duration-250 xl:block ${
             megaOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
           }`}
         >
