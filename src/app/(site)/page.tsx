@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HeroSystem } from "@/components/illustrations/hero-system";
 import { FlowDiagram } from "@/components/illustrations/flow-diagram";
-import { ChatDemo } from "@/components/illustrations/chat-demo";
 import { ProcessScroller } from "@/components/illustrations/process-scroller";
 import { ToolMarquee } from "@/components/tool-marquee";
 import { ServiceIcon } from "@/components/icons";
@@ -145,7 +144,7 @@ export default async function Home() {
 
       {/* AI solutions */}
       <section className="bg-white py-24 lg:py-32">
-        <div className="container-x grid gap-14 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-20">
+        <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-20">
           <div>
             <h2 className="t-h1" data-reveal>
               AI that works from your data, with a person in control
@@ -153,7 +152,9 @@ export default async function Home() {
             <p className="t-lead mt-5" data-reveal>
               Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters.
             </p>
-            <ul className="mt-10 border-t border-line">
+          </div>
+          <div>
+            <ul className="border-t border-line">
               {ai.map((s) => (
                 <li key={s.slug} data-reveal>
                   <Link href={`/services/${s.slug}`} className="group flex items-start gap-5 border-b border-line py-6">
@@ -169,9 +170,6 @@ export default async function Home() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div data-reveal>
-            <ChatDemo />
           </div>
         </div>
       </section>
