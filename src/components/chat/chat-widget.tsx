@@ -42,7 +42,8 @@ export function ChatWidget() {
   const wasOpen = useRef(false);
   const teaserDone = useRef(false);
 
-  // Teaser bubble: once per visit, after a short delay, never once the chat has been opened.
+  // Teaser bubble: shows on every page load after a short delay. Opening the chat hides it
+  // until the next load; only its own close button hides it for the rest of the visit.
   useEffect(() => {
     let seen = false;
     try {
@@ -55,17 +56,21 @@ export function ChatWidget() {
     return () => window.clearTimeout(t);
   }, []);
 
-  const dismissTeaser = useCallback(() => {
+  const hideTeaser = useCallback(() => {
     teaserDone.current = true;
     setTeaser(false);
+  }, []);
+
+  const dismissTeaser = () => {
+    hideTeaser();
     try {
       sessionStorage.setItem(TEASER_KEY, "1");
     } catch {}
-  }, []);
+  };
 
   const toggle = (next: boolean) => {
     if (next) {
-      dismissTeaser();
+      hideTeaser();
       // The greeting is stamped with the time the visitor first opens the chat.
       setMessages((m) => (m[0].at ? m : [{ ...m[0], at: now() }, ...m.slice(1)]));
     }

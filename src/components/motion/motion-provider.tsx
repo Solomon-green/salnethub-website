@@ -43,6 +43,7 @@ export function MotionProvider() {
 
     const ctx = gsap.context(() => {
       const els = gsap.utils.toArray<HTMLElement>("[data-reveal]");
+      if (!els.length) return;
       gsap.set(els, { opacity: 0, y: 24 });
       ScrollTrigger.batch(els, {
         start: "top 88%",
