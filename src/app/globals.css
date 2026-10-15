@@ -383,3 +383,44 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+/* Chat assistant */
+.chat-in {
+  animation: chat-in 420ms var(--ease-out-quint) both;
+}
+@keyframes chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.chat-dot {
+  animation: chat-dot 1.1s ease-in-out infinite;
+}
+@keyframes chat-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+.chat-ping {
+  box-shadow: 0 0 0 0 rgb(46 230 166 / 0.55);
+  animation: chat-ping 2.2s var(--ease-out-quint) infinite;
+}
+@keyframes chat-ping {
+  to {
+    box-shadow: 0 0 0 16px rgb(46 230 166 / 0);
+  }
+}
+.chat-scroll {
+  scrollbar-width: none;
+}
+.chat-scroll::-webkit-scrollbar {
+  display: none;
+}

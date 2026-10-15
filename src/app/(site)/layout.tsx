@@ -2,6 +2,7 @@ import { Toaster } from "sonner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MotionProvider } from "@/components/motion/motion-provider";
+import { ChatWidget } from "@/components/chat/chat-widget";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 import { getCaseStudies } from "@/lib/case-studies";
@@ -35,7 +36,14 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
       </main>
       <Footer hasWork={hasWork} />
       <MotionProvider />
-      <Toaster position="bottom-right" toastOptions={{ style: { borderRadius: 0, fontFamily: "var(--font-sans)" } }} />
+      <ChatWidget />
+      {/* Offset clears the chat launcher in the same corner */}
+      <Toaster
+        position="bottom-right"
+        offset={{ bottom: 100, right: 24 }}
+        mobileOffset={{ bottom: 92, right: 16 }}
+        toastOptions={{ style: { borderRadius: 0, fontFamily: "var(--font-sans)" } }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
     </>
   );
