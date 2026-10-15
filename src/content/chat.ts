@@ -2,7 +2,7 @@
 export const chat = {
   name: "SalnetHub Assistant",
   welcome: "Welcome to SalnetHub",
-  teaser: "Do you want to talk to an assistant?",
+  teaser: "Questions? I'm happy to help.",
   // Seconds before the teaser bubble appears on page load.
   teaserDelay: 3,
   greeting:
