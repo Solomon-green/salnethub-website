@@ -1,9 +1,10 @@
 import { Check } from "lucide-react";
 import { CtaBand, Faq, PageHero, PrimaryCta } from "@/components/ui";
 import { builds, carePlans, entryPoints, pricingFaqs } from "@/content/engagements";
+import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
-  title: "Automation & AI Pricing",
+  title: "Automation & AI Pricing: Fixed-Price Projects",
   description: "Published starting prices for automation, AI chatbots, AI agents and websites, plus monthly care plans. Every project gets a fixed written quote.",
   alternates: { canonical: "/engagements" },
 };
@@ -11,22 +12,23 @@ export const metadata = {
 export default function EngagementsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([{ name: "Pricing", path: "/engagements" }])} />
       <PageHero
         title="Clear prices, published up front"
         sub="Start free, build with a fixed quote, then keep everything running with a monthly care plan. Prices are in US dollars."
       >
-        <PrimaryCta tone="mint" />
+        <PrimaryCta tone="copper" />
       </PageHero>
 
       {/* Entry points */}
-      <section className="bg-white py-24 lg:py-28">
+      <section className="border-t border-line py-24 lg:py-28">
         <div className="container-x">
           <h2 className="t-h1 max-w-3xl" data-reveal>
             Where to start
           </h2>
-          <div className="mt-12 grid gap-px border border-line bg-line md:grid-cols-2">
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
             {entryPoints.map((e) => (
-              <div key={e.name} className="flex flex-col bg-white p-8 md:p-10" data-reveal>
+              <div key={e.name} className="border border-line rounded-card flex flex-col bg-white p-8 md:p-10" data-reveal>
                 <p className="text-[17px] font-bold">{e.name}</p>
                 <p className="mt-5 text-[52px] font-bold leading-none tracking-tight">{e.price}</p>
                 <p className="mt-2 text-[14px] text-slate">{e.unit}</p>
@@ -34,7 +36,7 @@ export default function EngagementsPage() {
                 <ul className="mt-6 grid gap-2.5 border-t border-line pt-6">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-3 text-[15px]">
-                      <Check size={18} className="mt-0.5 shrink-0 text-mint-ink" /> {p}
+                      <Check size={18} className="mt-0.5 shrink-0 text-sage" /> {p}
                     </li>
                   ))}
                 </ul>
@@ -45,7 +47,7 @@ export default function EngagementsPage() {
       </section>
 
       {/* Builds */}
-      <section className="iso-grid-sage bg-mist py-24 lg:py-28">
+      <section className="border-t border-line py-24 lg:py-28">
         <div className="container-x">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
@@ -89,10 +91,10 @@ export default function EngagementsPage() {
             {carePlans.map((p) => (
               <div
                 key={p.name}
-                className={`relative flex flex-col border p-8 ${p.featured ? "border-ink bg-ink text-white" : "border-line bg-white"}`}
+                className={`relative flex flex-col rounded-card border p-8 ${p.featured ? "border-ink bg-ink text-white" : "border-line bg-white"}`}
                 data-reveal
               >
-                {p.featured && <span className="t-label absolute right-8 top-8 bg-mint px-2 py-1 text-ink">Most chosen</span>}
+                {p.featured && <span className="absolute right-8 top-8 rounded-full bg-copper-soft px-2.5 py-1 text-[11px] font-bold text-ink">Most chosen</span>}
                 <p className="text-[19px] font-bold">{p.name}</p>
                 <p className="mt-6 text-[48px] font-bold leading-none tracking-tight">
                   {p.price}
@@ -102,7 +104,7 @@ export default function EngagementsPage() {
                 <ul className={`mt-8 grid gap-3 border-t pt-6 ${p.featured ? "border-white/15" : "border-line"}`}>
                   {p.points.map((pt) => (
                     <li key={pt} className="flex gap-3 text-[15px]">
-                      <Check size={18} className={`mt-0.5 shrink-0 ${p.featured ? "text-mint" : "text-mint-ink"}`} /> {pt}
+                      <Check size={18} className={`mt-0.5 shrink-0 text-sage`} /> {pt}
                     </li>
                   ))}
                 </ul>
@@ -113,13 +115,13 @@ export default function EngagementsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <Faq items={pricingFaqs} title="Pricing questions" />
         </div>
       </section>
 
-      <CtaBand title="Get a fixed quote for your first workflow" />
+      <CtaBand title="Get a fixed quote for your" accent="first workflow" />
     </>
   );
 }

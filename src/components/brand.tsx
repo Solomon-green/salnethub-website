@@ -22,7 +22,7 @@ export function ToolMark({ slug, size = 22, className = "" }: { slug: string; si
       <span
         aria-label={name}
         role="img"
-        className={`inline-flex items-center justify-center border border-current font-bold ${className}`}
+        className={`inline-flex items-center justify-center rounded-md border border-current font-bold ${className}`}
         style={{ width: size, height: size, fontSize: Math.max(11, size * 0.46) }}
       >
         {name.slice(0, 2)}

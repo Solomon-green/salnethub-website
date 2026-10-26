@@ -46,7 +46,7 @@ export const groups: Record<ServiceGroup, { name: string; blurb: string }> = {
 export const services: Service[] = [
   {
     slug: "marketing-crm-automation",
-    seo: { title: "CRM Automation Services for HubSpot, Zoho & Sheets", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. From $1,500." },
+    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. From $1,500." },
     name: "Marketing & CRM automation",
     group: "automation",
     icon: "users",
@@ -122,7 +122,7 @@ export const services: Service[] = [
   },
   {
     slug: "lead-acquisition-qualification",
-    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes." },
+    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes. From $1,500." },
     name: "Lead acquisition & qualification",
     group: "automation",
     icon: "filter",
@@ -189,7 +189,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-reporting-analytics",
-    seo: { title: "Automated Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. From $1,500." },
+    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. From $1,500." },
     name: "Data reporting & analytics",
     group: "automation",
     icon: "bar-chart-3",
@@ -256,7 +256,7 @@ export const services: Service[] = [
   },
   {
     slug: "business-process-automation",
-    seo: { title: "Business Process Automation for Onboarding & Approvals", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step." },
+    seo: { title: "Business Process Automation Services for Teams", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step. Fixed price from $4,500." },
     name: "Business process automation",
     group: "automation",
     icon: "workflow",
@@ -390,7 +390,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-chatbots",
-    seo: { title: "AI Chatbot for Your Website, Trained on Your Content", description: "An AI website chatbot that answers from your own content, qualifies leads and books calls, then hands over to a person when needed." },
+    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your business website that answers from your own content, qualifies leads and books calls, then hands over to a person. From $2,500." },
     name: "AI chatbots for websites",
     group: "ai",
     icon: "message-square",
@@ -463,7 +463,7 @@ export const services: Service[] = [
   },
   {
     slug: "custom-ai-agents",
-    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. From $5,000." },
+    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. Fixed price from $5,000." },
     name: "Custom AI agents",
     group: "ai",
     icon: "bot",
@@ -536,7 +536,7 @@ export const services: Service[] = [
   },
   {
     slug: "rag-systems",
-    seo: { title: "RAG Knowledge Assistant: AI That Answers From Your Docs", description: "A private AI assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. From $6,000." },
+    seo: { title: "AI Knowledge Assistant (RAG) for Your Documents", description: "A private AI knowledge assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. Fixed price from $6,000." },
     name: "RAG knowledge assistants",
     group: "ai",
     icon: "book-open",
@@ -609,7 +609,7 @@ export const services: Service[] = [
   },
   {
     slug: "web-solutions",
-    seo: { title: "Business Websites Connected to Your CRM", description: "Fast websites and landing pages where every form, booking and chat goes straight into your CRM and automations. From $2,500." },
+    seo: { title: "Business Websites Connected to Your CRM", description: "Fast business websites and landing pages where every form, booking and chat goes straight into your CRM and automations. Fixed-price builds from $2,500." },
     name: "Web solutions",
     group: "web",
     icon: "globe",

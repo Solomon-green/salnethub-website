@@ -5,6 +5,8 @@ export const chat = {
   teaser: "Questions? I'm happy to help.",
   // Seconds before the teaser bubble appears on page load.
   teaserDelay: 3,
+  // Seconds the teaser stays up before tucking itself away, so it never sits over content.
+  teaserDuration: 9,
   greeting:
     "Hi there. Want to take the manual work out of your day? Ask me anything about automation, AI chatbots, agents or pricing.",
   quickReplies: ["What can you automate?", "How much does it cost?", "Book a call"],

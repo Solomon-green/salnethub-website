@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Instrument_Serif } from "next/font/google";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -8,17 +9,25 @@ const heros = localFont({
   src: [
     { path: "./fonts/heros-regular.woff2", weight: "400", style: "normal" },
     { path: "./fonts/heros-bold.woff2", weight: "700", style: "normal" },
-    { path: "./fonts/heros-italic.woff2", weight: "400", style: "italic" },
   ],
   variable: "--font-heros",
   display: "swap",
   fallback: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
 });
 
+// Instrument Serif italic: the accent voice for one or two words per headline (.t-accent).
+const accent = Instrument_Serif({
+  weight: "400",
+  style: "italic",
+  subsets: ["latin"],
+  variable: "--font-accent",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Business Automation & AI Agents for Small Businesses | SalnetHub",
+    default: "Business Automation Agency for Small Businesses | SalnetHub",
     template: "%s | SalnetHub",
   },
   description: site.description,
@@ -47,7 +56,7 @@ const motionFlag = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').match
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={heros.variable} suppressHydrationWarning>
+    <html lang="en" className={`${heros.variable} ${accent.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionFlag }} />
       </head>

@@ -111,7 +111,7 @@ export function BookingWidget({ email }: { email: string }) {
     return (
       <div className="grid min-h-[420px] place-items-center" aria-busy>
         <p className="flex items-center gap-3 text-[15px] text-slate">
-          <span className="size-2 animate-pulse bg-mint-ink" /> Checking free times
+          <span className="size-2 animate-pulse rounded-full bg-deep-copper" /> Checking free times
         </p>
       </div>
     );
@@ -119,12 +119,12 @@ export function BookingWidget({ email }: { email: string }) {
 
   if (load.state === "offline" || !days.length) {
     return (
-      <div className="border border-line bg-paper p-8">
-        <CalendarDays size={26} strokeWidth={1.5} className="text-mint-ink" />
+      <div className="rounded-card border border-line bg-paper p-8">
+        <CalendarDays size={26} strokeWidth={1.5} className="text-deep-copper" />
         <p className="t-h3 mt-5">{load.state === "offline" ? "The calendar is offline right now" : "No free times in the next few weeks"}</p>
         <p className="mt-2 text-[15px] leading-relaxed text-slate">
           Send a message below or email{" "}
-          <a href={`mailto:${email}`} className="font-bold text-mint-ink">
+          <a href={`mailto:${email}`} className="font-bold text-deep-copper">
             {email}
           </a>{" "}
           and we will find a time with you.
@@ -135,8 +135,8 @@ export function BookingWidget({ email }: { email: string }) {
 
   if (step === "done" && booked) {
     return (
-      <div className="border border-sage bg-mist p-8 md:p-10" role="status">
-        <CircleCheck size={28} strokeWidth={1.5} className="text-mint-ink" />
+      <div className="rounded-card border border-sage bg-mist p-8 md:p-10" role="status">
+        <CircleCheck size={28} strokeWidth={1.5} className="text-deep-copper" />
         <p className="t-h2 mt-5">You&apos;re booked</p>
         <p className="mt-3 text-[17px] font-bold">
           {fmtLongDate(dayKey(booked.start, tz))}, {fmtTime(booked.start, tz)}
@@ -150,7 +150,7 @@ export function BookingWidget({ email }: { email: string }) {
               <Video size={18} /> Google Meet link
             </a>
           )}
-          <button type="button" onClick={reset} className="text-[14px] font-bold text-mint-ink">
+          <button type="button" onClick={reset} className="text-[14px] font-bold text-deep-copper">
             Book another time
           </button>
         </div>
@@ -201,10 +201,10 @@ export function BookingWidget({ email }: { email: string }) {
 
     return (
       <div>
-        <button type="button" onClick={() => setStep("pick")} className="inline-flex items-center gap-2 text-[14px] font-bold text-mint-ink">
+        <button type="button" onClick={() => setStep("pick")} className="inline-flex items-center gap-2 text-[14px] font-bold text-deep-copper">
           <ArrowLeft size={16} /> Change time
         </button>
-        <div className="mt-5 border border-line bg-paper p-5">
+        <div className="rounded-card mt-5 border border-line bg-paper p-5">
           <p className="text-[17px] font-bold">
             {fmtLongDate(dayKey(slot, tz))}, {fmtTime(slot, tz)}
           </p>
@@ -269,7 +269,7 @@ export function BookingWidget({ email }: { email: string }) {
               aria-label="Previous month"
               disabled={thisMonth <= firstMonth}
               onClick={() => shift(-1)}
-              className="grid size-10 place-items-center border border-line transition-colors hover:border-ink disabled:opacity-30 disabled:hover:border-line"
+              className="rounded-full grid size-10 place-items-center border border-line transition-colors hover:border-ink disabled:opacity-30 disabled:hover:border-line"
             >
               <ChevronLeft size={18} />
             </button>
@@ -278,7 +278,7 @@ export function BookingWidget({ email }: { email: string }) {
               aria-label="Next month"
               disabled={thisMonth >= lastMonth}
               onClick={() => shift(1)}
-              className="grid size-10 place-items-center border border-line transition-colors hover:border-ink disabled:opacity-30 disabled:hover:border-line"
+              className="rounded-full grid size-10 place-items-center border border-line transition-colors hover:border-ink disabled:opacity-30 disabled:hover:border-line"
             >
               <ChevronRight size={18} />
             </button>
@@ -307,16 +307,16 @@ export function BookingWidget({ email }: { email: string }) {
                   setDay(k);
                   setSlot(null);
                 }}
-                className={`relative grid aspect-square place-items-center text-[15px] transition-colors ${
+                className={`relative grid aspect-square place-items-center rounded-full text-[15px] transition-colors ${
                   selected
                     ? "bg-ink font-bold text-white"
                     : open
                       ? "bg-mist font-bold text-ink hover:bg-mist-2"
-                      : "cursor-default text-[#a9adab]"
+                      : "cursor-default text-[#A9A7A1]"
                 }`}
               >
                 {d}
-                {open && !selected && <span aria-hidden className="absolute bottom-1.5 size-1 bg-mint-ink" />}
+                {open && !selected && <span aria-hidden className="absolute bottom-1.5 size-1 rounded-full bg-deep-copper" />}
               </button>
             );
           })}
@@ -338,7 +338,7 @@ export function BookingWidget({ email }: { email: string }) {
                 type="button"
                 aria-pressed={selected}
                 onClick={() => setSlot(s)}
-                className={`min-h-12 border text-[15px] font-bold transition-colors ${
+                className={`min-h-12 rounded-full border text-[15px] font-bold transition-colors ${
                   selected ? "border-ink bg-ink text-white" : "border-line hover:border-ink"
                 }`}
               >

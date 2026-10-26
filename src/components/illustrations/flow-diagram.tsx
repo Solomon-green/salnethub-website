@@ -98,13 +98,13 @@ export function FlowDiagram({
   return (
     <div ref={root} className="relative">
       <style>{`
-        .fd-node.is-on .fd-box{background:${dark ? "#123a2d" : "#E6F7F0"};border-color:${dark ? "#2EE6A6" : "#0A7350"};box-shadow:${dark ? "0 0 24px -6px rgba(46,230,166,.55)" : "none"}}
+        .fd-node.is-on .fd-box{background:${dark ? "#2A2C30" : "#E5E7DF"};border-color:${dark ? "#C8754A" : "#A35A33"};box-shadow:${dark ? "0 0 24px -6px rgba(200,117,74,.35)" : "none"}}
         .fd-node.is-approval.is-on .fd-box{background:${dark ? "#3a2a21" : "#F6E7DE"};border-color:#C8754A}
         .fd-box{transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease}
       `}</style>
       <div className="fd-track relative">
         <div aria-hidden className={`absolute left-[27px] top-[28px] bottom-[28px] w-px md:hidden ${line}`} />
-        <div aria-hidden className={`fd-fill absolute left-[27px] top-[28px] bottom-[28px] w-px origin-top md:hidden ${dark ? "bg-mint" : "bg-mint-ink"}`} />
+        <div aria-hidden className={`fd-fill absolute left-[27px] top-[28px] bottom-[28px] w-px origin-top md:hidden ${dark ? "bg-copper" : "bg-deep-copper"}`} />
         <div
           aria-hidden
           className={`absolute top-[27px] hidden h-px md:block ${line}`}
@@ -112,12 +112,12 @@ export function FlowDiagram({
         />
         <div
           aria-hidden
-          className={`fd-fill absolute top-[27px] hidden h-px origin-left md:block ${dark ? "bg-mint" : "bg-mint-ink"}`}
+          className={`fd-fill absolute top-[27px] hidden h-px origin-left md:block ${dark ? "bg-copper" : "bg-deep-copper"}`}
           style={{ left: `calc(100% / ${nodes.length} / 2)`, right: `calc(100% / ${nodes.length} / 2)` }}
         />
         <div
           aria-hidden
-          className="fd-module pointer-events-none absolute left-[28px] top-0 z-10 -ml-[7px] -mt-[7px] h-[14px] w-[14px] bg-copper md:left-0 md:top-[28px]"
+          className="fd-module pointer-events-none absolute left-[28px] top-0 z-10 -ml-[7px] -mt-[7px] h-[14px] w-[14px] rounded-full bg-copper md:left-0 md:top-[28px]"
           style={{ opacity: 0 }}
         />
         <ol className="fd-list grid gap-8 md:gap-4">
@@ -126,12 +126,12 @@ export function FlowDiagram({
             key={n.label}
             className={`fd-node relative flex items-start gap-5 md:flex-col md:items-center md:text-center ${i === approvalIndex ? "is-approval" : ""}`}
           >
-            <div className={`fd-box relative z-[1] flex h-14 w-14 shrink-0 items-center justify-center border ${boxBase}`}>
+            <div className={`fd-box relative z-[1] flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border ${boxBase}`}>
               <span className="fd-check flex items-center justify-center" style={{ opacity: 0 }}>
                 {i === approvalIndex ? (
                   <Hand size={20} strokeWidth={1.5} className={dark ? "text-copper" : "text-deep-copper"} />
                 ) : (
-                  <Check size={20} strokeWidth={1.75} className={dark ? "text-mint" : "text-mint-ink"} />
+                  <Check size={20} strokeWidth={1.75} className={dark ? "text-copper" : "text-deep-copper"} />
                 )}
               </span>
             </div>

@@ -14,7 +14,7 @@ export default config({
   ui: { brand: { name: "SalnetHub" } },
   collections: {
     caseStudies: collection({
-      label: "Case studies",
+      label: "Customer stories",
       slugField: "title",
       path: "content/case-studies/*",
       format: { contentField: "body" },
@@ -22,9 +22,15 @@ export default config({
       columns: ["title", "publishedAt"],
       schema: {
         title: fields.slug({ name: { label: "Title", description: "Lead with the result, e.g. 'Lead replies in 2 minutes, not 2 days'" } }),
-        summary: fields.text({ label: "Summary", description: "One or two sentences shown on the Work page.", multiline: true, validation: { length: { min: 20, max: 280 } } }),
+        summary: fields.text({ label: "Summary", description: "One or two sentences shown on the Customer stories page.", multiline: true, validation: { length: { min: 20, max: 280 } } }),
         client: fields.text({ label: "Client", description: "Company name, or a description such as '12-person accounting firm' if anonymous." }),
         industry: fields.text({ label: "Industry" }),
+        logo: fields.image({
+          label: "Client logo (optional)",
+          description: "SVG or transparent PNG. Shown on the story card; leave empty to show the client's name instead.",
+          directory: "public/clients",
+          publicPath: "/clients/",
+        }),
         services: fields.multiselect({
           label: "Services used",
           options: services.map((s) => ({ label: s.name, value: s.slug })),
@@ -65,7 +71,7 @@ export default config({
           { label: "Testimonial (optional)" },
         ),
         publishedAt: fields.date({ label: "Published", defaultValue: { kind: "today" } }),
-        featured: fields.checkbox({ label: "Feature on the home page", defaultValue: false }),
+        featured: fields.checkbox({ label: "Featured (home page and the big tiles on Customer stories)", defaultValue: false }),
         draft: fields.checkbox({ label: "Draft (hidden from the site)", defaultValue: true }),
         body: fields.markdoc({ label: "Full story", description: "Optional longer write-up." }),
       },

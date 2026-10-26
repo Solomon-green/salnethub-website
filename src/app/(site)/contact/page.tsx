@@ -4,10 +4,11 @@ import { ContactForm } from "@/components/contact-form";
 import { booking } from "@/content/booking";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
+import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
-  title: "Book a Free Automation Call",
-  description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would automate first.",
+  title: "Book a Free Automation Consultation Call",
+  description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would automate first, and the fixed price.",
   alternates: { canonical: "/contact" },
 };
 
@@ -20,22 +21,22 @@ const next = [
 export default function ContactPage() {
   return (
     <>
-      <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
-        <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
+      <JsonLd data={breadcrumbLd([{ name: "Book a call", path: "/contact" }])} />
+      <section className="hero-light relative overflow-hidden pt-28 lg:pt-36">
         <div className="container-x relative grid gap-16 pb-24 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16 lg:pb-32">
           <div>
             <h1 className="t-hero">Book a call</h1>
-            <p className="mt-6 max-w-lg text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-on-ink-muted">
+            <p className="mt-6 max-w-lg text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">
               Tell us what takes up your team&apos;s time. We will tell you plainly what we would automate first, and what it would cost.
             </p>
 
-            <ol className="mt-12 border-t border-white/20">
+            <ol className="mt-12 border-t border-line">
               {next.map((n, i) => (
-                <li key={n.title} className="flex gap-5 border-b border-white/12 py-6">
-                  <span className="text-[14px] font-bold text-mint">{i + 1}</span>
+                <li key={n.title} className="flex gap-5 border-b border-line py-6">
+                  <span className="text-[14px] font-bold text-deep-sage">{i + 1}</span>
                   <span>
                     <span className="block text-[17px] font-bold">{n.title}</span>
-                    <span className="mt-1 block text-[15px] leading-relaxed text-on-ink-muted">{n.body}</span>
+                    <span className="mt-1 block text-[15px] leading-relaxed text-slate">{n.body}</span>
                   </span>
                 </li>
               ))}
@@ -46,7 +47,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div id="book" className="scroll-mt-28 border border-white/10 bg-white p-6 text-ink shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)] md:p-10">
+          <div id="book" className="rounded-card scroll-mt-28 border border-line bg-white p-6 text-ink shadow-[0_30px_80px_-40px_rgb(23_25_28/0.35)] md:p-10">
             <h2 className="t-h2">Choose a time</h2>
             <p className="mt-2 text-[15px] text-slate">Free {booking.durationMinutes}-minute call on Google Meet.</p>
             <div className="mt-8">
@@ -56,13 +57,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
           <div>
             <h2 className="t-h1">Prefer to write first?</h2>
             <p className="t-lead mt-5 max-w-md">Send a few lines about the work. We reply within 1 business day.</p>
           </div>
-          <div className="border border-line bg-paper p-6 md:p-10">
+          <div className="rounded-card border border-line bg-white p-6 md:p-10">
             <ContactForm services={services.map((s) => s.name)} email={site.email} />
           </div>
         </div>

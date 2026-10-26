@@ -3,7 +3,7 @@ export const site = {
   // Swap to the custom domain once it points at Vercel (or set NEXT_PUBLIC_SITE_URL there).
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://salnethub-website-ciui.vercel.app",
   email: "hello@salnethub.xyz",
-  tagline: "Your business runs on manual work between tools. We automate it.",
+  tagline: "Systems that run your business while you grow it.",
   description:
     "Business automation and AI agents for small businesses. We automate lead follow-up, CRM updates, reporting and admin across the tools you already use.",
   proof: "53 client projects since 2023",
@@ -17,6 +17,6 @@ export const nav = [
   { label: "Services", href: "/services" },
   { label: "How we work", href: "/how-we-work" },
   { label: "Integrations", href: "/integrations" },
-  { label: "Work", href: "/work" },
+  { label: "Customer stories", href: "/customer-stories" },
   { label: "Pricing", href: "/engagements" },
 ] as const;

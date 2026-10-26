@@ -45,8 +45,8 @@ export function ProcessScroller({ steps, heading, intro }: { steps: Step[]; head
           {steps.map((s, i) => (
             <li key={s.step} className="relative flex items-center gap-5 py-2.5">
               <span
-                className={`relative z-[1] h-[11px] w-[11px] border transition-colors duration-300 ${
-                  i === active ? "border-copper bg-copper" : i < active ? "border-ink bg-ink" : "border-line bg-white"
+                className={`relative z-[1] h-[11px] w-[11px] rounded-full border transition-colors duration-300 ${
+                  i === active ? "border-sage bg-sage" : i < active ? "border-ink bg-ink" : "border-line bg-white"
                 }`}
               />
               <span className={`text-[17px] font-bold transition-colors duration-300 ${i === active ? "text-ink" : "text-slate"}`}>{s.step}</span>
@@ -59,13 +59,13 @@ export function ProcessScroller({ steps, heading, intro }: { steps: Step[]; head
         {steps.map((s, i) => (
           <article
             key={s.step}
-            className={`ps-card border p-7 transition-colors duration-500 md:p-10 ${i === active ? "border-ink bg-white" : "border-line bg-white"}`}
+            className={`ps-card rounded-card border p-7 transition-colors duration-500 md:p-10 ${i === active ? "border-ink bg-white" : "border-line bg-white"}`}
           >
-            <p className="t-label text-mint-ink">{s.step}</p>
+            <p className="t-label text-deep-sage">{s.step}</p>
             <h3 className="t-h2 mt-3">{s.title}</h3>
             <p className="mt-4 max-w-[52ch] text-[16px] leading-relaxed text-slate">{s.body}</p>
             <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-5 text-[14px]">
-              <span className="h-2.5 w-2.5 bg-copper" aria-hidden />
+              <span className="h-2.5 w-2.5 rounded-full bg-sage" aria-hidden />
               <span className="text-slate">You receive:</span>
               <span className="font-bold">{s.output}</span>
             </div>

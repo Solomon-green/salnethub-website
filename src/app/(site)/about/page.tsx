@@ -2,9 +2,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CtaBand, PageHero, PrimaryCta } from "@/components/ui";
 import { principles } from "@/content/process";
+import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
-  title: "About SalnetHub",
+  title: "About Our Business Automation & AI Agency",
   description: "SalnetHub is an automation and AI company for small-to-medium teams and businesses. We connect your systems so your team gets its time back.",
   alternates: { canonical: "/about" },
 };
@@ -26,14 +27,15 @@ const believe = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([{ name: "About", path: "/about" }])} />
       <PageHero
         title="We connect systems so teams get their time back"
         sub="SalnetHub is an automation and AI company for small-to-medium teams and businesses. We build the connections between your tools so work moves on its own."
       >
-        <PrimaryCta tone="mint" />
+        <PrimaryCta tone="copper" />
       </PageHero>
 
-      <section className="bg-white py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-2 lg:gap-24">
           <h2 className="t-h1" data-reveal>
             Most teams do not need more software. They need the software they have to work together.
@@ -48,20 +50,26 @@ export default function AboutPage() {
             <p>
               Automation is our core. We also build websites and AI assistants, because they work best when they are part of the same connected system.
             </p>
+            <p className="mt-4 border-l-[3px] border-copper pl-6 text-[clamp(1.5rem,2.4vw,2rem)] font-bold leading-[1.2] tracking-tight text-ink">
+              Smarter systems.
+              <br />
+              Better decisions.
+              <br />
+              <span className="t-accent text-deep-copper">Greater impact.</span>
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink py-24 text-white lg:py-28">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />
+      <section className="border-t border-line py-24 lg:py-28">
         <div className="container-x relative">
           <h2 className="t-h1 max-w-2xl" data-reveal>
             What we believe
           </h2>
-          <ul className="mt-12 grid gap-px bg-white/15 md:grid-cols-2">
+          <ul className="mt-12 grid gap-4 md:grid-cols-2">
             {believe.map((b) => (
-              <li key={b} className="flex gap-4 bg-ink p-8 text-[20px] font-bold leading-snug md:p-10" data-reveal>
-                <span aria-hidden className="mt-2.5 h-2.5 w-2.5 shrink-0 bg-copper" />
+              <li key={b} className="rounded-card flex gap-4 border border-line bg-white p-8 text-[20px] font-bold leading-snug md:p-10" data-reveal>
+                <span aria-hidden className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-sage" />
                 {b}
               </li>
             ))}
@@ -69,18 +77,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x relative">
-          <h2 className="t-h1 max-w-3xl text-white" data-reveal>
+          <h2 className="t-h1 max-w-3xl" data-reveal>
             Who we work with
           </h2>
-          <p className="t-lead mt-5 max-w-3xl !text-on-sage-muted" data-reveal>
+          <p className="t-lead mt-5 max-w-3xl" data-reveal>
             Small-to-medium teams and businesses, usually between 5 and 200 people, that have outgrown doing everything by hand.
           </p>
-          <div className="mt-12 grid gap-px border border-white/20 bg-white/20 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {who.map((w) => (
-              <div key={w.title} className="bg-white p-7" data-reveal>
+              <div key={w.title} className="border border-line rounded-card bg-white p-7" data-reveal>
                 <h3 className="t-h3">{w.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{w.body}</p>
               </div>
@@ -89,7 +96,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="iso-grid-sage bg-mist py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <h2 className="t-h1" data-reveal>

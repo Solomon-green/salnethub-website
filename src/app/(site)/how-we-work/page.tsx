@@ -2,10 +2,11 @@ import { Check } from "lucide-react";
 import { ProcessScroller } from "@/components/illustrations/process-scroller";
 import { CtaBand, Faq, PageHero, PrimaryCta } from "@/components/ui";
 import { processSteps } from "@/content/process";
+import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
-  title: "How Our Automation Projects Work",
-  description: "Our five-step process: discover, build, test, hand over and support. Fixed scope, weekly updates and documentation your team can use.",
+  title: "How Our Business Automation Projects Work",
+  description: "Our five-step automation process: discover, build, test, hand over and support. Fixed scope, weekly updates and documentation your team can actually use.",
   alternates: { canonical: "/how-we-work" },
 };
 
@@ -34,14 +35,15 @@ const faqs = [
 export default function HowWeWorkPage() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([{ name: "How we work", path: "/how-we-work" }])} />
       <PageHero
         title="How we work"
         sub="A clear process with fixed prices, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
       >
-        <PrimaryCta tone="mint" />
+        <PrimaryCta tone="copper" />
       </PageHero>
 
-      <section className="bg-white py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <ProcessScroller
             steps={processSteps}
@@ -51,15 +53,14 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x relative">
-          <h2 className="t-h1 max-w-3xl text-white" data-reveal>
+          <h2 className="t-h1 max-w-3xl" data-reveal>
             What you can count on
           </h2>
-          <div className="mt-14 grid gap-px border border-white/20 bg-white/20 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {commitments.map((c) => (
-              <div key={c.title} className="bg-white p-7 md:p-8" data-reveal>
+              <div key={c.title} className="border border-line rounded-card bg-white p-7 md:p-8" data-reveal>
                 <span className="icon-tile">
                   <Check size={22} strokeWidth={1.75} />
                 </span>
@@ -71,7 +72,7 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="iso-grid-sage bg-mist py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
             <h2 className="t-h1" data-reveal>
@@ -81,9 +82,9 @@ export default function HowWeWorkPage() {
               No long meetings. Short written updates you can read in two minutes, and a demo whenever there is something to see.
             </p>
           </div>
-          <div className="grid gap-px border border-ink bg-line sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-3">
             {week.map((w) => (
-              <div key={w.day} className="bg-white p-7" data-reveal>
+              <div key={w.day} className="border border-line rounded-card bg-white p-7" data-reveal>
                 <p className="text-[20px] font-bold">{w.day}</p>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{w.body}</p>
               </div>
@@ -92,7 +93,7 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <Faq items={faqs} />
         </div>

@@ -6,19 +6,18 @@ import { site } from "@/content/site";
 const company = [
   { label: "How we work", href: "/how-we-work" },
   { label: "Integrations", href: "/integrations" },
-  { label: "Work", href: "/work" },
+  { label: "Customer stories", href: "/customer-stories" },
   { label: "Pricing", href: "/engagements" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Footer({ hasWork = false }: { hasWork?: boolean }) {
-  const companyLinks = hasWork ? company : company.filter((l) => l.href !== "/work");
+  const companyLinks = hasWork ? company : company.filter((l) => l.href !== "/customer-stories");
   const automation = services.filter((s) => s.group === "automation");
   const other = services.filter((s) => s.group !== "automation");
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
-      <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,transparent,#000_40%)]" />
+    <footer className="relative overflow-hidden border-t border-white/10 bg-ink text-white">
       <div className="container-x relative">
         <div className="grid gap-12 border-b border-white/12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr] lg:py-20">
           <div className="max-w-sm">
@@ -57,7 +56,7 @@ function FooterCol({ title, links }: { title: string; links: { label: string; hr
       <ul className="grid gap-0.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-mint">
+            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-copper">
               {l.label}
             </Link>
           </li>

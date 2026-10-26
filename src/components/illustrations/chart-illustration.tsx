@@ -1,7 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { gsap, prefersReducedMotion, useGSAP } from "@/components/motion/gsap";
+
+gsap.registerPlugin(DrawSVGPlugin);
 
 const bars = [38, 52, 46, 61, 58, 72, 69, 84];
 const line = [62, 58, 64, 55, 49, 46, 40, 34];
@@ -41,17 +44,17 @@ export function ChartIllustration() {
       <div className="grid gap-3">
         {sources.map((s) => (
           <div key={s} className="flex items-center">
-            <div className="ci-src flex-1 border border-ink bg-white px-4 py-3 text-[14px] font-bold">{s}</div>
+            <div className="ci-src flex-1 rounded-xl border border-ink bg-white px-4 py-3 text-[14px] font-bold">{s}</div>
             <div className="ci-pipe hidden h-px w-10 bg-ink md:block" />
           </div>
         ))}
         <p className="text-[12px] text-slate">Synced every 15 minutes</p>
       </div>
 
-      <div className="border border-ink bg-white">
+      <div className="overflow-hidden rounded-card border border-ink bg-white">
         <div className="flex items-center justify-between border-b border-line px-5 py-3">
           <p className="text-[14px] font-bold">Weekly revenue dashboard</p>
-          <p className="text-[12px] text-mint-ink">Live</p>
+          <p className="text-[12px] text-deep-copper">Live</p>
         </div>
         <div className="grid grid-cols-3 border-b border-line">
           <div className="ci-kpi border-r border-line px-5 py-4">
@@ -69,7 +72,7 @@ export function ChartIllustration() {
         </div>
         <svg viewBox="0 0 340 120" className="w-full px-3 py-4" role="img" aria-label="Example chart: revenue rising week on week while reply time falls.">
           {[30, 60, 90].map((y) => (
-            <line key={y} x1="0" x2="340" y1={y} y2={y} stroke="#D4D8D6" strokeWidth="1" />
+            <line key={y} x1="0" x2="340" y1={y} y2={y} stroke="#D3D0CA" strokeWidth="1" />
           ))}
           {bars.map((h, i) => (
             <rect key={i} className="ci-bar" x={8 + i * 40} y={110 - h} width="24" height={h} fill={i === bars.length - 1 ? "#6C8C7A" : "#17191C"} />

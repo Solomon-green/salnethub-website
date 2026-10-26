@@ -1,16 +1,19 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { HeroSystem } from "@/components/illustrations/hero-system";
-import { FlowDiagram } from "@/components/illustrations/flow-diagram";
+import { ArrowRight, Check } from "lucide-react";
+import { AutomationHub } from "@/components/illustrations/automation-hub";
+import { WorkflowCanvas } from "@/components/illustrations/workflow-canvas";
 import { ProcessScroller } from "@/components/illustrations/process-scroller";
 import { ToolMarquee } from "@/components/tool-marquee";
-import { ServiceIcon } from "@/components/icons";
-import { CtaBand, Faq, PrimaryCta, SectionHead, ServiceCard } from "@/components/ui";
-import { servicesByGroup } from "@/content/services";
-import { processSteps, principles } from "@/content/process";
+import { ServicesBento } from "@/components/services-bento";
+import { CostCalculator } from "@/components/cost-calculator";
+import { hasTestimonials, Testimonials, UpworkProof } from "@/components/testimonials";
+import { CtaBand, Faq, PrimaryCta, SectionHead } from "@/components/ui";
+import { processSteps } from "@/content/process";
 import { entryPoints, builds } from "@/content/engagements";
+import { integrations } from "@/content/integrations";
 import { getCaseStudies } from "@/lib/case-studies";
 import { site } from "@/content/site";
+import { upwork } from "@/content/proof";
 
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -21,6 +24,14 @@ const changes = [
   { area: "Onboarding a new client", before: "2 hours across 5 tools", after: "One trigger, under 5 minutes" },
 ];
 
+// Every promise here is one we already make in the pricing terms and FAQs.
+const promises = [
+  { name: "Fixed price, in writing", body: "A written quote before work starts. No hourly meter." },
+  { name: "Our mistake, our cost", body: "If we miss the written scope, we fix it free or refund the rest." },
+  { name: "Live in weeks", body: "Your first workflow is usually live in 1 to 2 weeks." },
+  { name: "Documented and handed over", body: "A written guide and recorded walkthrough for every build." },
+];
+
 const homeFaqs = [
   { q: "What kind of businesses do you work with?", a: "Small-to-medium teams and businesses, usually 5 to 200 people, in services, e-commerce, property, logistics and professional firms. If your team copies data between tools, we can probably help." },
   { q: "Do we need to change the tools we use?", a: "No. We build on what you already run, such as Google Workspace, HubSpot or your accounting software, and add a connector like Make, Zapier or n8n only where needed." },
@@ -28,181 +39,149 @@ const homeFaqs = [
   { q: "What happens if an automation breaks?", a: "You get an alert, and we fix it. Our care plans include monitoring, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost." },
 ];
 
+const hasUpwork = upwork.rating != null || upwork.jobSuccess != null || upwork.badge != null;
+const proofLine = [site.proof, `${integrations.length}+ tools connected`, "First workflow live in 1 to 2 weeks", "Fixed-price quotes"];
+
 export default async function Home() {
-  const automation = servicesByGroup("automation");
-  const ai = servicesByGroup("ai");
-  const web = servicesByGroup("web")[0];
-  const featured = (await getCaseStudies()).filter((c) => c.entry.featured).slice(0, 3);
+  const stories = await getCaseStudies();
 
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
-        <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
-        <div className="container-x relative pb-16 lg:pb-20">
-          <h1 className="t-hero max-w-[20ch] [text-wrap:balance]">
-            Your business runs on manual work between tools.{" "}
-            <span className="text-mint">We automate it.</span>
-          </h1>
-          <div className="mt-10 grid items-center gap-10 lg:mt-4 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
-            <div className="max-w-xl lg:pb-10">
-              <p className="text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-on-ink-muted">
-                SalnetHub builds automations and AI agents that capture leads, update your CRM, send reports and answer routine requests, so your team grows without hiring for busywork.
-              </p>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <PrimaryCta tone="mint" />
-                <Link href="/services" className="btn btn-ghost-light">
-                  Explore services
+      <section className="hero-light relative overflow-hidden pt-28 lg:pt-32">
+        <div className="container-x relative grid items-center gap-14 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pb-24">
+          <div>
+            <span className="eyebrow">Automate, simplify and scale</span>
+            <h1 className="t-hero mt-6 max-w-[15ch] [text-wrap:balance]">
+              Systems that run your business <span className="t-accent text-deep-copper">while you grow it.</span>
+            </h1>
+            <p className="mt-7 max-w-xl text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">
+              We design and build automations and AI agents across your whole operation: sales, marketing, admin, finance, reporting and customer
+              support. Your tools finally work as one system, and your team gets back to the work that moves the business forward.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <PrimaryCta tone="copper" />
+              {/* Quote cards first (on this page), with their "More customer stories" button leading to the full page */}
+              {hasTestimonials || stories.length > 0 ? (
+                <Link href={hasTestimonials ? "#customer-stories" : "/customer-stories"} className="btn btn-secondary">
+                  Customer stories
+                  <ArrowRight size={18} strokeWidth={1.75} className="btn-arrow" />
                 </Link>
-              </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-on-ink-muted" aria-label="Why teams choose SalnetHub">
-                {[site.proof, "Fixed-price quotes", "First workflow live in 1 to 2 weeks"].map((p) => (
-                  <li key={p} className="flex items-center gap-2.5">
-                    <span aria-hidden className="h-1.5 w-1.5 shrink-0 bg-mint" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
+              ) : (
+                <Link href="#services" className="btn btn-secondary">
+                  See what we automate
+                </Link>
+              )}
             </div>
-            <div className="relative -mx-4 lg:-mr-8 lg:mx-0">
-              <HeroSystem className="mx-auto w-full max-w-[780px]" />
-            </div>
+            <ul className="mt-9 grid max-w-xl gap-x-6 gap-y-2.5 text-[14px] text-slate sm:grid-cols-2" aria-label="Why teams choose SalnetHub">
+              {hasUpwork && (
+                <li className="text-ink sm:col-span-2">
+                  <UpworkProof className="font-bold" />
+                </li>
+              )}
+              {proofLine.map((p) => (
+                <li key={p} className="flex items-center gap-2.5">
+                  <Check aria-hidden size={15} strokeWidth={2.5} className="shrink-0 text-sage" />
+                  {p}
+                </li>
+              ))}
+            </ul>
           </div>
+          <AutomationHub className="mx-auto w-full max-w-[560px]" />
         </div>
       </section>
 
       {/* Tools */}
-      <section className="border-y border-white/10 bg-forest py-12 text-white">
-        <div className="container-x grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-16">
-          <p className="max-w-[15rem] text-[15px] font-bold leading-snug">
-            Built on the tools your team <span className="text-mint">already uses</span>
-          </p>
-          <ToolMarquee dark />
+      <section className="border-y border-line py-9">
+        <div className="container-x grid items-center gap-6 lg:grid-cols-[auto_1fr] lg:gap-14">
+          <p className="max-w-[14rem] text-[15px] font-bold leading-snug">Connects the tools your team already uses</p>
+          <ToolMarquee labeled />
         </div>
       </section>
 
       {/* What changes */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="container-x">
           <SectionHead
             title="The same work, without the busywork"
             body="Automation does not change what your business does. It removes the copying, chasing and waiting between the steps."
           />
-          <div className="mt-14 border-t border-ink">
-            <div className="hidden grid-cols-[1.1fr_1fr_1fr] gap-8 border-b border-line py-4 text-[13px] font-bold text-slate md:grid">
+          <div className="mt-12 overflow-hidden rounded-card border border-line bg-white px-6 shadow-[0_24px_60px_-44px_rgb(23_25_28/0.35)] md:px-10">
+            <div className="hidden grid-cols-[1.1fr_1fr_1fr] gap-8 border-b border-line py-5 text-[13px] font-bold text-slate md:grid">
               <span>Task</span>
-              <span>Before</span>
-              <span>After</span>
+              <span>Done by hand</span>
+              <span>Automated</span>
             </div>
             {changes.map((c) => (
-              <div key={c.area} data-reveal className="grid gap-2 border-b border-line py-6 md:grid-cols-[1.1fr_1fr_1fr] md:items-center md:gap-8">
+              <div key={c.area} data-reveal className="grid gap-2 border-b border-line py-6 last:border-b-0 md:grid-cols-[1.1fr_1fr_1fr] md:items-center md:gap-8">
                 <p className="text-[18px] font-bold">{c.area}</p>
-                <p className="text-[16px] text-slate line-through decoration-line decoration-1">{c.before}</p>
-                <p className="flex items-center gap-3 text-[16px] font-bold text-mint-ink">
-                  <span aria-hidden className="h-2 w-2 shrink-0 bg-mint-ink" />
+                <p className="text-[16px] text-slate line-through decoration-slate/50 decoration-[1.5px]">{c.before}</p>
+                <p className="flex items-center gap-2.5 text-[16px] font-bold text-ink">
+                  <Check aria-hidden size={18} strokeWidth={2.5} className="shrink-0 text-sage" />
                   {c.after}
                 </p>
               </div>
             ))}
           </div>
-          <p className="mt-4 text-[13px] text-slate">Examples based on typical single-workflow projects.</p>
+          <p className="mt-4 text-[13px] text-slate">Typical outcomes from single-workflow projects.</p>
         </div>
       </section>
 
-      {/* Automation services: hairline grid */}
-      <section className="relative overflow-hidden bg-deep-sage py-24 lg:py-32">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-70" />
-        <div className="container-x relative">
+      {/* Cost calculator: the strongest moment, right after the before/after */}
+      <section className="border-t border-line py-24 lg:py-32">
+        <div className="container-x">
+          <div className="max-w-3xl">
+            <h2 className="t-h1" data-reveal>
+              What is copy-paste <span className="t-accent text-deep-copper">costing you?</span>
+            </h2>
+            <p className="t-lead mt-5" data-reveal>
+              Move the sliders to match your team. Most businesses are surprised by the yearly number.
+            </p>
+          </div>
+          <div className="mt-12" data-reveal>
+            <CostCalculator />
+          </div>
+        </div>
+      </section>
+
+      {/* Services, by outcome */}
+      <section id="services" className="scroll-mt-20 border-t border-line py-24 lg:py-32">
+        <div className="container-x">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHead dark title="Automation that does the work between your tools" body="Five services that take repetitive work off your team for good. Each one is fixed-price and documented." />
-            <Link href="/services" className="link-arrow shrink-0 !text-white" data-reveal>
+            <SectionHead
+              title="Pick the work you want off your plate"
+              body="Fixed-price builds on the tools you already pay for. Start with one workflow, then add more when it pays for itself."
+            />
+            <Link href="/services" className="link-arrow shrink-0" data-reveal>
               Compare all services <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="mt-14 grid gap-px border border-white/20 bg-white/20 sm:grid-cols-2 lg:grid-cols-3">
-            {automation.map((s) => (
-              <ServiceCard key={s.slug} s={s} />
-            ))}
-            <Link
-              href={`/services/${web.slug}`}
-              data-reveal
-              className="group relative flex flex-col justify-between overflow-hidden bg-ink p-7 text-white md:p-8"
-            >
-              <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-80" />
-              <ServiceIcon name={web.icon} size={28} className="relative" />
-              <div className="relative mt-10">
-                <h3 className="t-h3">{web.name}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-on-ink-muted">{web.short}</p>
-                <span className="mt-8 inline-flex items-center gap-2 text-[14px] font-bold">
-                  Learn more <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
-            </Link>
+          <div className="mt-14">
+            <ServicesBento />
           </div>
         </div>
       </section>
 
-      {/* AI solutions */}
-      <section className="bg-white py-24 lg:py-32">
-        <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-20">
-          <div>
-            <h2 className="t-h1" data-reveal>
-              AI that works from your data, with a person in control
-            </h2>
-            <p className="t-lead mt-5" data-reveal>
-              Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters.
-            </p>
-          </div>
-          <div>
-            <ul className="border-t border-line">
-              {ai.map((s) => (
-                <li key={s.slug} data-reveal>
-                  <Link href={`/services/${s.slug}`} className="group flex items-start gap-5 border-b border-line py-6">
-                    <span className="icon-tile !h-11 !w-11 shrink-0 group-hover:bg-deep-sage group-hover:text-white">
-                      <ServiceIcon name={s.icon} size={22} />
-                    </span>
-                    <span className="flex-1">
-                      <span className="block text-[18px] font-bold group-hover:text-mint-ink">{s.name}</span>
-                      <span className="mt-1 block text-[15px] leading-relaxed text-slate">{s.short}</span>
-                    </span>
-                    <ArrowRight size={18} className="mt-1 shrink-0 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow showcase */}
-      <section className="relative overflow-hidden bg-ink py-24 text-white lg:py-32">
-        <div aria-hidden className="iso-grid-dark pointer-events-none absolute inset-0 opacity-60" />
+      {/* Workflow showcase: deep moment one */}
+      <section className="band-ink on-dark relative overflow-hidden py-24 text-white lg:py-32">
         <div className="container-x relative">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
-              Watch one lead move through a connected system
+              One lead, five tools, zero copy-paste
             </h2>
             <p className="mt-5 text-[18px] leading-relaxed text-on-ink-muted" data-reveal>
-              The copper square is the data. Nobody copies it, chases it or types it twice.
+              This is what a typical lead workflow does in under two minutes, without anyone touching it. We build it in n8n, Make or Zapier, on
+              your accounts.
             </p>
           </div>
-          <div className="mt-16">
-            <FlowDiagram
-              tone="dark"
-              nodes={[
-                { label: "Lead captured", meta: "Form, ad or chat" },
-                { label: "Scored", meta: "Against your rules" },
-                { label: "CRM updated", meta: "Record and deal" },
-                { label: "Reply sent", meta: "Within 2 minutes" },
-                { label: "Report updated", meta: "Live dashboard" },
-              ]}
-            />
+          <div className="mt-14" data-reveal>
+            <WorkflowCanvas />
           </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="iso-grid-sage relative bg-mist py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="container-x">
           <ProcessScroller
             steps={processSteps}
@@ -215,79 +194,57 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Principles */}
-      <section className="bg-white py-24 lg:py-28">
+      <Testimonials />
+
+      {/* Pricing, with the promises as one line underneath */}
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
-          <h2 className="t-h1 max-w-2xl" data-reveal>
-            Straight talk, real numbers, no drama
-          </h2>
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {principles.map((p, i) => (
-              <div
-                key={p.name}
-                className={`border-t-[3px] p-7 ${i === 0 ? "border-mint bg-ink text-white" : "border-sage bg-mist"}`}
-                data-reveal
-              >
-                <p className="text-[22px] font-bold tracking-tight">{p.name}</p>
-                <p className={`mt-3 text-[15px] leading-relaxed ${i === 0 ? "text-on-ink-muted" : "text-slate"}`}>{p.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing preview */}
-      <section className="py-24 lg:py-32">
-        <div className="container-x grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div>
-            <h2 className="t-h1" data-reveal>
-              Clear prices, published up front
-            </h2>
-            <p className="t-lead mt-5" data-reveal>
-              Every project gets a fixed written quote before work starts. Here is where most clients begin.
-            </p>
-            <Link href="/engagements" className="btn btn-secondary mt-9" data-reveal>
-              See pricing
-            </Link>
-          </div>
-          <div className="grid gap-px border border-line bg-line sm:grid-cols-2">
-            {[...entryPoints, builds[0], builds[2]].map((e) => (
-              <div key={e.name} className="bg-white p-7" data-reveal>
-                <p className="text-[15px] font-bold">{e.name}</p>
-                <p className="mt-4 text-[34px] font-bold leading-none tracking-tight">
-                  {"unit" in e ? e.price : `From ${e.price}`}
-                </p>
-                <p className="mt-2 text-[13px] text-slate">{"unit" in e ? e.unit : e.time}</p>
-                <p className="mt-5 text-[14px] leading-relaxed text-slate">{e.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {featured.length > 0 && (
-        <section className="bg-white py-24 lg:py-32">
-          <div className="container-x">
-            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <SectionHead title="Recent work" />
-              <Link href="/work" className="link-arrow" data-reveal>
-                All case studies <ArrowRight size={16} />
+          <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+            <div>
+              <h2 className="t-h1" data-reveal>
+                Clear prices, published up front
+              </h2>
+              <p className="t-lead mt-5" data-reveal>
+                Every project gets a fixed written quote before work starts. Most clients begin with a single workflow.
+              </p>
+              <Link href="/engagements" className="btn btn-secondary mt-9" data-reveal>
+                See all pricing
               </Link>
             </div>
-            <div className="mt-12 grid gap-px border border-line bg-line md:grid-cols-3">
-              {featured.map(({ slug, entry }) => (
-                <Link key={slug} href={`/work/${slug}`} className="group bg-white p-7" data-reveal>
-                  <p className="text-[13px] text-slate">{entry.industry}</p>
-                  <h3 className="t-h3 mt-3 group-hover:text-mint-ink">{entry.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-slate">{entry.summary}</p>
-                </Link>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[...entryPoints, builds[0], builds[2]].map((e, i) => (
+                <div
+                  key={e.name}
+                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-ink bg-ink text-white" : "border-line bg-white"}`}
+                  data-reveal
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-[15px] font-bold">{e.name}</p>
+                    {i === 2 && <span className="rounded-full bg-copper-soft px-2.5 py-1 text-[11px] font-bold text-ink">Most popular start</span>}
+                  </div>
+                  <p className="mt-4 text-[34px] font-bold leading-none tracking-tight">{"unit" in e ? e.price : `From ${e.price}`}</p>
+                  <p className={`mt-2 text-[13px] ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{"unit" in e ? e.unit : e.time}</p>
+                  <p className={`mt-5 text-[14px] leading-relaxed ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{e.body}</p>
+                </div>
               ))}
             </div>
           </div>
-        </section>
-      )}
 
-      <section className="bg-white py-24 lg:py-32">
+          <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
+            {promises.map((p) => (
+              <li key={p.name} className="flex gap-3" data-reveal>
+                <Check aria-hidden size={18} strokeWidth={2.5} className="mt-0.5 shrink-0 text-sage" />
+                <span>
+                  <span className="block text-[15px] font-bold">{p.name}</span>
+                  <span className="mt-1 block text-[14px] leading-relaxed text-slate">{p.body}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <Faq items={homeFaqs} />
         </div>

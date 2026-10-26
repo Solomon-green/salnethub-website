@@ -15,6 +15,7 @@ export function MotionProvider() {
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
+    // Anchor links honour each section's scroll-margin, which clears the fixed nav bar.
     const lenis = new Lenis({ duration: 1.05, easing: (t) => 1 - Math.pow(1 - t, 4), anchors: true });
     lenis.on("scroll", ScrollTrigger.update);
     const tick = (time: number) => lenis.raf(time * 1000);

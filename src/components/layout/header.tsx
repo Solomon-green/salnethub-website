@@ -17,11 +17,8 @@ type LenisLike = { stop: () => void; start: () => void };
 const lenis = () => (window as unknown as { __lenis?: LenisLike }).__lenis;
 
 const groupOrder: ServiceGroup[] = ["automation", "ai", "web"];
-// Pages whose hero is light; every other page opens on the dark hero.
-const lightHeroRoutes = ["/privacy", "/terms"];
-
 export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: boolean }) {
-  const links = hasWork ? nav : nav.filter((item) => item.href !== "/work");
+  const links = hasWork ? nav : nav.filter((item) => item.href !== "/customer-stories");
   const servicesByGroup = (g: ServiceGroup) => menu.filter((m) => m.group === g);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -77,16 +74,17 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
   const solid = scrolled || megaOpen || mobileOpen;
-  const overDark = !solid && !lightHeroRoutes.includes(pathname);
+  // The bar is always Sage, so links, logo and button always use their on-dark tones.
+  const overDark = true;
   const linkTone = (active: boolean) =>
-    overDark ? (active ? "text-mint" : "text-white/90 hover:text-white") : active ? "text-mint-ink" : "text-ink hover:text-mint-ink";
+    overDark ? (active ? "text-copper" : "text-white/90 hover:text-white") : active ? "text-deep-copper" : "text-ink hover:text-deep-copper";
 
   return (
     <>
       <div ref={sentinel} aria-hidden className="absolute top-0 h-px w-full" />
       <header
         className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,box-shadow] duration-300 ${
-          solid ? "border-b border-line bg-white/92 backdrop-blur-md" : "border-b border-transparent bg-transparent"
+          solid ? "nav-sage on-dark shadow-[0_10px_30px_-18px_rgb(23_25_28/0.6)]" : "nav-sage on-dark"
         }`}
       >
         <div className="container-x flex h-16 items-center gap-8 lg:h-[72px]">
@@ -120,7 +118,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           </nav>
 
           <div className="ml-auto flex items-center gap-3">
-            <Link href={primaryCta.href} className={`btn ${overDark ? "btn-mint" : "btn-primary"} hidden !min-h-11 sm:inline-flex`}>
+            <Link href={primaryCta.href} className={`btn ${overDark ? "btn-copper" : "btn-primary"} !min-h-10 !px-4 !text-[14px] sm:!min-h-11 sm:!px-[22px] sm:!text-[15px]`}>
               {primaryCta.label}
             </Link>
             <button
@@ -151,10 +149,10 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
                 <ul className="grid gap-1">
                   {servicesByGroup(g).map((s) => (
                     <li key={s.slug}>
-                      <Link href={`/services/${s.slug}`} className="group flex gap-4 p-3 transition-colors hover:bg-paper">
-                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-mint-ink" />
+                      <Link href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-paper">
+                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-deep-copper" />
                         <span>
-                          <span className="block text-[15px] font-bold leading-snug group-hover:text-mint-ink">{s.name}</span>
+                          <span className="block text-[15px] font-bold leading-snug group-hover:text-deep-copper">{s.name}</span>
                           <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                         </span>
                       </Link>
@@ -167,21 +165,21 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
               <div>
                 <p className="t-label mb-4 text-slate">{groupNames.web}</p>
                 {servicesByGroup("web").map((s) => (
-                  <Link key={s.slug} href={`/services/${s.slug}`} className="group flex gap-4 p-3 transition-colors hover:bg-paper">
-                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-mint-ink" />
+                  <Link key={s.slug} href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-paper">
+                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-deep-copper" />
                     <span>
-                      <span className="block text-[15px] font-bold group-hover:text-mint-ink">{s.name}</span>
+                      <span className="block text-[15px] font-bold group-hover:text-deep-copper">{s.name}</span>
                       <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                     </span>
                   </Link>
                 ))}
               </div>
-              <div className="mt-auto bg-ink p-6 text-white">
+              <div className="rounded-card on-dark mt-auto bg-ink p-6 text-white">
                 <p className="text-[15px] font-bold">Not sure where to start?</p>
                 <p className="mt-1 text-[13px] leading-relaxed text-on-ink-muted">
                   A 20-minute call is enough to find the first workflow worth automating.
                 </p>
-                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-mint hover:text-white">
+                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-copper hover:text-white">
                   Compare all services <ArrowRight size={16} />
                 </Link>
               </div>
@@ -224,7 +222,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-mint-ink" : ""}`}
+                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-deep-copper" : ""}`}
               >
                 {item.label}
               </Link>

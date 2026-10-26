@@ -2,10 +2,11 @@ import { Toaster } from "sonner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MotionProvider } from "@/components/motion/motion-provider";
-import { ChatWidget } from "@/components/chat/chat-widget";
+import { LazyChatWidget } from "@/components/chat/chat-widget-lazy";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 import { getCaseStudies } from "@/lib/case-studies";
+import { JsonLd, websiteLd } from "@/lib/schema";
 
 const orgJsonLd = {
   "@context": "https://schema.org",
@@ -36,7 +37,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
       </main>
       <Footer hasWork={hasWork} />
       <MotionProvider />
-      <ChatWidget />
+      <LazyChatWidget />
       {/* Offset clears the chat launcher in the same corner */}
       <Toaster
         position="bottom-right"
@@ -44,7 +45,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
         mobileOffset={{ bottom: 92, right: 16 }}
         toastOptions={{ style: { borderRadius: 0, fontFamily: "var(--font-sans)" } }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+      <JsonLd data={[orgJsonLd, websiteLd]} />
     </>
   );
 }

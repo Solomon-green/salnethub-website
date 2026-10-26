@@ -8,6 +8,7 @@ import { ArrowLeft, PlayCircle } from "lucide-react";
 import { CtaBand } from "@/components/ui";
 import { getCaseStudies, getCaseStudy } from "@/lib/case-studies";
 import { services } from "@/content/services";
+import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -17,14 +18,14 @@ export async function generateStaticParams() {
   return items.length ? items.map((i) => ({ slug: i.slug })) : [{ slug: "_none" }];
 }
 
-export async function generateMetadata({ params }: PageProps<"/work/[slug]">): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/customer-stories/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const e = await getCaseStudy(slug);
   if (!e) return { robots: { index: false } };
-  return { title: e.title, description: e.summary, alternates: { canonical: `/work/${slug}` } };
+  return { title: e.title, description: e.summary, alternates: { canonical: `/customer-stories/${slug}` } };
 }
 
-export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]">) {
+export default async function CaseStudyPage({ params }: PageProps<"/customer-stories/[slug]">) {
   const { slug } = await params;
   const e = await getCaseStudy(slug);
   if (!e) notFound();
@@ -35,24 +36,24 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
 
   return (
     <>
-      <section className="hero-dark on-dark relative overflow-hidden pt-28 lg:pt-36">
-        <div aria-hidden className="iso-grid-dark iso-fade pointer-events-none absolute inset-0" />
+      <JsonLd data={breadcrumbLd([{ name: "Customer stories", path: "/customer-stories" }, { name: e.client, path: `/customer-stories/${slug}` }])} />
+      <section className="hero-light relative overflow-hidden pt-28 lg:pt-36">
         <div className="container-x relative pb-16">
-          <Link href="/work" className="link-arrow text-[14px]">
-            <ArrowLeft size={16} /> All work
+          <Link href="/customer-stories" className="link-arrow text-[14px]">
+            <ArrowLeft size={16} /> All customer stories
           </Link>
-          <p className="mt-8 text-[15px] text-on-ink-muted">
+          <p className="mt-8 text-[15px] text-slate">
             {e.client}
             {e.industry ? `, ${e.industry}` : ""}
           </p>
           <h1 className="t-h1 mt-3 max-w-4xl">{e.title}</h1>
-          <p className="mt-6 max-w-3xl text-[19px] leading-relaxed text-on-ink-muted">{e.summary}</p>
+          <p className="mt-6 max-w-3xl text-[19px] leading-relaxed text-slate">{e.summary}</p>
           {e.results.length > 0 && (
-            <dl className="mt-12 grid max-w-4xl gap-px border border-white/15 bg-white/15 sm:grid-cols-3">
+            <dl className="mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
               {e.results.map((r) => (
-                <div key={r.label} className="bg-ink-2 p-6">
-                  <dd className="text-[36px] font-bold leading-none tracking-tight text-mint">{r.value}</dd>
-                  <dt className="mt-2 text-[14px] text-on-ink-muted">{r.label}</dt>
+                <div key={r.label} className="rounded-card border border-line bg-white p-6">
+                  <dd className="text-[36px] font-bold leading-none tracking-tight text-deep-copper">{r.value}</dd>
+                  <dt className="mt-2 text-[14px] text-slate">{r.label}</dt>
                 </div>
               ))}
             </dl>
@@ -62,7 +63,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
 
       {e.cover && (
         <div className="container-x pt-14">
-          <div className="relative aspect-[16/9] overflow-hidden border border-line">
+          <div className="rounded-card relative aspect-[16/9] overflow-hidden border border-line">
             <Image src={e.cover} alt={`${e.title} cover`} fill priority sizes="(min-width: 1320px) 1240px, 100vw" className="object-cover" />
           </div>
         </div>
@@ -77,7 +78,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
                 <ul className="mt-3 grid gap-2">
                   {serviceNames.map((s) => (
                     <li key={s!.slug}>
-                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-mint-ink hover:underline">
+                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-ink underline decoration-transparent underline-offset-4 hover:decoration-current hover:underline">
                         {s!.name}
                       </Link>
                     </li>
@@ -131,7 +132,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
             {e.gallery.map((g, i) =>
               g.image ? (
                 <figure key={i}>
-                  <div className="relative aspect-[16/10] overflow-hidden border border-line bg-white">
+                  <div className="rounded-card relative aspect-[16/10] overflow-hidden border border-line bg-white">
                     <Image src={g.image} alt={g.caption || ""} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
                   </div>
                   {g.caption && <figcaption className="mt-3 text-[14px] text-slate">{g.caption}</figcaption>}
@@ -142,7 +143,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
         </section>
       )}
 
-      <CtaBand title="Want a result like this?" />
+      <CtaBand title="Want a result" accent="like this?" />
     </>
   );
 }

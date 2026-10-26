@@ -43,3 +43,7 @@ next-env.d.ts
 # local brand files (not for the public repo)
 *.zip
 !.env.example
+
+# local tooling output
+graphify-out/
+.impeccable/

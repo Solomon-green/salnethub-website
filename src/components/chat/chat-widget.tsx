@@ -53,7 +53,11 @@ export function ChatWidget() {
     const t = window.setTimeout(() => {
       if (!teaserDone.current) setTeaser(true);
     }, chat.teaserDelay * 1000);
-    return () => window.clearTimeout(t);
+    const out = window.setTimeout(() => setTeaser(false), (chat.teaserDelay + chat.teaserDuration) * 1000);
+    return () => {
+      window.clearTimeout(t);
+      window.clearTimeout(out);
+    };
   }, []);
 
   const hideTeaser = useCallback(() => {
@@ -193,7 +197,7 @@ export function ChatWidget() {
             type="button"
             onClick={dismissTeaser}
             aria-label="Dismiss"
-            className="absolute -right-2 -top-2 flex size-5 items-center justify-center rounded-full bg-slate text-white shadow transition-colors hover:bg-ink"
+            className="absolute -right-2.5 -top-2.5 flex size-6 items-center justify-center rounded-full bg-slate text-white shadow transition-colors hover:bg-ink"
           >
             <X size={12} strokeWidth={2.75} />
           </button>
@@ -207,7 +211,7 @@ export function ChatWidget() {
         aria-labelledby={titleId}
         aria-hidden={!open}
         inert={!open}
-        className={`on-dark fixed z-50 flex flex-col overflow-hidden bg-ink text-white shadow-[0_30px_90px_-24px_rgb(10_20_16/0.7),0_0_0_1px_rgb(255_255_255/0.08)] transition-[opacity,translate,scale,visibility] ease-[var(--ease-out-quint)] max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-[max(12px,env(safe-area-inset-top))] max-sm:rounded-t-[22px] sm:bottom-[86px] sm:right-5 sm:h-[min(560px,calc(100dvh-110px))] sm:w-[380px] sm:origin-bottom-right sm:rounded-[20px] ${
+        className={`on-dark fixed z-50 flex flex-col overflow-hidden bg-ink text-white shadow-[0_30px_90px_-24px_rgb(23_25_28/0.7),0_0_0_1px_rgb(255_255_255/0.08)] transition-[opacity,translate,scale,visibility] ease-[var(--ease-out-quint)] max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-[max(12px,env(safe-area-inset-top))] max-sm:rounded-t-[22px] sm:bottom-[86px] sm:right-5 sm:h-[min(560px,calc(100dvh-110px))] sm:w-[380px] sm:origin-bottom-right sm:rounded-[20px] ${
           open
             ? "visible translate-y-0 scale-100 opacity-100 duration-[450ms]"
             : "invisible translate-y-8 opacity-0 duration-200 sm:translate-y-5 sm:scale-[0.85]"
@@ -260,7 +264,7 @@ export function ChatWidget() {
                           key={a.href}
                           href={a.href}
                           onClick={closeOnPhone}
-                          className="rounded-full border border-mint/40 px-3 py-1.5 text-[12.5px] font-bold text-mint transition-colors hover:border-mint hover:bg-mint hover:text-ink"
+                          className="rounded-full border border-copper/40 px-3 py-1.5 text-[12.5px] font-bold text-copper transition-colors hover:border-copper hover:bg-copper hover:text-ink"
                         >
                           {a.label}
                         </Link>
@@ -271,7 +275,7 @@ export function ChatWidget() {
               </div>
             ) : (
               <div key={m.id} className="chat-in flex justify-end pl-10">
-                <p className="whitespace-pre-wrap rounded-[16px] rounded-tr-[4px] bg-mint px-3.5 py-2.5 text-[14px] leading-[1.5] text-ink">
+                <p className="whitespace-pre-wrap rounded-[16px] rounded-tr-[4px] bg-copper px-3.5 py-2.5 text-[14px] leading-[1.5] text-ink">
                   {m.text}
                 </p>
               </div>
@@ -297,7 +301,7 @@ export function ChatWidget() {
                   key={q}
                   type="button"
                   onClick={() => send(q)}
-                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-mint hover:text-mint"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-copper hover:text-copper"
                 >
                   {q}
                 </button>
@@ -314,7 +318,7 @@ export function ChatWidget() {
           }}
           className="shrink-0 px-3.5 pb-[max(10px,env(safe-area-inset-bottom))] pt-1"
         >
-          <div className="flex items-end gap-2 rounded-[22px] border border-white/10 bg-white/[0.05] py-1 pl-4 pr-1 transition-colors focus-within:border-mint/50 focus-within:bg-white/[0.07]">
+          <div className="flex items-end gap-2 rounded-[22px] border border-white/10 bg-white/[0.05] py-1 pl-4 pr-1 transition-colors focus-within:border-copper/50 focus-within:bg-white/[0.07]">
             <label htmlFor={`${panelId}-input`} className="sr-only">
               Message
             </label>
@@ -336,7 +340,7 @@ export function ChatWidget() {
               type="submit"
               disabled={!draft.trim() || busy}
               aria-label="Send message"
-              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-mint text-ink transition-[background-color,opacity,scale] duration-200 hover:bg-[#5ff0bd] active:scale-95 disabled:opacity-35 disabled:hover:bg-mint"
+              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-copper text-ink transition-[background-color,opacity,scale] duration-200 hover:bg-[#D08A65] active:scale-95 disabled:opacity-35 disabled:hover:bg-copper"
             >
               <ArrowUp size={18} strokeWidth={2.4} />
             </button>
@@ -353,7 +357,7 @@ export function ChatWidget() {
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={open ? "Close chat" : "Chat with us"}
-        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-ink text-mint shadow-[0_14px_36px_-12px_rgb(10_20_16/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-ink-2 active:scale-95 ${
+        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-copper text-ink shadow-[0_14px_36px_-12px_rgb(23_25_28/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-ink-2 active:scale-95 ${
           open ? "max-sm:pointer-events-none max-sm:scale-75 max-sm:opacity-0" : ""
         }`}
       >
