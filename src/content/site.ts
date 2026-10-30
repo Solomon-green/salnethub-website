@@ -1,7 +1,6 @@
 export const site = {
   name: "SalnetHub",
-  // Swap to the custom domain once it points at Vercel (or set NEXT_PUBLIC_SITE_URL there).
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://salnethub-website-ciui.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.salnethub.com",
   email: "info@salnethub.com",
   tagline: "Systems that run your business while you grow it.",
   description:

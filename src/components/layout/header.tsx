@@ -87,10 +87,10 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           solid ? "nav-dark on-dark shadow-[0_10px_30px_-18px_rgb(0_0_0/0.6)]" : "nav-dark on-dark"
         }`}
       >
-        <div className="container-x flex h-16 items-center gap-8 lg:h-[72px]">
+        <div className="container-x flex h-16 items-center gap-4 lg:h-[72px] xl:gap-8">
           <Logo variant={overDark ? "white" : "color"} />
 
-          <nav aria-label="Main" className="ml-10 hidden flex-1 items-center gap-1.5 xl:ml-16 xl:flex">
+          <nav aria-label="Main" className="ml-2 hidden flex-1 items-center gap-0.5 lg:flex xl:ml-12 xl:gap-1.5">
             {links.map((item) =>
               item.label === "Services" ? (
                 <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega} className="relative">
@@ -99,7 +99,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
                     aria-expanded={megaOpen}
                     aria-controls="mega-menu"
                     onClick={() => setMegaOpen((v) => !v)}
-                    className={`flex h-10 items-center gap-1 px-3 text-[15px] font-medium transition-colors ${linkTone(isActive("/services"))}`}
+                    className={`flex h-10 items-center gap-1 whitespace-nowrap px-2.5 text-[14px] font-medium xl:px-3 xl:text-[15px] transition-colors ${linkTone(isActive("/services"))}`}
                   >
                     Services
                     <ChevronDown size={16} strokeWidth={1.75} className={`transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`} />
@@ -109,7 +109,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex h-10 items-center px-3 text-[15px] font-medium transition-colors ${linkTone(isActive(item.href))}`}
+                  className={`flex h-10 items-center whitespace-nowrap px-2.5 text-[14px] font-medium xl:px-3 xl:text-[15px] transition-colors ${linkTone(isActive(item.href))}`}
                 >
                   {item.label}
                 </Link>
@@ -123,7 +123,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
             </Link>
             <button
               type="button"
-              className={`flex h-11 w-11 items-center justify-center xl:hidden ${overDark ? "text-white" : "text-fg"}`}
+              className={`flex h-11 w-11 items-center justify-center lg:hidden ${overDark ? "text-white" : "text-fg"}`}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -138,7 +138,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           id="mega-menu"
           onMouseEnter={openMega}
           onMouseLeave={closeMega}
-          className={`absolute inset-x-0 top-full hidden border-b border-line bg-surface transition-[opacity,translate,visibility] duration-250 xl:block ${
+          className={`absolute inset-x-0 top-full hidden border-b border-line bg-surface transition-[opacity,translate,visibility] duration-250 lg:block ${
             megaOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
           }`}
         >
@@ -190,7 +190,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-30 overflow-y-auto bg-surface pt-16 transition-[opacity,visibility] duration-300 xl:hidden ${
+        className={`fixed inset-0 z-30 overflow-y-auto bg-surface pt-16 transition-[opacity,visibility] duration-300 lg:hidden ${
           mobileOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         aria-hidden={!mobileOpen}
