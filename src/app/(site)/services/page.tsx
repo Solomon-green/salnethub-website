@@ -33,7 +33,7 @@ export default function ServicesPage() {
         title="Services that take work off your team"
         sub="Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
         <a href="#fit" className="btn btn-secondary">
           Find your starting point
         </a>
@@ -44,7 +44,7 @@ export default function ServicesPage() {
         return (
           <section
             key={g}
-            className={`relative overflow-hidden py-24 lg:py-28 ${gi === 1 ? "band-ink on-dark text-white" : "border-t border-line"}`}
+            className={`relative overflow-hidden py-24 lg:py-28 ${gi === 1 ? "band-glow on-dark text-white" : "border-t border-line"}`}
           >
             <div className="container-x relative">
               <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
@@ -61,10 +61,10 @@ export default function ServicesPage() {
                 }`}
               >
                 {list.length === 1 ? (
-                  <Link href={`/services/${list[0].slug}`} className="border border-line rounded-card group grid gap-6 bg-white p-8 md:grid-cols-[auto_1fr_auto] md:items-center md:p-10" data-reveal>
+                  <Link href={`/services/${list[0].slug}`} className="border border-line rounded-card group grid gap-6 bg-surface p-8 md:grid-cols-[auto_1fr_auto] md:items-center md:p-10" data-reveal>
                     <ServiceIcon name={list[0].icon} size={32} />
                     <div>
-                      <h3 className="t-h2 group-hover:text-deep-sage">{list[0].name}</h3>
+                      <h3 className="t-h2 group-hover:text-stone-deep">{list[0].name}</h3>
                       <p className="mt-2 max-w-2xl text-[16px] text-slate">{list[0].short}</p>
                     </div>
                     <span className="link-arrow">
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                   list.map((s) => <ServiceCard key={s.slug} s={s} />)
                 )}
                 {g === "automation" && (
-                  <div className="rounded-card on-dark flex flex-col justify-between bg-ink p-7 text-white md:p-8" data-reveal>
+                  <div className="rounded-card on-dark flex flex-col justify-between bg-raised p-7 text-white md:p-8" data-reveal>
                     <p className="t-h3">Not sure which one you need?</p>
                     <p className="mt-3 text-[15px] leading-relaxed text-on-ink-muted">
                       Most projects combine two or three of these. The automation audit ranks every opportunity by hours saved.
@@ -101,14 +101,14 @@ export default function ServicesPage() {
               Pick the sentence that sounds most like your week. That is usually the best first project.
             </p>
           </div>
-          <ul className="border-t border-ink">
+          <ul className="border-t border-fg">
             {fit.map((f) => {
               const s = getService(f.slug)!;
               return (
                 <li key={f.slug} data-reveal>
                   <Link href={`/services/${s.slug}`} className="group grid gap-2 border-b border-line py-6 md:grid-cols-[1.2fr_1fr_auto] md:items-center md:gap-8">
                     <span className="text-[18px] font-bold">&ldquo;{f.problem}&rdquo;</span>
-                    <span className="flex items-center gap-3 text-[15px] text-deep-sage">
+                    <span className="flex items-center gap-3 text-[15px] text-stone-deep">
                       <ServiceIcon name={s.icon} size={18} /> {s.name}
                     </span>
                     <ArrowRight size={18} className="hidden transition-transform group-hover:translate-x-1 md:block" />

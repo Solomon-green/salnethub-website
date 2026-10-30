@@ -44,17 +44,17 @@ export function ChartIllustration() {
       <div className="grid gap-3">
         {sources.map((s) => (
           <div key={s} className="flex items-center">
-            <div className="ci-src flex-1 rounded-xl border border-ink bg-white px-4 py-3 text-[14px] font-bold">{s}</div>
-            <div className="ci-pipe hidden h-px w-10 bg-ink md:block" />
+            <div className="ci-src flex-1 rounded-xl border border-fg bg-surface px-4 py-3 text-[14px] font-bold">{s}</div>
+            <div className="ci-pipe hidden h-px w-10 bg-raised md:block" />
           </div>
         ))}
         <p className="text-[12px] text-slate">Synced every 15 minutes</p>
       </div>
 
-      <div className="overflow-hidden rounded-card border border-ink bg-white">
+      <div className="overflow-hidden rounded-card border border-fg bg-surface">
         <div className="flex items-center justify-between border-b border-line px-5 py-3">
           <p className="text-[14px] font-bold">Weekly revenue dashboard</p>
-          <p className="text-[12px] text-deep-copper">Live</p>
+          <p className="text-[12px] text-sky">Live</p>
         </div>
         <div className="grid grid-cols-3 border-b border-line">
           <div className="ci-kpi border-r border-line px-5 py-4">
@@ -67,17 +67,17 @@ export function ChartIllustration() {
           </div>
           <div className="ci-kpi px-5 py-4">
             <p className="text-[12px] text-slate">Lead reply time</p>
-            <p className="mt-1 text-[22px] font-bold tracking-tight text-deep-copper">2 min</p>
+            <p className="mt-1 text-[22px] font-bold tracking-tight text-sky">2 min</p>
           </div>
         </div>
         <svg viewBox="0 0 340 120" className="w-full px-3 py-4" role="img" aria-label="Example chart: revenue rising week on week while reply time falls.">
           {[30, 60, 90].map((y) => (
-            <line key={y} x1="0" x2="340" y1={y} y2={y} stroke="#D3D0CA" strokeWidth="1" />
+            <line key={y} x1="0" x2="340" y1={y} y2={y} stroke="#2A2B2F" strokeWidth="1" />
           ))}
           {bars.map((h, i) => (
-            <rect key={i} className="ci-bar" x={8 + i * 40} y={110 - h} width="24" height={h} fill={i === bars.length - 1 ? "#6C8C7A" : "#17191C"} />
+            <rect key={i} className="ci-bar" x={8 + i * 40} y={110 - h} width="24" height={h} fill={i === bars.length - 1 ? "#475BFF" : "#3A3B3F"} />
           ))}
-          <path className="ci-line" d={linePath} fill="none" stroke="#C8754A" strokeWidth="2" />
+          <path className="ci-line" d={linePath} fill="none" stroke="#5D8BFF" strokeWidth="2" />
         </svg>
         <p className="border-t border-line px-5 py-2.5 text-[11px] text-slate">Example dashboard with sample data.</p>
       </div>

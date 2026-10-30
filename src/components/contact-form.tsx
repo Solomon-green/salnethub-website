@@ -41,13 +41,13 @@ export function ContactForm({ services, email }: { services: string[]; email: st
 
   if (status === "sent") {
     return (
-      <div className="rounded-card border border-sage bg-mist p-8 md:p-10" role="status">
-        <CircleCheck size={28} strokeWidth={1.5} className="text-deep-copper" />
+      <div className="rounded-card border border-brand bg-mist p-8 md:p-10" role="status">
+        <CircleCheck size={28} strokeWidth={1.5} className="text-sky" />
         <p className="t-h2 mt-5">Message received</p>
         <p className="mt-3 text-[16px] leading-relaxed text-slate">
           Thank you. We read every enquiry and reply within 1 business day, usually with two or three questions and a time for a call.
         </p>
-        <button type="button" onClick={() => setStatus("idle")} className="mt-6 text-[14px] font-bold text-deep-copper">
+        <button type="button" onClick={() => setStatus("idle")} className="mt-6 text-[14px] font-bold text-sky">
           Send another message
         </button>
       </div>
@@ -103,7 +103,7 @@ export function ContactForm({ services, email }: { services: string[]; email: st
           aria-describedby={errors.message ? "message-error" : "message-help"}
         />
         {errors.message ? (
-          <p id="message-error" className="text-[13px] text-deep-copper">
+          <p id="message-error" className="text-[13px] text-error">
             {errors.message}
           </p>
         ) : (
@@ -143,7 +143,7 @@ function Field({
     <div className="grid gap-2">
       <label htmlFor={name} className="text-[14px] font-bold">
         {label}
-        {required && <span className="text-deep-copper"> *</span>}
+        {required && <span className="text-sky"> *</span>}
       </label>
       <input
         id={name}
@@ -155,7 +155,7 @@ function Field({
         aria-describedby={error ? `${name}-error` : undefined}
       />
       {error && (
-        <p id={`${name}-error`} className="text-[13px] text-deep-copper">
+        <p id={`${name}-error`} className="text-[13px] text-error">
           {error}
         </p>
       )}

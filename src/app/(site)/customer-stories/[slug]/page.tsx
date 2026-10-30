@@ -51,8 +51,8 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
           {e.results.length > 0 && (
             <dl className="mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
               {e.results.map((r) => (
-                <div key={r.label} className="rounded-card border border-line bg-white p-6">
-                  <dd className="text-[36px] font-bold leading-none tracking-tight text-deep-copper">{r.value}</dd>
+                <div key={r.label} className="rounded-card border border-line bg-surface p-6">
+                  <dd className="text-[36px] font-bold leading-none tracking-tight text-sky">{r.value}</dd>
                   <dt className="mt-2 text-[14px] text-slate">{r.label}</dt>
                 </div>
               ))}
@@ -78,7 +78,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
                 <ul className="mt-3 grid gap-2">
                   {serviceNames.map((s) => (
                     <li key={s!.slug}>
-                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-ink underline decoration-transparent underline-offset-4 hover:decoration-current hover:underline">
+                      <Link href={`/services/${s!.slug}`} className="text-[15px] font-bold text-fg underline decoration-transparent underline-offset-4 hover:decoration-current hover:underline">
                         {s!.name}
                       </Link>
                     </li>
@@ -114,8 +114,8 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
             )}
             {body}
             {e.quote?.text && (
-              <figure className="not-prose my-12 border-l-2 border-sage pl-6">
-                <blockquote className="text-[21px] font-bold leading-snug text-ink">&ldquo;{e.quote.text}&rdquo;</blockquote>
+              <figure className="not-prose my-12 border-l-2 border-brand pl-6">
+                <blockquote className="text-[21px] font-bold leading-snug text-fg">&ldquo;{e.quote.text}&rdquo;</blockquote>
                 <figcaption className="mt-4 text-[14px] text-slate">
                   {e.quote.name}
                   {e.quote.role ? `, ${e.quote.role}` : ""}
@@ -127,12 +127,12 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
       </section>
 
       {e.gallery.length > 0 && (
-        <section className="border-t border-line bg-paper py-20">
+        <section className="border-t border-line bg-canvas py-20">
           <div className="container-x grid gap-6 md:grid-cols-2">
             {e.gallery.map((g, i) =>
               g.image ? (
                 <figure key={i}>
-                  <div className="rounded-card relative aspect-[16/10] overflow-hidden border border-line bg-white">
+                  <div className="rounded-card relative aspect-[16/10] overflow-hidden border border-line bg-surface">
                     <Image src={g.image} alt={g.caption || ""} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
                   </div>
                   {g.caption && <figcaption className="mt-3 text-[14px] text-slate">{g.caption}</figcaption>}

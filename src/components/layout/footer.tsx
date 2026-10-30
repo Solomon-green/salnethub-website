@@ -17,7 +17,7 @@ export function Footer({ hasWork = false }: { hasWork?: boolean }) {
   const automation = services.filter((s) => s.group === "automation");
   const other = services.filter((s) => s.group !== "automation");
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-ink text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#050608] text-white">
       <div className="container-x relative">
         <div className="grid gap-12 border-b border-white/12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr] lg:py-20">
           <div className="max-w-sm">
@@ -56,7 +56,7 @@ function FooterCol({ title, links }: { title: string; links: { label: string; hr
       <ul className="grid gap-0.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-copper">
+            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-sky">
               {l.label}
             </Link>
           </li>

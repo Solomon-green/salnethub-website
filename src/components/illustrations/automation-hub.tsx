@@ -78,7 +78,7 @@ export function AutomationHub({ className = "" }: { className?: string }) {
         ref={(el) => {
           nodes.current[i] = el;
         }}
-        className="flex h-14 w-14 items-center justify-center rounded-2xl border border-line bg-white text-ink shadow-[0_12px_30px_-18px_rgb(23_25_28/0.35)] sm:h-16 sm:w-16"
+        className="flex h-14 w-14 items-center justify-center rounded-2xl border border-line bg-surface text-fg shadow-[0_12px_30px_-18px_rgb(0_0_0/0.35)] sm:h-16 sm:w-16"
       >
         <ToolMark slug={slug} size={26} />
       </div>
@@ -101,12 +101,12 @@ export function AutomationHub({ className = "" }: { className?: string }) {
           </defs>
           {beams.map((b) => (
             <g key={b.i}>
-              <path d={b.d} fill="none" stroke="rgb(23 25 28 / 0.12)" strokeWidth="1.5" />
+              <path d={b.d} fill="none" stroke="rgb(0 0 0 / 0.12)" strokeWidth="1.5" />
               <path
                 d={b.d}
                 pathLength={1}
                 fill="none"
-                stroke="#6C8C7A"
+                stroke="#3A3B3F"
                 strokeWidth="2"
                 strokeLinecap="round"
                 filter="url(#beam-glow)"
@@ -122,7 +122,7 @@ export function AutomationHub({ className = "" }: { className?: string }) {
         <div className="relative flex justify-center py-6">
           <div ref={hub} className="relative">
             <span aria-hidden className="hub-ring absolute inset-0 rounded-2xl" />
-            <div className="rounded-2xl relative flex h-20 w-20 items-center justify-center border border-sage/50 bg-ink shadow-[0_20px_50px_-14px_rgb(23_25_28/0.55)] sm:h-24 sm:w-24">
+            <div className="rounded-2xl relative flex h-20 w-20 items-center justify-center border border-brand/50 bg-raised shadow-[0_20px_50px_-14px_rgb(0_0_0/0.55)] sm:h-24 sm:w-24">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/brand/salnethub-icon-reversed.svg" alt="" width={44} height={44} className="h-10 w-10 sm:h-11 sm:w-11" />
             </div>
@@ -132,11 +132,11 @@ export function AutomationHub({ className = "" }: { className?: string }) {
         <div className="relative flex flex-col gap-7 sm:gap-9">{targets.map((s, i) => node(s, i + sources.length))}</div>
       </div>
 
-      <div className="mx-auto mt-8 max-w-[420px] rounded-panel border border-line bg-white p-4 shadow-[0_24px_60px_-36px_rgb(23_25_28/0.4)] sm:p-5" aria-label="Example automation activity">
+      <div className="mx-auto mt-8 max-w-[420px] rounded-panel border border-line bg-surface p-4 shadow-[0_24px_60px_-36px_rgb(0_0_0/0.4)] sm:p-5" aria-label="Example automation activity">
         <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.12em] text-slate">
           <span>Automation activity</span>
-          <span className="flex items-center gap-2 text-deep-sage">
-            <span aria-hidden className="rounded-full live-dot h-1.5 w-1.5 bg-sage" />
+          <span className="flex items-center gap-2 text-stone-deep">
+            <span aria-hidden className="rounded-full live-dot h-1.5 w-1.5 bg-brand" />
             Live demo
           </span>
         </div>
@@ -147,11 +147,11 @@ export function AutomationHub({ className = "" }: { className?: string }) {
               className={`flex items-center gap-3 py-2 ${k === 0 ? "feed-in" : ""} ${k > 0 ? "border-t border-line" : ""}`}
               
             >
-              <span className="rounded-xl flex h-8 w-8 shrink-0 items-center justify-center bg-paper text-ink">
+              <span className="rounded-xl flex h-8 w-8 shrink-0 items-center justify-center bg-canvas text-fg">
                 <ToolMark slug={e.tool} size={16} />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block truncate text-[14px] font-bold text-ink">{e.text}</span>
+                <span className="block truncate text-[14px] font-bold text-fg">{e.text}</span>
                 <span className="block truncate text-[12px] text-slate">{e.meta}</span>
               </span>
               <span className="shrink-0 text-[11px] text-slate">{ages[k]}</span>
@@ -163,7 +163,7 @@ export function AutomationHub({ className = "" }: { className?: string }) {
       <style>{`
         .beam-pulse{stroke-dasharray:0.16 1;stroke-dashoffset:1.16;animation:beam 2.4s cubic-bezier(.45,0,.25,1) infinite}
         @keyframes beam{to{stroke-dashoffset:0}}
-        .hub-ring{border:1px solid rgb(108 140 122 / .6);animation:hub-ring 2.4s cubic-bezier(.22,1,.36,1) infinite}
+        .hub-ring{border:1px solid rgb(71 91 255 / .6);animation:hub-ring 2.4s cubic-bezier(.22,1,.36,1) infinite}
         @keyframes hub-ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.55);opacity:0}}
         .live-dot{animation:live 1.6s ease-in-out infinite}
         @keyframes live{50%{opacity:.25}}

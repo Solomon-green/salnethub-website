@@ -12,6 +12,30 @@ export function Logo({ variant = "color", className = "" }: { variant?: "color" 
   );
 }
 
+/** A tool's app-style tile: its own brand colour behind its mark, the mark in white or Ink for contrast. */
+export function ToolTile({ slug, size = 48, className = "" }: { slug: string; size?: number; className?: string }) {
+  const tool = getIntegration(slug);
+  const hex = tool?.icon ? toolIcons[tool.icon]?.hex : undefined;
+  const bg = hex ? `#${hex}` : "var(--color-raised)";
+  const mark = hex && luminance(hex) > 0.4 ? "text-black" : "text-white";
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center justify-center rounded-[14px] ${mark} ${className}`}
+      style={{ width: size, height: size, background: bg }}
+    >
+      <ToolMark slug={slug} size={Math.round(size * 0.5)} />
+    </span>
+  );
+}
+
+function luminance(hex: string) {
+  const [r, g, b] = [0, 2, 4].map((i) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
 /** A tool's brand mark in a single colour (brand kit: logos and icons in Ink or white). */
 export function ToolMark({ slug, size = 22, className = "" }: { slug: string; size?: number; className?: string }) {
   const tool = getIntegration(slug);

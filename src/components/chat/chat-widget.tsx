@@ -189,7 +189,7 @@ export function ChatWidget() {
           <button
             type="button"
             onClick={() => toggle(true)}
-            className="rounded-[14px] bg-white px-4 py-2.5 text-left text-[14px] leading-snug text-ink shadow-[0_14px_40px_-14px_rgb(23_25_28/0.45),0_0_0_1px_rgb(23_25_28/0.06)] transition-[translate] duration-200 hover:-translate-y-0.5"
+            className="rounded-[14px] bg-surface px-4 py-2.5 text-left text-[14px] leading-snug text-fg shadow-[0_14px_40px_-14px_rgb(0_0_0/0.45),0_0_0_1px_rgb(0_0_0/0.06)] transition-[translate] duration-200 hover:-translate-y-0.5"
           >
             {chat.teaser}
           </button>
@@ -197,7 +197,7 @@ export function ChatWidget() {
             type="button"
             onClick={dismissTeaser}
             aria-label="Dismiss"
-            className="absolute -right-2.5 -top-2.5 flex size-6 items-center justify-center rounded-full bg-slate text-white shadow transition-colors hover:bg-ink"
+            className="absolute -right-2.5 -top-2.5 flex size-6 items-center justify-center rounded-full bg-slate text-white shadow transition-colors hover:bg-raised"
           >
             <X size={12} strokeWidth={2.75} />
           </button>
@@ -211,14 +211,14 @@ export function ChatWidget() {
         aria-labelledby={titleId}
         aria-hidden={!open}
         inert={!open}
-        className={`on-dark fixed z-50 flex flex-col overflow-hidden bg-ink text-white shadow-[0_30px_90px_-24px_rgb(23_25_28/0.7),0_0_0_1px_rgb(255_255_255/0.08)] transition-[opacity,translate,scale,visibility] ease-[var(--ease-out-quint)] max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-[max(12px,env(safe-area-inset-top))] max-sm:rounded-t-[22px] sm:bottom-[86px] sm:right-5 sm:h-[min(560px,calc(100dvh-110px))] sm:w-[380px] sm:origin-bottom-right sm:rounded-[20px] ${
+        className={`on-dark fixed z-50 flex flex-col overflow-hidden bg-raised text-white shadow-[0_30px_90px_-24px_rgb(0_0_0/0.7),0_0_0_1px_rgb(255_255_255/0.08)] transition-[opacity,translate,scale,visibility] ease-[var(--ease-out-quint)] max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-[max(12px,env(safe-area-inset-top))] max-sm:rounded-t-[22px] sm:bottom-[86px] sm:right-5 sm:h-[min(560px,calc(100dvh-110px))] sm:w-[380px] sm:origin-bottom-right sm:rounded-[20px] ${
           open
             ? "visible translate-y-0 scale-100 opacity-100 duration-[450ms]"
             : "invisible translate-y-8 opacity-0 duration-200 sm:translate-y-5 sm:scale-[0.85]"
         }`}
       >
         {/* Header */}
-        <header className="flex shrink-0 items-center gap-3 bg-ink-2 px-4 py-3.5">
+        <header className="flex shrink-0 items-center gap-3 bg-raised px-4 py-3.5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={AVATAR} alt="" width={40} height={40} className="size-10 shrink-0 rounded-full ring-1 ring-white/15" />
           <h2 id={titleId} className="min-w-0 flex-1 truncate text-[16px] font-bold tracking-[-0.01em]">
@@ -264,7 +264,7 @@ export function ChatWidget() {
                           key={a.href}
                           href={a.href}
                           onClick={closeOnPhone}
-                          className="rounded-full border border-copper/40 px-3 py-1.5 text-[12.5px] font-bold text-copper transition-colors hover:border-copper hover:bg-copper hover:text-ink"
+                          className="rounded-full border border-brand/40 px-3 py-1.5 text-[12.5px] font-bold text-sky transition-colors hover:border-brand hover:bg-brand hover:text-fg"
                         >
                           {a.label}
                         </Link>
@@ -275,7 +275,7 @@ export function ChatWidget() {
               </div>
             ) : (
               <div key={m.id} className="chat-in flex justify-end pl-10">
-                <p className="whitespace-pre-wrap rounded-[16px] rounded-tr-[4px] bg-copper px-3.5 py-2.5 text-[14px] leading-[1.5] text-ink">
+                <p className="whitespace-pre-wrap rounded-[16px] rounded-tr-[4px] bg-brand px-3.5 py-2.5 text-[14px] leading-[1.5] text-fg">
                   {m.text}
                 </p>
               </div>
@@ -301,7 +301,7 @@ export function ChatWidget() {
                   key={q}
                   type="button"
                   onClick={() => send(q)}
-                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-copper hover:text-copper"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-brand hover:text-sky"
                 >
                   {q}
                 </button>
@@ -318,7 +318,7 @@ export function ChatWidget() {
           }}
           className="shrink-0 px-3.5 pb-[max(10px,env(safe-area-inset-bottom))] pt-1"
         >
-          <div className="flex items-end gap-2 rounded-[22px] border border-white/10 bg-white/[0.05] py-1 pl-4 pr-1 transition-colors focus-within:border-copper/50 focus-within:bg-white/[0.07]">
+          <div className="flex items-end gap-2 rounded-[22px] border border-white/10 bg-white/[0.05] py-1 pl-4 pr-1 transition-colors focus-within:border-brand/50 focus-within:bg-white/[0.07]">
             <label htmlFor={`${panelId}-input`} className="sr-only">
               Message
             </label>
@@ -340,7 +340,7 @@ export function ChatWidget() {
               type="submit"
               disabled={!draft.trim() || busy}
               aria-label="Send message"
-              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-copper text-ink transition-[background-color,opacity,scale] duration-200 hover:bg-[#D08A65] active:scale-95 disabled:opacity-35 disabled:hover:bg-copper"
+              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-brand text-fg transition-[background-color,opacity,scale] duration-200 hover:bg-[#394EFF] active:scale-95 disabled:opacity-35 disabled:hover:bg-brand"
             >
               <ArrowUp size={18} strokeWidth={2.4} />
             </button>
@@ -357,7 +357,7 @@ export function ChatWidget() {
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={open ? "Close chat" : "Chat with us"}
-        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-copper text-ink shadow-[0_14px_36px_-12px_rgb(23_25_28/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-ink-2 active:scale-95 ${
+        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-brand text-fg shadow-[0_14px_36px_-12px_rgb(0_0_0/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-raised active:scale-95 ${
           open ? "max-sm:pointer-events-none max-sm:scale-75 max-sm:opacity-0" : ""
         }`}
       >

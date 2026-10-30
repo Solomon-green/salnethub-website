@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SalnetHub Email Signature</title>
+<style>
+  body { margin: 0; background: #F4F5F7; font-family: "Helvetica Neue", Arial, sans-serif; color: #000000; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 16px; }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  .note { color: #59595B; font-size: 14px; line-height: 1.6; margin: 0 0 24px; }
+  .card { background: #fff; border: 1px solid #D4D5D9; border-radius: 16px; padding: 32px; overflow-x: auto; }
+  .bar { display: flex; gap: 12px; margin: 20px 0 32px; flex-wrap: wrap; }
+  button { font: 700 15px "Helvetica Neue", Arial, sans-serif; border: 0; border-radius: 999px; padding: 14px 22px; cursor: pointer; }
+  .copy { background: #475BFF; color: #FFFFFF; }
+  .ghost { background: transparent; color: #000000; border: 1px solid #000000; }
+  .status { align-self: center; font-size: 14px; color: #475BFF; font-weight: 700; }
+  ol { color: #59595B; font-size: 14px; line-height: 1.7; padding-left: 20px; }
+  code { background: #E9EAEE; padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SalnetHub email signature</h1>
+  <p class="note">Click <strong>Copy signature</strong>, then paste it into your mail app's signature box. Images load from the live site, so keep this layout as is when you paste.</p>
+
+  <div class="card">
+<!-- ===== SIGNATURE START ===== -->
+<div id="sig">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;max-width:540px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <tr>
+    <td valign="top" style="padding:0 18px 0 0;">
+      <a href="https://salnethub.com" target="_blank" style="text-decoration:none;">
+        <img src="https://salnethub-website-ciui.vercel.app/email/salnethub-icon.png" width="64" height="64" alt="SalnetHub" style="display:block;width:64px;height:64px;border:0;border-radius:14px;">
+      </a>
+    </td>
+    <td valign="top" style="padding:0 0 0 18px;border-left:3px solid #475BFF;">
+      <p style="margin:0;font-size:17px;line-height:22px;font-weight:700;color:#000000;letter-spacing:-0.2px;">Bwire Solomon</p>
+      <p style="margin:2px 0 0;font-size:13px;line-height:18px;color:#59595B;">Founder, <strong style="color:#000000;">SalnetHub</strong></p>
+      <p style="margin:8px 0 0;font-size:13px;line-height:18px;color:#000000;">Business automation &amp; AI agents for small businesses</p>
+      <p style="margin:10px 0 0;font-size:13px;line-height:20px;color:#59595B;">
+        <span style="color:#475BFF;font-weight:700;">E</span>&nbsp;&nbsp;<a href="mailto:info@salnethub.com" style="color:#000000;text-decoration:none;">info@salnethub.com</a>
+        &nbsp;&nbsp;<span style="color:#D4D5D9;">|</span>&nbsp;&nbsp;
+        <span style="color:#475BFF;font-weight:700;">W</span>&nbsp;&nbsp;<a href="https://salnethub.com" target="_blank" style="color:#000000;text-decoration:none;">salnethub.com</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:18px 0 0;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100%" style="border-collapse:separate;background:#000000;border-radius:12px;">
+        <tr>
+          <td style="padding:16px 18px;">
+            <p style="margin:0;font-size:14px;line-height:19px;font-weight:700;color:#FFFFFF;">Is manual work slowing your team down?</p>
+            <p style="margin:4px 0 0;font-size:12.5px;line-height:18px;color:#B3B3B4;">A free 20-minute call. We name the first workflow worth automating and give you a fixed price.</p>
+          </td>
+          <td align="right" valign="middle" style="padding:16px 18px 16px 0;white-space:nowrap;">
+            <a href="https://salnethub.com/contact#book" target="_blank" style="display:inline-block;background:#475BFF;color:#FFFFFF;font-size:13px;line-height:13px;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:999px;">Book a call&nbsp;&rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:12px 0 0;font-size:11.5px;line-height:17px;color:#76767A;">
+      <strong style="color:#000000;">53 client projects since 2023</strong>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Fixed-price quotes&nbsp;&nbsp;&middot;&nbsp;&nbsp;First workflow live in 1&ndash;2 weeks
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:10px 0 0;font-size:10px;line-height:14px;color:#909091;">
+      This email and any attachments are confidential and intended only for the named recipient. If you received it in error, please let us know and delete it.
+    </td>
+  </tr>
+</table>
+</div>
+<!-- ===== SIGNATURE END ===== -->
+  </div>
+
+  <div class="bar">
+    <button class="copy" id="copy">Copy signature</button>
+    <button class="ghost" id="copyhtml">Copy HTML code</button>
+    <span class="status" id="status" role="status"></span>
+  </div>
+
+  <ol>
+    <li><strong>Gmail / Google Workspace:</strong> Settings &rarr; See all settings &rarr; General &rarr; Signature &rarr; Create new &rarr; paste &rarr; Save changes.</li>
+    <li><strong>Outlook (web):</strong> Settings &rarr; Mail &rarr; Compose and reply &rarr; Email signature &rarr; paste &rarr; Save.</li>
+    <li><strong>Zoho Mail / IONOS / others:</strong> open the signature editor, switch to HTML or source mode if offered and use <em>Copy HTML code</em>; otherwise paste normally.</li>
+  </ol>
+</div>
+<script>
+  const sig = document.getElementById("sig");
+  const status = document.getElementById("status");
+  const say = (t) => { status.textContent = t; setTimeout(() => (status.textContent = ""), 2500); };
+  document.getElementById("copy").onclick = async () => {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({
+        "text/html": new Blob([sig.innerHTML], { type: "text/html" }),
+        "text/plain": new Blob([sig.innerText], { type: "text/plain" }),
+      })]);
+      say("Copied. Paste it into your signature box.");
+    } catch {
+      const r = document.createRange(); r.selectNodeContents(sig);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      document.execCommand("copy"); s.removeAllRanges();
+      say("Copied.");
+    }
+  };
+  document.getElementById("copyhtml").onclick = async () => {
+    try { await navigator.clipboard.writeText(sig.innerHTML.trim()); say("HTML copied."); } catch { say("Copy blocked. Select the signature and copy it by hand."); }
+  };
+</script>
+</body>
+</html>

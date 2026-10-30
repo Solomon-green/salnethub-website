@@ -19,7 +19,7 @@ export function UpworkProof({ className = "" }: { className?: string }) {
   const body = (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       {upwork.rating != null && (
-        <span className="flex gap-0.5 text-copper" aria-hidden>
+        <span className="flex gap-0.5 text-fg" aria-hidden>
           {Array.from({ length: 5 }, (_, i) => (
             <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
           ))}
@@ -40,7 +40,7 @@ export function UpworkProof({ className = "" }: { className?: string }) {
 /** Outlined quote mark, drawn rather than typed so it stays crisp at any size. */
 function QuoteMark() {
   return (
-    <svg aria-hidden viewBox="0 0 64 48" className="h-12 w-16 text-sage" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg aria-hidden viewBox="0 0 64 48" className="h-12 w-16 text-sky" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M4 44V27C4 13 11 5 25 3l1.5 5C18 10 14.5 15 14 22h12v22H4Z" />
       <path d="M36 44V27c0-14 7-22 21-24l1.5 5C50 10 46.5 15 46 22h12v22H36Z" />
     </svg>
@@ -69,7 +69,7 @@ export async function Testimonials({ moreLink = true }: { moreLink?: boolean }) 
           {testimonials.map((t) => (
             <figure
               key={t.quote}
-              className="flex flex-col rounded-br-[72px] border border-line bg-white p-7 text-ink shadow-[0_30px_60px_-44px_rgb(23_25_28/0.4)] md:p-8"
+              className="flex flex-col rounded-br-[72px] border border-line bg-surface p-7 text-fg shadow-[0_30px_60px_-44px_rgb(0_0_0/0.4)] md:p-8"
               data-reveal
             >
               <div className="flex items-start justify-between gap-6">
@@ -79,8 +79,8 @@ export async function Testimonials({ moreLink = true }: { moreLink?: boolean }) 
                   <img src={t.logo} alt={t.company ?? ""} className="h-12 w-auto max-w-[150px] object-contain" />
                 )}
               </div>
-              {t.result && <p className="mt-6 text-[12px] font-bold uppercase tracking-[0.12em] text-deep-copper">{t.result}</p>}
-              <blockquote className="mt-4 text-[17px] italic leading-relaxed text-deep-sage">{t.quote}</blockquote>
+              {t.result && <p className="mt-6 text-[12px] font-bold uppercase tracking-[0.12em] text-sky">{t.result}</p>}
+              <blockquote className="mt-4 text-[17px] italic leading-relaxed text-stone-deep">{t.quote}</blockquote>
               <figcaption className="mt-8 border-t border-line pt-5 text-[15px] leading-snug">
                 <span className="block font-bold">{t.name}</span>
                 <span className="block text-slate">

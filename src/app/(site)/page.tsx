@@ -53,14 +53,14 @@ export default async function Home() {
           <div>
             <span className="eyebrow">Automate, simplify and scale</span>
             <h1 className="t-hero mt-6 max-w-[15ch] [text-wrap:balance]">
-              Systems that run your business <span className="t-accent text-deep-copper">while you grow it.</span>
+              Systems that run your business <span className="t-accent">while you grow it.</span>
             </h1>
             <p className="mt-7 max-w-xl text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">
               We design and build automations and AI agents across your whole operation: sales, marketing, admin, finance, reporting and customer
               support. Your tools finally work as one system, and your team gets back to the work that moves the business forward.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <PrimaryCta tone="copper" />
+              <PrimaryCta tone="lime" />
               {/* Quote cards first (on this page), with their "More customer stories" button leading to the full page */}
               {hasTestimonials || stories.length > 0 ? (
                 <Link href={hasTestimonials ? "#customer-stories" : "/customer-stories"} className="btn btn-secondary">
@@ -75,13 +75,13 @@ export default async function Home() {
             </div>
             <ul className="mt-9 grid max-w-xl gap-x-6 gap-y-2.5 text-[14px] text-slate sm:grid-cols-2" aria-label="Why teams choose SalnetHub">
               {hasUpwork && (
-                <li className="text-ink sm:col-span-2">
+                <li className="text-fg sm:col-span-2">
                   <UpworkProof className="font-bold" />
                 </li>
               )}
               {proofLine.map((p) => (
                 <li key={p} className="flex items-center gap-2.5">
-                  <Check aria-hidden size={15} strokeWidth={2.5} className="shrink-0 text-sage" />
+                  <Check aria-hidden size={15} strokeWidth={2.5} className="shrink-0 text-sky" />
                   {p}
                 </li>
               ))}
@@ -106,7 +106,7 @@ export default async function Home() {
             title="The same work, without the busywork"
             body="Automation does not change what your business does. It removes the copying, chasing and waiting between the steps."
           />
-          <div className="mt-12 overflow-hidden rounded-card border border-line bg-white px-6 shadow-[0_24px_60px_-44px_rgb(23_25_28/0.35)] md:px-10">
+          <div className="mt-12 overflow-hidden rounded-card border border-line bg-surface px-6 shadow-[0_24px_60px_-44px_rgb(0_0_0/0.35)] md:px-10">
             <div className="hidden grid-cols-[1.1fr_1fr_1fr] gap-8 border-b border-line py-5 text-[13px] font-bold text-slate md:grid">
               <span>Task</span>
               <span>Done by hand</span>
@@ -116,8 +116,8 @@ export default async function Home() {
               <div key={c.area} data-reveal className="grid gap-2 border-b border-line py-6 last:border-b-0 md:grid-cols-[1.1fr_1fr_1fr] md:items-center md:gap-8">
                 <p className="text-[18px] font-bold">{c.area}</p>
                 <p className="text-[16px] text-slate line-through decoration-slate/50 decoration-[1.5px]">{c.before}</p>
-                <p className="flex items-center gap-2.5 text-[16px] font-bold text-ink">
-                  <Check aria-hidden size={18} strokeWidth={2.5} className="shrink-0 text-sage" />
+                <p className="flex items-center gap-2.5 text-[16px] font-bold text-fg">
+                  <Check aria-hidden size={18} strokeWidth={2.5} className="shrink-0 text-sky" />
                   {c.after}
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default async function Home() {
         <div className="container-x">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
-              What is copy-paste <span className="t-accent text-deep-copper">costing you?</span>
+              What is copy-paste <span className="t-accent">costing you?</span>
             </h2>
             <p className="t-lead mt-5" data-reveal>
               Move the sliders to match your team. Most businesses are surprised by the yearly number.
@@ -163,7 +163,7 @@ export default async function Home() {
       </section>
 
       {/* Workflow showcase: deep moment one */}
-      <section className="band-ink on-dark relative overflow-hidden py-24 text-white lg:py-32">
+      <section className="band-glow on-dark relative overflow-hidden py-24 text-white lg:py-32">
         <div className="container-x relative">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
@@ -215,12 +215,12 @@ export default async function Home() {
               {[...entryPoints, builds[0], builds[2]].map((e, i) => (
                 <div
                   key={e.name}
-                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-ink bg-ink text-white" : "border-line bg-white"}`}
+                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-fg bg-raised text-white" : "border-line bg-surface"}`}
                   data-reveal
                 >
                   <div className="flex items-center justify-between gap-3">
                     <p className="text-[15px] font-bold">{e.name}</p>
-                    {i === 2 && <span className="rounded-full bg-copper-soft px-2.5 py-1 text-[11px] font-bold text-ink">Most popular start</span>}
+                    {i === 2 && <span className="rounded-full bg-brand-soft px-2.5 py-1 text-[11px] font-bold text-fg">Most popular start</span>}
                   </div>
                   <p className="mt-4 text-[34px] font-bold leading-none tracking-tight">{"unit" in e ? e.price : `From ${e.price}`}</p>
                   <p className={`mt-2 text-[13px] ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{"unit" in e ? e.unit : e.time}</p>
@@ -233,7 +233,7 @@ export default async function Home() {
           <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
             {promises.map((p) => (
               <li key={p.name} className="flex gap-3" data-reveal>
-                <Check aria-hidden size={18} strokeWidth={2.5} className="mt-0.5 shrink-0 text-sage" />
+                <Check aria-hidden size={18} strokeWidth={2.5} className="mt-0.5 shrink-0 text-sky" />
                 <span>
                   <span className="block text-[15px] font-bold">{p.name}</span>
                   <span className="mt-1 block text-[14px] leading-relaxed text-slate">{p.body}</span>

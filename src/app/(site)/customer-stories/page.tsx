@@ -44,13 +44,13 @@ export default async function CustomerStoriesPage() {
         title="Customer stories"
         sub="How teams like yours stopped copying, chasing and re-typing. Every story names what we built, the tools involved and what changed."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
       </PageHero>
 
       {items.length === 0 ? (
         <section className="py-24 lg:py-28">
           <div className="container-x">
-            <div className="rounded-card grid gap-10 border border-line bg-white p-8 md:grid-cols-[auto_1fr] md:items-center md:p-14" data-reveal>
+            <div className="rounded-card grid gap-10 border border-line bg-surface p-8 md:grid-cols-[auto_1fr] md:items-center md:p-14" data-reveal>
               <span className="icon-tile !h-16 !w-16">
                 <FolderOpen size={28} strokeWidth={1.5} />
               </span>
@@ -83,7 +83,7 @@ export default async function CustomerStoriesPage() {
                 >
                   {spotlight.map(({ slug, entry }, i) => (
                     <li key={slug} className={spotlight.length === 3 && i === 0 ? "md:col-span-2 lg:row-span-2" : ""} data-reveal>
-                      <Link href={`/customer-stories/${slug}`} className="group band-ink on-dark relative flex h-full flex-col justify-end overflow-hidden rounded-card p-7 text-white">
+                      <Link href={`/customer-stories/${slug}`} className="group band-glow on-dark relative flex h-full flex-col justify-end overflow-hidden rounded-card p-7 text-white">
                         {entry.cover && (
                           <Image
                             src={entry.cover}
@@ -94,13 +94,13 @@ export default async function CustomerStoriesPage() {
                           />
                         )}
                         {/* Dark fade at the foot keeps white text readable on any cover, without tinting it */}
-                        <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/45 to-transparent" />
+                        <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent" />
                         <span className="relative">
                           <span className={`block font-bold leading-tight tracking-tight ${i === 0 ? "text-[clamp(2rem,3.4vw,2.8rem)]" : "text-[26px]"}`}>
                             {entry.client}
                           </span>
                           <span className="mt-2 block max-w-[46ch] text-[15px] leading-relaxed text-on-ink-muted">{entry.title}</span>
-                          <span className="mt-5 inline-flex items-center gap-1 text-[14px] font-bold text-copper">
+                          <span className="mt-5 inline-flex items-center gap-1 text-[14px] font-bold text-sky">
                             Read their story <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
                           </span>
                         </span>

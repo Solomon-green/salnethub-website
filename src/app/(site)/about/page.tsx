@@ -32,7 +32,7 @@ export default function AboutPage() {
         title="We connect systems so teams get their time back"
         sub="SalnetHub is an automation and AI company for small-to-medium teams and businesses. We build the connections between your tools so work moves on its own."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
       </PageHero>
 
       <section className="border-t border-line py-24 lg:py-32">
@@ -50,12 +50,12 @@ export default function AboutPage() {
             <p>
               Automation is our core. We also build websites and AI assistants, because they work best when they are part of the same connected system.
             </p>
-            <p className="mt-4 border-l-[3px] border-copper pl-6 text-[clamp(1.5rem,2.4vw,2rem)] font-bold leading-[1.2] tracking-tight text-ink">
+            <p className="mt-4 border-l-[3px] border-brand pl-6 text-[clamp(1.5rem,2.4vw,2rem)] font-bold leading-[1.2] tracking-tight text-fg">
               Smarter systems.
               <br />
               Better decisions.
               <br />
-              <span className="t-accent text-deep-copper">Greater impact.</span>
+              <span className="t-accent">Greater impact.</span>
             </p>
           </div>
         </div>
@@ -68,8 +68,8 @@ export default function AboutPage() {
           </h2>
           <ul className="mt-12 grid gap-4 md:grid-cols-2">
             {believe.map((b) => (
-              <li key={b} className="rounded-card flex gap-4 border border-line bg-white p-8 text-[20px] font-bold leading-snug md:p-10" data-reveal>
-                <span aria-hidden className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-sage" />
+              <li key={b} className="rounded-card flex gap-4 border border-line bg-surface p-8 text-[20px] font-bold leading-snug md:p-10" data-reveal>
+                <span aria-hidden className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-brand" />
                 {b}
               </li>
             ))}
@@ -87,7 +87,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {who.map((w) => (
-              <div key={w.title} className="border border-line rounded-card bg-white p-7" data-reveal>
+              <div key={w.title} className="border border-line rounded-card bg-surface p-7" data-reveal>
                 <h3 className="t-h3">{w.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{w.body}</p>
               </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
               How we work <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="border-t border-ink">
+          <div className="border-t border-fg">
             {principles.map((p) => (
               <div key={p.name} className="grid gap-2 border-b border-line py-7 md:grid-cols-[0.5fr_1.5fr] md:gap-10" data-reveal>
                 <p className="text-[22px] font-bold tracking-tight">{p.name}</p>

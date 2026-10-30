@@ -40,7 +40,7 @@ export default function HowWeWorkPage() {
         title="How we work"
         sub="A clear process with fixed prices, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
       </PageHero>
 
       <section className="border-t border-line py-24 lg:py-32">
@@ -60,7 +60,7 @@ export default function HowWeWorkPage() {
           </h2>
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {commitments.map((c) => (
-              <div key={c.title} className="border border-line rounded-card bg-white p-7 md:p-8" data-reveal>
+              <div key={c.title} className="border border-line rounded-card bg-surface p-7 md:p-8" data-reveal>
                 <span className="icon-tile">
                   <Check size={22} strokeWidth={1.75} />
                 </span>
@@ -84,7 +84,7 @@ export default function HowWeWorkPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {week.map((w) => (
-              <div key={w.day} className="border border-line rounded-card bg-white p-7" data-reveal>
+              <div key={w.day} className="border border-line rounded-card bg-surface p-7" data-reveal>
                 <p className="text-[20px] font-bold">{w.day}</p>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{w.body}</p>
               </div>

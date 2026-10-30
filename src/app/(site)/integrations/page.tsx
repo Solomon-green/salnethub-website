@@ -1,4 +1,4 @@
-import { ToolMark } from "@/components/brand";
+import { ToolTile } from "@/components/brand";
 import { CtaBand, PageHero, PrimaryCta } from "@/components/ui";
 import { integrationCategories, integrations } from "@/content/integrations";
 import { JsonLd, breadcrumbLd } from "@/lib/schema";
@@ -17,7 +17,7 @@ export default function IntegrationsPage() {
         title="We build on the tools you already pay for"
         sub="No new platform to learn. We connect the software your team uses every day, and add a connector only where one is needed."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
       </PageHero>
 
       <section className="border-t border-line py-24 lg:py-28">
@@ -31,10 +31,8 @@ export default function IntegrationsPage() {
                 {integrations
                   .filter((i) => i.category === cat)
                   .map((i) => (
-                    <li key={i.slug} className="border border-line rounded-card flex gap-5 bg-white p-6" data-reveal>
-                      <span className="icon-tile !h-12 !w-12 shrink-0 !text-ink">
-                        <ToolMark slug={i.slug} size={24} />
-                      </span>
+                    <li key={i.slug} className="border border-line rounded-card flex gap-5 bg-surface p-6" data-reveal>
+                      <ToolTile slug={i.slug} />
                       <div>
                         <p className="text-[16px] font-bold">{i.name}</p>
                         <p className="mt-1 text-[14px] leading-relaxed text-slate">{i.use}</p>
@@ -57,7 +55,7 @@ export default function IntegrationsPage() {
               If it has an API, a webhook, an email notification or even a spreadsheet export, we can usually connect it. We confirm on the first call.
             </p>
           </div>
-          <PrimaryCta tone="copper" />
+          <PrimaryCta tone="lime" />
         </div>
       </section>
 

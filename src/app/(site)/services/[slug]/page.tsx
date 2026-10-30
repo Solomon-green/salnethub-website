@@ -63,9 +63,9 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
         title={s.hero.title}
         sub={s.hero.sub}
         aside={
-          <div className="overflow-hidden rounded-card border border-line bg-white text-ink shadow-[0_30px_80px_-40px_rgb(23_25_28/0.35)]" data-reveal>
+          <div className="overflow-hidden rounded-card border border-line bg-surface text-fg shadow-[0_30px_80px_-40px_rgb(0_0_0/0.35)]" data-reveal>
             <div className="flex items-center gap-4 border-b border-line p-6">
-              <span className="rounded-xl flex h-12 w-12 items-center justify-center bg-ink text-white">
+              <span className="rounded-xl flex h-12 w-12 items-center justify-center bg-raised text-white">
                 <ServiceIcon name={s.icon} size={24} />
               </span>
               <p className="text-[17px] font-bold leading-snug">{s.name}</p>
@@ -83,7 +83,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             </dl>
             <div className="p-6">
               <p className="text-[13px] text-slate">Works with</p>
-              <div className="mt-4 flex flex-wrap items-center gap-5 text-ink/80">
+              <div className="mt-4 flex flex-wrap items-center gap-5 text-fg/80">
                 {s.tools.slice(0, 6).map((t) => (
                   <ToolMark key={t} slug={t} size={24} />
                 ))}
@@ -92,7 +92,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         }
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
         <a href="#workflow" className="btn btn-secondary">
           See how it works
         </a>
@@ -104,7 +104,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <h2 className="t-h1 lg:sticky lg:top-28 lg:self-start" data-reveal>
             {s.problem.title}
           </h2>
-          <div className="border-t border-ink">
+          <div className="border-t border-fg">
             {s.problem.points.map((p) => (
               <div key={p.title} className="grid gap-3 border-b border-line py-8 md:grid-cols-[0.8fr_1.2fr] md:gap-10" data-reveal>
                 <h3 className="t-h3">{p.title}</h3>
@@ -118,7 +118,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       {/* Workflow */}
       <section
         id="workflow"
-        className={`relative scroll-mt-20 overflow-hidden py-24 lg:py-32 ${darkFlow ? "band-ink on-dark text-white" : "border-t border-line"}`}
+        className={`relative scroll-mt-20 overflow-hidden py-24 lg:py-32 ${darkFlow ? "band-glow on-dark text-white" : "border-t border-line"}`}
       >
         <div className="container-x relative">
           <div className="max-w-3xl">
@@ -143,8 +143,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </h2>
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {s.capabilities.map((c) => (
-              <div key={c.title} className="border border-line rounded-card bg-white p-7 md:p-8" data-reveal>
-                <span aria-hidden className="block h-2.5 w-2.5 rounded-full bg-sage" />
+              <div key={c.title} className="border border-line rounded-card bg-surface p-7 md:p-8" data-reveal>
+                <span aria-hidden className="block h-2.5 w-2.5 rounded-full bg-brand" />
                 <h3 className="t-h3 mt-6">{c.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-slate">{c.body}</p>
               </div>
@@ -160,13 +160,13 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             {s.example.title}
           </h2>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <div className="rounded-card border border-line bg-white p-8 md:p-10" data-reveal>
+            <div className="rounded-card border border-line bg-surface p-8 md:p-10" data-reveal>
               <p className="t-label text-slate">Before</p>
               <p className="mt-5 text-[19px] leading-relaxed text-slate">{s.example.before}</p>
             </div>
-            <div className="rounded-card on-dark relative overflow-hidden bg-ink p-8 text-white md:p-10" data-reveal>
-              <p className="t-label relative flex items-center gap-2 text-sage">
-                <span aria-hidden className="rounded-full h-2 w-2 bg-sage" /> After
+            <div className="rounded-card on-dark relative overflow-hidden bg-raised p-8 text-white md:p-10" data-reveal>
+              <p className="t-label relative flex items-center gap-2 text-sky">
+                <span aria-hidden className="rounded-full h-2 w-2 bg-brand" /> After
               </p>
               <p className="relative mt-5 text-[19px] font-bold leading-relaxed">{s.example.after}</p>
             </div>
@@ -189,8 +189,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             </div>
             <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {s.safeguards.map((g) => (
-                <div key={g.title} className="rounded-card border border-line bg-white p-7" data-reveal>
-                  <ShieldCheck size={24} strokeWidth={1.5} className="text-deep-sage" />
+                <div key={g.title} className="rounded-card border border-line bg-surface p-7" data-reveal>
+                  <ShieldCheck size={24} strokeWidth={1.5} className="text-stone-deep" />
                   <h3 className="t-h3 mt-5">{g.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-slate">{g.body}</p>
                 </div>
@@ -213,8 +213,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
           <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {s.tools.map((t) => (
-              <li key={t} className="flex items-center gap-3 bg-white px-5 py-5" data-reveal>
-                <ToolMark slug={t} size={22} className="shrink-0 text-ink" />
+              <li key={t} className="flex items-center gap-3 bg-surface px-5 py-5" data-reveal>
+                <ToolMark slug={t} size={22} className="shrink-0 text-fg" />
                 <span className="text-[14px] font-bold">{getIntegration(t)?.name ?? t}</span>
               </li>
             ))}
@@ -229,10 +229,10 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             <h2 className="t-h1" data-reveal>
               What you receive
             </h2>
-            <ul className="mt-10 border-t border-ink">
+            <ul className="mt-10 border-t border-fg">
               {s.deliverables.map((d) => (
                 <li key={d} className="flex gap-4 border-b border-line py-5 text-[16px]" data-reveal>
-                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sage" />
+                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sky" />
                   {d}
                 </li>
               ))}
@@ -246,7 +246,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
               <span aria-hidden className="absolute bottom-2 left-[5px] top-2 w-px bg-line" />
               {s.timeline.map((t) => (
                 <li key={t.phase} className="relative grid gap-1 pb-9 pl-10 last:pb-0" data-reveal>
-                  <span aria-hidden className="absolute left-0 top-1.5 h-[11px] w-[11px] rounded-full border border-ink bg-white" />
+                  <span aria-hidden className="absolute left-0 top-1.5 h-[11px] w-[11px] rounded-full border border-fg bg-surface" />
                   <p className="flex flex-wrap items-baseline gap-x-3">
                     <span className="text-[18px] font-bold">{t.phase}</span>
                     <span className="text-[13px] text-slate">{t.duration}</span>
@@ -265,12 +265,12 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <div data-reveal>
             <p className="text-[15px] text-slate">{s.name}</p>
             <p className="mt-2 text-[44px] font-bold leading-none tracking-tight">
-              From <span className="text-deep-copper">{s.priceFrom}</span>
+              From <span className="text-sky">{s.priceFrom}</span>
             </p>
             <p className="mt-3 max-w-xl text-[15px] text-slate">{s.priceNote}</p>
           </div>
           <div className="flex flex-wrap gap-3" data-reveal>
-            <PrimaryCta tone="copper" />
+            <PrimaryCta tone="lime" />
             <Link href="/engagements" className="btn btn-secondary">
               See pricing
             </Link>

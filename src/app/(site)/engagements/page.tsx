@@ -17,7 +17,7 @@ export default function EngagementsPage() {
         title="Clear prices, published up front"
         sub="Start free, build with a fixed quote, then keep everything running with a monthly care plan. Prices are in US dollars."
       >
-        <PrimaryCta tone="copper" />
+        <PrimaryCta tone="lime" />
       </PageHero>
 
       {/* Entry points */}
@@ -28,7 +28,7 @@ export default function EngagementsPage() {
           </h2>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             {entryPoints.map((e) => (
-              <div key={e.name} className="border border-line rounded-card flex flex-col bg-white p-8 md:p-10" data-reveal>
+              <div key={e.name} className="border border-line rounded-card flex flex-col bg-surface p-8 md:p-10" data-reveal>
                 <p className="text-[17px] font-bold">{e.name}</p>
                 <p className="mt-5 text-[52px] font-bold leading-none tracking-tight">{e.price}</p>
                 <p className="mt-2 text-[14px] text-slate">{e.unit}</p>
@@ -36,7 +36,7 @@ export default function EngagementsPage() {
                 <ul className="mt-6 grid gap-2.5 border-t border-line pt-6">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-3 text-[15px]">
-                      <Check size={18} className="mt-0.5 shrink-0 text-sage" /> {p}
+                      <Check size={18} className="mt-0.5 shrink-0 text-sky" /> {p}
                     </li>
                   ))}
                 </ul>
@@ -57,9 +57,9 @@ export default function EngagementsPage() {
               Starting prices for a typical scope. Your written quote is fixed before work begins, and includes 30 days of aftercare.
             </p>
           </div>
-          <div className="mt-12 border-t border-ink">
+          <div className="mt-12 border-t border-fg">
             {builds.map((b) => (
-              <div key={b.name} className="grid gap-3 border-b border-line bg-white px-6 py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10" data-reveal>
+              <div key={b.name} className="grid gap-3 border-b border-line bg-surface px-6 py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10" data-reveal>
                 <div>
                   <p className="text-[19px] font-bold">{b.name}</p>
                   <p className="mt-1 text-[13px] text-slate">{b.time}</p>
@@ -91,10 +91,10 @@ export default function EngagementsPage() {
             {carePlans.map((p) => (
               <div
                 key={p.name}
-                className={`relative flex flex-col rounded-card border p-8 ${p.featured ? "border-ink bg-ink text-white" : "border-line bg-white"}`}
+                className={`relative flex flex-col rounded-card border p-8 ${p.featured ? "border-fg bg-raised text-white" : "border-line bg-surface"}`}
                 data-reveal
               >
-                {p.featured && <span className="absolute right-8 top-8 rounded-full bg-copper-soft px-2.5 py-1 text-[11px] font-bold text-ink">Most chosen</span>}
+                {p.featured && <span className="absolute right-8 top-8 rounded-full bg-brand-soft px-2.5 py-1 text-[11px] font-bold text-fg">Most chosen</span>}
                 <p className="text-[19px] font-bold">{p.name}</p>
                 <p className="mt-6 text-[48px] font-bold leading-none tracking-tight">
                   {p.price}
@@ -104,7 +104,7 @@ export default function EngagementsPage() {
                 <ul className={`mt-8 grid gap-3 border-t pt-6 ${p.featured ? "border-white/15" : "border-line"}`}>
                   {p.points.map((pt) => (
                     <li key={pt} className="flex gap-3 text-[15px]">
-                      <Check size={18} className={`mt-0.5 shrink-0 text-sage`} /> {pt}
+                      <Check size={18} className={`mt-0.5 shrink-0 text-sky`} /> {pt}
                     </li>
                   ))}
                 </ul>

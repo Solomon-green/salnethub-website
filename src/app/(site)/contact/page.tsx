@@ -33,7 +33,7 @@ export default function ContactPage() {
             <ol className="mt-12 border-t border-line">
               {next.map((n, i) => (
                 <li key={n.title} className="flex gap-5 border-b border-line py-6">
-                  <span className="text-[14px] font-bold text-deep-sage">{i + 1}</span>
+                  <span className="text-[14px] font-bold text-stone-deep">{i + 1}</span>
                   <span>
                     <span className="block text-[17px] font-bold">{n.title}</span>
                     <span className="mt-1 block text-[15px] leading-relaxed text-slate">{n.body}</span>
@@ -47,7 +47,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div id="book" className="rounded-card scroll-mt-28 border border-line bg-white p-6 text-ink shadow-[0_30px_80px_-40px_rgb(23_25_28/0.35)] md:p-10">
+          <div id="book" className="rounded-card scroll-mt-28 border border-line bg-surface p-6 text-fg shadow-[0_30px_80px_-40px_rgb(0_0_0/0.35)] md:p-10">
             <h2 className="t-h2">Choose a time</h2>
             <p className="mt-2 text-[15px] text-slate">Free {booking.durationMinutes}-minute call on Google Meet.</p>
             <div className="mt-8">
@@ -63,7 +63,7 @@ export default function ContactPage() {
             <h2 className="t-h1">Prefer to write first?</h2>
             <p className="t-lead mt-5 max-w-md">Send a few lines about the work. We reply within 1 business day.</p>
           </div>
-          <div className="rounded-card border border-line bg-white p-6 md:p-10">
+          <div className="rounded-card border border-line bg-surface p-6 md:p-10">
             <ContactForm services={services.map((s) => s.name)} email={site.email} />
           </div>
         </div>

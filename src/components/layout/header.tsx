@@ -74,17 +74,17 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
   const solid = scrolled || megaOpen || mobileOpen;
-  // The bar is always Sage, so links, logo and button always use their on-dark tones.
+  // The bar is always Ink, so links, logo and button always use their on-dark tones.
   const overDark = true;
   const linkTone = (active: boolean) =>
-    overDark ? (active ? "text-copper" : "text-white/90 hover:text-white") : active ? "text-deep-copper" : "text-ink hover:text-deep-copper";
+    overDark ? (active ? "text-sky" : "text-white/90 hover:text-white") : active ? "text-sky" : "text-fg hover:text-sky";
 
   return (
     <>
       <div ref={sentinel} aria-hidden className="absolute top-0 h-px w-full" />
       <header
         className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,box-shadow] duration-300 ${
-          solid ? "nav-sage on-dark shadow-[0_10px_30px_-18px_rgb(23_25_28/0.6)]" : "nav-sage on-dark"
+          solid ? "nav-dark on-dark shadow-[0_10px_30px_-18px_rgb(0_0_0/0.6)]" : "nav-dark on-dark"
         }`}
       >
         <div className="container-x flex h-16 items-center gap-8 lg:h-[72px]">
@@ -118,12 +118,12 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           </nav>
 
           <div className="ml-auto flex items-center gap-3">
-            <Link href={primaryCta.href} className={`btn ${overDark ? "btn-copper" : "btn-primary"} !min-h-10 !px-4 !text-[14px] sm:!min-h-11 sm:!px-[22px] sm:!text-[15px]`}>
+            <Link href={primaryCta.href} className={`btn ${overDark ? "btn-brand" : "btn-primary"} !min-h-10 !px-4 !text-[14px] sm:!min-h-11 sm:!px-[22px] sm:!text-[15px]`}>
               {primaryCta.label}
             </Link>
             <button
               type="button"
-              className={`flex h-11 w-11 items-center justify-center xl:hidden ${overDark ? "text-white" : "text-ink"}`}
+              className={`flex h-11 w-11 items-center justify-center xl:hidden ${overDark ? "text-white" : "text-fg"}`}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -138,7 +138,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
           id="mega-menu"
           onMouseEnter={openMega}
           onMouseLeave={closeMega}
-          className={`absolute inset-x-0 top-full hidden border-b border-line bg-white transition-[opacity,translate,visibility] duration-250 xl:block ${
+          className={`absolute inset-x-0 top-full hidden border-b border-line bg-surface transition-[opacity,translate,visibility] duration-250 xl:block ${
             megaOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
           }`}
         >
@@ -149,10 +149,10 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
                 <ul className="grid gap-1">
                   {servicesByGroup(g).map((s) => (
                     <li key={s.slug}>
-                      <Link href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-paper">
-                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-deep-copper" />
+                      <Link href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-canvas">
+                        <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-sky" />
                         <span>
-                          <span className="block text-[15px] font-bold leading-snug group-hover:text-deep-copper">{s.name}</span>
+                          <span className="block text-[15px] font-bold leading-snug group-hover:text-sky">{s.name}</span>
                           <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                         </span>
                       </Link>
@@ -165,21 +165,21 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
               <div>
                 <p className="t-label mb-4 text-slate">{groupNames.web}</p>
                 {servicesByGroup("web").map((s) => (
-                  <Link key={s.slug} href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-paper">
-                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-deep-copper" />
+                  <Link key={s.slug} href={`/services/${s.slug}`} className="group flex gap-4 rounded-xl p-3 transition-colors hover:bg-canvas">
+                    <ServiceIcon name={s.icon} size={22} className="mt-0.5 shrink-0 text-sky" />
                     <span>
-                      <span className="block text-[15px] font-bold group-hover:text-deep-copper">{s.name}</span>
+                      <span className="block text-[15px] font-bold group-hover:text-sky">{s.name}</span>
                       <span className="mt-0.5 block text-[13px] leading-snug text-slate">{s.short}</span>
                     </span>
                   </Link>
                 ))}
               </div>
-              <div className="rounded-card on-dark mt-auto bg-ink p-6 text-white">
+              <div className="rounded-card on-dark mt-auto bg-raised p-6 text-white">
                 <p className="text-[15px] font-bold">Not sure where to start?</p>
                 <p className="mt-1 text-[13px] leading-relaxed text-on-ink-muted">
                   A 20-minute call is enough to find the first workflow worth automating.
                 </p>
-                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-copper hover:text-white">
+                <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-sky hover:text-white">
                   Compare all services <ArrowRight size={16} />
                 </Link>
               </div>
@@ -190,7 +190,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-30 overflow-y-auto bg-white pt-16 transition-[opacity,visibility] duration-300 xl:hidden ${
+        className={`fixed inset-0 z-30 overflow-y-auto bg-surface pt-16 transition-[opacity,visibility] duration-300 xl:hidden ${
           mobileOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         aria-hidden={!mobileOpen}
@@ -206,7 +206,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
                 <ul className="grid gap-1 pb-4">
                   {groupOrder.flatMap((g) => servicesByGroup(g)).map((s) => (
                     <li key={s.slug}>
-                      <Link href={`/services/${s.slug}`} className="flex items-center gap-3 py-2.5 text-[15px] text-ink">
+                      <Link href={`/services/${s.slug}`} className="flex items-center gap-3 py-2.5 text-[15px] text-fg">
                         <ServiceIcon name={s.icon} size={18} /> {s.name}
                       </Link>
                     </li>
@@ -222,7 +222,7 @@ export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: 
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-deep-copper" : ""}`}
+                className={`flex h-14 items-center border-b border-line text-lg font-bold ${isActive(item.href) ? "text-sky" : ""}`}
               >
                 {item.label}
               </Link>

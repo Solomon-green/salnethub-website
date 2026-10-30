@@ -19,7 +19,7 @@ function Slider({ label, value, min, max, step = 1, unit, onChange }: { label: s
         <label htmlFor={id} className="text-[15px] font-bold">
           {label}
         </label>
-        <span className="text-[15px] font-bold tabular-nums text-ink">
+        <span className="text-[15px] font-bold tabular-nums text-fg">
           {value} {unit}
         </span>
       </div>
@@ -50,7 +50,7 @@ export function CostCalculator() {
   const paybackWeeks = saved > 0 ? Math.max(1, Math.ceil(workflowPrice / (saved / WEEKS))) : 0;
 
   return (
-    <div className="grid overflow-hidden rounded-[24px] border border-line bg-white shadow-[0_30px_80px_-40px_rgb(23_25_28/0.35)] lg:grid-cols-[1fr_1fr]">
+    <div className="grid overflow-hidden rounded-[24px] border border-line bg-surface shadow-[0_30px_80px_-40px_rgb(0_0_0/0.35)] lg:grid-cols-[1fr_1fr]">
       <div className="space-y-9 p-7 md:p-10">
         <Slider label="People doing manual admin" value={people} min={1} max={25} unit={people === 1 ? "person" : "people"} onChange={setPeople} />
         <Slider label="Hours each, per week" value={hours} min={1} max={20} unit="hrs" onChange={setHours} />
@@ -60,10 +60,10 @@ export function CostCalculator() {
           workflows. Your real number comes out of the free call.
         </p>
       </div>
-      <div className="band-ink on-dark relative flex flex-col justify-between overflow-hidden p-7 md:p-10" aria-live="polite">
+      <div className="band-glow on-dark relative flex flex-col justify-between overflow-hidden p-7 md:p-10" aria-live="polite">
         <div className="relative">
           <p className="text-[14px] text-on-ink-muted">Manual work costs you about</p>
-          <p className="mt-2 text-[clamp(2.6rem,5vw,3.8rem)] font-bold leading-none tracking-tight tabular-nums text-[#C8754A]">
+          <p className="mt-2 text-[clamp(2.6rem,5vw,3.8rem)] font-bold leading-none tracking-tight tabular-nums text-sky">
             {money(costYear)}
             <span className="ml-2 text-[16px] font-normal tracking-normal text-on-ink-muted">a year</span>
           </p>
@@ -86,7 +86,7 @@ export function CostCalculator() {
           </div>
         </div>
         <div className="relative mt-8">
-          <PrimaryCta tone="copper" />
+          <PrimaryCta tone="lime" />
         </div>
       </div>
     </div>

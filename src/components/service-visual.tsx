@@ -11,7 +11,7 @@ export function ServiceVisual({ workflow, dark = false }: { workflow: Service["w
       return (
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-16">
           <ChatDemo />
-          <ol className="grid gap-0 border-t border-ink bg-white px-6">
+          <ol className="grid gap-0 border-t border-fg bg-surface px-6">
             {workflow.nodes.map((n) => (
               <li key={n.label} className="flex items-baseline justify-between gap-6 border-b border-line py-5" data-reveal>
                 <span className="text-[17px] font-bold">{n.label}</span>

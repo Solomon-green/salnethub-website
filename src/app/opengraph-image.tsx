@@ -4,29 +4,32 @@ export const alt = "SalnetHub: Your business runs on manual work between tools. 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// SH mark from public/brand/salnethub-mark.svg (viewBox 0 0 185 266)
+const S_PATH =
+  "M101,0 L0,56.56 L0,104.56 L77,147.68 L77,104 L39,82.72 L101,48 Z M0,169 L38,190.28 L77,168.44 L77,162 L116,183.84 L116,198 L0,262.96 Z";
+const H_PATH = "M147,78 L185,99.28 L185,259 L147,237.72 L147,191 L86,156.84 L86,110 L147,144.16 Z";
+
 export default function OgImage() {
-  const lines = Array.from({ length: 40 }, (_, i) => i * 34 - 400);
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#17191C", position: "relative", padding: 80 }}>
-        <svg width="1200" height="630" style={{ position: "absolute", inset: 0 }}>
-          {lines.map((o) => (
-            <line key={`a${o}`} x1={o} y1={630} x2={o + 1091} y2={0} stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
-          ))}
-          {lines.map((o) => (
-            <line key={`b${o}`} x1={o} y1={0} x2={o + 1091} y2={630} stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
-          ))}
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "radial-gradient(ellipse 70% 90% at 80% 10%, #0038ED 0%, #000FBD 35%, #000000 75%)", position: "relative", padding: 80 }}>
+        <svg width="370" height="532" viewBox="0 0 185 266" style={{ position: "absolute", right: 70, top: 49, opacity: 0.9 }}>
+          <path d={S_PATH} fill="#000000" fillOpacity="0.35" />
+          <path d={H_PATH} fill="#475BFF" />
         </svg>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", position: "relative" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-            <div style={{ width: 22, height: 22, background: "#C8754A" }} />
-            <div style={{ color: "#fff", fontSize: 34, fontWeight: 700, letterSpacing: -1 }}>SalnetHub</div>
+            <svg width="30" height="43" viewBox="0 0 185 266">
+              <path d={S_PATH} fill="#F9F9F9" />
+              <path d={H_PATH} fill="#475BFF" />
+            </svg>
+            <div style={{ color: "#F9F9F9", fontSize: 34, fontWeight: 700, letterSpacing: -1 }}>SalnetHub</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ color: "#fff", fontSize: 68, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.04 }}>Your business runs on</div>
-            <div style={{ color: "#fff", fontSize: 68, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.04 }}>manual work between tools.</div>
-            <div style={{ color: "#C8754A", fontSize: 68, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.04 }}>We automate it.</div>
-            <div style={{ color: "#A5A39F", fontSize: 28, marginTop: 28 }}>Business automation · AI agents · CRM · Reporting</div>
+            <div style={{ color: "#F9F9F9", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>Your business runs on</div>
+            <div style={{ color: "#F9F9F9", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>manual work between tools.</div>
+            <div style={{ color: "#5D8BFF", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>We automate it.</div>
+            <div style={{ color: "#B3B3B4", fontSize: 28, marginTop: 28 }}>Business automation · AI agents · CRM · Reporting</div>
           </div>
         </div>
       </div>

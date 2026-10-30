@@ -18,7 +18,7 @@ function LeadVisual() {
           <p className="font-bold text-white">Dana Ortiz</p>
           <p className="text-on-ink-muted">New lead, Meta ads</p>
         </div>
-        <span className="rounded-full border border-copper/40 bg-copper/10 px-2 py-0.5 text-[11px] font-bold text-copper">Hot</span>
+        <span className="rounded-full border border-brand/40 bg-brand/10 px-2 py-0.5 text-[11px] font-bold text-sky">Hot</span>
       </div>
       <div className="mt-4">
         <div className="flex justify-between text-[12px] text-on-ink-muted">
@@ -26,7 +26,7 @@ function LeadVisual() {
           <span className="font-bold text-white">86</span>
         </div>
         <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/10">
-          <div className="bento-bar h-full w-[86%] origin-left rounded-full bg-copper" />
+          <div className="bento-bar h-full w-[86%] origin-left rounded-full bg-brand" />
         </div>
       </div>
       <ul className="mt-4 space-y-2 text-[12px]">
@@ -39,7 +39,7 @@ function LeadVisual() {
               <ToolMark slug={t} size={14} />
             </span>
             {s}
-            <Check size={13} className="ml-auto text-cream" />
+            <Check size={13} className="ml-auto text-fg" />
           </li>
         ))}
       </ul>
@@ -53,13 +53,13 @@ function ChartVisual() {
     <div className="panel-dark w-full max-w-[300px] p-4">
       <div className="flex items-center justify-between text-[12px]">
         <span className="font-bold text-white">Weekly sales report</span>
-        <span className="text-copper">Sent Mon 08:00</span>
+        <span className="text-sky">Sent Mon 08:00</span>
       </div>
       <div className="mt-4 flex h-24 items-end gap-2">
         {bars.map((h, i) => (
           <div
             key={i}
-            className={`bento-col flex-1 origin-bottom rounded-t-md ${i === bars.length - 1 ? "bg-copper" : "bg-white/15"}`}
+            className={`bento-col flex-1 origin-bottom rounded-t-md ${i === bars.length - 1 ? "bg-brand" : "bg-white/15"}`}
             style={{ height: `${h}%`, transitionDelay: `${i * 40}ms` }}
           />
         ))}
@@ -74,7 +74,7 @@ function OpsVisual() {
     <ul className="panel-dark w-full max-w-[300px] space-y-2.5 p-4 text-[13px]">
       {items.map((s, i) => (
         <li key={s} className="flex items-center gap-3 text-white">
-          <span className="rounded-full bento-check flex h-5 w-5 shrink-0 items-center justify-center bg-cream text-ink" style={{ transitionDelay: `${i * 80}ms` }}>
+          <span className="rounded-full bento-check flex h-5 w-5 shrink-0 items-center justify-center bg-canvas text-fg" style={{ transitionDelay: `${i * 80}ms` }}>
             <Check size={13} strokeWidth={3} />
           </span>
           {s}
@@ -90,12 +90,12 @@ function ChatVisual() {
       <p className="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-md bg-white/10 px-3.5 py-2.5 text-white">Do you open on Saturdays?</p>
       <div className="panel-dark max-w-[88%] !rounded-2xl !rounded-bl-md px-3.5 py-2.5 text-white">
         Yes, 9 am to 1 pm. Want me to book you a slot this Saturday?
-        <span className="mt-2 flex items-center gap-1.5 text-[11px] text-copper">
+        <span className="mt-2 flex items-center gap-1.5 text-[11px] text-sky">
           <FileText size={12} /> Source: opening-hours.pdf
         </span>
       </div>
       <p className="flex items-center gap-2 text-[11px] text-on-ink-muted">
-        <span className="rounded-full h-1.5 w-1.5 bg-copper" /> Hands over to your team when it is unsure
+        <span className="rounded-full h-1.5 w-1.5 bg-brand" /> Hands over to your team when it is unsure
       </p>
     </div>
   );
@@ -114,10 +114,10 @@ function WebVisual() {
           <div className="h-2.5 w-2/3 rounded-full bg-white/20" />
           <div className="h-7 rounded-lg border border-white/15" />
           <div className="h-7 rounded-lg border border-white/15" />
-          <div className="h-7 w-1/2 rounded-full bg-copper" />
+          <div className="h-7 w-1/2 rounded-full bg-brand" />
         </div>
       </div>
-      <span aria-hidden className="hidden h-px w-10 shrink-0 bg-copper shadow-[0_0_10px_rgb(200_117_74/0.45)] sm:block" />
+      <span aria-hidden className="hidden h-px w-10 shrink-0 bg-brand shadow-[0_0_10px_rgb(71_91_255/0.45)] sm:block" />
       <div className="panel-dark shrink-0 whitespace-nowrap p-3 text-[12px]">
         <span className="flex items-center gap-2 font-bold text-white">
           <ToolMark slug="hubspot" size={14} /> Contact created
@@ -154,12 +154,12 @@ export function ServicesBento() {
                     <li key={s.slug}>
                       <Link
                         href={`/services/${s.slug}`}
-                        className="flex items-center justify-between gap-4 border-b border-line py-3.5 text-[15px] font-bold text-ink transition-colors hover:text-deep-copper"
+                        className="flex items-center justify-between gap-4 border-b border-line py-3.5 text-[15px] font-bold text-fg transition-colors hover:text-sky"
                       >
                         {s.name}
                         <span className="flex shrink-0 items-center gap-3 text-[13px] font-normal text-slate">
                           from {s.priceFrom}
-                          <ArrowUpRight size={16} className="text-slate transition-colors group-hover:text-deep-copper" />
+                          <ArrowUpRight size={16} className="text-slate transition-colors group-hover:text-sky" />
                         </span>
                       </Link>
                     </li>

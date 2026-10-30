@@ -4,11 +4,11 @@ import { ServiceIcon } from "@/components/icons";
 import { primaryCta } from "@/content/site";
 import type { Service } from "@/content/services";
 
-type CtaTone = "ink" | "light" | "copper";
+type CtaTone = "ink" | "light" | "lime";
 
 export function PrimaryCta({ className = "", light = false, tone }: { className?: string; light?: boolean; tone?: CtaTone }) {
   const t: CtaTone = tone ?? (light ? "light" : "ink");
-  const cls = t === "copper" ? "btn-copper" : t === "light" ? "btn-light" : "btn-primary";
+  const cls = t === "lime" ? "btn-brand" : t === "light" ? "btn-light" : "btn-primary";
   return (
     <Link href={primaryCta.href} className={`btn ${cls} ${className}`}>
       {primaryCta.label}
@@ -17,7 +17,7 @@ export function PrimaryCta({ className = "", light = false, tone }: { className?
   );
 }
 
-/** Dark hero used by every inner page: Ink lit by Sage, the 30° grid. */
+/** Dark hero used by every inner page: Ink with the 30° grid. */
 export function PageHero({
   crumbs,
   title,
@@ -42,7 +42,7 @@ export function PageHero({
                   <li key={c.label} className="flex items-center gap-2">
                     {i > 0 && <span aria-hidden>/</span>}
                     {c.href ? (
-                      <Link href={c.href} className="font-medium text-deep-copper hover:underline">
+                      <Link href={c.href} className="font-medium text-sky hover:underline">
                         {c.label}
                       </Link>
                     ) : (
@@ -75,7 +75,7 @@ export function GhostLink({ href, children }: { href: string; children: React.Re
 // What happens on the call: reassurance at the moment a visitor decides to book.
 const callSteps = ["We look at how the work happens today", "We name the first workflow worth automating", "You get a fixed written quote. No obligation"];
 
-/** Closing call to action: the page's second deep moment, Ink with the Copper button glowing against it. */
+/** Closing call to action: the page's second deep moment, Ink with the Lime button against it. */
 export function CtaBand({
   title = "Find the first workflow",
   accent = "worth automating",
@@ -86,7 +86,7 @@ export function CtaBand({
   body?: string;
 }) {
   return (
-    <section className="band-ink on-dark relative overflow-hidden text-white">
+    <section className="band-glow on-dark relative overflow-hidden text-white">
       <div className="container-x relative grid gap-12 py-24 md:py-28 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-20">
         <div data-reveal>
           <h2 className="t-h1 max-w-2xl">
@@ -94,13 +94,13 @@ export function CtaBand({
             {accent && (
               <>
                 {" "}
-                <span className="t-accent text-copper">{accent}</span>
+                <span className="t-accent text-sky">{accent}</span>
               </>
             )}
           </h2>
           <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-on-ink-muted">{body}</p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <PrimaryCta tone="copper" />
+            <PrimaryCta tone="lime" />
             <Link href="/engagements" className="btn btn-ghost-light">
               See pricing
             </Link>
@@ -131,12 +131,12 @@ export function Faq({ items, title = "Questions we hear often" }: { items: { q: 
       <h2 className="t-h1" data-reveal>
         {title}
       </h2>
-      <div className="border-t border-ink">
+      <div className="border-t border-fg">
         {items.map((f) => (
           <details key={f.q} className="group border-b border-line" data-reveal>
-            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 text-[18px] font-bold leading-snug transition-colors hover:text-deep-sage">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 text-[18px] font-bold leading-snug transition-colors hover:text-stone-deep">
               {f.q}
-              <span className="rounded-full mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-line transition-colors duration-300 group-open:border-ink group-open:bg-ink group-open:text-white">
+              <span className="rounded-full mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-line transition-colors duration-300 group-open:border-fg group-open:bg-raised group-open:text-white">
                 <Plus size={16} strokeWidth={1.75} className="transition-transform duration-300 group-open:rotate-45" />
               </span>
             </summary>
@@ -154,24 +154,24 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
     <Link
       href={`/services/${s.slug}`}
       data-reveal
-      className="border border-line rounded-card group relative flex h-full flex-col bg-white p-7 text-ink transition-colors duration-300 hover:bg-[#F7F5F0] md:p-8"
+      className="border border-line rounded-card group relative flex h-full flex-col bg-surface p-7 text-fg transition-colors duration-300 hover:bg-[#1C1D20] md:p-8"
     >
       <div className="flex items-start gap-4">
-        <ServiceIcon name={s.icon} size={24} className="mt-0.5 shrink-0 text-deep-sage" />
+        <ServiceIcon name={s.icon} size={24} className="mt-0.5 shrink-0 text-stone-deep" />
         <h3 className="t-h3 flex-1">{s.name}</h3>
         <ArrowUpRight
           size={20}
           strokeWidth={1.5}
-          className="shrink-0 text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-deep-copper"
+          className="shrink-0 text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-sky"
         />
       </div>
       <p className="mt-4 flex-1 pl-10 text-[15px] leading-relaxed text-slate">{s.short}</p>
       {!compact && (
         <p className="mt-7 pl-10 text-[14px] text-slate">
-          From <span className="font-bold text-ink">{s.priceFrom}</span>
+          From <span className="font-bold text-fg">{s.priceFrom}</span>
         </p>
       )}
-      <span aria-hidden className="absolute left-0 top-0 h-[3px] w-0 bg-ink transition-[width] duration-500 ease-out group-hover:w-full" />
+      <span aria-hidden className="absolute left-0 top-0 h-[3px] w-0 bg-raised transition-[width] duration-500 ease-out group-hover:w-full" />
     </Link>
   );
 }
@@ -183,7 +183,7 @@ export function SectionHead({ title, body, className = "", dark = false }: { tit
         {title}
       </h2>
       {body && (
-        <p className={`t-lead mt-5 ${dark ? "!text-on-sage-muted" : ""}`} data-reveal>
+        <p className={`t-lead mt-5 ${dark ? "!text-on-ink-muted" : ""}`} data-reveal>
           {body}
         </p>
       )}
