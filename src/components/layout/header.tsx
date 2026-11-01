@@ -17,8 +17,8 @@ type LenisLike = { stop: () => void; start: () => void };
 const lenis = () => (window as unknown as { __lenis?: LenisLike }).__lenis;
 
 const groupOrder: ServiceGroup[] = ["automation", "ai", "web"];
-export function Header({ menu, hasWork = false }: { menu: MenuItem[]; hasWork?: boolean }) {
-  const links = hasWork ? nav : nav.filter((item) => item.href !== "/customer-stories");
+export function Header({ menu, hasWork = false, hasBlog = false }: { menu: MenuItem[]; hasWork?: boolean; hasBlog?: boolean }) {
+  const links = nav.filter((item) => (item.href !== "/customer-stories" || hasWork) && (item.href !== "/blog" || hasBlog));
   const servicesByGroup = (g: ServiceGroup) => menu.filter((m) => m.group === g);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);

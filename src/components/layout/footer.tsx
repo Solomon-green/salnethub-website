@@ -8,12 +8,13 @@ const company = [
   { label: "Integrations", href: "/integrations" },
   { label: "Customer stories", href: "/customer-stories" },
   { label: "Pricing", href: "/engagements" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-export function Footer({ hasWork = false }: { hasWork?: boolean }) {
-  const companyLinks = hasWork ? company : company.filter((l) => l.href !== "/customer-stories");
+export function Footer({ hasWork = false, hasBlog = false }: { hasWork?: boolean; hasBlog?: boolean }) {
+  const companyLinks = company.filter((l) => (l.href !== "/customer-stories" || hasWork) && (l.href !== "/blog" || hasBlog));
   const automation = services.filter((s) => s.group === "automation");
   const other = services.filter((s) => s.group !== "automation");
   return (

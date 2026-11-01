@@ -27,3 +27,46 @@ export const websiteLd = {
   name: site.name,
   url: site.url,
 };
+
+/** FAQPage for a list of question/answer pairs. */
+export function faqLd(items: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
+}
+
+/** BlogPosting with its author (Person) and publisher (Organization). */
+export function blogPostingLd(p: {
+  slug: string;
+  title: string;
+  description: string;
+  image?: string | null;
+  publishedAt?: string | null;
+  updatedAt?: string | null;
+  author: { name: string; role: string; sameAs?: string[] };
+  keywords?: string;
+}) {
+  const url = `${site.url}/blog/${p.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: p.title,
+    description: p.description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: p.image ? `${site.url}${p.image}` : `${site.url}/opengraph-image`,
+    datePublished: p.publishedAt ?? undefined,
+    dateModified: p.updatedAt ?? p.publishedAt ?? undefined,
+    author: {
+      "@type": "Person",
+      name: p.author.name,
+      jobTitle: p.author.role,
+      url: `${site.url}/about`,
+      ...(p.author.sameAs?.length ? { sameAs: p.author.sameAs } : {}),
+    },
+    publisher: { "@type": "Organization", name: site.name, url: site.url, logo: { "@type": "ImageObject", url: `${site.url}/email/salnethub-icon.png` } },
+    ...(p.keywords ? { keywords: p.keywords } : {}),
+  };
+}

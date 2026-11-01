@@ -1,5 +1,6 @@
 import { collection, config, fields } from "@keystatic/core";
 import { services } from "./src/content/services";
+import { authors } from "./src/content/authors";
 
 // Local mode edits files on your machine (npm run dev, then open /keystatic).
 // Set NEXT_PUBLIC_KEYSTATIC_STORAGE=github (plus the Keystatic GitHub App env vars)
@@ -74,6 +75,73 @@ export default config({
         featured: fields.checkbox({ label: "Featured (home page and the big tiles on Customer stories)", defaultValue: false }),
         draft: fields.checkbox({ label: "Draft (hidden from the site)", defaultValue: true }),
         body: fields.markdoc({ label: "Full story", description: "Optional longer write-up." }),
+      },
+    }),
+    posts: collection({
+      label: "Blog posts",
+      slugField: "title",
+      path: "content/posts/*",
+      format: { contentField: "body" },
+      entryLayout: "content",
+      columns: ["title", "publishedAt"],
+      schema: {
+        title: fields.slug({
+          name: { label: "Title (H1)", description: "Contains the primary keyword, ideally near the start. Keep it under ~60 characters." },
+          slug: { label: "URL slug", description: "Short, lowercase, the primary keyword, e.g. 'crm-automation-for-small-business'." },
+        }),
+        seoTitle: fields.text({
+          label: "SEO title (optional)",
+          description: "Shown in Google results if different from the H1. 50–60 characters; ' | SalnetHub' is added automatically.",
+        }),
+        description: fields.text({
+          label: "Meta description",
+          description: "140–160 characters. Shown under the title in Google and on the blog index.",
+          multiline: true,
+          validation: { length: { min: 50, max: 170 } },
+        }),
+        primaryKeyword: fields.text({ label: "Primary keyword", description: "From keywords.csv. Internal: not shown on the page." }),
+        category: fields.select({
+          label: "Category",
+          options: [
+            { label: "Automation", value: "automation" },
+            { label: "AI agents and chatbots", value: "ai" },
+            { label: "CRM and sales", value: "crm" },
+            { label: "Reporting and data", value: "reporting" },
+            { label: "Guides", value: "guides" },
+          ],
+          defaultValue: "automation",
+        }),
+        author: fields.select({
+          label: "Author",
+          options: authors.map((a) => ({ label: a.name, value: a.slug })),
+          defaultValue: authors[0].slug,
+        }),
+        cover: fields.image({
+          label: "Cover image",
+          description: "1600 x 900 px. Real screenshots beat stock photos.",
+          directory: "public/blog",
+          publicPath: "/blog/",
+        }),
+        coverAlt: fields.text({ label: "Cover image alt text", description: "Describe the image; include the keyword only if it fits naturally." }),
+        relatedServices: fields.multiselect({
+          label: "Related services",
+          description: "Linked at the end of the post. Pick 1–3.",
+          options: services.map((s) => ({ label: s.name, value: s.slug })),
+        }),
+        faq: fields.array(
+          fields.object({
+            q: fields.text({ label: "Question", description: "Take these from Google's 'People also ask'." }),
+            a: fields.text({ label: "Answer", multiline: true, description: "2–4 sentences, direct answer first." }),
+          }),
+          { label: "FAQ (optional)", itemLabel: (props) => props.fields.q.value || "Question" },
+        ),
+        publishedAt: fields.date({ label: "Published", defaultValue: { kind: "today" } }),
+        updatedAt: fields.date({ label: "Last updated (optional)", description: "Set when you make a meaningful update." }),
+        draft: fields.checkbox({ label: "Draft (hidden from the live site)", defaultValue: true }),
+        body: fields.markdoc({
+          label: "Post",
+          description: "Start with a direct answer. Use ## for sections (they build the table of contents) and ### for sub-sections.",
+        }),
       },
     }),
   },

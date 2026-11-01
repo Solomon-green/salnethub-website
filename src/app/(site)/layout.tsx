@@ -6,6 +6,7 @@ import { LazyChatWidget } from "@/components/chat/chat-widget-lazy";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 import { getCaseStudies } from "@/lib/case-studies";
+import { getPosts } from "@/lib/blog";
 import { JsonLd, websiteLd } from "@/lib/schema";
 
 const orgJsonLd = {
@@ -22,6 +23,7 @@ const orgJsonLd = {
 
 export default async function SiteLayout({ children }: LayoutProps<"/">) {
   const hasWork = (await getCaseStudies()).length > 0;
+  const hasBlog = (await getPosts()).length > 0;
   const menu = services.map(({ slug, name, short, icon, group }) => ({ slug, name, short, icon, group }));
   return (
     <>
@@ -31,11 +33,11 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
       >
         Skip to content
       </a>
-      <Header menu={menu} hasWork={hasWork} />
+      <Header menu={menu} hasWork={hasWork} hasBlog={hasBlog} />
       <main id="main" className="flex-1">
         {children}
       </main>
-      <Footer hasWork={hasWork} />
+      <Footer hasWork={hasWork} hasBlog={hasBlog} />
       <MotionProvider />
       <LazyChatWidget />
       {/* Offset clears the chat launcher in the same corner */}
