@@ -2,6 +2,8 @@ export const site = {
   name: "SalnetHub",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.salnethub.com",
   email: "info@salnethub.com",
+  // GA4 Measurement ID (public by design; it appears in every page's source).
+  gaId: process.env.NEXT_PUBLIC_GA_ID ?? "G-NPEM0EF4ZV",
   tagline: "Systems that run your business while you grow it.",
   description:
     "Business automation and AI agents for small businesses. We automate lead follow-up, CRM updates, reporting and admin across the tools you already use.",

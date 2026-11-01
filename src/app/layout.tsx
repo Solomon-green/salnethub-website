@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } : undefined,
 };
 
-// GA4 loads only when a Measurement ID is set (Vercel env: NEXT_PUBLIC_GA_ID).
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 loads on the live production site only, so local and preview visits stay out of the data.
+const gaId = process.env.VERCEL_ENV === "production" ? site.gaId : undefined;
 
 export const viewport: Viewport = {
   themeColor: "#000000",

@@ -1,7 +1,7 @@
 import { sendGAEvent } from "@next/third-parties/google";
 
-/** GA4 "generate_lead" event (mark it as a key event in GA4). No-op when GA is not configured. */
+/** GA4 "generate_lead" event (mark it as a key event in GA4). No-op where GA is not loaded. */
 export function trackLead(method: "contact_form" | "booked_call") {
-  if (!process.env.NEXT_PUBLIC_GA_ID) return;
+  if (typeof window === "undefined" || !("dataLayer" in window)) return;
   sendGAEvent("event", "generate_lead", { method });
 }
