@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { toast } from "sonner";
 import { ArrowLeft, ArrowRight, CalendarDays, ChevronLeft, ChevronRight, CircleCheck, Clock, Globe, Video } from "lucide-react";
+import { trackLead } from "@/lib/analytics";
 
 type Load = { state: "loading" } | { state: "ready"; slots: string[]; duration: number } | { state: "offline" };
 type Errors = Partial<Record<"name" | "email", string>>;
@@ -191,6 +192,7 @@ export function BookingWidget({ email }: { email: string }) {
         setBooked({ start: slot!, meetLink: json.meetLink ?? null, email: data.email });
         setLeft(RESET_SECONDS);
         setStep("done");
+        trackLead("booked_call");
         toast.success("Booked. Check your inbox for the details.");
       } catch {
         toast.error(`The booking did not go through. Please try again or email ${email}.`);

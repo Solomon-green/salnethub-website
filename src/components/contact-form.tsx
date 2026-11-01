@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight, CircleCheck } from "lucide-react";
+import { trackLead } from "@/lib/analytics";
 
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
@@ -26,6 +27,7 @@ export function ContactForm({ services, email }: { services: string[]; email: st
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       if (res.ok) {
         setStatus("sent");
+        trackLead("contact_form");
         form.reset();
         toast.success("Thanks. We will reply within 1 business day.");
         return;
