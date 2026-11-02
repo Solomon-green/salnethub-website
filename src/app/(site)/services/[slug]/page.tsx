@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, ShieldCheck } from "lucide-react";
+import { Check, ShieldCheck } from "lucide-react";
 import { ServiceIcon } from "@/components/icons";
 import { ToolMark } from "@/components/brand";
 import { ServiceVisual } from "@/components/service-visual";
@@ -59,13 +59,13 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
     <>
       <JsonLd data={breadcrumbLd([{ name: "Services", path: "/services" }, { name: s.name, path: `/services/${s.slug}` }])} />
       <PageHero
-        crumbs={[{ label: "Services", href: "/services" }, { label: groups[s.group].name }]}
+        crumbs={[{ label: "Services", href: "/services" }, { label: groups[s.group].name, href: "/services" }]}
         title={s.hero.title}
         sub={s.hero.sub}
         aside={
           <div className="overflow-hidden rounded-card border border-line bg-surface text-fg shadow-[0_30px_80px_-40px_rgb(0_0_0/0.35)]" data-reveal>
             <div className="flex items-center gap-4 border-b border-line p-6">
-              <span className="rounded-xl flex h-12 w-12 items-center justify-center bg-raised text-white">
+              <span className="rounded-xl flex h-12 w-12 items-center justify-center bg-deep text-white">
                 <ServiceIcon name={s.icon} size={24} />
               </span>
               <p className="text-[17px] font-bold leading-snug">{s.name}</p>
@@ -81,18 +81,27 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 <dd className="text-[12px] text-slate">{finalTime.startsWith("Day") ? "days" : "weeks to launch"}</dd>
               </div>
             </dl>
+            <p className="border-b border-line px-6 py-4 text-[13px] leading-relaxed text-slate">{s.priceNote}</p>
             <div className="p-6">
-              <p className="text-[13px] text-slate">Works with</p>
-              <div className="mt-4 flex flex-wrap items-center gap-5 text-fg/80">
-                {s.tools.slice(0, 6).map((t) => (
-                  <ToolMark key={t} slug={t} size={24} />
-                ))}
+              <div className="flex items-baseline justify-between gap-4">
+                <p className="text-[13px] text-slate">Works with</p>
+                <Link href="/integrations" className="text-[13px] font-bold underline decoration-line underline-offset-4 hover:decoration-fg">
+                  All integrations
+                </Link>
               </div>
+              <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-3">
+                {s.tools.map((t) => (
+                  <li key={t} className="flex items-center gap-2 text-[13px] font-bold text-fg">
+                    <ToolMark slug={t} size={18} className="shrink-0" />
+                    {getIntegration(t)?.name ?? t}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         }
       >
-        <PrimaryCta tone="lime" />
+        <PrimaryCta tone="cta" />
         <a href="#workflow" className="btn btn-secondary">
           See how it works
         </a>
@@ -141,12 +150,11 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <h2 className="t-h1 max-w-3xl" data-reveal>
             What we build for you
           </h2>
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-x-16 border-t border-fg md:grid-cols-2">
             {s.capabilities.map((c) => (
-              <div key={c.title} className="border border-line rounded-card bg-surface p-7 md:p-8" data-reveal>
-                <span aria-hidden className="block h-2.5 w-2.5 rounded-full bg-brand" />
-                <h3 className="t-h3 mt-6">{c.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-slate">{c.body}</p>
+              <div key={c.title} className="grid gap-2 border-b border-line py-7" data-reveal>
+                <h3 className="t-h3">{c.title}</h3>
+                <p className="max-w-[52ch] text-[15px] leading-relaxed text-slate">{c.body}</p>
               </div>
             ))}
           </div>
@@ -164,9 +172,9 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
               <p className="t-label text-slate">Before</p>
               <p className="mt-5 text-[19px] leading-relaxed text-slate">{s.example.before}</p>
             </div>
-            <div className="rounded-card on-dark relative overflow-hidden bg-raised p-8 text-white md:p-10" data-reveal>
-              <p className="t-label relative flex items-center gap-2 text-sky">
-                <span aria-hidden className="rounded-full h-2 w-2 bg-brand" /> After
+            <div className="rounded-card on-dark relative overflow-hidden bg-deep p-8 text-white md:p-10" data-reveal>
+              <p className="t-label relative flex items-center gap-2 text-accent">
+                <span aria-hidden className="rounded-full h-2 w-2 bg-white" /> After
               </p>
               <p className="relative mt-5 text-[19px] font-bold leading-relaxed">{s.example.after}</p>
             </div>
@@ -177,22 +185,22 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* Safeguards (AI services) */}
       {s.safeguards && (
-        <section className="border-t border-line py-24 lg:py-32">
+        <section className="band-glow on-dark py-24 text-white lg:py-32">
           <div className="container-x">
             <div className="max-w-3xl">
               <h2 className="t-h1" data-reveal>
                 Safety and accuracy, built in
               </h2>
-              <p className="t-lead mt-5" data-reveal>
+              <p className="t-lead mt-5 !text-on-ink-muted" data-reveal>
                 AI is only useful if you can trust it. These rules are part of every build, not optional extras.
               </p>
             </div>
-            <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
               {s.safeguards.map((g) => (
-                <div key={g.title} className="rounded-card border border-line bg-surface p-7" data-reveal>
-                  <ShieldCheck size={24} strokeWidth={1.5} className="text-stone-deep" />
+                <div key={g.title} className="border-t border-white/25 pt-6" data-reveal>
+                  <ShieldCheck size={24} strokeWidth={1.5} className="text-accent" />
                   <h3 className="t-h3 mt-5">{g.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-slate">{g.body}</p>
+                  <p className="mt-3 text-[15px] leading-relaxed text-on-ink-muted">{g.body}</p>
                 </div>
               ))}
             </div>
@@ -200,30 +208,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
         </section>
       )}
 
-      {/* Tools */}
-      <section className="border-t border-line py-20">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.6fr_1.4fr] lg:items-center">
-          <div>
-            <h2 className="t-h2" data-reveal>
-              Tools we connect
-            </h2>
-            <Link href="/integrations" className="link-arrow mt-4 inline-flex text-[15px]">
-              All integrations <ArrowRight size={16} />
-            </Link>
-          </div>
-          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {s.tools.map((t) => (
-              <li key={t} className="flex items-center gap-3 bg-surface px-5 py-5" data-reveal>
-                <ToolMark slug={t} size={22} className="shrink-0 text-fg" />
-                <span className="text-[14px] font-bold">{getIntegration(t)?.name ?? t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Deliverables + timeline */}
-      <section className="py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x grid gap-16 lg:grid-cols-2 lg:gap-24">
           <div>
             <h2 className="t-h1" data-reveal>
@@ -232,7 +218,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             <ul className="mt-10 border-t border-fg">
               {s.deliverables.map((d) => (
                 <li key={d} className="flex gap-4 border-b border-line py-5 text-[16px]" data-reveal>
-                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sky" />
+                  <Check size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-accent" />
                   {d}
                 </li>
               ))}
@@ -255,25 +241,6 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 </li>
               ))}
             </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Price */}
-      <section className="border-t border-line py-16">
-        <div className="container-x relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div data-reveal>
-            <p className="text-[15px] text-slate">{s.name}</p>
-            <p className="mt-2 text-[44px] font-bold leading-none tracking-tight">
-              From <span className="text-sky">{s.priceFrom}</span>
-            </p>
-            <p className="mt-3 max-w-xl text-[15px] text-slate">{s.priceNote}</p>
-          </div>
-          <div className="flex flex-wrap gap-3" data-reveal>
-            <PrimaryCta tone="lime" />
-            <Link href="/engagements" className="btn btn-secondary">
-              See pricing
-            </Link>
           </div>
         </div>
       </section>

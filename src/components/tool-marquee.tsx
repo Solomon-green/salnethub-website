@@ -13,7 +13,7 @@ export function ToolMarquee({ dark = false, labeled = false }: { dark?: boolean;
         {[...list, ...list].map((t, i) => (
           <li
             key={`${t.slug}-${i}`}
-            className={`flex items-center gap-3 transition-colors duration-300 ${dark ? "text-white/75 hover:text-sky" : "text-fg/75 hover:text-fg"}`}
+            className={`flex items-center gap-3 transition-colors duration-300 ${dark ? "text-white/75 hover:text-accent" : "text-fg/75 hover:text-fg"}`}
             title={t.name}
             aria-hidden={i >= list.length}
           >

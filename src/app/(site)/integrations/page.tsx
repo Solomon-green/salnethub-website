@@ -17,7 +17,7 @@ export default function IntegrationsPage() {
         title="We build on the tools you already pay for"
         sub="No new platform to learn. We connect the software your team uses every day, and add a connector only where one is needed."
       >
-        <PrimaryCta tone="lime" />
+        <PrimaryCta tone="cta" />
       </PageHero>
 
       <section className="border-t border-line py-24 lg:py-28">
@@ -55,7 +55,7 @@ export default function IntegrationsPage() {
               If it has an API, a webhook, an email notification or even a spreadsheet export, we can usually connect it. We confirm on the first call.
             </p>
           </div>
-          <PrimaryCta tone="lime" />
+          <PrimaryCta tone="cta" />
         </div>
       </section>
 

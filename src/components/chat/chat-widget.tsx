@@ -42,7 +42,7 @@ export function ChatWidget() {
   const wasOpen = useRef(false);
   const teaserDone = useRef(false);
 
-  // Teaser bubble: shows on every page load after a short delay. Opening the chat hides it
+  // Teaser bubble: shows once the visitor has scrolled past the first screen. Opening the chat hides it
   // until the next load; only its own close button hides it for the rest of the visit.
   useEffect(() => {
     let seen = false;
@@ -50,13 +50,24 @@ export function ChatWidget() {
       seen = sessionStorage.getItem(TEASER_KEY) === "1";
     } catch {}
     if (seen) return;
+    // Never over the first screen: wait for the delay AND for the visitor to scroll past the hero.
+    let delayed = false;
+    let out = 0;
+    const show = () => {
+      if (teaserDone.current || !delayed || window.scrollY < window.innerHeight * 0.9) return;
+      window.removeEventListener("scroll", show);
+      setTeaser(true);
+      out = window.setTimeout(() => setTeaser(false), chat.teaserDuration * 1000);
+    };
     const t = window.setTimeout(() => {
-      if (!teaserDone.current) setTeaser(true);
+      delayed = true;
+      show();
     }, chat.teaserDelay * 1000);
-    const out = window.setTimeout(() => setTeaser(false), (chat.teaserDelay + chat.teaserDuration) * 1000);
+    window.addEventListener("scroll", show, { passive: true });
     return () => {
       window.clearTimeout(t);
       window.clearTimeout(out);
+      window.removeEventListener("scroll", show);
     };
   }, []);
 
@@ -264,7 +275,7 @@ export function ChatWidget() {
                           key={a.href}
                           href={a.href}
                           onClick={closeOnPhone}
-                          className="rounded-full border border-brand/40 px-3 py-1.5 text-[12.5px] font-bold text-sky transition-colors hover:border-brand hover:bg-brand hover:text-fg"
+                          className="rounded-full border border-brand/40 px-3 py-1.5 text-[12.5px] font-bold text-accent transition-colors hover:border-brand hover:bg-brand hover:text-fg"
                         >
                           {a.label}
                         </Link>
@@ -301,7 +312,7 @@ export function ChatWidget() {
                   key={q}
                   type="button"
                   onClick={() => send(q)}
-                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-brand hover:text-sky"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-[12.5px] font-bold text-white/85 transition-colors hover:border-brand hover:text-accent"
                 >
                   {q}
                 </button>
@@ -340,7 +351,7 @@ export function ChatWidget() {
               type="submit"
               disabled={!draft.trim() || busy}
               aria-label="Send message"
-              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-brand text-fg transition-[background-color,opacity,scale] duration-200 hover:bg-[#394EFF] active:scale-95 disabled:opacity-35 disabled:hover:bg-brand"
+              className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-brand text-white transition-[background-color,opacity,scale] duration-200 hover:bg-[#284FBC] active:scale-95 disabled:opacity-35 disabled:hover:bg-brand"
             >
               <ArrowUp size={18} strokeWidth={2.4} />
             </button>
@@ -357,7 +368,7 @@ export function ChatWidget() {
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={open ? "Close chat" : "Chat with us"}
-        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-brand text-fg shadow-[0_14px_36px_-12px_rgb(0_0_0/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-raised active:scale-95 ${
+        className={`fixed bottom-5 right-5 z-50 flex size-[52px] items-center justify-center rounded-full bg-brand text-white shadow-[0_14px_36px_-12px_rgb(0_0_0/0.6),0_0_0_1px_rgb(255_255_255/0.1)] transition-[scale,background-color,opacity] duration-300 ease-[var(--ease-out-quint)] hover:scale-105 hover:bg-raised active:scale-95 ${
           open ? "max-sm:pointer-events-none max-sm:scale-75 max-sm:opacity-0" : ""
         }`}
       >

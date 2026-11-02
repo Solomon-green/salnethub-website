@@ -26,7 +26,7 @@ export function LegalPage({
           <nav aria-label="Breadcrumb" className="text-[14px]">
             <ol className="flex flex-wrap items-center gap-2 text-slate">
               <li>
-                <Link href="/" className="font-medium text-sky hover:underline">
+                <Link href="/" className="font-medium text-accent hover:underline">
                   Home
                 </Link>
               </li>
@@ -37,7 +37,7 @@ export function LegalPage({
           <h1 className="t-page mt-7 max-w-4xl">{title}</h1>
           <p className="mt-6 max-w-3xl text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">{sub}</p>
           <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 px-4 py-2 text-[13px] text-slate">
-            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-sky" />
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
             Last updated <time className="font-bold text-fg">{updated}</time>
           </p>
         </div>
@@ -68,7 +68,7 @@ export function LegalPage({
                     <span aria-hidden className="w-5 shrink-0 tabular-nums text-stone-deep">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <a href={`#${s.id}`} className="text-slate transition-colors hover:text-sky">
+                    <a href={`#${s.id}`} className="text-slate transition-colors hover:text-accent">
                       {s.title}
                     </a>
                   </li>
@@ -81,7 +81,7 @@ export function LegalPage({
             {sections.map((s, i) => (
               <section key={s.id} aria-labelledby={s.id} className={i ? "mt-14 border-t border-line pt-12" : ""}>
                 <h2 id={s.id}>
-                  <span className="mr-3 text-sky tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="mr-3 text-accent tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                   {s.title}
                 </h2>
                 {s.body}

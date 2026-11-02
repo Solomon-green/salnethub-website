@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import { ConsentManager } from "@/components/consent";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -16,11 +16,12 @@ const heros = localFont({
   fallback: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
 });
 
-// Poppins: the wordmark's typeface, used for headings (--font-display).
-const poppins = Poppins({
-  weight: ["500", "600"],
+// Instrument Sans: the headline voice (--font-display), set tight and heavy; italic marks accent words.
+const displaySans = Instrument_Sans({
+  weight: ["600", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-display-sans",
   display: "swap",
 });
 
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
 const gaId = process.env.VERCEL_ENV === "production" ? site.gaId : undefined;
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -62,7 +63,7 @@ const motionFlag = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').match
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${heros.variable} ${poppins.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${heros.variable} ${displaySans.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionFlag }} />
       </head>

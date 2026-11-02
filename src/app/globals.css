@@ -1,37 +1,40 @@
 @import "tailwindcss";
 
-/* Brand palette (2026-10-30): black canvas lit by electric blue, graphite surfaces, white type.
-   Brand blue #475BFF is for fills (buttons, bars, dots); small blue text uses Sky #5D8BFF (6.6:1 on black). */
+/* Brand palette (2026-11-02, trial A): Graphite and Silver. Near-monochrome, light-first.
+   Silver-white canvas, white cards, Graphite type and buttons, Slate and Steel for the rest.
+   Premium comes from restraint and tight, heavy sans headlines, not from a loud accent. */
 @theme {
   /* Core */
-  --color-canvas: #000000; /* page background */
-  --color-surface: #121315; /* cards on the canvas */
-  --color-raised: #202124; /* panels inside cards, chips, small UI screens */
-  --color-fg: #f9f9f9; /* primary text */
+  --color-canvas: #eceef0; /* silver-white page background */
+  --color-surface: #ffffff; /* cards on the canvas */
+  --color-raised: #e3e6e9; /* panels inside cards, chips, small UI screens */
+  --color-fg: #1a1c1e; /* Graphite: primary text */
   --color-white: #ffffff;
-  --color-black: #000000;
+  --color-black: #1a1c1e;
 
-  /* Blue */
-  --color-brand: #475bff; /* primary actions */
-  --color-brand-hover: #394eff;
-  --color-sky: #5d8bff; /* accent text and icons on dark */
-  --color-electric: #0038ed; /* glow core */
-  --color-deep-blue: #000fbd; /* glow falloff */
-  --color-brand-soft: #141a3d; /* blue-tinted chip background */
+  /* Action and accent */
+  --color-brand: #1a1c1e; /* Graphite fills: dots, bars, toggles, slider (actions use --color-cta) */
+  --color-brand-hover: #3c4044;
+  --color-accent: #3c4044; /* accent text and icons */
+  --color-deep: #1a1c1e; /* deep bands, nav, footer */
+  --color-deep-2: #141618;
+  --color-brand-soft: #e3e6e9; /* chip background */
+  --color-cta: #2459e0; /* Royal: the one colour that asks for action (call buttons, the call band) */
+  --color-cta-hover: #1d4bc4;
 
   /* Neutrals */
-  --color-paper: #000000; /* = canvas */
-  --color-mist: #18191b;
-  --color-mist-2: #1f2023;
-  --color-line: #26272a; /* hairlines on black */
-  --color-slate: #b3b3b4; /* secondary text, 10:1 on black */
-  --color-stone: #59595b;
-  --color-stone-deep: #909091;
-  --color-on-ink-muted: #b3b3b4; /* muted text on dark panels */
-  --color-error: #ff7a6b;
+  --color-paper: #eceef0; /* = canvas */
+  --color-mist: #e3e6e9;
+  --color-mist-2: #d9dde1;
+  --color-line: #d9dde1; /* hairlines */
+  --color-slate: #3c4044; /* secondary text */
+  --color-stone: #a6acb2; /* Steel */
+  --color-stone-deep: #6b7076;
+  --color-on-ink-muted: #3c4044;
+  --color-error: #b42318;
 
   --font-sans: var(--font-heros), "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: var(--font-poppins), var(--font-heros), "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-display-sans), var(--font-heros), "Helvetica Neue", Arial, sans-serif;
 
   /* Soft corners, echoing the rounded joints in the logo mark */
   --radius-card: 20px;
@@ -49,7 +52,7 @@
   body {
     background: var(--color-canvas);
     color: var(--color-fg);
-    color-scheme: dark;
+    color-scheme: light;
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.55;
@@ -58,11 +61,15 @@
     -webkit-tap-highlight-color: transparent;
   }
   h1,
-  h2,
-  h3,
-  h4 {
+  h2 {
     font-family: var(--font-display);
     font-weight: 600;
+    text-wrap: balance;
+  }
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    font-weight: 700;
     text-wrap: balance;
   }
   p {
@@ -75,16 +82,45 @@
   html {
     scrollbar-color: var(--color-stone) var(--color-canvas);
     accent-color: var(--color-brand);
-    caret-color: var(--color-sky);
+    caret-color: var(--color-brand);
   }
   :focus-visible {
-    outline: 2px solid var(--color-sky);
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
   img,
   svg {
     display: block;
   }
+}
+
+/* Dark islands (deep bands, product screens, chat, footer, nav): the same tokens, re-pointed to Graphite */
+.on-dark {
+  --color-canvas: #1a1c1e;
+  --color-surface: #24272a;
+  --color-raised: #2c3034;
+  --color-fg: #f4f5f6;
+  --color-brand: #5a6066;
+  --color-brand-hover: #6b7076;
+  --color-accent: #c9ced3; /* Silver */
+  --color-brand-soft: #2c3034;
+  --color-mist: #212427;
+  --color-mist-2: #2c3034;
+  --color-line: #3c4044;
+  --color-slate: #a6acb2;
+  --color-stone: #5a6066;
+  --color-stone-deep: #a6acb2;
+  --color-on-ink-muted: #a6acb2;
+  --color-error: #ff9a8a;
+  color-scheme: dark;
+}
+
+/* Call band: the closing "20-minute call" section, the only large block of colour on the page */
+.band-cta {
+  background: var(--color-cta);
+  --color-stone-deep: #dce5fd;
+  --color-on-ink-muted: #dce5fd;
+  --color-accent: #ffffff;
 }
 
 @layer components {
@@ -117,22 +153,22 @@
     font-family: var(--font-display);
     font-size: clamp(2.1rem, 4.4vw, 3.25rem);
     line-height: 1.08;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
     font-weight: 600;
   }
   .t-h2 {
     font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.8vw, 2.25rem);
     line-height: 1.14;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.035em;
     font-weight: 600;
   }
   .t-h3 {
-    font-family: var(--font-display);
-    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
     line-height: 1.3;
-    letter-spacing: -0.015em;
-    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-weight: 700;
   }
   .t-lead {
     font-size: clamp(1.075rem, 1.4vw, 1.25rem);
@@ -172,37 +208,43 @@
     transform: translateY(1px);
   }
   .btn-primary {
-    background: var(--color-brand);
+    background: var(--color-cta);
     color: var(--color-white);
   }
   .btn-primary:hover {
-    background: var(--color-brand-hover);
-    box-shadow: 0 10px 34px -12px rgb(71 91 255 / 0.7);
+    background: var(--color-cta-hover);
+    box-shadow: 0 10px 28px -12px rgb(36 89 224 / 0.6);
   }
   .btn-secondary {
-    background: rgb(237 238 240 / 0.08);
+    background: var(--color-surface);
     color: var(--color-fg);
-    border-color: rgb(255 255 255 / 0.14);
+    border-color: var(--color-line);
   }
   .btn-secondary:hover {
-    background: rgb(237 238 240 / 0.14);
-    border-color: rgb(255 255 255 / 0.3);
+    border-color: var(--color-stone);
   }
-  .btn-brand {
-    background: var(--color-brand);
+  .on-dark .btn-secondary {
+    background: rgb(255 255 255 / 0.08);
+    border-color: rgb(255 255 255 / 0.18);
+  }
+  .on-dark .btn-secondary:hover {
+    background: rgb(255 255 255 / 0.14);
+    border-color: rgb(255 255 255 / 0.34);
+  }
+  .btn-cta {
+    background: var(--color-cta);
     color: var(--color-white);
-    box-shadow: 0 0 0 0 rgb(71 91 255 / 0);
   }
-  .btn-brand:hover {
-    background: var(--color-brand-hover);
-    box-shadow: 0 10px 34px -12px rgb(71 91 255 / 0.7);
+  .btn-cta:hover {
+    background: var(--color-cta-hover);
+    box-shadow: 0 10px 28px -12px rgb(36 89 224 / 0.6);
   }
   .btn-light {
     background: var(--color-white);
     color: var(--color-black);
   }
   .btn-light:hover {
-    background: #e6e7ea;
+    background: #e3e6e9;
   }
   .btn-ghost-light {
     background: transparent;
@@ -247,26 +289,24 @@
   /* 30° system grid, the brand's background device */
   .iso-grid {
     background-image:
-      repeating-linear-gradient(30deg, rgb(255 255 255 / 0.05) 0 1px, transparent 1px 34px),
-      repeating-linear-gradient(150deg, rgb(255 255 255 / 0.05) 0 1px, transparent 1px 34px);
+      repeating-linear-gradient(30deg, rgb(18 17 23 / 0.05) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(150deg, rgb(18 17 23 / 0.05) 0 1px, transparent 1px 34px);
   }
   .iso-grid-dark {
     background-image:
       repeating-linear-gradient(30deg, rgb(255 255 255 / 0.07) 0 1px, transparent 1px 34px),
       repeating-linear-gradient(150deg, rgb(255 255 255 / 0.07) 0 1px, transparent 1px 34px);
   }
-  /* Electric glow: the signature light. Black canvas lit from above by brand blue */
+  /* Navy hero, kept for any page that needs a deep opener */
   .hero-dark {
-    background:
-      radial-gradient(ellipse 60% 70% at 50% -10%, rgb(0 56 237 / 0.85), rgb(0 15 189 / 0.35) 45%, transparent 75%),
-      var(--color-canvas);
+    background: var(--color-deep);
     color: var(--color-white);
   }
   .t-hero {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+    font-size: clamp(2.4rem, 4.8vw, 4rem);
     line-height: 1.04;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.035em;
     font-weight: 600;
   }
   .t-page {
@@ -277,7 +317,7 @@
     font-weight: 600;
   }
   .hero-wash {
-    background: linear-gradient(180deg, var(--color-mist) 0%, var(--color-canvas) 100%);
+    background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-canvas) 100%);
   }
   .icon-tile {
     display: inline-flex;
@@ -287,20 +327,21 @@
     height: 52px;
     border-radius: 14px;
     background: var(--color-brand-soft);
-    color: var(--color-sky);
-    border: 1px solid rgb(93 139 255 / 0.25);
+    color: var(--color-accent);
+    border: 1px solid rgb(26 28 30 / 0.16);
     transition: background-color 300ms var(--ease-out-quint), color 300ms var(--ease-out-quint);
   }
   .iso-fade {
     mask-image: radial-gradient(ellipse 70% 70% at 70% 40%, #000 30%, transparent 75%);
   }
 
-  /* Accent words inside headlines: Sky blue */
+  /* Accent words inside headlines: same ink and weight, set in italic */
   .t-accent {
-    color: var(--color-sky);
+    font-style: italic;
+    color: inherit;
   }
 
-  /* Eyebrow: a small blue square, echoing the logo's H, plus label */
+  /* Eyebrow: a small graphite square, echoing the logo's H, plus label */
   .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -317,50 +358,43 @@
     height: 8px;
     border-radius: 2px;
     background: var(--color-brand);
-    box-shadow: 0 0 12px 2px rgb(71 91 255 / 0.6);
   }
 
-  /* Page hero: black canvas with the electric-blue light pooling from the top right */
+  /* Page hero: white fading into the silver canvas */
   .hero-light {
     background:
-      radial-gradient(ellipse 60% 85% at 75% -10%, rgb(4 73 254 / 0.95), rgb(0 15 189 / 0.45) 42%, transparent 76%),
-      radial-gradient(ellipse 40% 50% at 0% 100%, rgb(0 15 189 / 0.18), transparent 70%),
-      var(--color-canvas);
+      linear-gradient(180deg, var(--color-surface) 0%, var(--color-canvas) 100%);
     color: var(--color-fg);
   }
 
-  /* Glow band: the deep moment (demo, closing call to action). Electric blue rising from below */
+  /* Navy band: the deep moment (demo, closing call to action). Flat Graphite */
   .band-glow {
-    background:
-      radial-gradient(ellipse 70% 80% at 50% 115%, rgb(0 56 237 / 0.7), rgb(0 15 189 / 0.25) 45%, transparent 75%),
-      #050608;
+    background: var(--color-deep);
     color: var(--color-white);
   }
 
-  /* Navigation bar: black, slightly translucent over the glow */
-  .nav-dark {
-    background: rgb(0 0 0 / 0.82);
+  /* Navigation bar: Graphite, slightly translucent; matches the footer */
+  .nav-bar {
+    background: rgb(26 28 30 / 0.94);
     backdrop-filter: saturate(140%) blur(14px);
-    border-bottom: 1px solid rgb(255 255 255 / 0.06);
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
   }
 
-  /* Brand band: solid electric blue */
+  /* Brand band: solid Graphite */
   .band-brand {
-    background: linear-gradient(135deg, var(--color-electric) 0%, var(--color-deep-blue) 100%);
+    background: var(--color-brand);
     color: var(--color-white);
   }
 
-  /* Product "screen": a small stage that holds a mock UI inside a card, lit blue from one corner */
+  /* Product "screen": a small graphite stage that holds a mock UI inside a light card */
   .screen {
     position: relative;
     overflow: hidden;
     border-radius: 18px;
     padding: 22px;
-    background:
-      radial-gradient(ellipse 70% 80% at 90% 0%, rgb(0 56 237 / 0.45), transparent 70%),
-      #08090b;
-    border: 1px solid rgb(255 255 255 / 0.06);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+    background: var(--color-deep);
+    border: 1px solid rgb(26 28 30 / 0.9);
+    box-shadow: 0 18px 40px -24px rgb(26 28 30 / 0.45);
   }
 
   /* Glass panel on dark surfaces: mock UI cards, hub nodes, canvas nodes */
@@ -381,7 +415,7 @@
     overflow: hidden;
     background: var(--color-surface);
     border: 1px solid var(--color-line);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.04);
+    box-shadow: 0 1px 2px rgb(18 17 23 / 0.04);
     transition: border-color 400ms var(--ease-out-quint);
   }
   .bento::before {
@@ -389,12 +423,12 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgb(71 91 255 / 0.16), transparent 45%);
+    background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgb(26 28 30 / 0.06), transparent 45%);
     opacity: 0;
     transition: opacity 400ms var(--ease-out-quint);
   }
   .bento:hover {
-    border-color: rgb(93 139 255 / 0.4);
+    border-color: rgb(26 28 30 / 0.35);
   }
   .bento:hover::before {
     opacity: 1;
@@ -412,16 +446,16 @@
   }
   .range::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: var(--color-white);
     border: 3px solid var(--color-brand);
     cursor: grab;
   }
   .range::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
     background: var(--color-white);
     border: 3px solid var(--color-brand);
     border-radius: 50%;
@@ -437,14 +471,14 @@
     min-height: 48px;
     padding: 12px 14px;
     border-radius: 12px;
-    background: var(--color-raised);
-    border: 1px solid rgb(255 255 255 / 0.08);
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
     color: var(--color-fg);
     font-size: 16px;
     transition: border-color 160ms ease;
   }
   .field-input::placeholder {
-    color: #75757a;
+    color: #8a8d97;
   }
   .field-input:hover {
     border-color: var(--color-stone);
@@ -462,7 +496,7 @@
   .prose-sh {
     font-size: 17px;
     line-height: 1.7;
-    color: #d6d6d8;
+    color: #2c2b33;
     max-width: 68ch;
   }
   .prose-sh h2 {
@@ -494,11 +528,11 @@
     margin: 0.35em 0;
   }
   .prose-sh li::marker {
-    color: var(--color-sky);
+    color: var(--color-accent);
   }
   .prose-sh a {
-    color: var(--color-sky);
-    text-decoration-color: rgb(93 139 255 / 0.5);
+    color: var(--color-accent);
+    text-decoration-color: rgb(26 28 30 / 0.4);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
@@ -539,7 +573,8 @@
   margin: 1.6em 0;
   padding: 18px 20px;
   overflow-x: auto;
-  background: #08090b;
+  background: var(--color-deep);
+  color: #e3e6e9;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-panel);
   font-size: 14px;
@@ -648,12 +683,12 @@ html.lenis body {
   }
 }
 .chat-ping {
-  box-shadow: 0 0 0 0 rgb(71 91 255 / 0.6);
+  box-shadow: 0 0 0 0 rgb(26 28 30 / 0.5);
   animation: chat-ping 2.2s var(--ease-out-quint) infinite;
 }
 @keyframes chat-ping {
   to {
-    box-shadow: 0 0 0 16px rgb(71 91 255 / 0);
+    box-shadow: 0 0 0 16px rgb(26 28 30 / 0);
   }
 }
 .chat-scroll {

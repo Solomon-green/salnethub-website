@@ -8,7 +8,7 @@ type Node = { label: string; meta: string };
 
 /**
  * The brand "flow line": square nodes for systems, a hairline for the connection,
- * a lime module for the data. Plays when scrolled into view and loops.
+ * a moving dot for the data. Plays when scrolled into view and loops.
  */
 export function FlowDiagram({
   nodes,
@@ -98,9 +98,11 @@ export function FlowDiagram({
   return (
     <div ref={root} className="relative">
       <style>{`
-        .fd-node.is-on .fd-box{background:${dark ? "#252628" : "#1C1D20"};border-color:${dark ? "#475BFF" : "#5D8BFF"};box-shadow:${dark ? "0 0 24px -6px rgba(199,240,0,.35)" : "none"}}
-        .fd-node.is-approval.is-on .fd-box{background:${dark ? "#141A3D" : "#141A3D"};border-color:#475BFF}
+        .fd-node.is-on .fd-box{background:var(--color-brand-soft);border-color:var(--color-accent);box-shadow:none}
+        .fd-node.is-approval.is-on .fd-box{background:var(--color-brand-soft);border-color:var(--color-brand)}
         .fd-box{transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease}
+        .fd-num{transition:opacity .25s ease}
+        .fd-node.is-on .fd-num{opacity:0}
       `}</style>
       <div className="fd-track relative">
         <div aria-hidden className={`absolute left-[27px] top-[28px] bottom-[28px] w-px md:hidden ${line}`} />
@@ -127,17 +129,20 @@ export function FlowDiagram({
             className={`fd-node relative flex items-start gap-5 md:flex-col md:items-center md:text-center ${i === approvalIndex ? "is-approval" : ""}`}
           >
             <div className={`fd-box relative z-[1] flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border ${boxBase}`}>
+              <span aria-hidden className={`fd-num absolute text-[15px] font-bold tabular-nums ${dark ? "text-on-ink-muted" : "text-slate"}`}>
+                {i + 1}
+              </span>
               <span className="fd-check flex items-center justify-center" style={{ opacity: 0 }}>
                 {i === approvalIndex ? (
-                  <Hand size={20} strokeWidth={1.5} className={dark ? "text-sky" : "text-sky"} />
+                  <Hand size={20} strokeWidth={1.5} className={dark ? "text-accent" : "text-accent"} />
                 ) : (
-                  <Check size={20} strokeWidth={1.75} className={dark ? "text-sky" : "text-sky"} />
+                  <Check size={20} strokeWidth={1.75} className={dark ? "text-accent" : "text-accent"} />
                 )}
               </span>
             </div>
             <div className="pt-1.5 md:pt-0">
               <p className={`text-[15px] font-bold leading-snug ${dark ? "text-white" : "text-fg"}`}>{n.label}</p>
-              <p className={`mt-0.5 text-[13px] leading-snug ${i === approvalIndex ? (dark ? "text-sky" : "text-sky") : dark ? "text-on-ink-muted" : "text-slate"}`}>
+              <p className={`mt-0.5 text-[13px] leading-snug ${i === approvalIndex ? (dark ? "text-accent" : "text-accent") : dark ? "text-on-ink-muted" : "text-slate"}`}>
                 {n.meta}
               </p>
             </div>

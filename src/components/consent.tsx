@@ -92,15 +92,15 @@ export function ConsentManager({ gaId }: { gaId?: string }) {
           role="dialog"
           aria-modal="false"
           aria-labelledby="cookie-title"
-          className="consent-in fixed inset-x-3 bottom-3 z-[70] rounded-card border border-line bg-surface/95 p-5 shadow-[0_24px_80px_-20px_rgb(0_0_0/0.9)] backdrop-blur-md sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-[420px] sm:p-6"
+          className="consent-in fixed inset-x-3 bottom-3 z-[70] rounded-card border border-line bg-surface/95 p-5 shadow-[0_24px_80px_-28px_rgb(18_17_23/0.35)] backdrop-blur-md sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-[420px] sm:p-6"
         >
           <p id="cookie-title" className="flex items-center gap-2 text-[16px] font-bold text-fg">
-            <span aria-hidden className="h-2 w-2 rounded-full bg-brand shadow-[0_0_12px_2px_rgb(71_91_255/0.7)]" />
+            <span aria-hidden className="h-2 w-2 rounded-full bg-brand" />
             Your privacy, your call
           </p>
           <p className="mt-2 text-[14px] leading-relaxed text-slate">
             We&apos;d like to use Google Analytics cookies to see which pages help visitors. They stay off unless you accept. No ads, no selling data.{" "}
-            <Link href="/privacy#cookies" className="font-semibold text-sky underline decoration-sky/40 underline-offset-2 hover:decoration-sky">
+            <Link href="/privacy#cookies" className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent">
               Cookie details
             </Link>
           </p>
@@ -108,7 +108,7 @@ export function ConsentManager({ gaId }: { gaId?: string }) {
             <button type="button" className="btn btn-secondary !min-h-[44px] !px-4" onClick={() => decide("denied")}>
               Decline
             </button>
-            <button type="button" className="btn btn-brand !min-h-[44px] !px-4" onClick={() => decide("granted")}>
+            <button type="button" className="btn btn-cta !min-h-[44px] !px-4" onClick={() => decide("granted")}>
               Accept
             </button>
           </div>

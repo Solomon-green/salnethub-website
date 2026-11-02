@@ -121,11 +121,11 @@ export function BookingWidget({ email }: { email: string }) {
   if (load.state === "offline" || !days.length) {
     return (
       <div className="rounded-card border border-line bg-canvas p-8">
-        <CalendarDays size={26} strokeWidth={1.5} className="text-sky" />
+        <CalendarDays size={26} strokeWidth={1.5} className="text-accent" />
         <p className="t-h3 mt-5">{load.state === "offline" ? "The calendar is offline right now" : "No free times in the next few weeks"}</p>
         <p className="mt-2 text-[15px] leading-relaxed text-slate">
           Send a message below or email{" "}
-          <a href={`mailto:${email}`} className="font-bold text-sky">
+          <a href={`mailto:${email}`} className="font-bold text-accent">
             {email}
           </a>{" "}
           and we will find a time with you.
@@ -137,7 +137,7 @@ export function BookingWidget({ email }: { email: string }) {
   if (step === "done" && booked) {
     return (
       <div className="rounded-card border border-brand bg-mist p-8 md:p-10" role="status">
-        <CircleCheck size={28} strokeWidth={1.5} className="text-sky" />
+        <CircleCheck size={28} strokeWidth={1.5} className="text-accent" />
         <p className="t-h2 mt-5">You&apos;re booked</p>
         <p className="mt-3 text-[17px] font-bold">
           {fmtLongDate(dayKey(booked.start, tz))}, {fmtTime(booked.start, tz)}
@@ -151,7 +151,7 @@ export function BookingWidget({ email }: { email: string }) {
               <Video size={18} /> Google Meet link
             </a>
           )}
-          <button type="button" onClick={reset} className="text-[14px] font-bold text-sky">
+          <button type="button" onClick={reset} className="text-[14px] font-bold text-accent">
             Book another time
           </button>
         </div>
@@ -203,7 +203,7 @@ export function BookingWidget({ email }: { email: string }) {
 
     return (
       <div>
-        <button type="button" onClick={() => setStep("pick")} className="inline-flex items-center gap-2 text-[14px] font-bold text-sky">
+        <button type="button" onClick={() => setStep("pick")} className="inline-flex items-center gap-2 text-[14px] font-bold text-accent">
           <ArrowLeft size={16} /> Change time
         </button>
         <div className="rounded-card mt-5 border border-line bg-canvas p-5">
@@ -314,7 +314,7 @@ export function BookingWidget({ email }: { email: string }) {
                     ? "bg-raised font-bold text-white"
                     : open
                       ? "bg-mist font-bold text-fg hover:bg-mist-2"
-                      : "cursor-default text-[#59595B]"
+                      : "cursor-default text-[#5B6478]"
                 }`}
               >
                 {d}
@@ -381,7 +381,7 @@ function Field({
     <div className="grid gap-2">
       <label htmlFor={`book-${name}`} className="text-[14px] font-bold">
         {label}
-        {required && <span className="text-sky"> *</span>}
+        {required && <span className="text-accent"> *</span>}
       </label>
       <input
         id={`book-${name}`}

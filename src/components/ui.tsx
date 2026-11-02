@@ -4,11 +4,11 @@ import { ServiceIcon } from "@/components/icons";
 import { primaryCta } from "@/content/site";
 import type { Service } from "@/content/services";
 
-type CtaTone = "ink" | "light" | "lime";
+type CtaTone = "ink" | "light" | "cta";
 
 export function PrimaryCta({ className = "", light = false, tone }: { className?: string; light?: boolean; tone?: CtaTone }) {
   const t: CtaTone = tone ?? (light ? "light" : "ink");
-  const cls = t === "lime" ? "btn-brand" : t === "light" ? "btn-light" : "btn-primary";
+  const cls = t === "cta" ? "btn-cta" : t === "light" ? "btn-light" : "btn-primary";
   return (
     <Link href={primaryCta.href} className={`btn ${cls} ${className}`}>
       {primaryCta.label}
@@ -42,7 +42,7 @@ export function PageHero({
                   <li key={c.label} className="flex items-center gap-2">
                     {i > 0 && <span aria-hidden>/</span>}
                     {c.href ? (
-                      <Link href={c.href} className="font-medium text-sky hover:underline">
+                      <Link href={c.href} className="font-medium text-accent hover:underline">
                         {c.label}
                       </Link>
                     ) : (
@@ -86,7 +86,7 @@ export function CtaBand({
   body?: string;
 }) {
   return (
-    <section className="band-glow on-dark relative overflow-hidden text-white">
+    <section className="band-cta on-dark relative overflow-hidden text-white">
       <div className="container-x relative grid gap-12 py-24 md:py-28 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-20">
         <div data-reveal>
           <h2 className="t-h1 max-w-2xl">
@@ -94,13 +94,13 @@ export function CtaBand({
             {accent && (
               <>
                 {" "}
-                <span className="t-accent text-sky">{accent}</span>
+                <span className="t-accent text-accent">{accent}</span>
               </>
             )}
           </h2>
           <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-on-ink-muted">{body}</p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <PrimaryCta tone="lime" />
+            <PrimaryCta tone="light" />
             <Link href="/engagements" className="btn btn-ghost-light">
               See pricing
             </Link>
@@ -154,7 +154,7 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
     <Link
       href={`/services/${s.slug}`}
       data-reveal
-      className="border border-line rounded-card group relative flex h-full flex-col bg-surface p-7 text-fg transition-colors duration-300 hover:bg-[#1C1D20] md:p-8"
+      className="border border-line rounded-card group relative flex h-full flex-col bg-surface p-7 text-fg transition-colors duration-300 hover:border-brand/35 md:p-8"
     >
       <div className="flex items-start gap-4">
         <ServiceIcon name={s.icon} size={24} className="mt-0.5 shrink-0 text-stone-deep" />
@@ -162,7 +162,7 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
         <ArrowUpRight
           size={20}
           strokeWidth={1.5}
-          className="shrink-0 text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-sky"
+          className="shrink-0 text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
         />
       </div>
       <p className="mt-4 flex-1 pl-10 text-[15px] leading-relaxed text-slate">{s.short}</p>

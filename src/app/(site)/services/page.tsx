@@ -33,7 +33,7 @@ export default function ServicesPage() {
         title="Services that take work off your team"
         sub="Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation."
       >
-        <PrimaryCta tone="lime" />
+        <PrimaryCta tone="cta" />
         <a href="#fit" className="btn btn-secondary">
           Find your starting point
         </a>

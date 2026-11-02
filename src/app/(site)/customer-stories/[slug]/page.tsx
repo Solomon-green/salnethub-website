@@ -52,7 +52,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
             <dl className="mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
               {e.results.map((r) => (
                 <div key={r.label} className="rounded-card border border-line bg-surface p-6">
-                  <dd className="text-[36px] font-bold leading-none tracking-tight text-sky">{r.value}</dd>
+                  <dd className="text-[36px] font-bold leading-none tracking-tight text-accent">{r.value}</dd>
                   <dt className="mt-2 text-[14px] text-slate">{r.label}</dt>
                 </div>
               ))}

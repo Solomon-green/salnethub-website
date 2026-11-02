@@ -12,24 +12,24 @@ const H_PATH = "M147,78 L185,99.28 L185,259 L147,237.72 L147,191 L86,156.84 L86,
 export default function OgImage() {
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "radial-gradient(ellipse 70% 90% at 80% 10%, #0038ED 0%, #000FBD 35%, #000000 75%)", position: "relative", padding: 80 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#1A1C1E", position: "relative", padding: 80 }}>
         <svg width="370" height="532" viewBox="0 0 185 266" style={{ position: "absolute", right: 70, top: 49, opacity: 0.9 }}>
-          <path d={S_PATH} fill="#000000" fillOpacity="0.35" />
-          <path d={H_PATH} fill="#475BFF" />
+          <path d={S_PATH} fill="#FFFFFF" fillOpacity="0.06" />
+          <path d={H_PATH} fill="#C9CED3" />
         </svg>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", position: "relative" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
             <svg width="30" height="43" viewBox="0 0 185 266">
-              <path d={S_PATH} fill="#F9F9F9" />
-              <path d={H_PATH} fill="#475BFF" />
+              <path d={S_PATH} fill="#FFFFFF" />
+              <path d={H_PATH} fill="#C9CED3" />
             </svg>
-            <div style={{ color: "#F9F9F9", fontSize: 34, fontWeight: 700, letterSpacing: -1 }}>SalnetHub</div>
+            <div style={{ color: "#FFFFFF", fontSize: 34, fontWeight: 700, letterSpacing: -1 }}>SalnetHub</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ color: "#F9F9F9", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>Your business runs on</div>
-            <div style={{ color: "#F9F9F9", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>manual work between tools.</div>
-            <div style={{ color: "#5D8BFF", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>We automate it.</div>
-            <div style={{ color: "#B3B3B4", fontSize: 28, marginTop: 28 }}>Business automation · AI agents · CRM · Reporting</div>
+            <div style={{ color: "#FFFFFF", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>Your business runs on</div>
+            <div style={{ color: "#FFFFFF", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>manual work between tools.</div>
+            <div style={{ color: "#C9CED3", fontSize: 66, fontWeight: 700, letterSpacing: -2.5, lineHeight: 1.06 }}>We automate it.</div>
+            <div style={{ color: "#A6ACB2", fontSize: 28, marginTop: 28 }}>Business automation · AI agents · CRM · Reporting</div>
           </div>
         </div>
       </div>

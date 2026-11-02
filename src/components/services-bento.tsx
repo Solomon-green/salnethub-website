@@ -18,7 +18,7 @@ function LeadVisual() {
           <p className="font-bold text-white">Dana Ortiz</p>
           <p className="text-on-ink-muted">New lead, Meta ads</p>
         </div>
-        <span className="rounded-full border border-brand/40 bg-brand/10 px-2 py-0.5 text-[11px] font-bold text-sky">Hot</span>
+        <span className="rounded-full border border-brand/40 bg-brand/10 px-2 py-0.5 text-[11px] font-bold text-accent">Hot</span>
       </div>
       <div className="mt-4">
         <div className="flex justify-between text-[12px] text-on-ink-muted">
@@ -53,7 +53,7 @@ function ChartVisual() {
     <div className="panel-dark w-full max-w-[300px] p-4">
       <div className="flex items-center justify-between text-[12px]">
         <span className="font-bold text-white">Weekly sales report</span>
-        <span className="text-sky">Sent Mon 08:00</span>
+        <span className="text-accent">Sent Mon 08:00</span>
       </div>
       <div className="mt-4 flex h-24 items-end gap-2">
         {bars.map((h, i) => (
@@ -90,7 +90,7 @@ function ChatVisual() {
       <p className="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-md bg-white/10 px-3.5 py-2.5 text-white">Do you open on Saturdays?</p>
       <div className="panel-dark max-w-[88%] !rounded-2xl !rounded-bl-md px-3.5 py-2.5 text-white">
         Yes, 9 am to 1 pm. Want me to book you a slot this Saturday?
-        <span className="mt-2 flex items-center gap-1.5 text-[11px] text-sky">
+        <span className="mt-2 flex items-center gap-1.5 text-[11px] text-accent">
           <FileText size={12} /> Source: opening-hours.pdf
         </span>
       </div>
@@ -117,7 +117,7 @@ function WebVisual() {
           <div className="h-7 w-1/2 rounded-full bg-brand" />
         </div>
       </div>
-      <span aria-hidden className="hidden h-px w-10 shrink-0 bg-brand shadow-[0_0_10px_rgb(71_91_255/0.45)] sm:block" />
+      <span aria-hidden className="hidden h-px w-10 shrink-0 bg-brand  sm:block" />
       <div className="panel-dark shrink-0 whitespace-nowrap p-3 text-[12px]">
         <span className="flex items-center gap-2 font-bold text-white">
           <ToolMark slug="hubspot" size={14} /> Contact created
@@ -154,12 +154,12 @@ export function ServicesBento() {
                     <li key={s.slug}>
                       <Link
                         href={`/services/${s.slug}`}
-                        className="flex items-center justify-between gap-4 border-b border-line py-3.5 text-[15px] font-bold text-fg transition-colors hover:text-sky"
+                        className="flex items-center justify-between gap-4 border-b border-line py-3.5 text-[15px] font-bold text-fg transition-colors hover:text-accent"
                       >
                         {s.name}
                         <span className="flex shrink-0 items-center gap-3 text-[13px] font-normal text-slate">
                           from {s.priceFrom}
-                          <ArrowUpRight size={16} className="text-slate transition-colors group-hover:text-sky" />
+                          <ArrowUpRight size={16} className="text-slate transition-colors group-hover:text-accent" />
                         </span>
                       </Link>
                     </li>

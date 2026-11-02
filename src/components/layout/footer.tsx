@@ -19,7 +19,7 @@ export function Footer({ hasWork = false, hasBlog = false }: { hasWork?: boolean
   const automation = services.filter((s) => s.group === "automation");
   const other = services.filter((s) => s.group !== "automation");
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#050608] text-white">
+    <footer className="on-dark relative overflow-hidden bg-deep text-white">
       <div className="container-x relative">
         <div className="grid gap-12 border-b border-white/12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr] lg:py-20">
           <div className="max-w-sm">
@@ -36,7 +36,7 @@ export function Footer({ hasWork = false, hasBlog = false }: { hasWork?: boolean
           <FooterCol title="Company" links={companyLinks} />
         </div>
         <div className="flex flex-col gap-4 py-8 text-[13px] text-on-ink-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} SalnetHub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SalnetHub. All rights reserved. Based in Uganda, working with teams worldwide.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="inline-block py-2 hover:text-white">
               Privacy
@@ -59,7 +59,7 @@ function FooterCol({ title, links }: { title: string; links: { label: string; hr
       <ul className="grid gap-0.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-sky">
+            <Link href={l.href} className="inline-block py-2 text-[15px] text-white/90 transition-colors hover:text-accent">
               {l.label}
             </Link>
           </li>

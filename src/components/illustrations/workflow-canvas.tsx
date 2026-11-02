@@ -91,7 +91,7 @@ export function WorkflowCanvas() {
               </span>
               Active
             </span>
-            <span className="rounded-full border border-brand/40 bg-brand/10 px-3 py-1.5 text-sky">Demo run</span>
+            <span className="rounded-full border border-brand/40 bg-brand/10 px-3 py-1.5 text-accent">Demo run</span>
           </div>
         </div>
 
@@ -107,8 +107,8 @@ export function WorkflowCanvas() {
           <ol className="relative grid gap-5 lg:grid-cols-5 lg:gap-4">
             {steps.map((s) => (
               <li key={s.title} className="wf-node group flex items-center gap-4 lg:flex-col lg:items-center lg:text-center" data-state="idle">
-                <span className="wf-icon relative flex h-[68px] w-[68px] rounded-2xl shrink-0 items-center justify-center border bg-[#18191B] text-white transition-[border-color,box-shadow] duration-300">
-                  {s.tool ? <ToolMark slug={s.tool} size={28} /> : <Sparkles size={28} strokeWidth={1.5} className="text-sky" />}
+                <span className="wf-icon relative flex h-[68px] w-[68px] rounded-2xl shrink-0 items-center justify-center border bg-deep-2 text-white transition-[border-color,box-shadow] duration-300">
+                  {s.tool ? <ToolMark slug={s.tool} size={28} /> : <Sparkles size={28} strokeWidth={1.5} className="text-accent" />}
                   <span className="rounded-full wf-badge absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center bg-brand text-fg">
                     <Check size={13} strokeWidth={3} />
                   </span>
@@ -119,10 +119,10 @@ export function WorkflowCanvas() {
                   <span className="mt-0.5 block text-[13px] text-on-ink-muted">{s.app}</span>
                   <span className="wf-status mt-2 inline-flex items-center gap-1.5 text-[12px] font-bold">
                     <span className="st-idle text-white/60">Waiting</span>
-                    <span className="st-run items-center gap-1.5 text-sky">
+                    <span className="st-run items-center gap-1.5 text-accent">
                       <Loader2 size={12} className="animate-spin" /> Running
                     </span>
-                    <span className="st-done text-sky">Success</span>
+                    <span className="st-done text-accent">Success</span>
                   </span>
                 </span>
               </li>
@@ -151,7 +151,7 @@ export function WorkflowCanvas() {
             <Check size={18} strokeWidth={2.5} />
           </span>
           <span>
-            <span className="block text-[14px] font-bold text-sky">Completed in 1 min 52 s</span>
+            <span className="block text-[14px] font-bold text-accent">Completed in 1 min 52 s</span>
             <span className="block text-[12px] text-on-ink-muted">Manual steps: 0</span>
           </span>
         </div>
@@ -162,11 +162,11 @@ export function WorkflowCanvas() {
         .wf-node .wf-icon{border-color:rgb(255 255 255 / .14)}
         .wf-node .wf-badge{opacity:0;transform:scale(.4);transition:opacity .25s,transform .35s cubic-bezier(.22,1,.36,1)}
         .wf-node .st-run,.wf-node .st-done{display:none}
-        .wf-node[data-state=running] .wf-icon{border-color:#475BFF;box-shadow:0 0 0 4px rgb(71 91 255 / .12),0 0 34px -4px rgb(71 91 255 / .6)}
+        .wf-node[data-state=running] .wf-icon{border-color:#3C4044;box-shadow:0 0 0 4px rgb(26 28 30 / .12),0 0 34px -4px rgb(26 28 30 / .6)}
         .wf-node[data-state=running] .st-idle,.wf-node[data-state=done] .st-idle{display:none}
         .wf-node[data-state=running] .st-run{display:inline-flex}
         .wf-node[data-state=done] .st-done{display:inline}
-        .wf-node[data-state=done] .wf-icon{border-color:rgb(144 144 145 / .75)}
+        .wf-node[data-state=done] .wf-icon{border-color:rgb(139 147 165 / .75)}
         .wf-node[data-state=done] .wf-badge{opacity:1;transform:scale(1)}
       `}</style>
     </div>

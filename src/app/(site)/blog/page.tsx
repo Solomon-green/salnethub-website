@@ -78,7 +78,7 @@ function PostCard({ post, featured = false }: { post: Post; featured?: boolean }
         )}
       </div>
       <div className={`flex flex-1 flex-col ${featured ? "p-8 lg:p-10" : "p-6"}`}>
-        <p className="t-label text-sky">{categoryLabels[post.category]}</p>
+        <p className="t-label text-accent">{categoryLabels[post.category]}</p>
         <h2 className={`mt-3 font-[family-name:var(--font-display)] font-semibold leading-tight tracking-tight ${featured ? "text-[clamp(1.6rem,2.6vw,2.2rem)]" : "text-[20px]"}`}>
           {post.title}
         </h2>
@@ -87,7 +87,7 @@ function PostCard({ post, featured = false }: { post: Post; featured?: boolean }
           <span>
             {formatDate(post.publishedAt)} · {post.readingMinutes} min read
           </span>
-          <ArrowUpRight size={18} className="text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-sky" />
+          <ArrowUpRight size={18} className="text-slate transition-[translate,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
         </p>
       </div>
     </Link>

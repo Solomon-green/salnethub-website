@@ -65,7 +65,7 @@ export default async function BlogPost({ params }: PageProps<"/blog/[slug]">) {
           <nav aria-label="Breadcrumb" className="text-[14px]">
             <ol className="flex flex-wrap items-center gap-2 text-slate">
               <li>
-                <Link href="/blog" className="font-medium text-sky hover:underline">
+                <Link href="/blog" className="font-medium text-accent hover:underline">
                   Blog
                 </Link>
               </li>
@@ -115,7 +115,7 @@ export default async function BlogPost({ params }: PageProps<"/blog/[slug]">) {
                 <ol className="mt-4 grid gap-2.5 text-[14px] leading-snug">
                   {toc.map((h) => (
                     <li key={h.id} className={h.level === 3 ? "pl-4" : ""}>
-                      <a href={`#${h.id}`} className="text-slate transition-colors hover:text-sky">
+                      <a href={`#${h.id}`} className="text-slate transition-colors hover:text-accent">
                         {h.text}
                       </a>
                     </li>

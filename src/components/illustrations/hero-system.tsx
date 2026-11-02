@@ -64,7 +64,7 @@ export function HeroSystem({ className = "" }: { className?: string }) {
       const tops = gsap.utils.toArray<SVGPolygonElement>(".blk-top");
       const metas = gsap.utils.toArray<SVGTextElement>(".blk-meta");
       if (prefersReducedMotion()) {
-        gsap.set(tops, { fill: "#909091" });
+        gsap.set(tops, { fill: "#8B93A5" });
         gsap.set(".data-module", { opacity: 0 });
         return;
       }
@@ -74,21 +74,21 @@ export function HeroSystem({ className = "" }: { className?: string }) {
 
       const tl = gsap.timeline({ repeat: -1, delay: 1.4, repeatDelay: 0.4 });
       tl.set(".data-module", { opacity: 1 });
-      tl.set(tops, { fill: "#252628" });
-      tl.set(metas, { fill: "#909091" });
-      tl.to(tops[0], { fill: "#909091", duration: 0.25 });
+      tl.set(tops, { fill: "#22304B" });
+      tl.set(metas, { fill: "#8B93A5" });
+      tl.to(tops[0], { fill: "#8B93A5", duration: 0.25 });
       for (let i = 1; i < route.length; i++) {
         tl.to(".data-module", {
           duration: 1.05,
           ease: "power2.inOut",
           motionPath: { path: routeD, start: (i - 1) / (route.length - 1), end: i / (route.length - 1) },
         });
-        tl.to(tops[i], { fill: i === 1 ? "#475BFF" : "#909091", duration: 0.25 }, "<0.8");
-        tl.to(metas[i], { fill: "#475BFF", duration: 0.25 }, "<");
+        tl.to(tops[i], { fill: i === 1 ? "#3C4044" : "#8B93A5", duration: 0.25 }, "<0.8");
+        tl.to(metas[i], { fill: "#3C4044", duration: 0.25 }, "<");
       }
       tl.to(".data-module", { opacity: 0, duration: 0.3 }, "+=0.2");
-      tl.to(tops, { fill: "#252628", duration: 0.6, stagger: 0.05 }, "+=1.4");
-      tl.to(metas, { fill: "#909091", duration: 0.4 }, "<");
+      tl.to(tops, { fill: "#22304B", duration: 0.6, stagger: 0.05 }, "+=1.4");
+      tl.to(metas, { fill: "#8B93A5", duration: 0.4 }, "<");
     },
     { scope: root },
   );
@@ -125,19 +125,19 @@ export function HeroSystem({ className = "" }: { className?: string }) {
         </mask>
       </defs>
 
-      <g mask="url(#grid-mask)" stroke="#475BFF" strokeOpacity="0.09" strokeWidth="1">
+      <g mask="url(#grid-mask)" stroke="#3C4044" strokeOpacity="0.09" strokeWidth="1">
         {grid.map((d, i) => (
           <path key={i} d={d} />
         ))}
       </g>
 
-      <path className="route-line" d={routeD} fill="none" stroke="#475BFF" strokeWidth="1.6" strokeOpacity="0.9" filter="url(#lime-glow)" />
+      <path className="route-line" d={routeD} fill="none" stroke="#3C4044" strokeWidth="1.6" strokeOpacity="0.9" filter="url(#lime-glow)" />
       {route.map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r="3" fill="#475BFF" />
+        <circle key={i} cx={x} cy={y} r="3" fill="#3C4044" />
       ))}
 
       <g className="data-module" style={{ opacity: 0 }} transform={`translate(${route[0][0]} ${route[0][1]})`}>
-        <polygon points={moduleShape} fill="#475BFF" filter="url(#lime-glow)" />
+        <polygon points={moduleShape} fill="#3C4044" filter="url(#lime-glow)" />
       </g>
 
       {blocks.map((b) => {
@@ -145,13 +145,13 @@ export function HeroSystem({ className = "" }: { className?: string }) {
         const [lx, ly] = f.labelAnchor;
         return (
           <g key={b.id} className="blk">
-            <polygon points={f.left} fill="#18191B" stroke="#475BFF" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
-            <polygon points={f.right} fill="#0B0C0E" stroke="#475BFF" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
-            <polygon className="blk-top" points={f.top} fill="#252628" stroke="#475BFF" strokeOpacity="0.7" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon points={f.left} fill="#101A2E" stroke="#3C4044" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon points={f.right} fill="#0B1426" stroke="#3C4044" strokeOpacity="0.45" strokeWidth="1.25" strokeLinejoin="round" />
+            <polygon className="blk-top" points={f.top} fill="#22304B" stroke="#3C4044" strokeOpacity="0.7" strokeWidth="1.25" strokeLinejoin="round" />
             <text x={lx} y={ly - U * 1.62} textAnchor="middle" fontSize="13" fontWeight="700" fill="#FFFFFF">
               {b.label}
             </text>
-            <text className="blk-meta" x={lx} y={ly - U * 1.62 + 15} textAnchor="middle" fontSize="11" fill="#909091">
+            <text className="blk-meta" x={lx} y={ly - U * 1.62 + 15} textAnchor="middle" fontSize="11" fill="#8B93A5">
               {b.meta}
             </text>
           </g>

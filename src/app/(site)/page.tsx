@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
-import { AutomationHub } from "@/components/illustrations/automation-hub";
+import { HeroCost } from "@/components/illustrations/hero-cost";
 import { WorkflowCanvas } from "@/components/illustrations/workflow-canvas";
-import { ProcessScroller } from "@/components/illustrations/process-scroller";
 import { ToolMarquee } from "@/components/tool-marquee";
 import { ServicesBento } from "@/components/services-bento";
 import { CostCalculator } from "@/components/cost-calculator";
@@ -51,8 +50,7 @@ export default async function Home() {
       <section className="hero-light relative overflow-hidden pt-28 lg:pt-32">
         <div className="container-x relative grid items-center gap-14 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pb-24">
           <div>
-            <span className="eyebrow">Automate, simplify and scale</span>
-            <h1 className="t-hero mt-6 max-w-[15ch] [text-wrap:balance]">
+            <h1 className="t-hero max-w-[15ch] [text-wrap:balance]">
               Systems that run your business <span className="t-accent">while you grow it.</span>
             </h1>
             <p className="mt-7 max-w-xl text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">
@@ -60,7 +58,7 @@ export default async function Home() {
               support. Your tools finally work as one system, and your team gets back to the work that moves the business forward.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <PrimaryCta tone="lime" />
+              <PrimaryCta tone="cta" />
               {/* Quote cards first (on this page), with their "More customer stories" button leading to the full page */}
               {hasTestimonials || stories.length > 0 ? (
                 <Link href={hasTestimonials ? "#customer-stories" : "/customer-stories"} className="btn btn-secondary">
@@ -73,6 +71,7 @@ export default async function Home() {
                 </Link>
               )}
             </div>
+            <p className="mt-4 text-[13px] text-slate">Free 20-minute call on Google Meet. No obligation.</p>
             <ul className="mt-9 grid max-w-xl gap-x-6 gap-y-2.5 text-[14px] text-slate sm:grid-cols-2" aria-label="Why teams choose SalnetHub">
               {hasUpwork && (
                 <li className="text-fg sm:col-span-2">
@@ -81,13 +80,14 @@ export default async function Home() {
               )}
               {proofLine.map((p) => (
                 <li key={p} className="flex items-center gap-2.5">
-                  <Check aria-hidden size={15} strokeWidth={2.5} className="shrink-0 text-sky" />
+                  <Check aria-hidden size={15} strokeWidth={2.5} className="shrink-0 text-accent" />
                   {p}
                 </li>
               ))}
             </ul>
           </div>
-          <AutomationHub className="mx-auto w-full max-w-[560px]" />
+          {/* Desktop only: on small screens the calculator itself follows a scroll later */}
+          <HeroCost className="mx-auto hidden w-full max-w-[540px] lg:block" />
         </div>
       </section>
 
@@ -99,8 +99,25 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Cost calculator: the strongest moment, straight after the hero's example */}
+      <section id="cost" className="scroll-mt-20 py-24 lg:py-32">
+        <div className="container-x">
+          <div className="max-w-3xl">
+            <h2 className="t-h1" data-reveal>
+              What is copy-paste <span className="t-accent">costing you?</span>
+            </h2>
+            <p className="t-lead mt-5" data-reveal>
+              Move the sliders to match your team. Most businesses are surprised by the yearly number.
+            </p>
+          </div>
+          <div className="mt-12" data-reveal>
+            <CostCalculator />
+          </div>
+        </div>
+      </section>
+
       {/* What changes */}
-      <section className="py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <SectionHead
             title="The same work, without the busywork"
@@ -117,30 +134,13 @@ export default async function Home() {
                 <p className="text-[18px] font-bold">{c.area}</p>
                 <p className="text-[16px] text-slate line-through decoration-slate/50 decoration-[1.5px]">{c.before}</p>
                 <p className="flex items-center gap-2.5 text-[16px] font-bold text-fg">
-                  <Check aria-hidden size={18} strokeWidth={2.5} className="shrink-0 text-sky" />
+                  <Check aria-hidden size={18} strokeWidth={2.5} className="shrink-0 text-accent" />
                   {c.after}
                 </p>
               </div>
             ))}
           </div>
           <p className="mt-4 text-[13px] text-slate">Typical outcomes from single-workflow projects.</p>
-        </div>
-      </section>
-
-      {/* Cost calculator: the strongest moment, right after the before/after */}
-      <section className="border-t border-line py-24 lg:py-32">
-        <div className="container-x">
-          <div className="max-w-3xl">
-            <h2 className="t-h1" data-reveal>
-              What is copy-paste <span className="t-accent">costing you?</span>
-            </h2>
-            <p className="t-lead mt-5" data-reveal>
-              Move the sliders to match your team. Most businesses are surprised by the yearly number.
-            </p>
-          </div>
-          <div className="mt-12" data-reveal>
-            <CostCalculator />
-          </div>
         </div>
       </section>
 
@@ -180,17 +180,27 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Process: one line of five steps; the detail lives on How we work */}
       <section className="py-24 lg:py-32">
         <div className="container-x">
-          <ProcessScroller
-            steps={processSteps}
-            heading="A clear process, from first call to running system"
-            intro="Fixed scope, weekly progress in plain language, and documentation your team can actually use."
-          />
-          <Link href="/how-we-work" className="link-arrow mt-12 inline-flex">
-            How we work <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <SectionHead
+              title="From first call to a running system"
+              body="Fixed scope, weekly progress in plain language, and documentation your team can actually use."
+            />
+            <Link href="/how-we-work" className="link-arrow shrink-0" data-reveal>
+              How we work <ArrowRight size={16} />
+            </Link>
+          </div>
+          <ol className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+            {processSteps.map((p) => (
+              <li key={p.step} className="border-t-2 border-fg pt-6" data-reveal>
+                <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-slate">{p.step}</p>
+                <p className="mt-3 text-[18px] font-bold leading-snug">{p.title}</p>
+                <p className="mt-3 text-[14px] leading-relaxed text-slate">{p.output}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -215,12 +225,12 @@ export default async function Home() {
               {[...entryPoints, builds[0], builds[2]].map((e, i) => (
                 <div
                   key={e.name}
-                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-fg bg-raised text-white" : "border-line bg-surface"}`}
+                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-deep bg-deep text-white" : "border-line bg-surface"}`}
                   data-reveal
                 >
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
                     <p className="text-[15px] font-bold">{e.name}</p>
-                    {i === 2 && <span className="rounded-full bg-brand-soft px-2.5 py-1 text-[11px] font-bold text-fg">Most popular start</span>}
+                    {i === 2 && <span className="whitespace-nowrap rounded-full bg-white px-3 py-1 text-[12px] font-bold text-black">Most popular start</span>}
                   </div>
                   <p className="mt-4 text-[34px] font-bold leading-none tracking-tight">{"unit" in e ? e.price : `From ${e.price}`}</p>
                   <p className={`mt-2 text-[13px] ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{"unit" in e ? e.unit : e.time}</p>
@@ -233,7 +243,7 @@ export default async function Home() {
           <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
             {promises.map((p) => (
               <li key={p.name} className="flex gap-3" data-reveal>
-                <Check aria-hidden size={18} strokeWidth={2.5} className="mt-0.5 shrink-0 text-sky" />
+                <Check aria-hidden size={18} strokeWidth={2.5} className="mt-0.5 shrink-0 text-accent" />
                 <span>
                   <span className="block text-[15px] font-bold">{p.name}</span>
                   <span className="mt-1 block text-[14px] leading-relaxed text-slate">{p.body}</span>

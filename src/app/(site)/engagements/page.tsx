@@ -17,7 +17,7 @@ export default function EngagementsPage() {
         title="Clear prices, published up front"
         sub="Start free, build with a fixed quote, then keep everything running with a monthly care plan. Prices are in US dollars."
       >
-        <PrimaryCta tone="lime" />
+        <PrimaryCta tone="cta" />
       </PageHero>
 
       {/* Entry points */}
@@ -36,7 +36,7 @@ export default function EngagementsPage() {
                 <ul className="mt-6 grid gap-2.5 border-t border-line pt-6">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-3 text-[15px]">
-                      <Check size={18} className="mt-0.5 shrink-0 text-sky" /> {p}
+                      <Check size={18} className="mt-0.5 shrink-0 text-accent" /> {p}
                     </li>
                   ))}
                 </ul>
@@ -104,7 +104,7 @@ export default function EngagementsPage() {
                 <ul className={`mt-8 grid gap-3 border-t pt-6 ${p.featured ? "border-white/15" : "border-line"}`}>
                   {p.points.map((pt) => (
                     <li key={pt} className="flex gap-3 text-[15px]">
-                      <Check size={18} className={`mt-0.5 shrink-0 text-sky`} /> {pt}
+                      <Check size={18} className={`mt-0.5 shrink-0 text-accent`} /> {pt}
                     </li>
                   ))}
                 </ul>

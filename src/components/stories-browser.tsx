@@ -58,7 +58,7 @@ export function StoriesBrowser({ items, categories }: { items: StoryCard[]; cate
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-[15px] font-bold">{s.client}</p>
                 <p className="mt-2 text-[15px] leading-relaxed text-slate">{s.title}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-bold text-sky">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-bold text-accent">
                   Read their story <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
                 </span>
                 {s.categories.length > 0 && (

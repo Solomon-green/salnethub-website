@@ -60,8 +60,8 @@ export function RagDiagram() {
     <div ref={root} className="grid items-center gap-6 lg:grid-cols-[1fr_auto_1.25fr_auto_1.15fr] lg:gap-0">
       <style>{`
         .rag-doc{transition:background-color .35s ease,border-color .35s ease}
-        .rag-doc.is-hit{background:#1C1D20;border-color:#5D8BFF}
-        .rag-doc.is-hit .rag-bar{background:#5D8BFF}
+        .rag-doc.is-hit{background:var(--color-brand-soft);border-color:var(--color-accent)}
+        .rag-doc.is-hit .rag-bar{background:var(--color-accent)}
       `}</style>
 
       <div className="rounded-card border border-fg bg-surface p-5">
@@ -99,8 +99,8 @@ export function RagDiagram() {
           Tenants must give <strong>60 days&apos; written notice</strong> before the lease end date. Notice is sent to the property manager by email or post.
         </p>
         <div className="mt-4 flex flex-wrap gap-2 text-[12px]">
-          <span className="rounded-full border border-brand bg-mist px-2 py-1 font-bold text-sky">[1] Lease template, clause 14.2</span>
-          <span className="rounded-full border border-brand bg-mist px-2 py-1 font-bold text-sky">[2] Maintenance guide, p. 3</span>
+          <span className="rounded-full border border-brand bg-mist px-2 py-1 font-bold text-accent">[1] Lease template, clause 14.2</span>
+          <span className="rounded-full border border-brand bg-mist px-2 py-1 font-bold text-accent">[2] Maintenance guide, p. 3</span>
         </div>
       </div>
     </div>

@@ -44,7 +44,7 @@ export default async function CustomerStoriesPage() {
         title="Customer stories"
         sub="How teams like yours stopped copying, chasing and re-typing. Every story names what we built, the tools involved and what changed."
       >
-        <PrimaryCta tone="lime" />
+        <PrimaryCta tone="cta" />
       </PageHero>
 
       {items.length === 0 ? (
@@ -100,7 +100,7 @@ export default async function CustomerStoriesPage() {
                             {entry.client}
                           </span>
                           <span className="mt-2 block max-w-[46ch] text-[15px] leading-relaxed text-on-ink-muted">{entry.title}</span>
-                          <span className="mt-5 inline-flex items-center gap-1 text-[14px] font-bold text-sky">
+                          <span className="mt-5 inline-flex items-center gap-1 text-[14px] font-bold text-accent">
                             Read their story <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
                           </span>
                         </span>

@@ -26,24 +26,24 @@ function layout(heading: string, intro: string, rows: [string, string][], cta?: 
   const rowHtml = rows
     .map(
       ([k, v]) =>
-        `<tr><td style="padding:12px 0;border-top:1px solid #E3E4E8;color:#59595B;font-size:14px;width:120px;vertical-align:top">${k}</td><td style="padding:12px 0;border-top:1px solid #E3E4E8;color:#000000;font-size:15px;font-weight:700">${v}</td></tr>`,
+        `<tr><td style="padding:12px 0;border-top:1px solid #D9DDE1;color:#3C4044;font-size:14px;width:120px;vertical-align:top">${k}</td><td style="padding:12px 0;border-top:1px solid #D9DDE1;color:#1A1C1E;font-size:15px;font-weight:700">${v}</td></tr>`,
     )
     .join("");
   const button = cta
-    ? `<a href="${cta.href}" style="display:inline-block;margin-top:28px;background:#000000;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:15px 24px">${cta.label}</a>`
+    ? `<a href="${cta.href}" style="display:inline-block;margin-top:28px;background:#2459E0;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:15px 24px">${cta.label}</a>`
     : "";
-  return `<!doctype html><html><body style="margin:0;background:#F4F5F7;font-family:Helvetica,Arial,sans-serif">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F4F5F7;padding:32px 16px"><tr><td align="center">
+  return `<!doctype html><html><body style="margin:0;background:#ECEEF0;font-family:Helvetica,Arial,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ECEEF0;padding:32px 16px"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
-<tr><td style="background:#000000;padding:22px 32px;color:#ffffff;font-size:18px;font-weight:700;letter-spacing:-0.01em">SalnetHub<span style="color:#5D8BFF">.</span></td></tr>
+<tr><td style="background:#1A1C1E;padding:22px 32px;color:#ffffff;font-size:18px;font-weight:700;letter-spacing:-0.01em">SalnetHub<span style="color:#A6ACB2">.</span></td></tr>
 <tr><td style="background:#ffffff;padding:36px 32px">
-<h1 style="margin:0;color:#000000;font-size:26px;line-height:1.15;letter-spacing:-0.02em">${heading}</h1>
-<p style="margin:14px 0 26px;color:#59595B;font-size:16px;line-height:1.55">${intro}</p>
+<h1 style="margin:0;color:#1A1C1E;font-size:26px;line-height:1.15;letter-spacing:-0.02em">${heading}</h1>
+<p style="margin:14px 0 26px;color:#3C4044;font-size:16px;line-height:1.55">${intro}</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rowHtml}</table>
 ${button}
-${footer ? `<p style="margin:28px 0 0;color:#59595B;font-size:14px;line-height:1.55">${footer}</p>` : ""}
+${footer ? `<p style="margin:28px 0 0;color:#3C4044;font-size:14px;line-height:1.55">${footer}</p>` : ""}
 </td></tr>
-<tr><td style="padding:20px 32px;color:#59595B;font-size:12px">SalnetHub · Business automation and AI agents · <a href="${site.url}" style="color:#394EFF">${site.url.replace(/^https?:\/\//, "")}</a></td></tr>
+<tr><td style="padding:20px 32px;color:#3C4044;font-size:12px">SalnetHub · Business automation and AI agents · <a href="${site.url}" style="color:#2459E0">${site.url.replace(/^https?:\/\//, "")}</a></td></tr>
 </table></td></tr></table></body></html>`;
 }
 
@@ -54,7 +54,7 @@ export function guestEmail(b: Booked) {
     ["Date", esc(date)],
     ["Time", esc(time)],
     ["Length", `${booking.durationMinutes} minutes`],
-    ["Where", b.meetLink ? `<a href="${b.meetLink}" style="color:#394EFF">Google Meet</a>` : "Video call (link in the calendar invite)"],
+    ["Where", b.meetLink ? `<a href="${b.meetLink}" style="color:#2459E0">Google Meet</a>` : "Video call (link in the calendar invite)"],
   ];
   const html = layout(
     "Your call is booked",
@@ -82,7 +82,7 @@ export function ownerEmail(b: Booked) {
   const rows: [string, string][] = [
     ["When", `${esc(date)}<br>${esc(time)}`],
     ["Name", esc(b.name)],
-    ["Email", `<a href="mailto:${esc(b.email)}" style="color:#394EFF">${esc(b.email)}</a>`],
+    ["Email", `<a href="mailto:${esc(b.email)}" style="color:#2459E0">${esc(b.email)}</a>`],
     ["Company", esc(b.company || "Not given")],
     ["Their time", `${esc(guest.time)} (${esc(b.guestTimeZone)})`],
     ["Notes", esc(b.notes || "None").replace(/\n/g, "<br>")],

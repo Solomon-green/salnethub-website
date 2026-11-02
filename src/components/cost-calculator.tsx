@@ -3,9 +3,10 @@
 import { useId, useState } from "react";
 import { PrimaryCta } from "@/components/ui";
 import { builds } from "@/content/engagements";
+import { calculator, yearlyCost } from "@/content/calculator";
 
-const WEEKS = 48; // working weeks in a year
-const SHARE = 0.5; // conservative: assume one project removes half the manual time
+const WEEKS = calculator.weeks;
+const SHARE = calculator.share;
 const workflowPrice = Number(builds[0].price.replace(/[^0-9]/g, ""));
 
 const money = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
@@ -40,12 +41,12 @@ function Slider({ label, value, min, max, step = 1, unit, onChange }: { label: s
 
 /** "What is copy-paste costing you?" Plain arithmetic with the assumptions printed underneath. */
 export function CostCalculator() {
-  const [people, setPeople] = useState(3);
-  const [hours, setHours] = useState(6);
-  const [rate, setRate] = useState(25);
+  const [people, setPeople] = useState(calculator.defaults.people);
+  const [hours, setHours] = useState(calculator.defaults.hours);
+  const [rate, setRate] = useState(calculator.defaults.rate);
 
   const hoursYear = people * hours * WEEKS;
-  const costYear = hoursYear * rate;
+  const costYear = yearlyCost(people, hours, rate);
   const saved = costYear * SHARE;
   const paybackWeeks = saved > 0 ? Math.max(1, Math.ceil(workflowPrice / (saved / WEEKS))) : 0;
 
@@ -63,7 +64,7 @@ export function CostCalculator() {
       <div className="band-glow on-dark relative flex flex-col justify-between overflow-hidden p-7 md:p-10" aria-live="polite">
         <div className="relative">
           <p className="text-[14px] text-on-ink-muted">Manual work costs you about</p>
-          <p className="mt-2 text-[clamp(2.6rem,5vw,3.8rem)] font-bold leading-none tracking-tight tabular-nums text-sky">
+          <p className="mt-2 text-[clamp(2.6rem,5vw,3.8rem)] font-bold leading-none tracking-tight tabular-nums text-accent">
             {money(costYear)}
             <span className="ml-2 text-[16px] font-normal tracking-normal text-on-ink-muted">a year</span>
           </p>
@@ -86,7 +87,7 @@ export function CostCalculator() {
           </div>
         </div>
         <div className="relative mt-8">
-          <PrimaryCta tone="lime" />
+          <PrimaryCta tone="cta" />
         </div>
       </div>
     </div>
