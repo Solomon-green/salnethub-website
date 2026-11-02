@@ -10,7 +10,9 @@ Decisions (2026-10-26): buy a .com first · global/remote market · free keyword
 - Quality over volume: every post is reviewed by Solomon before publishing; publish at a steady, gradual pace.
 - Only clean links. No PBNs, link farms or unlabelled paid links.
 
-## Phase 0: Foundations (Solomon)
+## Phase 0: Foundations (Solomon) ✅ done 2026-11-01
+Result: www.salnethub.com live (apex 308 → www); Search Console Domain property verified, sitemap Success (18 URLs); GA4 G-NPEM0EF4ZV on production with `generate_lead` events (contact form, booked call).
+
 1. Buy the .com (e.g. salnethub.com) and connect it in Vercel → Settings → Domains. Set `NEXT_PUBLIC_SITE_URL` to the new URL. Consider moving the email to the .com too.
 2. Google Search Console: add a **Domain property** and verify through DNS. Submit `/sitemap.xml`.
 3. Google Analytics 4: create a property and give Claude the Measurement ID to install.
@@ -35,7 +37,9 @@ Output: `keywords.csv` (informational → blog) and `service-keywords.csv` (comm
 - Build **service × industry** pages (not cities): e.g. "CRM automation for dental clinics", "AI chatbot for real estate agencies". Only where real search demand exists and each page has genuinely distinct content. Tens of pages, not hundreds.
 - One proven conversion layout reused across service pages; test variations once traffic arrives.
 
-## Phase 4: Blog
+## Phase 4: Blog (infrastructure ✅ 2026-11-01, d4c6a9b)
+Done: Keystatic "Blog posts" collection, `/blog` index (noindex while empty), `/blog/[slug]` template with BlogPosting+Person, FAQPage, BreadcrumbList JSON-LD, author box (`src/content/authors.ts`), dates, reading time, TOC from ##/###, related services. Blog appears in nav/footer/sitemap only once a real post is published. Remaining: voice files, `/blog` Claude skill, first posts.
+
 - Build `/blog` index + post template (Article schema, author, dates, table of contents, FAQ, related services).
 - Voice files in `references/`: voice, opinions, stats (from the 53 Upwork contracts), stories, humour (light, professional).
 - Per post: one primary keyword + 4–5 cluster keywords; study the top 3 results (format, length within 20%, headings, topics); direct answer first; 3–5 internal links (incl. a service page) and 2–3 authoritative external links; images (real screenshots preferred, Pexels otherwise).

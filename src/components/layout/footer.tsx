@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand";
+import { CookieSettingsButton } from "@/components/consent";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 
@@ -43,6 +44,7 @@ export function Footer({ hasWork = false, hasBlog = false }: { hasWork?: boolean
             <Link href="/terms" className="inline-block py-2 hover:text-white">
               Terms
             </Link>
+            <CookieSettingsButton className="inline-block py-2 hover:text-white" />
           </div>
         </div>
       </div>

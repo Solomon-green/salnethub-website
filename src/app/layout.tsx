@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { ConsentManager } from "@/components/consent";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } : undefined,
 };
 
-// GA4 loads on the live production site only, so local and preview visits stay out of the data.
+// GA4 loads on the live production site only, so local and preview visits stay out of the data,
+// and only after the visitor accepts analytics cookies (see ConsentManager).
 const gaId = process.env.VERCEL_ENV === "production" ? site.gaId : undefined;
 
 export const viewport: Viewport = {
@@ -65,8 +66,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionFlag }} />
       </head>
-      <body>{children}</body>
-      {gaId && <GoogleAnalytics gaId={gaId} />}
+      <body>
+        {children}
+        <ConsentManager gaId={gaId} />
+      </body>
     </html>
   );
 }
