@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { clearJourney, recordPage } from "@/lib/journey";
 
-// The visitor's cookie choice. Google Analytics loads only after an explicit "Accept".
+// The visitor's cookie choice. Google Analytics and the page journey run only after an explicit "Accept".
 const KEY = "sh-cookie-consent";
-const VERSION = 1;
+// Bumped when what consent covers changes, so earlier visitors are asked again (2: page journey added).
+const VERSION = 2;
 const OPEN_EVENT = "sh:cookie-settings";
 
 type Choice = "granted" | "denied";
@@ -37,6 +40,15 @@ function clearAnalyticsCookies() {
     if (!name.startsWith("_ga")) continue;
     for (const d of domains) document.cookie = `${name}=; Max-Age=0; path=/${d ? `; domain=${d}` : ""}`;
   }
+}
+
+// Notes each page the visitor views; mounted only while consent is granted.
+function JourneyTracker() {
+  const pathname = usePathname();
+  useEffect(() => {
+    recordPage(pathname, document.title);
+  }, [pathname]);
+  return null;
 }
 
 /** Reopens the cookie banner, e.g. from the footer. */
@@ -75,6 +87,7 @@ export function ConsentManager({ gaId }: { gaId?: string }) {
 
   function decide(next: Choice) {
     const withdrawing = choice === "granted" && next === "denied";
+    if (next === "denied") clearJourney();
     saveChoice(next);
     setChoice(next);
     setOpen(false);
@@ -86,6 +99,7 @@ export function ConsentManager({ gaId }: { gaId?: string }) {
 
   return (
     <>
+      {choice === "granted" && <JourneyTracker />}
       {gaId && choice === "granted" && <GoogleAnalytics gaId={gaId} />}
       {open && (
         <div
@@ -99,7 +113,7 @@ export function ConsentManager({ gaId }: { gaId?: string }) {
             Your privacy, your call
           </p>
           <p className="mt-2 text-[14px] leading-relaxed text-slate">
-            We&apos;d like to use Google Analytics cookies to see which pages help visitors. They stay off unless you accept. No ads, no selling data.{" "}
+            We&apos;d like to use analytics cookies and remember which pages you visit, so we can improve the site and, if you get in touch, prepare for your call. All of it stays off unless you accept. No ads, no selling data.{" "}
             <Link href="/privacy#cookies" className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent">
               Cookie details
             </Link>

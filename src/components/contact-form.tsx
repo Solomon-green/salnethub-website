@@ -4,6 +4,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import { trackLead } from "@/lib/analytics";
+import { getJourney } from "@/lib/journey";
 
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
@@ -24,7 +25,11 @@ export function ContactForm({ services, email }: { services: string[]; email: st
 
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, journey: getJourney() }),
+      });
       if (res.ok) {
         setStatus("sent");
         trackLead("contact_form");

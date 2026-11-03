@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 
 import { toast } from "sonner";
 import { ArrowLeft, ArrowRight, CalendarDays, ChevronLeft, ChevronRight, CircleCheck, Clock, Globe, Video } from "lucide-react";
 import { trackLead } from "@/lib/analytics";
+import { getJourney } from "@/lib/journey";
 
 type Load = { state: "loading" } | { state: "ready"; slots: string[]; duration: number } | { state: "offline" };
 type Errors = Partial<Record<"name" | "email", string>>;
@@ -177,7 +178,7 @@ export function BookingWidget({ email }: { email: string }) {
         const res = await fetch("/api/booking/book", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...data, start: slot, timeZone: tz }),
+          body: JSON.stringify({ ...data, start: slot, timeZone: tz, journey: getJourney() }),
         });
         const json = await res.json().catch(() => ({}));
         if (res.status === 409) {

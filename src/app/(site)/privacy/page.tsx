@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const UPDATED = "2 November 2026";
+const UPDATED = "3 November 2026";
 const Mail = () => <a href={`mailto:${site.email}`}>{site.email}</a>;
 
 const sections: LegalSection[] = [
@@ -66,6 +66,12 @@ const sections: LegalSection[] = [
               <td>Pages viewed, how you arrived, approximate location (city or country, from your IP address), device and browser type, and whether you sent an enquiry or booked a call.</td>
             </tr>
             <tr>
+              <td>Your visit history (only if you accept)</td>
+              <td>
+                The pages you viewed on the Site, the page you arrived on, the site or campaign that sent you, how many visits you made and roughly how long you spent. This stays in your own browser and reaches us only if you send the contact form or book a call. It is then attached to your enquiry so we can prepare for the conversation.
+              </td>
+            </tr>
+            <tr>
               <td>Hosting and security logs</td>
               <td>IP address, browser, the page requested and the time, recorded automatically by our hosting provider to keep the Site running and secure.</td>
             </tr>
@@ -94,6 +100,9 @@ const sections: LegalSection[] = [
           </li>
           <li>
             <strong>To improve the Site:</strong> understanding which pages and guides are useful, if you accept analytics cookies.
+          </li>
+          <li>
+            <strong>To prepare for your enquiry:</strong> if you accepted cookies and then contact us or book a call, we see which pages you read and how you found us, so the conversation can start from what matters to you. We keep these details with your enquiry in our lead records.
           </li>
           <li>
             <strong>To stay in touch:</strong> occasional relevant updates to people we have worked or spoken with. Every message has an easy opt-out, and we never buy email lists.
@@ -151,6 +160,14 @@ const sections: LegalSection[] = [
               <td>Counts visits and shows us how the Site is used.</td>
               <td>Analytics, only with your consent. Up to 2 years.</td>
             </tr>
+            <tr>
+              <td>
+                <code>sh-journey</code>
+              </td>
+              <td>SalnetHub</td>
+              <td>Remembers the pages you visit and how you found us, sent to us only with an enquiry or booking.</td>
+              <td>Analytics, only with your consent. Browser storage, deleted after 30 days or when you decline cookies.</td>
+            </tr>
           </tbody>
         </table>
         <p>
@@ -188,7 +205,7 @@ const sections: LegalSection[] = [
             </tr>
             <tr>
               <td>Google (Workspace and Analytics)</td>
-              <td>Calendar invites, Google Meet links and booking emails. Site analytics if you accept cookies.</td>
+              <td>Calendar invites, Google Meet links and booking emails. Our lead records in Google Sheets. Site analytics if you accept cookies.</td>
             </tr>
             <tr>
               <td>Spaceship (Spacemail)</td>
@@ -348,7 +365,7 @@ const sections: LegalSection[] = [
               <td>Contractual necessity (steps you ask for before a contract, and performing it). Legitimate interests where you contact us for an employer.</td>
             </tr>
             <tr>
-              <td>Site analytics</td>
+              <td>Site analytics and visit history</td>
               <td>Consent, which you can withdraw at any time in cookie settings.</td>
             </tr>
             <tr>
@@ -388,7 +405,7 @@ const sections: LegalSection[] = [
           <li>We will not discriminate against you for exercising your rights.</li>
         </ul>
         <p>
-          In the past 12 months we have collected these categories, from the sources and for the purposes above: <strong>identifiers</strong> (name, email, IP address); <strong>commercial and professional information</strong> (company, team size, project needs); and <strong>internet activity</strong> (pages viewed and device information, with consent). We disclose them only to the service providers listed in <a href="#sharing">Who we share it with</a>.
+          In the past 12 months we have collected these categories, from the sources and for the purposes above: <strong>identifiers</strong> (name, email, IP address); <strong>commercial and professional information</strong> (company, team size, project needs); and <strong>internet activity</strong> (pages viewed, visit history and device information, with consent). We disclose them only to the service providers listed in <a href="#sharing">Who we share it with</a>.
         </p>
       </>
     ),

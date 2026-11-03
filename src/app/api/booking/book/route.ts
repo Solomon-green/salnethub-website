@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
+import { cleanJourney, pushLead } from "@/lib/leads";
 import { booking } from "@/content/booking";
 import { bookingConfigured, busyTimes, createEvent, sendEmail } from "@/lib/booking/google";
 import { guestEmail, ownerEmail } from "@/lib/booking/emails";
@@ -23,6 +24,7 @@ export async function POST(req: Request) {
   const notes = String(data.notes ?? "").trim().slice(0, 2000);
   const tz = String(data.timeZone ?? "");
   const guestTimeZone = isValidTimeZone(tz) ? tz : booking.timeZone;
+  const journey = cleanJourney(data.journey);
 
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || Number.isNaN(Date.parse(start))) {
     return NextResponse.json({ ok: false, error: "Please fill in your name and a valid email." }, { status: 422 });
@@ -55,6 +57,7 @@ export async function POST(req: Request) {
       sendEmail({ to: owner, replyTo: email, ...ownerEmail(details) }),
     ]);
     results.forEach((r) => r.status === "rejected" && console.error("[booking] email", r.reason));
+    after(() => pushLead({ action: "booking", name, email, company, message: notes, callTime: startIso }, journey));
 
     return NextResponse.json({ ok: true, start: startIso, end, meetLink: event.meetLink ?? null });
   } catch (err) {
