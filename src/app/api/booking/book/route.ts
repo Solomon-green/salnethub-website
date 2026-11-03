@@ -57,7 +57,9 @@ export async function POST(req: Request) {
       sendEmail({ to: owner, replyTo: email, ...ownerEmail(details) }),
     ]);
     results.forEach((r) => r.status === "rejected" && console.error("[booking] email", r.reason));
-    after(() => pushLead({ action: "booking", name, email, company, message: notes, callTime: startIso }, journey));
+    after(async () => {
+      await pushLead({ action: "booking", name, email, company, message: notes, callTime: startIso }, journey);
+    });
 
     return NextResponse.json({ ok: true, start: startIso, end, meetLink: event.meetLink ?? null });
   } catch (err) {

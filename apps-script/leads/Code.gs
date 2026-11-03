@@ -41,6 +41,8 @@ function doPost(e) {
     } finally {
       lock.releaseLock();
     }
+    // Booked calls already send their own alert from the booking system.
+    if (lead.action !== 'booking') notify_(lead, body.journey || {}, Boolean(body.test));
     return json_({ ok: true });
   } catch (err) {
     console.error(err);
@@ -80,6 +82,39 @@ function row_(lead, j) {
     'New',
     '',
   ].map(clean_);
+}
+
+// Emails the new-lead alert (to NOTIFY_EMAIL in Script Properties, default info@salnethub.com).
+// Reply-to is the lead, so replying answers them directly. A mail failure never loses the row.
+function notify_(lead, j, test) {
+  try {
+    const to = PropertiesService.getScriptProperties().getProperty('NOTIFY_EMAIL') || 'info@salnethub.com';
+    const pages = (Array.isArray(j.pages) ? j.pages : []).map((p) => p.path).filter(Boolean);
+    const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const row = (k, v) => (v ? `<tr><td style="padding:6px 14px 6px 0;color:#6b6b70;vertical-align:top">${k}</td><td style="padding:6px 0;color:#111">${esc(v)}</td></tr>` : '');
+    const html = `
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;color:#111">
+        <p style="font-size:16px;margin:0 0 12px"><b>New enquiry from ${esc(lead.name)}</b>${lead.company ? ' (' + esc(lead.company) + ')' : ''}</p>
+        <table style="border-collapse:collapse">
+          ${row('Email', lead.email)}${row('Team size', lead.teamSize)}${row('Interest', lead.interest)}
+          ${row('Came from', [j.source, j.medium, j.campaign].filter(Boolean).join(' / '))}
+          ${row('Pages visited', pages.join(' → '))}
+          ${row('Time on site', duration_(j.timeOnSite))}
+        </table>
+        <p style="margin:16px 0 4px;color:#6b6b70">Message</p>
+        <p style="margin:0;white-space:pre-wrap">${esc(lead.message)}</p>
+        <p style="margin:20px 0 0"><a href="${SpreadsheetApp.getActiveSpreadsheet().getUrl()}" style="color:#475BFF">Open the leads sheet</a> · Reply to this email to answer ${esc(lead.name)} directly.</p>
+      </div>`;
+    MailApp.sendEmail({
+      to,
+      replyTo: lead.email,
+      name: 'SalnetHub website',
+      subject: `${test ? '[TEST] ' : ''}New enquiry: ${lead.name}${lead.company ? ' (' + lead.company + ')' : ''}`,
+      htmlBody: html,
+    });
+  } catch (err) {
+    console.error('notify failed', err);
+  }
 }
 
 // Plain text only: trims long values and stops "=", "+", "-", "@" from running as formulas.

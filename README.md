@@ -52,7 +52,7 @@ One-time setup (about 10 minutes):
 See `.env.example`. All are optional; the site works without them.
 
 - `NEXT_PUBLIC_SITE_URL`: the live domain, used for SEO tags and the sitemap.
-- `WEB3FORMS_ACCESS_KEY`: free key from https://web3forms.com so the contact form emails you. Without it, the form falls back to opening the visitor's email app.
+- `LEADS_WEBHOOK_URL` and `LEADS_WEBHOOK_SECRET`: the leads sheet's Apps Script web app (see `apps-script/leads/Code.gs`). Contact enquiries and booked calls are saved there, and the script emails the new-enquiry alert. Without them, the contact form falls back to opening the visitor's email app.
 - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`, `BOOKING_OWNER_EMAIL`: power the Book a call calendar (below). Without them the calendar shows an "offline" note and points people to the contact form.
 
 ## Deploying on Vercel

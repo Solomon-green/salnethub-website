@@ -200,12 +200,8 @@ const sections: LegalSection[] = [
               <td>Hosts the Site and keeps its server logs.</td>
             </tr>
             <tr>
-              <td>Web3Forms</td>
-              <td>Delivers contact form submissions to our inbox.</td>
-            </tr>
-            <tr>
               <td>Google (Workspace and Analytics)</td>
-              <td>Calendar invites, Google Meet links and booking emails. Our lead records in Google Sheets. Site analytics if you accept cookies.</td>
+              <td>Calendar invites, Google Meet links and booking emails. Our lead records in Google Sheets and the email alerts we receive for new enquiries. Site analytics if you accept cookies.</td>
             </tr>
             <tr>
               <td>Spaceship (Spacemail)</td>

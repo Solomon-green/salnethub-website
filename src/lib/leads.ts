@@ -1,6 +1,6 @@
 // Sends each lead, with the visitor's page journey, to the "SalnetHub Website Leads" Google Sheet
-// through its Apps Script web app (apps-script/leads/Code.gs). Set LEADS_WEBHOOK_URL and
-// LEADS_WEBHOOK_SECRET in Vercel; without them this does nothing.
+// through its Apps Script web app (apps-script/leads/Code.gs), which also emails the new-lead
+// alert. Set LEADS_WEBHOOK_URL and LEADS_WEBHOOK_SECRET in Vercel.
 
 export type Lead = {
   action: "contact" | "booking";
@@ -52,10 +52,10 @@ export function cleanJourney(raw: unknown): Journey | null {
   };
 }
 
-export async function pushLead(lead: Lead, journey: Journey | null) {
+export async function pushLead(lead: Lead, journey: Journey | null): Promise<"saved" | "failed" | "not-configured"> {
   const url = process.env.LEADS_WEBHOOK_URL;
   const secret = process.env.LEADS_WEBHOOK_SECRET;
-  if (!url || !secret) return;
+  if (!url || !secret) return "not-configured";
   try {
     const res = await fetch(url, {
       method: "POST",
@@ -64,8 +64,10 @@ export async function pushLead(lead: Lead, journey: Journey | null) {
       body: JSON.stringify({ secret, test: process.env.VERCEL_ENV !== "production", lead, journey }),
     });
     const json = await res.json().catch(() => ({}));
-    if (!res.ok || json.ok !== true) console.error("[leads] sheet rejected the lead", res.status, json.error);
+    if (res.ok && json.ok === true) return "saved";
+    console.error("[leads] sheet rejected the lead", res.status, json.error);
   } catch (err) {
     console.error("[leads] sheet unreachable", err);
   }
+  return "failed";
 }
