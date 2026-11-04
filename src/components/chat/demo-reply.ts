@@ -1,5 +1,5 @@
-// Placeholder answers so the widget can be reviewed before the AI route is connected.
-// Phase 2 replaces this with a streamed reply from /api/chat.
+// Built-in answers the widget falls back to when /api/chat is unavailable (not configured
+// locally, n8n down or too slow), so a visitor always gets a useful next step.
 export type ChatAction = { label: string; href: string };
 export type DemoReply = { text: string; actions?: ChatAction[] };
 

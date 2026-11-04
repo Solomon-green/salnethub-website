@@ -1,0 +1,1027 @@
+{
+  "name": "SalnetHub Knowledge Base",
+  "description": "Everything published on www.salnethub.com about SalnetHub: company, services, pricing, process, integrations, FAQs and policies. One self-contained document per topic, for retrieval by the SalnetHub chat assistant.",
+  "updated": "2026-11-03",
+  "source": "https://www.salnethub.com",
+  "currency": "USD",
+  "documentCount": 87,
+  "documents": [
+    {
+      "id": "company-overview",
+      "title": "About SalnetHub",
+      "category": "Company",
+      "url": "https://www.salnethub.com/about",
+      "tags": [
+        "about",
+        "company",
+        "founder",
+        "location"
+      ],
+      "content": "SalnetHub: Systems that run your business while you grow it.\nSalnetHub is an automation and AI company for small-to-medium teams and businesses. We build the connections between your tools so work moves on its own.\nBusiness automation and AI agents for small businesses. We automate lead follow-up, CRM updates, reporting and admin across the tools you already use.\nWe design and build automations and AI agents across your whole operation: sales, marketing, admin, finance, reporting and customer support. Your tools finally work as one system, and your team gets back to the work that moves the business forward.\n\nMost teams do not need more software. They need the software they have to work together.\n\nA typical small-to-medium business runs on 10 to 30 tools: a CRM, Google Workspace, accounting, a project board, forms, chat. Each one works well on its own. The trouble is the space between them, where people copy data, chase updates and rebuild the same report every week.\n\nThat is where SalnetHub works. We map how your work actually happens, then connect your tools so information moves on its own. Where judgment is needed, we add AI that works from your data and keeps a person in control.\n\nAutomation is our core. We also build websites and AI assistants, because they work best when they are part of the same connected system.\n\nOur line: Smarter systems. Better decisions. Greater impact.\n\nFounder: Bwire Solomon, Founder of SalnetHub. Solomon has built automations, CRM workflows and AI agents for 53 client projects since 2023, mostly for small teams running on Google Workspace, HubSpot, Zoho, Make, Zapier and n8n.\nTrack record: 53 client projects since 2023.\nBased in: Kampala, Uganda. SalnetHub works with clients worldwide, remotely.\nWebsite: https://www.salnethub.com\nEmail: info@salnethub.com"
+    },
+    {
+      "id": "company-beliefs",
+      "title": "What SalnetHub believes and how we behave",
+      "category": "Company",
+      "url": "https://www.salnethub.com/about",
+      "tags": [
+        "values",
+        "principles"
+      ],
+      "content": "What SalnetHub believes:\n- Your team should spend its time on work that needs a person.\n- Automation should use the tools you already pay for.\n- Every system we build should be documented and owned by you.\n- AI should answer from your data, with a person in control.\n\nHow we behave. Four principles shape how SalnetHub writes, builds and supports:\n- Plain: We describe your system in the words you already use. If a term needs a definition, we use a simpler one.\n- Specific: We name the tools, the steps and the time saved. A number does more work than an adjective.\n- Calm: Automations break sometimes. We say what happened, what we did and what happens next, without drama.\n- Accountable: We own our work. When something is our mistake, we say so in the first sentence."
+    },
+    {
+      "id": "company-who-we-work-with",
+      "title": "Who SalnetHub works with",
+      "category": "Company",
+      "url": "https://www.salnethub.com/about",
+      "tags": [
+        "customers",
+        "industries",
+        "fit"
+      ],
+      "content": "SalnetHub works with small-to-medium teams and businesses, usually between 5 and 200 people, that have outgrown doing everything by hand. If your team copies data between tools, we can probably help.\n\n- Service businesses: Agencies, consultancies, accounting and legal practices where client admin eats billable hours.\n- E-commerce and retail: Online stores and wholesalers handling orders, stock and customer messages across several tools.\n- Property and logistics: Teams coordinating bookings, maintenance, quotes and documents with many moving parts.\n- Growing sales teams: Teams of 3 to 50 reps who need leads routed, followed up and reported without extra admin."
+    },
+    {
+      "id": "company-contact",
+      "title": "Contact SalnetHub and book a call",
+      "category": "Contact",
+      "url": "https://www.salnethub.com/contact",
+      "tags": [
+        "contact",
+        "booking",
+        "email",
+        "call",
+        "meeting"
+      ],
+      "content": "The best way to start with SalnetHub is a free 20-minute discovery call on Google Meet. Book it at https://www.salnethub.com/contact#book.\n\nWhat happens:\n1. Pick a time that suits you. Times show in your own time zone.\n2. We look at your workflow: your tools and process, and the first workflow worth automating.\n3. A written scope. If it is a fit, you get a fixed price and timeline in writing. No obligation.\n\nBooking details: calls are offered Monday to Friday, 09:00 to 17:00 East Africa Time (EAT, UTC+3), with at least 12 hours' notice and up to 21 days ahead. You get a Google Meet link and a calendar invite by email straight away.\n\nPrefer to write first? Use the contact form at https://www.salnethub.com/contact or email info@salnethub.com. SalnetHub replies within 1 business day."
+    },
+    {
+      "id": "services-overview",
+      "title": "SalnetHub services at a glance",
+      "category": "Services",
+      "url": "https://www.salnethub.com/services",
+      "tags": [
+        "services",
+        "overview"
+      ],
+      "content": "SalnetHub offers 9 services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.\n\nAutomation: Connect the tools you already pay for so work moves between them on its own.\n- Marketing & CRM automation (from $1,500): Keep your CRM accurate and your follow-ups on time without anyone updating records by hand. https://www.salnethub.com/services/marketing-crm-automation\n- Lead acquisition & qualification (from $1,500): Capture every lead, score it, and route the good ones to the right person in minutes. https://www.salnethub.com/services/lead-acquisition-qualification\n- Data reporting & analytics (from $1,500): Dashboards that update themselves, so the Monday report is ready before Monday. https://www.salnethub.com/services/data-reporting-analytics\n- Business process automation (from $4,500): Automate approvals, invoicing, onboarding and other processes that cross teams and tools. https://www.salnethub.com/services/business-process-automation\n- Task & workflow automation (from $1,500): Remove the small repetitive tasks that eat your team's day, from data entry to reminders. https://www.salnethub.com/services/task-workflow-automation\n\nAI solutions: Chatbots, agents and knowledge assistants that work from your data, with a human in control.\n- AI chatbots for websites (from $2,500): A website chatbot that answers questions, guides visitors and books calls, trained on your content. https://www.salnethub.com/services/ai-chatbots\n- Custom AI agents (from $5,000): AI agents that do real work in your tools, from email triage to CRM updates, with approval steps. https://www.salnethub.com/services/custom-ai-agents\n- RAG knowledge assistants (from $6,000): An AI assistant that answers from your own documents and shows the source for every answer. https://www.salnethub.com/services/rag-systems\n\nWeb: Websites that capture leads straight into your CRM and automations.\n- Web solutions (from $2,500): Fast, clear websites and landing pages wired straight into your CRM and automations. https://www.salnethub.com/services/web-solutions\n\nMost projects combine two or three of these services. The automation audit ranks every opportunity by hours saved."
+    },
+    {
+      "id": "services-by-problem",
+      "title": "Which SalnetHub service fits your problem",
+      "category": "Services",
+      "url": "https://www.salnethub.com/services",
+      "tags": [
+        "services",
+        "recommendation",
+        "problems"
+      ],
+      "content": "Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.\n\n- \"Leads wait hours or days for a reply\" → Lead acquisition & qualification (from $1,500). https://www.salnethub.com/services/lead-acquisition-qualification\n- \"Our CRM is never up to date\" → Marketing & CRM automation (from $1,500). https://www.salnethub.com/services/marketing-crm-automation\n- \"Reports take a day to put together\" → Data reporting & analytics (from $1,500). https://www.salnethub.com/services/data-reporting-analytics\n- \"Onboarding and approvals keep stalling\" → Business process automation (from $4,500). https://www.salnethub.com/services/business-process-automation\n- \"The team spends hours copying data\" → Task & workflow automation (from $1,500). https://www.salnethub.com/services/task-workflow-automation\n- \"Visitors leave without asking anything\" → AI chatbots for websites (from $2,500). https://www.salnethub.com/services/ai-chatbots\n- \"Someone reads and routes every request\" → Custom AI agents (from $5,000). https://www.salnethub.com/services/custom-ai-agents\n- \"Nobody can find the right document\" → RAG knowledge assistants (from $6,000). https://www.salnethub.com/services/rag-systems\n- \"Our website does not bring in leads\" → Web solutions (from $2,500). https://www.salnethub.com/services/web-solutions\n\nBy outcome:\n- Sales & leads: Every lead answered in minutes, every deal in the CRM. Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does. Services: Lead acquisition & qualification, Marketing & CRM automation.\n- Reporting: Reports that build themselves. Live dashboards and a Monday report that is ready before Monday. Services: Data reporting & analytics.\n- Operations & admin: Admin that runs on its own. Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools. Services: Business process automation, Task & workflow automation.\n- AI agents & chatbots: AI that works from your data, with a person in control. Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters. Services: AI chatbots for websites, Custom AI agents, RAG knowledge assistants.\n- Websites: Websites that feed your pipeline. Fast, clear websites and landing pages wired straight into your CRM and automations, so every enquiry starts a workflow. Services: Web solutions.\n\nNot sure which one you need? Book a free call or start with the automation audit."
+    },
+    {
+      "id": "service-marketing-crm-automation",
+      "title": "Marketing & CRM automation: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "automation",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nA CRM that updates itself. We connect your forms, inbox, ads and CRM so every contact, deal and follow-up is recorded the moment it happens.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nPrice: Marketing & CRM automation starts from $1,500, for one end-to-end workflow. Multi-workflow CRM projects start at $4,500.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-marketing-crm-automation-details",
+      "title": "Marketing & CRM automation: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "automation",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Marketing & CRM automation service includes:\n- Contact sync: Form fills, calls, emails and purchases create or update the right CRM record with no duplicates.\n- Follow-up sequences: Personal emails and tasks go out on a schedule you set, and stop as soon as the lead replies.\n- Deal stage automation: Deals move stage when something real happens: a quote is opened, a contract is signed, an invoice is paid.\n- Lifecycle tagging: Contacts are tagged by source, interest and stage so campaigns reach the right people.\n- Campaign attribution: UTM and ad data are stored on the contact, so revenue can be traced back to the channel that earned it.\n- Clean-up jobs: Scheduled checks merge duplicates, fix formatting and flag records with missing owners.\n\nFrom first touch to closed deal: Each step runs on its own. Your team only steps in for the conversations that need a person.\nSteps: Web form (New enquiry) → CRM record (Created, deduplicated) → Follow-up email (Sent in 2 minutes) → Sales task (Assigned to owner) → Deal updated (Stage moves on reply)\n\nDeliverables:\n- A map of your current contact and deal flow, with the gaps marked\n- Working automations in your CRM and connected tools\n- Field and pipeline clean-up so the data stays usable\n- A written handover guide and a recorded walkthrough\n- 30 days of monitoring and fixes after launch\n\nTimeline:\n- Map (Week 1): We review your CRM, forms and inbox and agree which flows to automate first.\n- Build (Weeks 2 to 3): We build in a test copy of your setup so nothing touches live data until it works.\n- Test (Week 3): We run real examples end to end with your team and fix what they find.\n- Launch (Week 4): We switch it on, watch the first days closely and hand over the documentation.\n\nTools we typically use for Marketing & CRM automation: HubSpot, Zoho, Gmail, Google Sheets, Typeform, Mailchimp, Make, Zapier."
+    },
+    {
+      "id": "service-marketing-crm-automation-faq-1",
+      "title": "Marketing & CRM automation FAQ: Which CRMs do you work with?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: Which CRMs do you work with?\nAnswer: Mostly HubSpot, Zoho and Google Sheets based CRMs. If your CRM has an API, we can usually connect it. We confirm this on the first call."
+    },
+    {
+      "id": "service-marketing-crm-automation-faq-2",
+      "title": "Marketing & CRM automation FAQ: Will this replace my sales team's work?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: Will this replace my sales team's work?\nAnswer: No. It removes the copying, chasing and data entry so your team spends their time on conversations."
+    },
+    {
+      "id": "service-marketing-crm-automation-faq-3",
+      "title": "Marketing & CRM automation FAQ: What happens to our existing data?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: What happens to our existing data?\nAnswer: We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup."
+    },
+    {
+      "id": "service-marketing-crm-automation-faq-4",
+      "title": "Marketing & CRM automation FAQ: Do we need to buy new software?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "tags": [
+        "marketing-crm-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: Do we need to buy new software?\nAnswer: Usually not. We build on the tools you already pay for, plus a connector like Make or Zapier if one is needed."
+    },
+    {
+      "id": "service-lead-acquisition-qualification",
+      "title": "Lead acquisition & qualification: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "automation",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Lead acquisition & qualification (Automation).\nCapture every lead, score it, and route the good ones to the right person in minutes.\nEvery lead captured, scored and routed. Leads from forms, ads and chat are enriched, scored against your criteria and sent to the right rep before they go cold.\n\nWhy good leads get lost:\n- Too many sources: Website forms, Facebook lead ads, LinkedIn, referrals and chat all land in different places.\n- No clear priority: Reps treat a student enquiry and a 200-seat buyer the same way, so the best leads wait in line.\n- Slow first response: Most buyers choose the company that replies first. A reply the next day is often too late.\n\nExample: lead ads for a home-services company\nBefore: Facebook leads were downloaded as a spreadsheet each morning and split between 4 reps by hand.\nAfter: Each lead is scored and texted to the rep covering that area within 90 seconds, with a booking link sent to the customer.\n\nPrice: Lead acquisition & qualification starts from $1,500, for capture and routing from one source. Full multi-source pipelines start at $4,500.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-details",
+      "title": "Lead acquisition & qualification: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "automation",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Lead acquisition & qualification service includes:\n- Lead capture: Forms, ad platforms, chat and email feed into one pipeline with the source recorded.\n- Enrichment: Company size, industry and location are added from public data so reps know who they are talking to.\n- Scoring: Each lead is scored against rules you agree with us, such as budget, team size or service requested.\n- Routing: Leads go to the right rep by territory, product or round robin, with a backup if nobody picks them up.\n- Instant replies: A personal first reply and a booking link go out within 2 minutes, day or night.\n- Disqualification: Poor-fit leads get a polite automated reply and stay out of your reps' queue.\n\nFrom click to qualified conversation: A strong lead reaches a rep's phone in minutes. A weak one never takes up their time.\nSteps: Lead captured (Form, ad or chat) → Enriched (Company data added) → Scored (Against your rules) → Routed (Right rep, instantly) → Call booked (Calendar link sent)\n\nDeliverables:\n- A lead scoring model written down and agreed with your sales lead\n- Connected capture from every lead source you use\n- Routing rules, reply templates and booking links\n- A live view of lead volume, speed to reply and conversion\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Map (Week 1): We list every lead source and agree what makes a lead worth a call.\n- Build (Weeks 2 to 3): We connect the sources, scoring, routing and replies in a test setup.\n- Test (Week 3): We push sample leads through every path, including the edge cases.\n- Launch (Week 4): We go live and tune the scoring after the first 2 weeks of real leads.\n\nTools we typically use for Lead acquisition & qualification: Typeform, Google Forms, Meta lead ads, HubSpot, Google Sheets, Calendly, WhatsApp, Make."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-1",
+      "title": "Lead acquisition & qualification FAQ: Can you work with our ad accounts?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: Can you work with our ad accounts?\nAnswer: Yes. We connect Facebook and Instagram lead ads, Google Ads lead forms and most form tools through their official integrations."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-2",
+      "title": "Lead acquisition & qualification FAQ: Who decides the scoring rules?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: Who decides the scoring rules?\nAnswer: You do. We propose a starting model from your past deals and adjust it with your sales lead."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-3",
+      "title": "Lead acquisition & qualification FAQ: Can leads go to WhatsApp or SMS?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: Can leads go to WhatsApp or SMS?\nAnswer: Yes. Reps can be alerted by email, Slack-style chat, WhatsApp or SMS, depending on what your team actually checks."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-4",
+      "title": "Lead acquisition & qualification FAQ: What if a rep does not respond?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: What if a rep does not respond?\nAnswer: We set a time limit. If the lead is not picked up, it moves to the next rep or a manager."
+    },
+    {
+      "id": "service-data-reporting-analytics",
+      "title": "Data reporting & analytics: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "automation",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Data reporting & analytics (Automation).\nDashboards that update themselves, so the Monday report is ready before Monday.\nReports that build themselves. We pull data from your CRM, finance and operations tools into live dashboards and scheduled reports your team can trust.\n\nWhat manual reporting costs you:\n- Hours of copy and paste: Someone exports 5 spreadsheets every week and stitches them together before the meeting.\n- Numbers nobody trusts: Different teams report different totals because each one pulls data a different way.\n- Decisions on old data: By the time the monthly report is ready, the month it describes is long gone.\n\nExample: weekly sales report for an online retailer\nBefore: The operations lead spent most of Monday morning exporting Shopify, ad and Sheets data into a slide deck.\nAfter: A Looker Studio dashboard refreshes every hour, and a summary email reaches the leadership team at 8 am each Monday.\n\nPrice: Data reporting & analytics starts from $1,500, for one dashboard from up to 3 sources. Larger reporting systems start at $4,500.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-data-reporting-analytics-details",
+      "title": "Data reporting & analytics: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "automation",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Data reporting & analytics service includes:\n- Data pipelines: Scheduled syncs pull from your CRM, accounting, ads, store and spreadsheets into one place.\n- Live dashboards: Looker Studio or Google Sheets dashboards that refresh on their own, built around the questions you ask.\n- Scheduled reports: A PDF or email summary goes to the right people every Monday at 8 am, or whenever you choose.\n- KPI definitions: We write down how each number is calculated so every team reports the same total.\n- Alerts: Get a message when a number crosses a line: cash below a threshold, leads down 30%, stock running low.\n- Data clean-up: Duplicates, mismatched names and broken formats are fixed before they reach a chart.\n\nFrom scattered exports to one source of truth: Data is collected, cleaned and charted on a schedule. Nobody has to open an export again.\nSteps: CRM (Deals, contacts) → Accounting (Invoices, cash) → Store and ads (Orders, spend) → Clean and join (Every 15 minutes) → Dashboard (Live for the team)\n\nDeliverables:\n- A short list of the KPIs that matter, with written definitions\n- Automated data pipelines from each source\n- Dashboards and scheduled reports for each audience\n- Threshold alerts for the numbers you want watched\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Define (Week 1): We agree on the questions the dashboard must answer and how each number is calculated.\n- Connect (Weeks 2 to 3): We build the data pipelines and check every total against your current reports.\n- Design (Week 3): We lay out the dashboards so the most important number is the first thing you see.\n- Launch (Week 4): We schedule the reports, set the alerts and walk your team through it.\n\nTools we typically use for Data reporting & analytics: Google Sheets, Looker Studio, Google Analytics, HubSpot, QuickBooks, Xero, Shopify, Apps Script."
+    },
+    {
+      "id": "service-data-reporting-analytics-faq-1",
+      "title": "Data reporting & analytics FAQ: Do we need a data warehouse?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Data reporting & analytics service: Do we need a data warehouse?\nAnswer: Most small-to-medium businesses do not. Google Sheets and Looker Studio handle a lot. We suggest a warehouse only when your data volume needs one."
+    },
+    {
+      "id": "service-data-reporting-analytics-faq-2",
+      "title": "Data reporting & analytics FAQ: How fresh is the data?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Data reporting & analytics service: How fresh is the data?\nAnswer: It depends on the source. Most dashboards refresh between every 15 minutes and every hour."
+    },
+    {
+      "id": "service-data-reporting-analytics-faq-3",
+      "title": "Data reporting & analytics FAQ: Can you match our existing report?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Data reporting & analytics service: Can you match our existing report?\nAnswer: Yes. We start by rebuilding the report you already use, so you can check our numbers against it."
+    },
+    {
+      "id": "service-data-reporting-analytics-faq-4",
+      "title": "Data reporting & analytics FAQ: Is our data shared with anyone?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Data reporting & analytics service: Is our data shared with anyone?\nAnswer: No. Your data stays in your own accounts. We work with the access you grant us and remove it when the project ends if you prefer."
+    },
+    {
+      "id": "service-business-process-automation",
+      "title": "Business process automation: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "automation",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Business process automation (Automation).\nAutomate approvals, invoicing, onboarding and other processes that cross teams and tools.\nProcesses that run end to end. We automate the multi-step processes that cross teams, like client onboarding, approvals and invoicing, with clear owners at every step.\n\nWhere cross-team processes stall:\n- Work waits in inboxes: An approval sits in a manager's email for 3 days because nobody knew it was waiting.\n- The same data typed 4 times: A new client's details are entered into the CRM, the invoicing tool, the project board and a spreadsheet.\n- Steps depend on one person: When the person who knows the process is on leave, the process stops.\n\nExample: client onboarding for an accounting practice\nBefore: Each new client took about 2 hours of admin across 5 tools, and steps were often missed.\nAfter: A signed engagement letter triggers every setup step in under 5 minutes, with a checklist the partner can review.\n\nPrice: Business process automation starts from $4,500, for a multi-step process across 3 or more tools.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-business-process-automation-details",
+      "title": "Business process automation: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "automation",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Business process automation service includes:\n- Client onboarding: A signed contract creates the client folder, project board, invoice schedule and welcome email.\n- Approvals: Requests go to the right approver with one-click approve or reject, plus reminders and escalation.\n- Invoicing and payments: Invoices are created from completed work and payment reminders go out on schedule.\n- Document generation: Quotes, contracts and reports are filled from your data in Google Docs and saved to the right folder.\n- Employee onboarding: Accounts, equipment requests, training tasks and first-week emails are triggered from one form.\n- Audit trail: Every step is logged with who did what and when, in a sheet your team can search.\n\nFrom signed contract to kickoff call: One trigger starts every step. People only act where a decision is needed.\nSteps: Contract signed (Trigger) → Client folder (Drive, templates) → Invoice schedule (In accounting) → Manager approval (One click) → Kickoff booked (Welcome email)\n\nDeliverables:\n- A process map showing every step, owner and tool\n- Automations with approval steps where people need to decide\n- Document templates connected to your data\n- An audit log of every run\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Map (Week 1): We walk through the process with the people who do it today and find where time is lost.\n- Build (Weeks 2 to 4): We automate the steps in order, with approval points wherever a person must decide.\n- Test (Week 4): We run real cases through the process and adjust it with your team.\n- Launch (Weeks 5 to 6): We switch over in stages so nothing breaks during the change.\n\nTools we typically use for Business process automation: Google Drive, Gmail, Google Sheets, Apps Script, QuickBooks, ClickUp, Asana, n8n."
+    },
+    {
+      "id": "service-business-process-automation-faq-1",
+      "title": "Business process automation FAQ: Which processes are worth automating first?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: Which processes are worth automating first?\nAnswer: The ones that happen often, follow the same steps each time and involve copying data between tools. We help you rank them on the first call."
+    },
+    {
+      "id": "service-business-process-automation-faq-2",
+      "title": "Business process automation FAQ: What if our process has exceptions?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: What if our process has exceptions?\nAnswer: We build the normal path first and route exceptions to a person with all the context attached."
+    },
+    {
+      "id": "service-business-process-automation-faq-3",
+      "title": "Business process automation FAQ: Do we lose control over decisions?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: Do we lose control over decisions?\nAnswer: No. Anything that needs judgment stays with a person. The automation prepares the information and waits for their decision."
+    },
+    {
+      "id": "service-business-process-automation-faq-4",
+      "title": "Business process automation FAQ: Can you work with tools we built in-house?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: Can you work with tools we built in-house?\nAnswer: Often yes, if they have an API, a database we can read, or even a spreadsheet export."
+    },
+    {
+      "id": "service-task-workflow-automation",
+      "title": "Task & workflow automation: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "automation",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Task & workflow automation (Automation).\nRemove the small repetitive tasks that eat your team's day, from data entry to reminders.\nWin back hours every week. Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.\n\nSmall tasks, big cost:\n- Death by copy and paste: Moving order details from email into a spreadsheet takes 3 minutes. Forty times a day, that is 2 hours.\n- Reminders that rely on memory: Renewals, follow-ups and deadlines are tracked in someone's head or a sticky note.\n- Constant status questions: People ask where things are because there is no automatic update when something changes.\n\nExample: order handling for a wholesale supplier\nBefore: A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.\nAfter: Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.\n\nPrice: Task & workflow automation starts from $1,500, for one automated task flow. Bundles of 3 to 5 tasks start at $3,500.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-task-workflow-automation-details",
+      "title": "Task & workflow automation: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "automation",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Task & workflow automation service includes:\n- Email to spreadsheet: Orders, receipts and requests in your inbox are read and added to Google Sheets as clean rows.\n- Scheduled reminders: Renewals, deadlines and follow-ups trigger reminders to the right person at the right time.\n- File handling: Attachments are renamed, filed into the right Drive folder and shared with the right people.\n- Status updates: Customers and teammates get an automatic message when an order, ticket or task changes stage.\n- Form processing: Form submissions become tasks, records and notifications without anyone retyping them.\n- Apps Script tools: Custom buttons and menus inside Google Sheets and Docs for the jobs no off-the-shelf tool covers.\n\nFrom inbox to done: Repetitive steps happen in seconds. Your team sees the result, not the busywork.\nSteps: Order email (Arrives in Gmail) → Details read (Parsed automatically) → Sheet updated (New row added) → Team notified (Task created) → Customer updated (Status email sent)\n\nDeliverables:\n- A list of tasks ranked by hours saved per week\n- Working automations for the top tasks\n- Error alerts so you know if anything stops\n- Handover guide and a recorded walkthrough\n- 30 days of monitoring and fixes\n\nTimeline:\n- List (Days 1 to 2): We list the repetitive tasks and estimate the time each one costs.\n- Build (Week 1): We automate the tasks with the biggest time savings first.\n- Test (Week 2): We run the automations on real data alongside your team.\n- Launch (Week 2): We switch them on and set up alerts in case anything fails.\n\nTools we typically use for Task & workflow automation: Gmail, Google Sheets, Google Drive, Apps Script, Google Calendar, Trello, Zapier, Make."
+    },
+    {
+      "id": "service-task-workflow-automation-faq-1",
+      "title": "Task & workflow automation FAQ: How small a task is worth automating?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: How small a task is worth automating?\nAnswer: If it happens daily and follows the same steps, it is usually worth it. A 5-minute task done 10 times a day is 4 hours a week."
+    },
+    {
+      "id": "service-task-workflow-automation-faq-2",
+      "title": "Task & workflow automation FAQ: Make, Zapier or n8n?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: Make, Zapier or n8n?\nAnswer: We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes."
+    },
+    {
+      "id": "service-task-workflow-automation-faq-3",
+      "title": "Task & workflow automation FAQ: What if an automation fails?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: What if an automation fails?\nAnswer: You get an alert with the details, and we fix it. Our care plans include monitoring so we usually see failures before you do."
+    },
+    {
+      "id": "service-task-workflow-automation-faq-4",
+      "title": "Task & workflow automation FAQ: Can we change the automations later?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "tags": [
+        "task-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: Can we change the automations later?\nAnswer: Yes. We document how each one works so your team can make small changes, and we handle the bigger ones."
+    },
+    {
+      "id": "service-ai-chatbots",
+      "title": "AI chatbots for websites: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "ai",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: AI chatbots for websites (AI solutions).\nA website chatbot that answers questions, guides visitors and books calls, trained on your content.\nA website chatbot that knows your business. It answers visitor questions from your own content, points people to the right page, qualifies leads and books calls. A person takes over when needed.\n\nWhy visitors leave without a word:\n- Questions go unanswered: Visitors have one question about price, timing or fit. If they cannot find the answer in 30 seconds, they leave.\n- Forms feel like work: A contact form with 8 fields gets skipped. A conversation gets answered.\n- After-hours traffic is wasted: Half your visits happen outside office hours, when nobody is there to reply.\n\nExample: a chatbot for a training provider\nBefore: Most enquiries asked the same 10 questions about dates, prices and certificates, answered by email the next day.\nAfter: The chatbot answers them instantly from the course catalogue and books a call when a company asks about group training.\n\nPrice: AI chatbots for websites starts from $2,500, for a chatbot trained on your content with CRM and booking connections. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-ai-chatbots-details",
+      "title": "AI chatbots for websites: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "ai",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's AI chatbots for websites service includes:\n- Trained on your content: The chatbot answers from your website, FAQs, price lists and documents, not from guesswork.\n- Visitor guidance: It recommends the right service or page based on what the visitor asks.\n- Lead qualification: It asks the questions your sales team would ask and saves the answers to your CRM.\n- Call booking: Qualified visitors can book a meeting in your calendar without leaving the chat.\n- Human handoff: When a question needs a person, the chat goes to your team by email, WhatsApp or live chat, with the full history.\n- Conversation review: You can read every conversation and see the most common questions, so you know what to add to your site.\n\nFrom question to booked call: Try the demo. Every answer comes from the business's own content, and each lead lands in the CRM.\nSteps: Visitor asks (On any page) → Answer found (From your content) → Lead qualified (Key questions asked) → Saved to CRM (With full transcript) → Call booked (In your calendar)\n\nDeliverables:\n- A chatbot trained on your approved content\n- Conversation flows for qualification and booking\n- CRM and calendar connections\n- Human handoff to your team's channel\n- A dashboard of conversations and common questions\n\nTimeline:\n- Gather (Week 1): We collect your content, agree on what the chatbot may and may not answer, and write its tone guide.\n- Build (Weeks 2 to 3): We set up the knowledge base, conversation flows, CRM and calendar connections.\n- Test (Week 3): We test with 100+ real questions, including tricky ones, and fix every weak answer.\n- Launch (Week 4): We add it to your site and review conversations weekly for the first month.\n\nSafeguards:\n- Answers from approved content only: The chatbot is limited to your material. If it does not know, it says so and offers a person.\n- No invented prices or promises: Sensitive topics like pricing, refunds and contracts follow fixed rules you approve.\n- Data privacy: Conversations are stored in your own accounts. We do not use your data to train public models.\n- Clear AI disclosure: Visitors are told they are talking to an AI assistant and can ask for a person at any time.\n\nTools we typically use for AI chatbots for websites: OpenAI, Anthropic, HubSpot, Calendly, WhatsApp, WordPress, Webflow, Make."
+    },
+    {
+      "id": "service-ai-chatbots-faq-1",
+      "title": "AI chatbots for websites FAQ: Which AI models do you use?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: Which AI models do you use?\nAnswer: We use leading models from providers such as OpenAI and Anthropic, chosen for accuracy and cost. You can switch providers later."
+    },
+    {
+      "id": "service-ai-chatbots-faq-2",
+      "title": "AI chatbots for websites FAQ: What does it cost to run each month?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: What does it cost to run each month?\nAnswer: Running costs depend on traffic. Most small-to-medium sites spend between $20 and $150 a month on AI usage. We estimate it before we build."
+    },
+    {
+      "id": "service-ai-chatbots-faq-3",
+      "title": "AI chatbots for websites FAQ: Will it give wrong answers?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: Will it give wrong answers?\nAnswer: We limit it to your content and test it heavily. When it is not sure, it hands over to a person instead of guessing."
+    },
+    {
+      "id": "service-ai-chatbots-faq-4",
+      "title": "AI chatbots for websites FAQ: Does it work on any website?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: Does it work on any website?\nAnswer: Yes. It installs with a small code snippet on WordPress, Webflow, Shopify, Wix or a custom site."
+    },
+    {
+      "id": "service-custom-ai-agents",
+      "title": "Custom AI agents: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "ai",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Custom AI agents (AI solutions).\nAI agents that do real work in your tools, from email triage to CRM updates, with approval steps.\nAI agents that do the work, with you in control. An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.\n\nWork that rules alone cannot handle:\n- Every message is different: Simple automations need fixed rules. Real emails, requests and documents rarely follow them.\n- Judgment calls pile up: Someone has to read each request, decide what it is and route it, dozens of times a day.\n- Busy people do low-value reading: Senior staff spend hours reading and summarising before they can make a decision.\n\nExample: quote requests for a logistics firm\nBefore: A coordinator read each quote request, checked rates in a spreadsheet and typed a reply. Each one took about 20 minutes.\nAfter: An agent reads the request, checks the rate sheet and drafts the quote. The coordinator reviews and sends it in under 2 minutes.\n\nPrice: Custom AI agents starts from $5,000, for one agent with approval steps and logging. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-custom-ai-agents-details",
+      "title": "Custom AI agents: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "ai",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Custom AI agents service includes:\n- Email and inbox triage: The agent reads incoming email, labels it, drafts a reply and routes anything urgent to a person.\n- CRM and record updates: It pulls details from emails, calls and documents and updates the right records.\n- Document processing: Invoices, contracts and forms are read, checked and turned into structured data.\n- Research and preparation: Before a sales call, it gathers the company background and history and writes a short brief.\n- Multi-step tasks: It works through a task across several tools, such as checking stock, drafting a quote and logging it.\n- Approval checkpoints: Any action that sends, pays or deletes waits for a person to approve it.\n\nHow an agent handles a request: The agent prepares everything. A person approves before anything leaves the building.\nSteps: Request arrives (Email or form) → Agent reads (Understands intent) → Gathers data (CRM, Sheets, Drive) → Needs approval (Person reviews) → Action done (Logged and sent)\n\nDeliverables:\n- A written scope of what the agent may and may not do\n- The working agent connected to your tools\n- Approval steps for every sensitive action\n- A log of every decision and action the agent takes\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Scope (Week 1): We pick one job, define the agent's permissions and agree where approvals are required.\n- Build (Weeks 2 to 4): We build the agent, connect its tools and test it on your past examples.\n- Shadow (Week 5): The agent runs alongside your team, suggesting actions without taking them.\n- Launch (Week 6): We turn on approved actions step by step and review its work weekly.\n\nSafeguards:\n- Least access: The agent only gets the permissions its job needs. It cannot reach anything else.\n- Human approval: Sending, paying, deleting and other sensitive actions always wait for a person.\n- Full activity log: Every decision is recorded with its reasoning, so you can check exactly what happened.\n- Shadow mode first: The agent proves itself on suggestions before it is allowed to act.\n\nTools we typically use for Custom AI agents: OpenAI, Anthropic, Gmail, Google Sheets, HubSpot, n8n, Make, Supabase."
+    },
+    {
+      "id": "service-custom-ai-agents-faq-1",
+      "title": "Custom AI agents FAQ: How is an agent different from an automation?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Custom AI agents service: How is an agent different from an automation?\nAnswer: An automation follows fixed rules. An agent can read unstructured information, decide what it means and choose the next step, within limits you set."
+    },
+    {
+      "id": "service-custom-ai-agents-faq-2",
+      "title": "Custom AI agents FAQ: Can the agent make mistakes?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Custom AI agents service: Can the agent make mistakes?\nAnswer: Yes, which is why we use approval steps, shadow mode and logs. Sensitive actions never happen without a person."
+    },
+    {
+      "id": "service-custom-ai-agents-faq-3",
+      "title": "Custom AI agents FAQ: Where does the agent run?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Custom AI agents service: Where does the agent run?\nAnswer: In your own accounts or a private server, using tools like n8n or a small custom app. You own it."
+    },
+    {
+      "id": "service-custom-ai-agents-faq-4",
+      "title": "Custom AI agents FAQ: What does it cost to run?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Custom AI agents service: What does it cost to run?\nAnswer: AI usage for most agents costs between $30 and $300 a month, depending on volume. We estimate it during scoping."
+    },
+    {
+      "id": "service-rag-systems",
+      "title": "RAG knowledge assistants: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "ai",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: RAG knowledge assistants (AI solutions).\nAn AI assistant that answers from your own documents and shows the source for every answer.\nAnswers from your documents, with sources. A knowledge assistant that searches your SOPs, contracts and help articles first, then answers with a link to the exact source.\n\nWhen knowledge is hard to find:\n- Answers live in 500 files: The answer exists somewhere in Drive, Notion or an old PDF. Finding it takes 20 minutes.\n- The same questions every day: New staff ask senior staff the same questions, pulling them away from their own work.\n- General AI makes things up: Public chatbots do not know your policies and will confidently guess when they are unsure.\n\nExample: an internal assistant for a property manager\nBefore: Staff searched 300+ Drive documents or asked the operations manager about lease terms and maintenance procedures.\nAfter: Staff ask the assistant in plain words and get the answer with a link to the exact clause or procedure.\n\nPrice: RAG knowledge assistants starts from $6,000, for an assistant over one document library with citations and access rules. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-rag-systems-details",
+      "title": "RAG knowledge assistants: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "ai",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's RAG knowledge assistants service includes:\n- Document library: We connect your Google Drive, Notion, PDFs, help centre and website as the assistant's source material.\n- Cited answers: Every answer links to the document and section it came from, so anyone can check it.\n- Internal help desk: Staff ask questions about policies, processes and products and get answers in seconds.\n- Customer support: Customers get accurate answers from your help articles, with handoff to your team when needed.\n- Access control: People only get answers from the documents they are allowed to see.\n- Automatic updates: When a document changes, the assistant's knowledge updates on the next sync.\n\nHow retrieval-augmented generation works: It looks up your documents first, then answers. That is what stops it from guessing.\nSteps: Question (Asked in plain words) → Search library (Your documents only) → Best passages (Ranked by relevance) → Answer written (From those passages) → Sources shown (Linked for checking)\n\nDeliverables:\n- A connected and cleaned document library\n- The assistant, in Slack-style chat, on your site or as an internal web app\n- Source citations on every answer\n- Access rules matched to your team structure\n- An accuracy test set and report\n\nTimeline:\n- Collect (Week 1): We gather the documents, remove outdated ones and agree who can see what.\n- Index (Weeks 2 to 3): We split, label and index the documents so the right passages are found.\n- Evaluate (Week 4): We test against a set of real questions with known answers and measure accuracy.\n- Launch (Weeks 5 to 6): We roll it out to a pilot group first, then to everyone.\n\nSafeguards:\n- Grounded answers: The assistant only answers from retrieved passages. If nothing relevant is found, it says so.\n- Sources on every answer: Each answer links to its source, so people can check rather than trust blindly.\n- Permission-aware: Search respects your access rules. Confidential files stay confidential.\n- Measured accuracy: We test against real questions before launch and share the results with you.\n\nTools we typically use for RAG knowledge assistants: OpenAI, Anthropic, Google Drive, Notion, Supabase, LangChain, Intercom, n8n."
+    },
+    {
+      "id": "service-rag-systems-faq-1",
+      "title": "RAG knowledge assistants FAQ: What does RAG mean?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's RAG knowledge assistants service: What does RAG mean?\nAnswer: Retrieval-augmented generation. The AI first retrieves relevant passages from your documents, then writes an answer based only on them."
+    },
+    {
+      "id": "service-rag-systems-faq-2",
+      "title": "RAG knowledge assistants FAQ: Which documents can it use?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's RAG knowledge assistants service: Which documents can it use?\nAnswer: Google Docs, Sheets, PDFs, Word files, Notion pages, help centre articles and web pages. Scanned documents can be converted to text first."
+    },
+    {
+      "id": "service-rag-systems-faq-3",
+      "title": "RAG knowledge assistants FAQ: Is our data used to train AI models?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's RAG knowledge assistants service: Is our data used to train AI models?\nAnswer: No. We use business API terms that exclude your data from model training, and your index is stored in your own account."
+    },
+    {
+      "id": "service-rag-systems-faq-4",
+      "title": "RAG knowledge assistants FAQ: How accurate is it?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's RAG knowledge assistants service: How accurate is it?\nAnswer: We measure it on your own test questions before launch. Because every answer shows its source, errors are easy to spot and fix."
+    },
+    {
+      "id": "service-web-solutions",
+      "title": "Web solutions: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "web",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: Web solutions (Web).\nFast, clear websites and landing pages wired straight into your CRM and automations.\nWebsites that feed your pipeline. We design and build fast websites and landing pages where every form, booking and chat goes straight into your CRM and automations.\n\nWhy many business websites underperform:\n- Pretty but disconnected: Form submissions go to an inbox nobody checks, so leads are lost after the click.\n- Slow and hard to update: Pages take 6 seconds to load, and every text change needs a developer.\n- No clear next step: Visitors cannot tell what you offer or what to do next, so they leave.\n\nExample: a services website rebuild\nBefore: A slow template site sent form submissions to a personal inbox and could only be edited by the original developer.\nAfter: A fast site with an easy editor, where every enquiry creates a CRM deal and gets an instant personal reply.\n\nPrice: Web solutions starts from $2,500, for a focused 5-page website connected to your CRM.\nEvery project gets a fixed written quote before work starts."
+    },
+    {
+      "id": "service-web-solutions-details",
+      "title": "Web solutions: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "web",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's Web solutions service includes:\n- Clear page structure: Pages lead with what the visitor gets, show how it works, then make the next step obvious.\n- Connected forms: Every form, booking and chat creates a CRM record and starts your follow-up automation.\n- Fast by default: Modern builds that load in under 2 seconds and score well on Google's speed tests.\n- Easy editing: A simple editor so your team can change text, add case studies and publish pages.\n- SEO foundations: Clean structure, metadata, sitemaps and schema so search engines understand your pages.\n- Analytics and tracking: Conversion tracking set up properly, so you know which pages and channels bring leads.\n\nFrom visit to CRM record: The website is the start of your pipeline, not a separate island.\nSteps: Visitor lands (Fast page load) → Clear offer (Next step obvious) → Form or chat (Low friction) → CRM record (Created instantly) → Follow-up (Automation starts)\n\nDeliverables:\n- Sitemap, page copy structure and wireframes\n- A responsive design in your brand\n- The built website with an easy content editor\n- Forms and booking connected to your CRM\n- Speed, SEO and analytics setup\n\nTimeline:\n- Plan (Week 1): We agree the sitemap, the message for each page and how leads should flow.\n- Design (Weeks 2 to 3): We design the key pages and refine them with you.\n- Build (Weeks 3 to 5): We build the site, connect the forms and set up the editor.\n- Launch (Week 6): We test on real devices, launch and track the first month of results.\n\nTools we typically use for Web solutions: Next.js, Webflow, WordPress, Shopify, Vercel, HubSpot, Google Analytics, Calendly."
+    },
+    {
+      "id": "service-web-solutions-faq-1",
+      "title": "Web solutions FAQ: Which platform do you build on?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Web solutions service: Which platform do you build on?\nAnswer: Usually Next.js for custom sites, or Webflow and WordPress when your team wants to edit everything themselves. We recommend one on the first call."
+    },
+    {
+      "id": "service-web-solutions-faq-2",
+      "title": "Web solutions FAQ: Can you redesign our existing site?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Web solutions service: Can you redesign our existing site?\nAnswer: Yes. We keep what works, especially pages that already rank in search, and rebuild the rest."
+    },
+    {
+      "id": "service-web-solutions-faq-3",
+      "title": "Web solutions FAQ: Do you write the copy?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Web solutions service: Do you write the copy?\nAnswer: We structure every page and write the copy with you, based on how your customers describe their problems."
+    },
+    {
+      "id": "service-web-solutions-faq-4",
+      "title": "Web solutions FAQ: Who hosts the website?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Web solutions service: Who hosts the website?\nAnswer: Your site is hosted in your own account, so you always own it. We can manage it under a care plan."
+    },
+    {
+      "id": "pricing-overview",
+      "title": "SalnetHub pricing: where to start, builds and care plans",
+      "category": "Pricing",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "cost",
+        "quote",
+        "audit"
+      ],
+      "content": "SalnetHub publishes its prices up front. All prices are in US dollars. Start free, build with a fixed quote, then keep everything running with a monthly care plan.\n\nWhere to start:\n- Discovery call: Free (20 minutes). We map the problem, tell you honestly whether automation will help, and suggest where to start. Covers: Your current tools and process; The first workflow worth automating; A rough budget and timeline.\n- Automation audit: $490 (credited to your build). A structured review of your tools and processes, ending in a written, ranked automation roadmap. Covers: Process and tool review; Hours-saved estimate per opportunity; A prioritised 90-day roadmap.\n\nFixed-price builds (starting prices for a typical scope; your written quote is fixed before work begins and includes 30 days of aftercare):\n- Single workflow: from $1,500, 1 to 2 weeks. One process automated end to end, such as lead capture to CRM or email to spreadsheet.\n- Automation system: from $4,500, 3 to 6 weeks. Several connected workflows across teams, with approvals, logging and reporting.\n- AI chatbot: from $2,500, 3 to 4 weeks. A website chatbot trained on your content, connected to your CRM and calendar.\n- Custom AI agent: from $5,000, 4 to 6 weeks. An agent that works across your tools with approval steps and a full activity log.\n- RAG knowledge assistant: from $6,000, 4 to 6 weeks. Answers from your documents with sources, access rules and measured accuracy.\n- Website: from $2,500, 4 to 6 weeks. A fast 5-page website with forms and booking connected to your CRM.\n\nThird-party subscriptions and AI usage are paid directly to the providers, at cost. SalnetHub estimates them up front."
+    },
+    {
+      "id": "pricing-care-plans",
+      "title": "SalnetHub monthly care plans",
+      "category": "Pricing",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "care plan",
+        "support",
+        "maintenance",
+        "monthly"
+      ],
+      "content": "Tools change their APIs and your processes evolve. A SalnetHub care plan keeps your automations working and adds new ones each month. Care plans are billed monthly and can be cancelled with 30 days' notice.\n\n- Essential: $490 per month. For teams with a few automations that must keep running. Includes: Monitoring and error alerts; Fixes when tools or APIs change; Monthly health report; Email support, reply within 1 business day.\n- Growth: $1,500 per month (most popular). For teams adding new automations every month. Includes: Everything in Essential; Up to 10 hours of new builds and changes; Monthly planning call; Priority support, reply within 4 business hours.\n- Partner: $3,500 per month. For businesses that want a dedicated automation team. Includes: Everything in Growth; Up to 30 hours of builds each month; Dedicated automation lead; Quarterly roadmap and reporting review."
+    },
+    {
+      "id": "pricing-faq-1",
+      "title": "Pricing FAQ: Why do you publish prices?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: Why do you publish prices?\nAnswer: So you can tell in a minute whether we fit your budget. Every project still gets a fixed written quote before work starts."
+    },
+    {
+      "id": "pricing-faq-2",
+      "title": "Pricing FAQ: What is not included in the build price?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: What is not included in the build price?\nAnswer: Third-party subscriptions such as Zapier, Make, your CRM, and AI usage. We estimate these up front and you pay the providers directly."
+    },
+    {
+      "id": "pricing-faq-3",
+      "title": "Pricing FAQ: How do payments work?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: How do payments work?\nAnswer: Builds are usually 50% to start and 50% at launch. Care plans are billed monthly and can be cancelled with 30 days' notice."
+    },
+    {
+      "id": "pricing-faq-4",
+      "title": "Pricing FAQ: Do you offer refunds?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: Do you offer refunds?\nAnswer: If we cannot deliver what the written scope describes, we fix it at no cost or refund the unfinished part of the work."
+    },
+    {
+      "id": "pricing-faq-5",
+      "title": "Pricing FAQ: Can we start small?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: Can we start small?\nAnswer: Yes. Most clients start with one workflow, see the result, then add more. The audit fee is credited to your first build."
+    },
+    {
+      "id": "pricing-cost-calculator",
+      "title": "What manual work costs: the SalnetHub cost calculator",
+      "category": "Pricing",
+      "url": "https://www.salnethub.com/",
+      "tags": [
+        "roi",
+        "savings",
+        "calculator",
+        "outcomes"
+      ],
+      "content": "The SalnetHub home page has a cost calculator that shows what copy-paste work costs per year: people × hours per week each × 48 working weeks × hourly rate. It then assumes, conservatively, that one automation project removes half of that time.\nExample with the default numbers: 3 people × 6 hours a week × 48 weeks × $25 an hour = $21,600 a year, of which about half could be saved.\n\nTypical outcomes from single-workflow projects:\n- Replying to a new lead: before, the next working day; after, under 2 minutes, day or night.\n- The weekly sales report: before, half of every monday; after, in your inbox at 8 am.\n- Order details from email: before, copied by hand, 40 a day; after, added to the sheet as they arrive.\n- Onboarding a new client: before, 2 hours across 5 tools; after, one trigger, under 5 minutes."
+    },
+    {
+      "id": "process-steps",
+      "title": "How SalnetHub projects work: five steps",
+      "category": "Process",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "process",
+        "how we work",
+        "steps"
+      ],
+      "content": "SalnetHub follows a clear process with fixed prices, weekly updates and nothing installed on your side. Five steps, from first call to a system that keeps running. Each step ends with something concrete you can see, check and keep.\n\n1. Discover: We learn how the work happens today. A 20-minute call, then a closer look at your tools and the people who use them. We find where time is lost and agree on the first workflow worth automating. Output: A written scope with a fixed price.\n2. Build: We build in a safe copy of your setup. Automations are built and tested away from live data. You see progress every week, in plain language, with nothing to install. Output: Working automations in a test setup.\n3. Test: We run real examples end to end. Your team pushes real cases through every path, including the odd ones. We fix every issue before anything touches live data. Output: A signed-off test checklist.\n4. Hand over: We launch and teach your team. We switch on in stages, watch the first days closely, and leave a written guide plus a recorded walkthrough. Output: Documentation your team can use.\n5. Support: We keep it running. Tools change their APIs and processes evolve. Care plans include monitoring, fixes and new builds, so automations keep working. Output: Monthly health report."
+    },
+    {
+      "id": "process-commitments",
+      "title": "What you can count on with SalnetHub",
+      "category": "Process",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "process",
+        "guarantee",
+        "ownership",
+        "aftercare",
+        "updates"
+      ],
+      "content": "What you can count on when you work with SalnetHub:\n- Fixed scope and price: You get a written scope and a fixed price before any work starts. No hourly surprises.\n- Weekly updates in plain words: Every week you hear what was built, what is next and anything we need from you.\n- Built in a safe copy first: We build and test away from live data, so your daily work is never interrupted.\n- You own everything: Automations live in your accounts. If we part ways, everything keeps running.\n- Documentation included: Every build ships with a written guide and a recorded walkthrough.\n- 30 days of aftercare: We monitor and fix every new build for 30 days after launch at no extra cost.\n\nOur promises:\n- Fixed price, in writing: A written quote before work starts. No hourly meter.\n- Our mistake, our cost: If we miss the written scope, we fix it free or refund the rest.\n- Live in weeks: Your first workflow is usually live in 1 to 2 weeks.\n- Documented and handed over: A written guide and recorded walkthrough for every build.\n\nA typical project week. No long meetings. Short written updates you can read in two minutes, and a demo whenever there is something to see.\n- Monday: Short written update: progress, blockers, decisions needed.\n- Mid-week: Demo link or recording of what is working so far.\n- Friday: Plan for next week and any access or data we need."
+    },
+    {
+      "id": "general-faq-1",
+      "title": "FAQ: How much of our team's time will this take?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: How much of our team's time will this take?\nAnswer: About 2 hours in the first week for discovery, then 30 minutes a week for feedback. Testing needs one or two people for a few hours."
+    },
+    {
+      "id": "general-faq-2",
+      "title": "FAQ: What access do you need?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: What access do you need?\nAnswer: Only what the workflow touches, granted through your own admin settings. We use separate logins where possible and remove access when you ask."
+    },
+    {
+      "id": "general-faq-3",
+      "title": "FAQ: Do you sign NDAs?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: Do you sign NDAs?\nAnswer: Yes. We are happy to sign your NDA or provide ours before discovery."
+    },
+    {
+      "id": "general-faq-4",
+      "title": "FAQ: What if our requirements change mid-project?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/how-we-work",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: What if our requirements change mid-project?\nAnswer: Small changes are absorbed. Larger ones are written up with their cost and timeline, and you decide before we do the work."
+    },
+    {
+      "id": "general-faq-5",
+      "title": "FAQ: What kind of businesses do you work with?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: What kind of businesses do you work with?\nAnswer: Small-to-medium teams and businesses, usually 5 to 200 people, in services, e-commerce, property, logistics and professional firms. If your team copies data between tools, we can probably help."
+    },
+    {
+      "id": "general-faq-6",
+      "title": "FAQ: Do we need to change the tools we use?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: Do we need to change the tools we use?\nAnswer: No. We build on what you already run, such as Google Workspace, HubSpot or your accounting software, and add a connector like Make, Zapier or n8n only where needed."
+    },
+    {
+      "id": "general-faq-7",
+      "title": "FAQ: How quickly will we see results?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: How quickly will we see results?\nAnswer: A single workflow is usually live within 1 to 2 weeks. Larger systems go live in stages, so you get value before the whole project is finished."
+    },
+    {
+      "id": "general-faq-8",
+      "title": "FAQ: What happens if an automation breaks?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/",
+      "tags": [
+        "faq"
+      ],
+      "content": "Question about working with SalnetHub: What happens if an automation breaks?\nAnswer: You get an alert, and we fix it. Our care plans include monitoring, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost."
+    },
+    {
+      "id": "integrations-overview",
+      "title": "Tools SalnetHub connects",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "tools",
+        "stack"
+      ],
+      "content": "SalnetHub connects 36+ tools your team already uses. We build on what you already run and add a connector like Make, Zapier or n8n only where needed. If a tool has an API, we can usually connect it.\n\nGoogle Workspace: Google Sheets, Gmail, Google Drive, Google Calendar, Google Forms, Apps Script.\nCRM & sales: HubSpot, Zoho, Typeform, Calendly, Mailchimp, Meta lead ads, WhatsApp.\nAutomation platforms: Make, Zapier, n8n.\nAI & data: OpenAI, Anthropic, LangChain, Supabase, Looker Studio, Google Analytics.\nOperations & finance: QuickBooks, Xero, Notion, ClickUp, Asana, Trello, Airtable, Intercom.\nWeb & commerce: Shopify, Stripe, WordPress, Webflow, Next.js, Vercel."
+    },
+    {
+      "id": "integrations-google-workspace",
+      "title": "SalnetHub integrations: Google Workspace",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "google-workspace"
+      ],
+      "content": "What SalnetHub does with Google Workspace tools:\n- Google Sheets: Lightweight CRMs, trackers, data pipelines and dashboards.\n- Gmail: Inbox parsing, follow-up sequences and AI email triage.\n- Google Drive: Automatic filing, document generation and RAG libraries.\n- Google Calendar: Booking flows, reminders and scheduling automations.\n- Google Forms: Intake forms that create records and tasks on submit.\n- Apps Script: Custom tools, menus and logic inside Google Workspace."
+    },
+    {
+      "id": "integrations-crm-sales",
+      "title": "SalnetHub integrations: CRM & sales",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "crm-sales"
+      ],
+      "content": "What SalnetHub does with CRM & sales tools:\n- HubSpot: Contact sync, deal automation, sequences and reporting.\n- Zoho: CRM workflows, lead routing and Zoho app integrations.\n- Typeform: Lead capture with scoring and instant routing.\n- Calendly: Booked meetings that update the CRM and notify the owner.\n- Mailchimp: Audience sync, tagging and campaign triggers.\n- Meta lead ads: Lead ads delivered to your CRM and reps in seconds.\n- WhatsApp: Rep alerts, customer updates and chatbot handoff."
+    },
+    {
+      "id": "integrations-automation-platforms",
+      "title": "SalnetHub integrations: Automation platforms",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "automation-platforms"
+      ],
+      "content": "What SalnetHub does with Automation platforms tools:\n- Make: Complex multi-step scenarios at a low running cost.\n- Zapier: Fast, reliable connections across 7,000+ apps.\n- n8n: High-volume and self-hosted workflows and AI agents."
+    },
+    {
+      "id": "integrations-ai-data",
+      "title": "SalnetHub integrations: AI & data",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "ai-data"
+      ],
+      "content": "What SalnetHub does with AI & data tools:\n- OpenAI: Language models for chatbots, agents and document processing.\n- Anthropic: Claude models for careful reasoning and long documents.\n- LangChain: Retrieval pipelines and agent tooling.\n- Supabase: Databases and vector search for RAG and agent memory.\n- Looker Studio: Live dashboards over your business data.\n- Google Analytics: Traffic and conversion data for reporting."
+    },
+    {
+      "id": "integrations-operations-finance",
+      "title": "SalnetHub integrations: Operations & finance",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "operations-finance"
+      ],
+      "content": "What SalnetHub does with Operations & finance tools:\n- QuickBooks: Invoices, payments and finance reporting.\n- Xero: Invoice automation and cash reporting.\n- Notion: Wikis, project databases and knowledge sources.\n- ClickUp: Tasks and projects created from your other tools.\n- Asana: Project setup and status updates.\n- Trello: Boards and cards driven by forms and email.\n- Airtable: Operational databases with automated records.\n- Intercom: Support inbox automation and AI answers."
+    },
+    {
+      "id": "integrations-web-commerce",
+      "title": "SalnetHub integrations: Web & commerce",
+      "category": "Integrations",
+      "url": "https://www.salnethub.com/integrations",
+      "tags": [
+        "integrations",
+        "web-commerce"
+      ],
+      "content": "What SalnetHub does with Web & commerce tools:\n- Shopify: Order, inventory and customer automations.\n- Stripe: Payment events that trigger fulfilment and reporting.\n- WordPress: Sites with connected forms and chatbots.\n- Webflow: Marketing sites with CRM-connected forms.\n- Next.js: Fast custom websites and web apps.\n- Vercel: Hosting for fast, modern websites."
+    },
+    {
+      "id": "policy-privacy",
+      "title": "SalnetHub privacy in brief",
+      "category": "Policies",
+      "url": "https://www.salnethub.com/privacy",
+      "tags": [
+        "privacy",
+        "data",
+        "cookies",
+        "gdpr"
+      ],
+      "content": "SalnetHub's privacy policy in brief (full policy: https://www.salnethub.com/privacy):\n- We collect what you send us through the contact form, the booking calendar or email, such as your name, email, company and message, and use it to reply and prepare for your call.\n- Analytics cookies and the record of pages you visit on the site are only used if you accept them in the cookie banner. You can change your choice any time with \"Cookie settings\" in the site footer. We honour Global Privacy Control.\n- We do not sell personal data and do not run ads.\n- Our providers include Vercel (hosting), Google (Workspace, Calendar, Sheets and Analytics) and our email provider.\n- For client projects, your data stays in your own accounts and we use AI providers on business terms that exclude your data from model training.\n- To access, correct or delete your data, email info@salnethub.com."
+    },
+    {
+      "id": "policy-terms",
+      "title": "SalnetHub terms of use in brief",
+      "category": "Policies",
+      "url": "https://www.salnethub.com/terms",
+      "tags": [
+        "terms",
+        "legal",
+        "contract",
+        "upwork"
+      ],
+      "content": "SalnetHub's terms of use in brief (full terms: https://www.salnethub.com/terms):\n- Client work is governed by its own written proposal, statement of work or services agreement, or by the contract terms of the marketplace where you hired us, such as Upwork. If those conflict with the site terms, the project agreement wins.\n- Quotes are fixed and in writing before work starts.\n- The site terms are governed by the laws of Uganda. Consumers keep any rights their home law gives them.\n- Questions about the terms: info@salnethub.com."
+    }
+  ]
+}

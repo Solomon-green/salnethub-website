@@ -4,11 +4,12 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUp, X } from "lucide-react";
 import { chat } from "@/content/chat";
-import { demoReply, type ChatAction } from "./demo-reply";
+import { demoReply, type ChatAction, type DemoReply } from "./demo-reply";
 
 type Message = { id: number; role: "assistant" | "user"; text: string; at?: string; actions?: ChatAction[] };
 
 const TEASER_KEY = "sh-chat-teaser-seen";
+const SESSION_KEY = "sh-chat-session";
 const MOBILE = "(max-width: 639px)";
 // Mouse/trackpad devices: auto-focusing the input there doesn't raise an on-screen keyboard.
 const FINE_POINTER = "(pointer: fine)";
@@ -17,6 +18,63 @@ const AVATAR = "/brand/salnethub-icon-reversed.svg";
 type LenisLike = { stop: () => void; start: () => void };
 const lenis = () => (window as unknown as { __lenis?: LenisLike }).__lenis;
 const now = () => new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+
+// One conversation id per visit, so the n8n agent remembers earlier questions in this tab.
+function sessionId() {
+  let id = "";
+  try {
+    id = sessionStorage.getItem(SESSION_KEY) ?? "";
+  } catch {}
+  if (!id) {
+    id = crypto.randomUUID?.() ?? `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+    try {
+      sessionStorage.setItem(SESSION_KEY, id);
+    } catch {}
+  }
+  return id;
+}
+
+async function askAssistant(message: string): Promise<DemoReply> {
+  try {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sessionId: sessionId(), message, page: window.location.pathname }),
+    });
+    const json = await res.json().catch(() => ({}));
+    if (res.ok && typeof json.reply === "string" && json.reply) return { text: json.reply };
+  } catch {}
+  return demoReply(message);
+}
+
+// Turns URLs and email addresses in a reply into links; links to this site stay in-app.
+const LINK = /(https?:\/\/[^\s<>()]+[^\s<>().,!?;:'"]|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g;
+function linkify(text: string, onNavigate: () => void) {
+  return text.split(LINK).map((part, i) => {
+    if (i % 2 === 0) return part;
+    const cls = "font-bold text-accent underline underline-offset-2 hover:text-white";
+    if (!part.startsWith("http")) {
+      return (
+        <a key={i} href={`mailto:${part}`} className={cls}>
+          {part}
+        </a>
+      );
+    }
+    const local = part.match(/^https?:\/\/(?:www\.)?salnethub\.com(\/\S*)?$/i);
+    if (local) {
+      return (
+        <Link key={i} href={local[1] || "/"} onClick={onNavigate} className={cls}>
+          {part.replace(/^https?:\/\/(www\.)?/, "")}
+        </Link>
+      );
+    }
+    return (
+      <a key={i} href={part} target="_blank" rel="noopener noreferrer" className={cls}>
+        {part.replace(/^https?:\/\//, "")}
+      </a>
+    );
+  });
+}
 
 /**
  * Site chat assistant: a small round launcher bottom-right on every page. Clicking it
@@ -138,7 +196,7 @@ export function ChatWidget() {
     timers.current.push(t);
   };
 
-  const send = (raw: string) => {
+  const send = async (raw: string) => {
     const text = raw.trim().slice(0, chat.maxMessageLength);
     if (!text || busy) return;
     setMessages((m) => [...m, { id: nextId.current++, role: "user", text, at: now() }]);
@@ -147,8 +205,9 @@ export function ChatWidget() {
     setBusy(true);
     setTyping(true);
 
-    // Phase 1: a local placeholder answer, revealed word by word like a streamed reply.
-    const reply = demoReply(text);
+    // Ask the knowledge-base assistant, then reveal the answer word by word like a streamed reply.
+    // The typing dots show for at least 700ms, even when the answer comes back faster.
+    const [reply] = await Promise.all([askAssistant(text), new Promise((r) => window.setTimeout(r, 700))]);
     const id = nextId.current++;
     const words = reply.text.split(" ");
     later(() => {
@@ -167,7 +226,7 @@ export function ChatWidget() {
           if (done) setBusy(false);
         }, i * 28);
       });
-    }, 700);
+    }, 0);
   };
 
   const onInputKey = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -266,7 +325,7 @@ export function ChatWidget() {
                     {m.at && <> • {m.at}</>}
                   </p>
                   <p className="whitespace-pre-wrap rounded-[16px] rounded-tl-[4px] bg-white/[0.07] px-3.5 py-2.5 text-[14px] leading-[1.5] text-white/90">
-                    {m.text || " "}
+                    {m.text ? linkify(m.text, closeOnPhone) : " "}
                   </p>
                   {m.actions && (
                     <div className="chat-in mt-2 flex flex-wrap gap-1.5">
