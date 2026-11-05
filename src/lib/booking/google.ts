@@ -76,8 +76,10 @@ const b64url = (s: string) => Buffer.from(s, "utf8").toString("base64url");
 const b64body = (s: string) => Buffer.from(s, "utf8").toString("base64").replace(/.{76}/g, "$&\r\n");
 const encodeHeader = (s: string) => (/^[\x20-\x7e]*$/.test(s) ? s : `=?UTF-8?B?${Buffer.from(s, "utf8").toString("base64")}?=`);
 
+// BOOKING_FROM_EMAIL must be a verified "Send mail as" address in the owner's Gmail, otherwise
+// Gmail silently sends from the owner's own address instead.
 export async function sendEmail(m: { to: string; subject: string; html: string; text: string; replyTo?: string }) {
-  const from = process.env.BOOKING_OWNER_EMAIL!;
+  const from = process.env.BOOKING_FROM_EMAIL || process.env.BOOKING_OWNER_EMAIL!;
   const boundary = `b_${crypto.randomUUID()}`;
   const mime = [
     `From: ${encodeHeader("SalnetHub")} <${from}>`,
