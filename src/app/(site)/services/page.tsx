@@ -13,11 +13,12 @@ export const metadata = {
 
 const fit = [
   { problem: "Leads wait hours or days for a reply", slug: "lead-acquisition-qualification" },
-  { problem: "Our CRM is never up to date", slug: "marketing-crm-automation" },
+  { problem: "Our CRM is never up to date", slug: "crm-automation-services" },
   { problem: "Reports take a day to put together", slug: "data-reporting-analytics" },
   { problem: "Onboarding and approvals keep stalling", slug: "business-process-automation" },
-  { problem: "The team spends hours copying data", slug: "task-workflow-automation" },
+  { problem: "The team spends hours copying data", slug: "n8n-workflow-automation" },
   { problem: "Visitors leave without asking anything", slug: "ai-chatbots" },
+  { problem: "Calls go to voicemail after hours", slug: "ai-receptionist" },
   { problem: "Someone reads and routes every request", slug: "custom-ai-agents" },
   { problem: "Nobody can find the right document", slug: "rag-systems" },
   { problem: "Our website does not bring in leads", slug: "web-solutions" },

@@ -27,7 +27,9 @@ Result: titles 50–60 / descriptions 140–160 on all indexable pages; Breadcru
 - Audit every page's title (50–60 chars), description (150–160), single H1 with the keyword, slugs, alt text, internal links.
 - Lighthouse 95+ on Performance, Accessibility, Best Practices and SEO for every template (home, service, blog post, stories). Real-user Core Web Vitals in Search Console are the true target.
 
-## Phase 2: Keyword research (free tools)
+## Phase 2: Keyword research (free tools) ✅ done 2026-11-06
+Result (`seo-research/`): 49 seeds → 1,360 Google autocomplete suggestions → 119 relevant candidates (script-verified as real suggestions) → Keyword Planner volumes (Google Ads account 865-284-9809, no campaign; ranges only) → SERP-based difficulty for the 32 most important. Outputs: `service-keywords.csv` (51 commercial) and `keywords.csv` (27 informational), each with volume range, difficulty, top results, target page, priority, status. 41 keywords under 10/month dropped. Difficulty is qualitative (who ranks), not a KD score; "unchecked" rows need a SERP check before use. Biggest find: "ai receptionist for small business" (1K–10K, Medium) → a new AI receptionist service page.
+
 Tools: Google Keyword Planner (volumes), Ahrefs free keyword generator / Ubersuggest free searches (difficulty), Google autocomplete + People Also Ask + AlsoAsked (questions), Google Trends, competitor sites' service pages, and Search Console queries once data arrives.
 Filters: difficulty ≤ 30 · volume ≥ 30/month (B2B niche) · correct intent · not another company's brand.
 Output: `keywords.csv` (informational → blog) and `service-keywords.csv` (commercial → service/industry pages), each row with keyword, volume, difficulty, intent, target page, status (unused/used).

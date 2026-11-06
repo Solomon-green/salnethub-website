@@ -45,15 +45,15 @@ export const groups: Record<ServiceGroup, { name: string; blurb: string }> = {
 
 export const services: Service[] = [
   {
-    slug: "marketing-crm-automation",
-    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. Priced on time saved, after a 14-day pilot." },
+    slug: "crm-automation-services",
+    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "CRM and marketing automation services for HubSpot, Zoho and Google Sheets: every lead logged, followed up and tracked. Pay from savings after a 14-day pilot." },
     name: "Marketing & CRM automation",
     group: "automation",
     icon: "users",
     short: "Keep your CRM accurate and your follow-ups on time without anyone updating records by hand.",
     hero: {
-      title: "A CRM that updates itself",
-      sub: "We connect your forms, inbox, ads and CRM so every contact, deal and follow-up is recorded the moment it happens.",
+      title: "CRM automation services: a CRM that updates itself",
+      sub: "Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens, in HubSpot, Zoho or Google Sheets.",
     },
     problem: {
       title: "Where CRM work usually breaks",
@@ -112,6 +112,8 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Week 4", body: "We switch it on, watch the first days closely and hand over the documentation." },
     ],
     faqs: [
+      { q: "What is CRM automation?", a: "CRM automation is software doing the routine CRM work for you: creating contacts from forms and emails, sending follow-ups on schedule, moving deals between stages and keeping records clean. Your team only steps in for the conversations." },
+      { q: "What do your marketing automation services include?", a: "Lead capture from forms and ads, follow-up email sequences, contact tagging by source and interest, and campaign attribution so you can see which channel brings paying customers. All of it runs inside the CRM and email tools you already use." },
       { q: "Which CRMs do you work with?", a: "Mostly HubSpot, Zoho and Google Sheets based CRMs. If your CRM has an API, we can usually connect it. We confirm this on the first call." },
       { q: "Will this replace my sales team's work?", a: "No. It removes the copying, chasing and data entry so your team spends their time on conversations." },
       { q: "What happens to our existing data?", a: "We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup." },
@@ -122,7 +124,7 @@ export const services: Service[] = [
   },
   {
     slug: "lead-acquisition-qualification",
-    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes. Pay per qualified lead, nothing up front." },
+    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them and route them to the right rep with a reply in under 2 minutes. Pay per qualified lead, nothing up front." },
     name: "Lead acquisition & qualification",
     group: "automation",
     icon: "filter",
@@ -189,7 +191,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-reporting-analytics",
-    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. Priced on time saved, after a 14-day pilot." },
+    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards from your CRM, finance and ops tools, ready before the meeting. Priced on time saved, after a 14-day pilot." },
     name: "Data reporting & analytics",
     group: "automation",
     icon: "bar-chart-3",
@@ -256,7 +258,7 @@ export const services: Service[] = [
   },
   {
     slug: "business-process-automation",
-    seo: { title: "Business Process Automation Services for Teams", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step. Priced on time saved, after a 14-day pilot." },
+    seo: { title: "Business Process Automation Services for Teams", description: "Business process automation services for onboarding, approvals, invoicing and documents, with an audit trail. Priced on time saved after a 14-day pilot." },
     name: "Business process automation",
     group: "automation",
     icon: "workflow",
@@ -322,15 +324,15 @@ export const services: Service[] = [
     priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
-    slug: "task-workflow-automation",
-    seo: { title: "Workflow Automation with Make, Zapier & n8n", description: "Automate data entry, reminders, file moves and status updates with Make, Zapier, n8n or Apps Script, and win back hours every week. Priced on time saved, after a 14-day pilot." },
+    slug: "n8n-workflow-automation",
+    seo: { title: "n8n Automation Services & Workflow Automation", description: "n8n automation services and workflow automation on Make or Zapier: data entry, reminders and status updates done for you. Pay from savings after a 14-day pilot." },
     name: "Task & workflow automation",
     group: "automation",
     icon: "zap",
     short: "Remove the small repetitive tasks that eat your team's day, from data entry to reminders.",
     hero: {
-      title: "Win back hours every week",
-      sub: "Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.",
+      title: "n8n and workflow automation services that win back hours",
+      sub: "Our n8n automation services, with Make and Zapier where they fit better, take over the data entry, reminders, file moves and status updates that quietly eat your team's day. Your people get back to the work they were hired for.",
     },
     problem: {
       title: "Small tasks, big cost",
@@ -365,7 +367,7 @@ export const services: Service[] = [
       before: "A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.",
       after: "Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.",
     },
-    tools: ["gmail", "googlesheets", "googledrive", "googleappsscript", "googlecalendar", "trello", "zapier", "make"],
+    tools: ["n8n", "make", "zapier", "gmail", "googlesheets", "googledrive", "googleappsscript", "googlecalendar"],
     deliverables: [
       "A list of tasks ranked by hours saved per week",
       "Working automations for the top tasks",
@@ -380,8 +382,10 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Week 2", body: "We switch them on and set up alerts in case anything fails." },
     ],
     faqs: [
+      { q: "What do your n8n automation services include?", a: "We map the task, build the n8n workflow, test it on your real data, add error alerts and hand it over with a written guide. Monitoring and fixes are included in the monthly fee, so the workflows keep running when your tools change." },
+      { q: "Can n8n run in our own account?", a: "Yes. We build in your own n8n Cloud account or on a self-hosted n8n server you control, so the workflows and your data stay yours. If we part ways, everything keeps running." },
       { q: "How small a task is worth automating?", a: "If it happens daily and follows the same steps, it is usually worth it. A 5-minute task done 10 times a day is 4 hours a week." },
-      { q: "Make, Zapier or n8n?", a: "We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes." },
+      { q: "Make, Zapier or n8n?", a: "We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes and AI steps at the lowest running cost." },
       { q: "What if an automation fails?", a: "You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do." },
       { q: "Can we change the automations later?", a: "Yes. We document how each one works so your team can make small changes, and we handle the bigger ones." },
     ],
@@ -390,7 +394,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-chatbots",
-    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your business website that answers from your own content, qualifies leads and books calls, then hands over to a person. Pay per booked appointment, nothing up front." },
+    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your website that answers from your own content, qualifies leads and books calls. Pay per booked appointment, nothing up front." },
     name: "AI chatbots for websites",
     group: "ai",
     icon: "message-square",
@@ -462,8 +466,86 @@ export const services: Service[] = [
     priceNote: "Paid per booked appointment or qualified lead. No setup fee, nothing up front. Starts with a free 14-day pilot.",
   },
   {
+    slug: "ai-receptionist",
+    seo: {
+      title: "AI Receptionist for Small Business: Answers 24/7",
+      description: "An AI receptionist for small business that answers every call, books appointments and logs each caller, day or night. Pay per booking, free 14-day pilot.",
+    },
+    name: "AI receptionist",
+    group: "ai",
+    icon: "phone",
+    short: "An AI receptionist that answers every call, books the appointment and logs the caller, 24 hours a day.",
+    hero: {
+      title: "An AI receptionist for small business that never misses a call",
+      sub: "Our AI receptionist answers your business line in a natural voice, handles common questions from your own information and books callers in, day or night. Every call is logged for your team, and you only pay for the appointments it books.",
+    },
+    problem: {
+      title: "What a missed call really costs",
+      points: [
+        { title: "Callers do not leave voicemails", body: "Most people who reach voicemail hang up and call the next business on the list. The booking goes to a competitor." },
+        { title: "The busiest hours are the hardest to cover", body: "Lunchtime, early mornings, evenings and weekends are when people call, and when nobody is free to answer." },
+        { title: "A full-time receptionist is expensive", body: "Covering every hour of the week with people means several salaries. Most small businesses settle for gaps instead." },
+      ],
+    },
+    capabilities: [
+      { title: "Answers every call", body: "It picks up in seconds, around the clock, in a natural voice, and can handle several callers at once." },
+      { title: "Knows your business", body: "It answers questions about services, prices, opening hours and location from information you approve, and nothing else." },
+      { title: "Books appointments", body: "It offers open times and books the caller into your calendar, or into a booking sheet your team confirms." },
+      { title: "Logs every caller", body: "Name, number, reason for calling and outcome are saved to your CRM or a Google Sheet after each call." },
+      { title: "Hands over to a person", body: "Urgent or complex calls are transferred to your team, or flagged for a call back with the full context." },
+      { title: "Works with your number", body: "Your customers keep calling the number they know. Calls are forwarded to the AI only when you choose, such as after hours." },
+    ],
+    workflow: {
+      title: "From ringing phone to booked appointment",
+      caption: "The caller gets an answer and a booking. Your team gets a clean record of every call.",
+      kind: "flow",
+      nodes: [
+        { label: "Call comes in", meta: "Your usual number" },
+        { label: "Answered", meta: "Within seconds, 24/7" },
+        { label: "Question handled", meta: "From your information" },
+        { label: "Appointment booked", meta: "In your calendar" },
+        { label: "Caller logged", meta: "CRM or Google Sheet" },
+      ],
+    },
+    example: {
+      title: "Example: after-hours calls for a dental clinic",
+      before: "Calls after 5 pm and at weekends went to voicemail. Few callers left a message, and most of those who did had booked elsewhere by morning.",
+      after: "The AI receptionist answers every after-hours call, books the patient into an open slot and logs the call for the front desk to confirm in the morning.",
+    },
+    tools: ["googlecalendar", "googlesheets", "calendly", "hubspot", "whatsapp", "n8n", "openai", "anthropic"],
+    deliverables: [
+      "A voice receptionist trained on your approved business information",
+      "A call script with your questions, booking rules and handover points",
+      "Calendar or booking-sheet connection and call forwarding set up",
+      "A log of every call: caller, reason, outcome and booking",
+      "A monthly report of calls answered and appointments booked",
+    ],
+    timeline: [
+      { phase: "Set up", duration: "Days 1 to 3", body: "We gather your services, prices and booking rules, choose the voice and write the call script with you." },
+      { phase: "Pilot", duration: "Days 4 to 14", body: "The receptionist answers after-hours and missed calls only. You listen to calls and see every booking." },
+      { phase: "Tune", duration: "Week 2", body: "We adjust answers and booking rules based on real calls before anything changes in your daytime routine." },
+      { phase: "Go live", duration: "Week 3", body: "You decide which calls it handles. Billing starts, per booked appointment." },
+    ],
+    safeguards: [
+      { title: "Answers from approved information only", body: "It does not guess prices, diagnoses or policies. If it does not know, it takes a message or transfers the call." },
+      { title: "Clear AI disclosure", body: "Callers are told they are speaking with an AI assistant, and can ask for a person at any time." },
+      { title: "Your data stays yours", body: "Call logs and bookings are stored in your own accounts. Recording and data rules are set to match your industry." },
+      { title: "You stay in control", body: "You choose the hours it works, the calls it takes and when a person steps in, and can switch it off any time." },
+    ],
+    faqs: [
+      { q: "How much does an AI receptionist cost?", a: "With SalnetHub there is no setup fee or monthly retainer for the receptionist. You pay per booked appointment, at a rate below what a booking costs you today, after a free 14-day pilot. Phone and AI usage are billed at cost." },
+      { q: "Is an AI receptionist better than a human receptionist?", a: "It is better at answering every call, at any hour, without breaks. A person is better at complex, sensitive conversations. Most businesses use both: the AI covers after-hours and overflow calls, and your team handles the rest." },
+      { q: "Will callers know they are talking to AI?", a: "Yes. The receptionist says it is an AI assistant, and callers can ask for a person at any time. The voice is natural, so most callers simply carry on and book." },
+      { q: "Do I need a new phone number?", a: "No. Your customers keep calling your existing number. We set up call forwarding so calls reach the AI receptionist only when you want, for example after hours or when the line is busy." },
+      { q: "Can it book into my existing calendar?", a: "Yes, if your calendar or booking tool can be connected, such as Google Calendar or Calendly. If not, it books into a shared sheet and your team confirms the appointment." },
+      { q: "Is it suitable for medical and dental offices?", a: "Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice." },
+    ],
+    priceModel: "Pay per booking",
+    priceNote: "Paid per booked appointment. No setup fee, nothing up front. Starts with a free 14-day pilot on after-hours and missed calls.",
+  },
+  {
     slug: "custom-ai-agents",
-    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. Priced on time saved, after a 14-day pilot." },
+    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies, with approval steps where it matters. Priced on time saved after a 14-day pilot." },
     name: "Custom AI agents",
     group: "ai",
     icon: "bot",

@@ -16,7 +16,7 @@ export const outcomes: Outcome[] = [
     label: "Sales & leads",
     title: "Every lead answered in minutes, every deal in the CRM",
     body: "Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does.",
-    services: ["lead-acquisition-qualification", "marketing-crm-automation"],
+    services: ["lead-acquisition-qualification", "crm-automation-services"],
     span: "lg:col-span-2",
   },
   {
@@ -31,14 +31,14 @@ export const outcomes: Outcome[] = [
     label: "Operations & admin",
     title: "Admin that runs on its own",
     body: "Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools.",
-    services: ["business-process-automation", "task-workflow-automation"],
+    services: ["business-process-automation", "n8n-workflow-automation"],
   },
   {
     id: "ai",
     label: "AI agents & chatbots",
     title: "AI that works from your data, with a person in control",
     body: "Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters.",
-    services: ["ai-chatbots", "custom-ai-agents", "rag-systems"],
+    services: ["ai-chatbots", "ai-receptionist", "custom-ai-agents", "rag-systems"],
     span: "lg:col-span-2",
   },
   {

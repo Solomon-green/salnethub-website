@@ -4,7 +4,7 @@
   "updated": "2026-11-06",
   "source": "https://www.salnethub.com",
   "currency": "USD",
-  "documentCount": 90,
+  "documentCount": 102,
   "documents": [
     {
       "id": "company-overview",
@@ -65,7 +65,7 @@
         "services",
         "overview"
       ],
-      "content": "SalnetHub offers 9 services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.\n\nAutomation: Connect the tools you already pay for so work moves between them on its own.\n- Marketing & CRM automation (Pay from savings): Keep your CRM accurate and your follow-ups on time without anyone updating records by hand. https://www.salnethub.com/services/marketing-crm-automation\n- Lead acquisition & qualification (Pay per lead): Capture every lead, score it, and route the good ones to the right person in minutes. https://www.salnethub.com/services/lead-acquisition-qualification\n- Data reporting & analytics (Pay from savings): Dashboards that update themselves, so the Monday report is ready before Monday. https://www.salnethub.com/services/data-reporting-analytics\n- Business process automation (Pay from savings): Automate approvals, invoicing, onboarding and other processes that cross teams and tools. https://www.salnethub.com/services/business-process-automation\n- Task & workflow automation (Pay from savings): Remove the small repetitive tasks that eat your team's day, from data entry to reminders. https://www.salnethub.com/services/task-workflow-automation\n\nAI solutions: Chatbots, agents and knowledge assistants that work from your data, with a human in control.\n- AI chatbots for websites (Pay per booking): A website chatbot that answers questions, guides visitors and books calls, trained on your content. https://www.salnethub.com/services/ai-chatbots\n- Custom AI agents (Pay from savings): AI agents that do real work in your tools, from email triage to CRM updates, with approval steps. https://www.salnethub.com/services/custom-ai-agents\n- RAG knowledge assistants (Pilot first): An AI assistant that answers from your own documents and shows the source for every answer. https://www.salnethub.com/services/rag-systems\n\nWeb: Websites that capture leads straight into your CRM and automations.\n- Web solutions (Pilot first): Fast, clear websites and landing pages wired straight into your CRM and automations. https://www.salnethub.com/services/web-solutions\n\nMost projects combine two or three of these services. The free call ranks every opportunity by what it costs you today."
+      "content": "SalnetHub offers 10 services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.\n\nAutomation: Connect the tools you already pay for so work moves between them on its own.\n- Marketing & CRM automation (Pay from savings): Keep your CRM accurate and your follow-ups on time without anyone updating records by hand. https://www.salnethub.com/services/crm-automation-services\n- Lead acquisition & qualification (Pay per lead): Capture every lead, score it, and route the good ones to the right person in minutes. https://www.salnethub.com/services/lead-acquisition-qualification\n- Data reporting & analytics (Pay from savings): Dashboards that update themselves, so the Monday report is ready before Monday. https://www.salnethub.com/services/data-reporting-analytics\n- Business process automation (Pay from savings): Automate approvals, invoicing, onboarding and other processes that cross teams and tools. https://www.salnethub.com/services/business-process-automation\n- Task & workflow automation (Pay from savings): Remove the small repetitive tasks that eat your team's day, from data entry to reminders. https://www.salnethub.com/services/n8n-workflow-automation\n\nAI solutions: Chatbots, agents and knowledge assistants that work from your data, with a human in control.\n- AI chatbots for websites (Pay per booking): A website chatbot that answers questions, guides visitors and books calls, trained on your content. https://www.salnethub.com/services/ai-chatbots\n- AI receptionist (Pay per booking): An AI receptionist that answers every call, books the appointment and logs the caller, 24 hours a day. https://www.salnethub.com/services/ai-receptionist\n- Custom AI agents (Pay from savings): AI agents that do real work in your tools, from email triage to CRM updates, with approval steps. https://www.salnethub.com/services/custom-ai-agents\n- RAG knowledge assistants (Pilot first): An AI assistant that answers from your own documents and shows the source for every answer. https://www.salnethub.com/services/rag-systems\n\nWeb: Websites that capture leads straight into your CRM and automations.\n- Web solutions (Pilot first): Fast, clear websites and landing pages wired straight into your CRM and automations. https://www.salnethub.com/services/web-solutions\n\nMost projects combine two or three of these services. The free call ranks every opportunity by what it costs you today."
     },
     {
       "id": "services-by-problem",
@@ -77,28 +77,28 @@
         "recommendation",
         "problems"
       ],
-      "content": "Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.\n\n- \"Leads wait hours or days for a reply\" → Lead acquisition & qualification (Pay per lead). https://www.salnethub.com/services/lead-acquisition-qualification\n- \"Our CRM is never up to date\" → Marketing & CRM automation (Pay from savings). https://www.salnethub.com/services/marketing-crm-automation\n- \"Reports take a day to put together\" → Data reporting & analytics (Pay from savings). https://www.salnethub.com/services/data-reporting-analytics\n- \"Onboarding and approvals keep stalling\" → Business process automation (Pay from savings). https://www.salnethub.com/services/business-process-automation\n- \"The team spends hours copying data\" → Task & workflow automation (Pay from savings). https://www.salnethub.com/services/task-workflow-automation\n- \"Visitors leave without asking anything\" → AI chatbots for websites (Pay per booking). https://www.salnethub.com/services/ai-chatbots\n- \"Someone reads and routes every request\" → Custom AI agents (Pay from savings). https://www.salnethub.com/services/custom-ai-agents\n- \"Nobody can find the right document\" → RAG knowledge assistants (Pilot first). https://www.salnethub.com/services/rag-systems\n- \"Our website does not bring in leads\" → Web solutions (Pilot first). https://www.salnethub.com/services/web-solutions\n\nBy outcome:\n- Sales & leads: Every lead answered in minutes, every deal in the CRM. Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does. Services: Lead acquisition & qualification, Marketing & CRM automation.\n- Reporting: Reports that build themselves. Live dashboards and a Monday report that is ready before Monday. Services: Data reporting & analytics.\n- Operations & admin: Admin that runs on its own. Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools. Services: Business process automation, Task & workflow automation.\n- AI agents & chatbots: AI that works from your data, with a person in control. Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters. Services: AI chatbots for websites, Custom AI agents, RAG knowledge assistants.\n- Websites: Websites that feed your pipeline. Fast, clear websites and landing pages wired straight into your CRM and automations, so every enquiry starts a workflow. Services: Web solutions.\n\nNot sure which one you need? Book a free 20-minute call and we will work out which problem costs you most."
+      "content": "Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.\n\n- \"Leads wait hours or days for a reply\" → Lead acquisition & qualification (Pay per lead). https://www.salnethub.com/services/lead-acquisition-qualification\n- \"Our CRM is never up to date\" → Marketing & CRM automation (Pay from savings). https://www.salnethub.com/services/crm-automation-services\n- \"Reports take a day to put together\" → Data reporting & analytics (Pay from savings). https://www.salnethub.com/services/data-reporting-analytics\n- \"Onboarding and approvals keep stalling\" → Business process automation (Pay from savings). https://www.salnethub.com/services/business-process-automation\n- \"The team spends hours copying data\" → Task & workflow automation (Pay from savings). https://www.salnethub.com/services/n8n-workflow-automation\n- \"Visitors leave without asking anything\" → AI chatbots for websites (Pay per booking). https://www.salnethub.com/services/ai-chatbots\n- \"Calls go to voicemail after hours\" → AI receptionist (Pay per booking). https://www.salnethub.com/services/ai-receptionist\n- \"Someone reads and routes every request\" → Custom AI agents (Pay from savings). https://www.salnethub.com/services/custom-ai-agents\n- \"Nobody can find the right document\" → RAG knowledge assistants (Pilot first). https://www.salnethub.com/services/rag-systems\n- \"Our website does not bring in leads\" → Web solutions (Pilot first). https://www.salnethub.com/services/web-solutions\n\nBy outcome:\n- Sales & leads: Every lead answered in minutes, every deal in the CRM. Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does. Services: Lead acquisition & qualification, Marketing & CRM automation.\n- Reporting: Reports that build themselves. Live dashboards and a Monday report that is ready before Monday. Services: Data reporting & analytics.\n- Operations & admin: Admin that runs on its own. Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools. Services: Business process automation, Task & workflow automation.\n- AI agents & chatbots: AI that works from your data, with a person in control. Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters. Services: AI chatbots for websites, AI receptionist, Custom AI agents, RAG knowledge assistants.\n- Websites: Websites that feed your pipeline. Fast, clear websites and landing pages wired straight into your CRM and automations, so every enquiry starts a workflow. Services: Web solutions.\n\nNot sure which one you need? Book a free 20-minute call and we will work out which problem costs you most."
     },
     {
-      "id": "service-marketing-crm-automation",
+      "id": "service-crm-automation-services",
       "title": "Marketing & CRM automation: overview and price",
       "category": "Service",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "automation",
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nA CRM that updates itself. We connect your forms, inbox, ads and CRM so every contact, deal and follow-up is recorded the moment it happens.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nHow you pay for Marketing & CRM automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
+      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nCRM automation services: a CRM that updates itself. Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens, in HubSpot, Zoho or Google Sheets.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nHow you pay for Marketing & CRM automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
     },
     {
-      "id": "service-marketing-crm-automation-details",
+      "id": "service-crm-automation-services-details",
       "title": "Marketing & CRM automation: what is included and how it is delivered",
       "category": "Service",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "automation",
         "service",
         "deliverables",
@@ -107,45 +107,67 @@
       "content": "What SalnetHub's Marketing & CRM automation service includes:\n- Contact sync: Form fills, calls, emails and purchases create or update the right CRM record with no duplicates.\n- Follow-up sequences: Personal emails and tasks go out on a schedule you set, and stop as soon as the lead replies.\n- Deal stage automation: Deals move stage when something real happens: a quote is opened, a contract is signed, an invoice is paid.\n- Lifecycle tagging: Contacts are tagged by source, interest and stage so campaigns reach the right people.\n- Campaign attribution: UTM and ad data are stored on the contact, so revenue can be traced back to the channel that earned it.\n- Clean-up jobs: Scheduled checks merge duplicates, fix formatting and flag records with missing owners.\n\nFrom first touch to closed deal: Each step runs on its own. Your team only steps in for the conversations that need a person.\nSteps: Web form (New enquiry) → CRM record (Created, deduplicated) → Follow-up email (Sent in 2 minutes) → Sales task (Assigned to owner) → Deal updated (Stage moves on reply)\n\nDeliverables:\n- A map of your current contact and deal flow, with the gaps marked\n- Working automations in your CRM and connected tools\n- Field and pipeline clean-up so the data stays usable\n- A written handover guide and a recorded walkthrough\n- 30 days of monitoring and fixes after launch\n\nTimeline:\n- Map (Week 1): We review your CRM, forms and inbox and agree which flows to automate first.\n- Build (Weeks 2 to 3): We build in a test copy of your setup so nothing touches live data until it works.\n- Test (Week 3): We run real examples end to end with your team and fix what they find.\n- Launch (Week 4): We switch it on, watch the first days closely and hand over the documentation.\n\nTools we typically use for Marketing & CRM automation: HubSpot, Zoho, Gmail, Google Sheets, Typeform, Mailchimp, Make, Zapier."
     },
     {
-      "id": "service-marketing-crm-automation-faq-1",
+      "id": "service-crm-automation-services-faq-1",
+      "title": "Marketing & CRM automation FAQ: What is CRM automation?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
+      "tags": [
+        "crm-automation-services",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: What is CRM automation?\nAnswer: CRM automation is software doing the routine CRM work for you: creating contacts from forms and emails, sending follow-ups on schedule, moving deals between stages and keeping records clean. Your team only steps in for the conversations."
+    },
+    {
+      "id": "service-crm-automation-services-faq-2",
+      "title": "Marketing & CRM automation FAQ: What do your marketing automation services include?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
+      "tags": [
+        "crm-automation-services",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: What do your marketing automation services include?\nAnswer: Lead capture from forms and ads, follow-up email sequences, contact tagging by source and interest, and campaign attribution so you can see which channel brings paying customers. All of it runs inside the CRM and email tools you already use."
+    },
+    {
+      "id": "service-crm-automation-services-faq-3",
       "title": "Marketing & CRM automation FAQ: Which CRMs do you work with?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "faq"
       ],
       "content": "Question about SalnetHub's Marketing & CRM automation service: Which CRMs do you work with?\nAnswer: Mostly HubSpot, Zoho and Google Sheets based CRMs. If your CRM has an API, we can usually connect it. We confirm this on the first call."
     },
     {
-      "id": "service-marketing-crm-automation-faq-2",
+      "id": "service-crm-automation-services-faq-4",
       "title": "Marketing & CRM automation FAQ: Will this replace my sales team's work?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "faq"
       ],
       "content": "Question about SalnetHub's Marketing & CRM automation service: Will this replace my sales team's work?\nAnswer: No. It removes the copying, chasing and data entry so your team spends their time on conversations."
     },
     {
-      "id": "service-marketing-crm-automation-faq-3",
+      "id": "service-crm-automation-services-faq-5",
       "title": "Marketing & CRM automation FAQ: What happens to our existing data?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "faq"
       ],
       "content": "Question about SalnetHub's Marketing & CRM automation service: What happens to our existing data?\nAnswer: We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup."
     },
     {
-      "id": "service-marketing-crm-automation-faq-4",
+      "id": "service-crm-automation-services-faq-6",
       "title": "Marketing & CRM automation FAQ: Do we need to buy new software?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/marketing-crm-automation",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
       "tags": [
-        "marketing-crm-automation",
+        "crm-automation-services",
         "faq"
       ],
       "content": "Question about SalnetHub's Marketing & CRM automation service: Do we need to buy new software?\nAnswer: Usually not. We build on the tools you already pay for, plus a connector like Make or Zapier if one is needed."
@@ -364,72 +386,94 @@
       "content": "Question about SalnetHub's Business process automation service: Can you work with tools we built in-house?\nAnswer: Often yes, if they have an API, a database we can read, or even a spreadsheet export."
     },
     {
-      "id": "service-task-workflow-automation",
+      "id": "service-n8n-workflow-automation",
       "title": "Task & workflow automation: overview and price",
       "category": "Service",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "automation",
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Task & workflow automation (Automation).\nRemove the small repetitive tasks that eat your team's day, from data entry to reminders.\nWin back hours every week. Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.\n\nSmall tasks, big cost:\n- Death by copy and paste: Moving order details from email into a spreadsheet takes 3 minutes. Forty times a day, that is 2 hours.\n- Reminders that rely on memory: Renewals, follow-ups and deadlines are tracked in someone's head or a sticky note.\n- Constant status questions: People ask where things are because there is no automatic update when something changes.\n\nExample: order handling for a wholesale supplier\nBefore: A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.\nAfter: Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.\n\nHow you pay for Task & workflow automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
+      "content": "SalnetHub service: Task & workflow automation (Automation).\nRemove the small repetitive tasks that eat your team's day, from data entry to reminders.\nn8n and workflow automation services that win back hours. Our n8n automation services, with Make and Zapier where they fit better, take over the data entry, reminders, file moves and status updates that quietly eat your team's day. Your people get back to the work they were hired for.\n\nSmall tasks, big cost:\n- Death by copy and paste: Moving order details from email into a spreadsheet takes 3 minutes. Forty times a day, that is 2 hours.\n- Reminders that rely on memory: Renewals, follow-ups and deadlines are tracked in someone's head or a sticky note.\n- Constant status questions: People ask where things are because there is no automatic update when something changes.\n\nExample: order handling for a wholesale supplier\nBefore: A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.\nAfter: Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.\n\nHow you pay for Task & workflow automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
     },
     {
-      "id": "service-task-workflow-automation-details",
+      "id": "service-n8n-workflow-automation-details",
       "title": "Task & workflow automation: what is included and how it is delivered",
       "category": "Service",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "automation",
         "service",
         "deliverables",
         "timeline"
       ],
-      "content": "What SalnetHub's Task & workflow automation service includes:\n- Email to spreadsheet: Orders, receipts and requests in your inbox are read and added to Google Sheets as clean rows.\n- Scheduled reminders: Renewals, deadlines and follow-ups trigger reminders to the right person at the right time.\n- File handling: Attachments are renamed, filed into the right Drive folder and shared with the right people.\n- Status updates: Customers and teammates get an automatic message when an order, ticket or task changes stage.\n- Form processing: Form submissions become tasks, records and notifications without anyone retyping them.\n- Apps Script tools: Custom buttons and menus inside Google Sheets and Docs for the jobs no off-the-shelf tool covers.\n\nFrom inbox to done: Repetitive steps happen in seconds. Your team sees the result, not the busywork.\nSteps: Order email (Arrives in Gmail) → Details read (Parsed automatically) → Sheet updated (New row added) → Team notified (Task created) → Customer updated (Status email sent)\n\nDeliverables:\n- A list of tasks ranked by hours saved per week\n- Working automations for the top tasks\n- Error alerts so you know if anything stops\n- Handover guide and a recorded walkthrough\n- 30 days of monitoring and fixes\n\nTimeline:\n- List (Days 1 to 2): We list the repetitive tasks and estimate the time each one costs.\n- Build (Week 1): We automate the tasks with the biggest time savings first.\n- Test (Week 2): We run the automations on real data alongside your team.\n- Launch (Week 2): We switch them on and set up alerts in case anything fails.\n\nTools we typically use for Task & workflow automation: Gmail, Google Sheets, Google Drive, Apps Script, Google Calendar, Trello, Zapier, Make."
+      "content": "What SalnetHub's Task & workflow automation service includes:\n- Email to spreadsheet: Orders, receipts and requests in your inbox are read and added to Google Sheets as clean rows.\n- Scheduled reminders: Renewals, deadlines and follow-ups trigger reminders to the right person at the right time.\n- File handling: Attachments are renamed, filed into the right Drive folder and shared with the right people.\n- Status updates: Customers and teammates get an automatic message when an order, ticket or task changes stage.\n- Form processing: Form submissions become tasks, records and notifications without anyone retyping them.\n- Apps Script tools: Custom buttons and menus inside Google Sheets and Docs for the jobs no off-the-shelf tool covers.\n\nFrom inbox to done: Repetitive steps happen in seconds. Your team sees the result, not the busywork.\nSteps: Order email (Arrives in Gmail) → Details read (Parsed automatically) → Sheet updated (New row added) → Team notified (Task created) → Customer updated (Status email sent)\n\nDeliverables:\n- A list of tasks ranked by hours saved per week\n- Working automations for the top tasks\n- Error alerts so you know if anything stops\n- Handover guide and a recorded walkthrough\n- 30 days of monitoring and fixes\n\nTimeline:\n- List (Days 1 to 2): We list the repetitive tasks and estimate the time each one costs.\n- Build (Week 1): We automate the tasks with the biggest time savings first.\n- Test (Week 2): We run the automations on real data alongside your team.\n- Launch (Week 2): We switch them on and set up alerts in case anything fails.\n\nTools we typically use for Task & workflow automation: n8n, Make, Zapier, Gmail, Google Sheets, Google Drive, Apps Script, Google Calendar."
     },
     {
-      "id": "service-task-workflow-automation-faq-1",
+      "id": "service-n8n-workflow-automation-faq-1",
+      "title": "Task & workflow automation FAQ: What do your n8n automation services include?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
+      "tags": [
+        "n8n-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: What do your n8n automation services include?\nAnswer: We map the task, build the n8n workflow, test it on your real data, add error alerts and hand it over with a written guide. Monitoring and fixes are included in the monthly fee, so the workflows keep running when your tools change."
+    },
+    {
+      "id": "service-n8n-workflow-automation-faq-2",
+      "title": "Task & workflow automation FAQ: Can n8n run in our own account?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
+      "tags": [
+        "n8n-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: Can n8n run in our own account?\nAnswer: Yes. We build in your own n8n Cloud account or on a self-hosted n8n server you control, so the workflows and your data stay yours. If we part ways, everything keeps running."
+    },
+    {
+      "id": "service-n8n-workflow-automation-faq-3",
       "title": "Task & workflow automation FAQ: How small a task is worth automating?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "faq"
       ],
       "content": "Question about SalnetHub's Task & workflow automation service: How small a task is worth automating?\nAnswer: If it happens daily and follows the same steps, it is usually worth it. A 5-minute task done 10 times a day is 4 hours a week."
     },
     {
-      "id": "service-task-workflow-automation-faq-2",
+      "id": "service-n8n-workflow-automation-faq-4",
       "title": "Task & workflow automation FAQ: Make, Zapier or n8n?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "faq"
       ],
-      "content": "Question about SalnetHub's Task & workflow automation service: Make, Zapier or n8n?\nAnswer: We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes."
+      "content": "Question about SalnetHub's Task & workflow automation service: Make, Zapier or n8n?\nAnswer: We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes and AI steps at the lowest running cost."
     },
     {
-      "id": "service-task-workflow-automation-faq-3",
+      "id": "service-n8n-workflow-automation-faq-5",
       "title": "Task & workflow automation FAQ: What if an automation fails?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "faq"
       ],
       "content": "Question about SalnetHub's Task & workflow automation service: What if an automation fails?\nAnswer: You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do."
     },
     {
-      "id": "service-task-workflow-automation-faq-4",
+      "id": "service-n8n-workflow-automation-faq-6",
       "title": "Task & workflow automation FAQ: Can we change the automations later?",
       "category": "FAQ",
-      "url": "https://www.salnethub.com/services/task-workflow-automation",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
       "tags": [
-        "task-workflow-automation",
+        "n8n-workflow-automation",
         "faq"
       ],
       "content": "Question about SalnetHub's Task & workflow automation service: Can we change the automations later?\nAnswer: Yes. We document how each one works so your team can make small changes, and we handle the bigger ones."
@@ -504,6 +548,99 @@
         "faq"
       ],
       "content": "Question about SalnetHub's AI chatbots for websites service: Does it work on any website?\nAnswer: Yes. It installs with a small code snippet on WordPress, Webflow, Shopify, Wix or a custom site."
+    },
+    {
+      "id": "service-ai-receptionist",
+      "title": "AI receptionist: overview and price",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "ai",
+        "service",
+        "price"
+      ],
+      "content": "SalnetHub service: AI receptionist (AI solutions).\nAn AI receptionist that answers every call, books the appointment and logs the caller, 24 hours a day.\nAn AI receptionist for small business that never misses a call. Our AI receptionist answers your business line in a natural voice, handles common questions from your own information and books callers in, day or night. Every call is logged for your team, and you only pay for the appointments it books.\n\nWhat a missed call really costs:\n- Callers do not leave voicemails: Most people who reach voicemail hang up and call the next business on the list. The booking goes to a competitor.\n- The busiest hours are the hardest to cover: Lunchtime, early mornings, evenings and weekends are when people call, and when nobody is free to answer.\n- A full-time receptionist is expensive: Covering every hour of the week with people means several salaries. Most small businesses settle for gaps instead.\n\nExample: after-hours calls for a dental clinic\nBefore: Calls after 5 pm and at weekends went to voicemail. Few callers left a message, and most of those who did had booked elsewhere by morning.\nAfter: The AI receptionist answers every after-hours call, books the patient into an open slot and logs the call for the front desk to confirm in the morning.\n\nHow you pay for AI receptionist: Pay per booking. Paid per booked appointment. No setup fee, nothing up front. Starts with a free 14-day pilot on after-hours and missed calls."
+    },
+    {
+      "id": "service-ai-receptionist-details",
+      "title": "AI receptionist: what is included and how it is delivered",
+      "category": "Service",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "ai",
+        "service",
+        "deliverables",
+        "timeline"
+      ],
+      "content": "What SalnetHub's AI receptionist service includes:\n- Answers every call: It picks up in seconds, around the clock, in a natural voice, and can handle several callers at once.\n- Knows your business: It answers questions about services, prices, opening hours and location from information you approve, and nothing else.\n- Books appointments: It offers open times and books the caller into your calendar, or into a booking sheet your team confirms.\n- Logs every caller: Name, number, reason for calling and outcome are saved to your CRM or a Google Sheet after each call.\n- Hands over to a person: Urgent or complex calls are transferred to your team, or flagged for a call back with the full context.\n- Works with your number: Your customers keep calling the number they know. Calls are forwarded to the AI only when you choose, such as after hours.\n\nFrom ringing phone to booked appointment: The caller gets an answer and a booking. Your team gets a clean record of every call.\nSteps: Call comes in (Your usual number) → Answered (Within seconds, 24/7) → Question handled (From your information) → Appointment booked (In your calendar) → Caller logged (CRM or Google Sheet)\n\nDeliverables:\n- A voice receptionist trained on your approved business information\n- A call script with your questions, booking rules and handover points\n- Calendar or booking-sheet connection and call forwarding set up\n- A log of every call: caller, reason, outcome and booking\n- A monthly report of calls answered and appointments booked\n\nTimeline:\n- Set up (Days 1 to 3): We gather your services, prices and booking rules, choose the voice and write the call script with you.\n- Pilot (Days 4 to 14): The receptionist answers after-hours and missed calls only. You listen to calls and see every booking.\n- Tune (Week 2): We adjust answers and booking rules based on real calls before anything changes in your daytime routine.\n- Go live (Week 3): You decide which calls it handles. Billing starts, per booked appointment.\n\nSafeguards:\n- Answers from approved information only: It does not guess prices, diagnoses or policies. If it does not know, it takes a message or transfers the call.\n- Clear AI disclosure: Callers are told they are speaking with an AI assistant, and can ask for a person at any time.\n- Your data stays yours: Call logs and bookings are stored in your own accounts. Recording and data rules are set to match your industry.\n- You stay in control: You choose the hours it works, the calls it takes and when a person steps in, and can switch it off any time.\n\nTools we typically use for AI receptionist: Google Calendar, Google Sheets, Calendly, HubSpot, WhatsApp, n8n, OpenAI, Anthropic."
+    },
+    {
+      "id": "service-ai-receptionist-faq-1",
+      "title": "AI receptionist FAQ: How much does an AI receptionist cost?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: How much does an AI receptionist cost?\nAnswer: With SalnetHub there is no setup fee or monthly retainer for the receptionist. You pay per booked appointment, at a rate below what a booking costs you today, after a free 14-day pilot. Phone and AI usage are billed at cost."
+    },
+    {
+      "id": "service-ai-receptionist-faq-2",
+      "title": "AI receptionist FAQ: Is an AI receptionist better than a human receptionist?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Is an AI receptionist better than a human receptionist?\nAnswer: It is better at answering every call, at any hour, without breaks. A person is better at complex, sensitive conversations. Most businesses use both: the AI covers after-hours and overflow calls, and your team handles the rest."
+    },
+    {
+      "id": "service-ai-receptionist-faq-3",
+      "title": "AI receptionist FAQ: Will callers know they are talking to AI?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Will callers know they are talking to AI?\nAnswer: Yes. The receptionist says it is an AI assistant, and callers can ask for a person at any time. The voice is natural, so most callers simply carry on and book."
+    },
+    {
+      "id": "service-ai-receptionist-faq-4",
+      "title": "AI receptionist FAQ: Do I need a new phone number?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Do I need a new phone number?\nAnswer: No. Your customers keep calling your existing number. We set up call forwarding so calls reach the AI receptionist only when you want, for example after hours or when the line is busy."
+    },
+    {
+      "id": "service-ai-receptionist-faq-5",
+      "title": "AI receptionist FAQ: Can it book into my existing calendar?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Can it book into my existing calendar?\nAnswer: Yes, if your calendar or booking tool can be connected, such as Google Calendar or Calendly. If not, it books into a shared sheet and your team confirms the appointment."
+    },
+    {
+      "id": "service-ai-receptionist-faq-6",
+      "title": "AI receptionist FAQ: Is it suitable for medical and dental offices?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Is it suitable for medical and dental offices?\nAnswer: Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice."
     },
     {
       "id": "service-custom-ai-agents",

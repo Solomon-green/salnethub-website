@@ -1,0 +1,28 @@
+keyword,volume_range,tier,difficulty,top_results,intent,target_page,ads_competition,cpc_high_usd,priority,status
+ai receptionist cost,100-1K,B,Low,"vendor blogs (myaifrontdesk, callin.io, Hyperleap)",informational,blog,Medium,20.15,1,unused
+how to calculate cost per lead,100-1K,B,Low,"SendPulse, Gleam, small agency blogs",informational,blog,Low,40.00,1,unused
+speed to lead statistics,100-1K,B,Medium,stat roundups copying each other; room for verified stats,informational,blog,Low,28.57,1,unused
+ai chatbot cost,100-1K,B,Medium,"dev agencies' cost guides, Bluehost",informational,blog,Low,6.41,2,unused
+what is speed to lead,100-1K,B,Medium,"Chili Piper, MadKudu, Hatch, Calldrip",informational,blog,Low,12.44,2,unused
+ai agents examples,1K-10K,A,Medium,"many mid-size blogs (Workday, Unito, Azilen)",informational,blog,Medium,4.97,3,unused
+business process automation examples,100-1K,B,unchecked,,informational,blog,Low,7.06,3,unused
+client onboarding process,100-1K,B,unchecked,,informational,blog,Low,40.00,3,unused
+google apps script automation,100-1K,B,unchecked,,informational,blog,Low,5.71,3,unused
+how to automate google sheets,100-1K,B,unchecked,,informational,blog,Low,5.74,3,unused
+how to automate invoice processing,100-1K,B,unchecked,,informational,blog,Low,41.10,3,unused
+looker studio dashboard examples,100-1K,B,unchecked,,informational,blog,Low,8.36,3,unused
+what is a good cost per lead,100-1K,B,unchecked,,informational,blog,Low,-,3,unused
+what is crm automation,100-1K,B,unchecked,,informational,blog,Low,10.51,3,unused
+workflow automation examples,100-1K,B,Medium,"ServiceNow, Workato, Process Street",informational,blog,Low,6.29,3,unused
+ai receptionist vs human receptionist,10-100,C,unchecked,,informational,blog,Low,-,3,unused
+business process automation with ai,10-100,C,unchecked,,informational,blog,Low,16.58,3,unused
+crm automation examples,10-100,C,unchecked,,informational,blog,Low,16.06,3,unused
+how to add ai chatbot in website,10-100,C,unchecked,,informational,blog,Medium,5.55,3,unused
+how to automate data entry,10-100,C,unchecked,,informational,blog,Low,8.72,3,unused
+how to automate emails from google sheets,10-100,C,unchecked,,informational,blog,Low,6.53,3,unused
+how to automate reporting,10-100,C,unchecked,,informational,blog,Low,13.15,3,unused
+how to build ai agent for business,10-100,C,unchecked,,informational,blog,Medium,-,3,unused
+how to build ai chatbot with custom knowledge base,10-100,C,unchecked,,informational,blog,Medium,-,3,unused
+make automation vs zapier,10-100,C,unchecked,,informational,blog,Low,-,3,unused
+zoho crm workflow examples,10-100,C,unchecked,,informational,blog,Low,-,3,unused
+what is business process automation,1K-10K,A,Hard,"IBM, ServiceNow, Kissflow",informational,blog,Low,9.37,4,unused

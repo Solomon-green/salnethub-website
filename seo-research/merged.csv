@@ -1,0 +1,120 @@
+keyword,intent,target_page,volume_range,tier,ads_competition,cpc_high_usd
+crm automation services,commercial,/services/marketing-crm-automation,10-100,C,Low,6.70
+marketing automation services,commercial,/services/marketing-crm-automation,100-1K,B,Low,22.89
+hubspot automation services,commercial,/services/marketing-crm-automation,10-100,C,Low,29.85
+crm automation,commercial,/services/marketing-crm-automation,1K-10K,A,Low,19.80
+marketing automation for small businesses,commercial,/services/marketing-crm-automation,100-1K,B,Low,19.29
+marketing automation for real estate,commercial,industry: real estate,100-1K,B,Low,18.72
+marketing automation for law firms,commercial,industry: law firms,10-100,C,Medium,44.87
+what is crm automation,informational,blog,100-1K,B,Low,10.51
+crm automation examples,informational,blog,10-100,C,Low,16.06
+how to automate hubspot emails,informational,blog,<10,-,-,-
+zoho crm workflow examples,informational,blog,10-100,C,Low,-
+speed to lead services,commercial,/services/lead-acquisition-qualification,<10,-,-,-
+speed to lead ai,commercial,/services/lead-acquisition-qualification,10-100,C,Low,30.02
+lead routing automation,commercial,/services/lead-acquisition-qualification,<10,-,-,-
+lead distribution automation,commercial,/services/lead-acquisition-qualification,10-100,C,Low,-
+automated lead follow up system,commercial,/services/lead-acquisition-qualification,10-100,C,Low,37.09
+lead reactivation services,commercial,/services/lead-acquisition-qualification,<10,-,-,-
+lead reactivation agency,commercial,/services/lead-acquisition-qualification,<10,-,-,-
+missed call text back service,commercial,/services/lead-acquisition-qualification,10-100,C,Low,19.63
+missed call text back for contractors,commercial,industry: contractors,<10,-,-,-
+speed to lead real estate,commercial,industry: real estate,10-100,C,Low,33.00
+what is speed to lead,informational,blog,100-1K,B,Low,12.44
+speed to lead statistics,informational,blog,100-1K,B,Low,28.57
+how to automate lead follow up,informational,blog,<10,-,-,-
+lead reactivation campaign,informational,blog,<10,-,-,-
+dead lead reactivation,informational,blog,<10,-,-,-
+how does missed call text back work,informational,blog,<10,-,-,-
+how much does missed call text back cost,informational,blog,<10,-,-,-
+pay per appointment lead generation,commercial,/engagements,10-100,C,Medium,59.98
+pay per appointment agency,commercial,/engagements,10-100,C,Low,32.12
+pay per appointment model,informational,blog,<10,-,-,-
+pay per lead services,commercial,/engagements,10-100,C,Medium,48.29
+performance based marketing agency,commercial,/engagements,100-1K,B,Low,17.96
+how to calculate cost per appointment,informational,blog,<10,-,-,-
+how to calculate cost per lead,informational,blog,100-1K,B,Low,40.00
+what is a good cost per lead,informational,blog,100-1K,B,Low,-
+automated reporting for clients,commercial,/services/data-reporting-analytics,100-1K,B,Low,11.93
+automated reporting and dashboards,commercial,/services/data-reporting-analytics,<10,-,-,-
+automated dashboard in google sheets,informational,blog,<10,-,-,-
+looker studio dashboard from google sheets,informational,blog,<10,-,-,-
+how to automate reporting,informational,blog,10-100,C,Low,13.15
+how to build an automated dashboard,informational,blog,<10,-,-,-
+looker studio dashboard examples,informational,blog,100-1K,B,Low,8.36
+business process automation services,commercial,/services/business-process-automation,100-1K,B,Low,37.17
+business process automation company,commercial,/services/business-process-automation,100-1K,B,Low,13.85
+client onboarding automation,commercial,/services/business-process-automation,100-1K,B,Low,104.00
+customer onboarding automation,commercial,/services/business-process-automation,100-1K,B,Low,104.00
+invoice automation services,commercial,/services/business-process-automation,10-100,C,Medium,132.73
+approval workflow automation,commercial,/services/business-process-automation,<10,-,-,-
+document automation for law firms,commercial,industry: law firms,10-100,C,Low,47.90
+ai automation for accounting firms,commercial,industry: accounting firms,10-100,C,Low,10.45
+what is business process automation,informational,blog,1K-10K,A,Low,9.37
+business process automation examples,informational,blog,100-1K,B,Low,7.06
+business process automation with ai,informational,blog,10-100,C,Low,16.58
+how to automate invoice processing,informational,blog,100-1K,B,Low,41.10
+client onboarding process,informational,blog,100-1K,B,Low,40.00
+workflow automation services,commercial,/services/task-workflow-automation,100-1K,B,Low,31.19
+n8n automation services,commercial,/services/task-workflow-automation,100-1K,B,Low,12.54
+zapier automation services,commercial,/services/task-workflow-automation,10-100,C,Low,-
+make automation service,commercial,/services/task-workflow-automation,<10,-,-,-
+google sheet automation service,commercial,/services/task-workflow-automation,<10,-,-,-
+workflow automation for small business,commercial,/services/task-workflow-automation,100-1K,B,Low,19.14
+automation for small business,commercial,/services/task-workflow-automation,100-1K,B,Low,15.00
+ai automation services for small business,commercial,/services/task-workflow-automation,<10,-,-,-
+workflow automation examples,informational,blog,100-1K,B,Low,6.29
+n8n automation vs zapier,informational,blog,<10,-,-,-
+make automation vs zapier,informational,blog,10-100,C,Low,-
+how to automate google sheets,informational,blog,100-1K,B,Low,5.74
+how to automate emails from google sheets,informational,blog,10-100,C,Low,6.53
+how to automate data entry,informational,blog,10-100,C,Low,8.72
+best zapier automations for small business,informational,blog,<10,-,-,-
+best n8n automations for business,informational,blog,<10,-,-,-
+google apps script automation,informational,blog,100-1K,B,Low,5.71
+ai chatbot for small business,commercial,/services/ai-chatbots,100-1K,B,Low,16.42
+ai chatbot for website,commercial,/services/ai-chatbots,1K-10K,A,Medium,18.75
+ai chatbot for website cost,commercial,/services/ai-chatbots,<10,-,-,-
+ai chatbot for customer service,commercial,/services/ai-chatbots,1K-10K,A,Low,94.87
+ai chatbot for appointment booking,commercial,/services/ai-chatbots,10-100,C,Medium,4.38
+whatsapp chatbot for business,commercial,/services/ai-chatbots,100-1K,B,Medium,3.44
+whatsapp automation for business,commercial,/services/ai-chatbots,100-1K,B,Medium,3.14
+whatsapp automation services,commercial,/services/ai-chatbots,10-100,C,Medium,1.63
+chatbot for dental clinic,commercial,industry: dental clinics,<10,-,-,-
+ai chatbot for real estate,commercial,industry: real estate,100-1K,B,Low,11.17
+chatbot for real estate website,commercial,industry: real estate,<10,-,-,-
+whatsapp automation for clinics,commercial,industry: clinics,<10,-,-,-
+how to add ai chatbot in website,informational,blog,10-100,C,Medium,5.55
+whatsapp business chatbot cost,informational,blog,<10,-,-,-
+ai chatbot cost,informational,blog,100-1K,B,Low,6.41
+ai receptionist for small business,commercial,new: ai receptionist,1K-10K,A,Low,55.80
+ai receptionist services,commercial,new: ai receptionist,100-1K,B,Medium,47.28
+ai answering services for small business,commercial,new: ai receptionist,<10,-,-,-
+ai receptionist for dental office,commercial,industry: dental clinics,10-100,C,Medium,114.87
+ai receptionist for medical office,commercial,industry: clinics,100-1K,B,Medium,94.73
+ai receptionist for hvac,commercial,industry: hvac,10-100,C,Medium,33.73
+ai receptionist cost,informational,blog,100-1K,B,Medium,20.15
+ai receptionist vs human receptionist,informational,blog,10-100,C,Low,-
+ai appointment booking system,commercial,new: ai receptionist,10-100,C,Low,8.05
+ai agent for business automation,commercial,/services/custom-ai-agents,<10,-,-,-
+best ai agent for small business,commercial,/services/custom-ai-agents,100-1K,B,Medium,25.46
+best ai email assistant for business,commercial,/services/custom-ai-agents,<10,-,-,-
+how to build ai agent for business,informational,blog,10-100,C,Medium,-
+ai agents examples,informational,blog,1K-10K,A,Medium,4.97
+how to automate customer service with ai,informational,blog,<10,-,-,-
+rag chatbot for company documents,commercial,/services/rag-systems,<10,-,-,-
+ai knowledge base chatbot,commercial,/services/rag-systems,10-100,C,Low,27.94
+internal knowledge base ai,commercial,/services/rag-systems,10-100,C,High,-
+ai knowledge base service,commercial,/services/rag-systems,<10,-,-,-
+rag chatbot for website,commercial,/services/rag-systems,<10,-,-,-
+how to build ai chatbot with custom knowledge base,informational,blog,10-100,C,Medium,-
+ai knowledge base vs rag,informational,blog,<10,-,-,-
+rag chatbot pricing,informational,blog,<10,-,-,-
+website crm integration,commercial,/services/web-solutions,10-100,C,Medium,-
+ai automation agency for small businesses,commercial,/,10-100,C,Medium,12.75
+ai automation agency services list,informational,blog,<10,-,-,-
+ai automation agency for law firms,commercial,industry: law firms,<10,-,-,-
+ai automation for real estate agents,commercial,industry: real estate,10-100,C,Medium,10.73
+ai automation for dental clinics,commercial,industry: dental clinics,10-100,C,Low,9.47
+automation for accounting firms,commercial,industry: accounting firms,<10,-,-,-
+workflow automation for law firms,commercial,industry: law firms,10-100,C,Low,-

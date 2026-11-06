@@ -1,0 +1,52 @@
+keyword,volume_range,tier,difficulty,top_results,intent,target_page,ads_competition,cpc_high_usd,priority,status
+ai receptionist for small business,1K-10K,A,Medium,"thin vendor blogs: callin.io, myaifrontdesk, ringly",commercial,new: ai receptionist,Low,55.80,1,unused
+ai chatbot for real estate,100-1K,B,Low,"freelancers, Gumroad templates, small vendors",commercial,industry: real estate,Low,11.17,1,unused
+n8n automation services,100-1K,B,Low,"freelancers, small agencies, pages.dev sites",commercial,/services/task-workflow-automation,Low,12.54,1,unused
+ai receptionist for dental office,10-100,C,Low,one vendor's repetitive blog posts dominate,commercial,industry: dental clinics,Medium,114.87,1,unused
+crm automation services,10-100,C,Low,"one-page sites, Fiverr gigs, small agencies",commercial,/services/marketing-crm-automation,Low,6.70,1,unused
+ai chatbot for small business,100-1K,B,Medium,"Bluehost, Salesforce blog, small chatbot vendors",commercial,/services/ai-chatbots,Low,16.42,2,unused
+ai receptionist for medical office,100-1K,B,Medium,one vendor's repetitive blog posts dominate,commercial,industry: clinics,Medium,94.73,2,unused
+business process automation services,100-1K,B,Medium,"mid-size agencies: Charter Global, Imaginovation, SageIT",commercial,/services/business-process-automation,Low,37.17,2,unused
+marketing automation services,100-1K,B,Medium,"mid-size agencies, Wikipedia",commercial,/services/marketing-crm-automation,Low,22.89,2,unused
+workflow automation services,100-1K,B,Medium,"agencies: Bitcot, Bacancy, Toptal, Intuz",commercial,/services/task-workflow-automation,Low,31.19,2,unused
+missed call text back service,10-100,C,Low,"small SaaS, templates, thin pages",commercial,/services/lead-acquisition-qualification,Low,19.63,2,unused
+best ai agent for small business,100-1K,B,unchecked,,commercial,/services/custom-ai-agents,Medium,25.46,3,unused
+business process automation company,100-1K,B,Medium,"listicles and directories (CB Insights, Process Street)",commercial,/services/business-process-automation,Low,13.85,3,unused
+customer onboarding automation,100-1K,B,unchecked,,commercial,/services/business-process-automation,Low,104.00,3,unused
+marketing automation for real estate,100-1K,B,Medium,"Mailchimp, Brevo, Luxury Presence, callin.io",commercial,industry: real estate,Low,18.72,3,unused
+marketing automation for small businesses,100-1K,B,unchecked,,commercial,/services/marketing-crm-automation,Low,19.29,3,unused
+performance based marketing agency,100-1K,B,Medium,"ad agencies and listicles; intent = paid ads, weak fit",commercial,/engagements,Low,17.96,3,unused
+whatsapp automation for business,100-1K,B,unchecked,,commercial,/services/ai-chatbots,Medium,3.14,3,unused
+ai appointment booking system,10-100,C,unchecked,,commercial,new: ai receptionist,Low,8.05,3,unused
+ai automation agency for small businesses,10-100,C,unchecked,,commercial,/,Medium,12.75,3,unused
+ai automation for accounting firms,10-100,C,unchecked,,commercial,industry: accounting firms,Low,10.45,3,unused
+ai automation for dental clinics,10-100,C,unchecked,,commercial,industry: dental clinics,Low,9.47,3,unused
+ai automation for real estate agents,10-100,C,unchecked,,commercial,industry: real estate,Medium,10.73,3,unused
+ai chatbot for appointment booking,10-100,C,unchecked,,commercial,/services/ai-chatbots,Medium,4.38,3,unused
+ai knowledge base chatbot,10-100,C,unchecked,,commercial,/services/rag-systems,Low,27.94,3,unused
+ai receptionist for hvac,10-100,C,unchecked,,commercial,industry: hvac,Medium,33.73,3,unused
+automated lead follow up system,10-100,C,unchecked,,commercial,/services/lead-acquisition-qualification,Low,37.09,3,unused
+document automation for law firms,10-100,C,unchecked,,commercial,industry: law firms,Low,47.90,3,unused
+hubspot automation services,10-100,C,unchecked,,commercial,/services/marketing-crm-automation,Low,29.85,3,unused
+internal knowledge base ai,10-100,C,unchecked,,commercial,/services/rag-systems,High,-,3,unused
+invoice automation services,10-100,C,unchecked,,commercial,/services/business-process-automation,Medium,132.73,3,unused
+lead distribution automation,10-100,C,unchecked,,commercial,/services/lead-acquisition-qualification,Low,-,3,unused
+marketing automation for law firms,10-100,C,unchecked,,commercial,industry: law firms,Medium,44.87,3,unused
+pay per appointment agency,10-100,C,unchecked,,commercial,/engagements,Low,32.12,3,unused
+pay per appointment lead generation,10-100,C,Medium,"B2B appointment-setting firms (Belkins); intent = outsourced SDRs, weak fit",commercial,/engagements,Medium,59.98,3,unused
+pay per lead services,10-100,C,unchecked,,commercial,/engagements,Medium,48.29,3,unused
+speed to lead ai,10-100,C,unchecked,,commercial,/services/lead-acquisition-qualification,Low,30.02,3,unused
+speed to lead real estate,10-100,C,unchecked,,commercial,industry: real estate,Low,33.00,3,unused
+website crm integration,10-100,C,unchecked,,commercial,/services/web-solutions,Medium,-,3,unused
+whatsapp automation services,10-100,C,unchecked,,commercial,/services/ai-chatbots,Medium,1.63,3,unused
+workflow automation for law firms,10-100,C,unchecked,,commercial,industry: law firms,Low,-,3,unused
+zapier automation services,10-100,C,unchecked,,commercial,/services/task-workflow-automation,Low,-,3,unused
+ai chatbot for customer service,1K-10K,A,Hard,"Salesforce, Sendbird, chatbot SaaS",commercial,/services/ai-chatbots,Low,94.87,4,unused
+ai chatbot for website,1K-10K,A,Hard,"Botpress, Jotform, IONOS, chatbot SaaS",commercial,/services/ai-chatbots,Medium,18.75,4,unused
+crm automation,1K-10K,A,Hard,"Salesforce, Freshworks, Shopify, ActiveCampaign",commercial,/services/marketing-crm-automation,Low,19.80,4,unused
+ai receptionist services,100-1K,B,Hard,"Salesforce, Gartner, RingCentral, Webex",commercial,new: ai receptionist,Medium,47.28,4,unused
+automated reporting for clients,100-1K,B,Hard,"AgencyAnalytics, Whatagraph, Coupler",commercial,/services/data-reporting-analytics,Low,11.93,4,unused
+automation for small business,100-1K,B,Hard,"Salesforce, Zapier, Entrepreneur, Bluehost",commercial,/services/task-workflow-automation,Low,15.00,4,unused
+client onboarding automation,100-1K,B,Hard,"ClickUp, Zapier, Salesforce, onboarding SaaS",commercial,/services/business-process-automation,Low,104.00,4,unused
+whatsapp chatbot for business,100-1K,B,Hard,"Sinch, CM.com, Gupshup, Airtel",commercial,/services/ai-chatbots,Medium,3.44,4,unused
+workflow automation for small business,100-1K,B,Hard,"Salesforce, Jotform, Superhuman, Cognito Forms",commercial,/services/task-workflow-automation,Low,19.14,4,unused
