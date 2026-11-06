@@ -161,7 +161,7 @@ SalnetHub offers ${services.length} services in three groups. Automation is what
 
 ${Object.entries(groups).map(([g, info]) => `${info.name}: ${info.blurb}\n${services.filter((s) => s.group === g).map((s) => `- ${s.name} (${s.priceModel}): ${s.short} ${url(`/services/${s.slug}`)}`).join("\n")}`).join("\n\n")}
 
-Most projects combine two or three of these services. The automation audit ranks every opportunity by hours saved.
+Most projects combine two or three of these services. The free call ranks every opportunity by what it costs you today.
 `, ["services", "overview"]);
 
 add("services-by-problem", "Which SalnetHub service fits your problem", "Services", "/services", `
@@ -172,7 +172,7 @@ ${pageCopy.problems.map(([p, slug]) => { const s = services.find((x) => x.slug =
 By outcome:
 ${outcomes.map((o) => `- ${o.label}: ${o.title}. ${o.body} Services: ${o.services.map((slug) => services.find((s) => s.slug === slug)?.name).join(", ")}.`).join("\n")}
 
-Not sure which one you need? Book a free call or start with the automation audit.
+Not sure which one you need? Book a free 20-minute call and we will work out which problem costs you most.
 `, ["services", "recommendation", "problems"]);
 
 for (const s of services) {
@@ -190,7 +190,6 @@ Before: ${s.example.before}
 After: ${s.example.after}
 
 How you pay for ${s.name}: ${s.priceModel}. ${s.priceNote}
-Every project gets a fixed written quote before work starts.
 `, [s.slug, s.group, "service", "price"]);
 
   add(`service-${s.slug}-details`, `${s.name}: what is included and how it is delivered`, "Service", path, `
@@ -326,7 +325,7 @@ SalnetHub's privacy policy in brief (full policy: ${url("/privacy")}):
 add("policy-terms", "SalnetHub terms of use in brief", "Policies", "/terms", `
 SalnetHub's terms of use in brief (full terms: ${url("/terms")}):
 - Client work is governed by its own written proposal, statement of work or services agreement, or by the contract terms of the marketplace where you hired us, such as Upwork. If those conflict with the site terms, the project agreement wins.
-- Quotes are fixed and in writing before work starts.
+- Prices follow results. The price, the result that counts and the pilot target are set in your written agreement before work starts.
 - The site terms are governed by the laws of Uganda. Consumers keep any rights their home law gives them.
 - Questions about the terms: ${site.email}.
 `, ["terms", "legal", "contract", "upwork"]);

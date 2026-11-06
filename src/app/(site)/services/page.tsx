@@ -78,7 +78,7 @@ export default function ServicesPage() {
                   <div className="rounded-card on-dark flex flex-col justify-between bg-raised p-7 text-white md:p-8" data-reveal>
                     <p className="t-h3">Not sure which one you need?</p>
                     <p className="mt-3 text-[15px] leading-relaxed text-on-ink-muted">
-                      Most projects combine two or three of these. The automation audit ranks every opportunity by hours saved.
+                      Most projects combine two or three of these. The free call ranks every opportunity by what it costs you today.
                     </p>
                     <Link href="/engagements" className="mt-8 inline-flex items-center gap-2 text-[14px] font-bold">
                       About the audit <ArrowRight size={16} />
