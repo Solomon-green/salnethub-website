@@ -7,6 +7,7 @@ import { ToolMark } from "@/components/brand";
 import { ServiceVisual } from "@/components/service-visual";
 import { CtaBand, Faq, PageHero, PrimaryCta, ServiceCard } from "@/components/ui";
 import { getService, groups, services } from "@/content/services";
+import { solutionsFor } from "@/content/solutions";
 import { getIntegration } from "@/content/integrations";
 import { site } from "@/content/site";
 import { JsonLd, breadcrumbLd } from "@/lib/schema";
@@ -37,6 +38,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
   const related = services.filter((o) => o.slug !== s.slug && o.group === s.group).slice(0, 3);
   const fill = related.length < 3 ? services.filter((o) => o.group !== s.group).slice(0, 3 - related.length) : [];
   const finalTime = s.timeline[s.timeline.length - 1].duration;
+  const industries = solutionsFor(s.slug);
   const darkFlow = ["flow", "agent", "web"].includes(s.workflow.kind);
 
   const jsonLd = {
@@ -250,6 +252,25 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <Faq items={s.faqs} />
         </div>
       </section>
+
+      {industries.length > 0 && (
+        <section className="border-t border-line py-24">
+          <div className="container-x">
+            <h2 className="t-h2" data-reveal>
+              Built for your industry
+            </h2>
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {industries.map((p) => (
+                <Link key={p.slug} href={`/solutions/${p.slug}`} className="group rounded-card border border-line bg-surface p-7 transition-colors hover:border-fg" data-reveal>
+                  <p className="text-[13px] text-slate">{p.industry}</p>
+                  <p className="t-h3 mt-2">{p.name}</p>
+                  <p className="mt-3 text-[14px] leading-relaxed text-slate">{p.pains[0].body}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="border-t border-line py-24">
         <div className="container-x">

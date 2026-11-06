@@ -18,6 +18,7 @@ import { leadExample, pricing, pricingFaqs, pricingHero, pricingLadder, pricingM
 import { principles, processSteps } from "../src/content/process.ts";
 import { integrationCategories, integrations } from "../src/content/integrations.ts";
 import { groups, services } from "../src/content/services.ts";
+import { solutions } from "../src/content/solutions.ts";
 import { outcomes } from "../src/content/outcomes.ts";
 import { calculator, leadCalculator } from "../src/content/calculator.ts";
 
@@ -214,6 +215,32 @@ Tools we typically use for ${s.name}: ${s.tools.map(toolName).join(", ")}.
 Question about SalnetHub's ${s.name} service: ${f.q}
 Answer: ${f.a}
 `, [s.slug, "faq"]),
+  );
+}
+
+// ---- Industry pages (service × industry) ----
+for (const p of solutions) {
+  const parent = services.find((x) => x.slug === p.service);
+  const path = `/solutions/${p.slug}`;
+  add(`solution-${p.slug}`, `${p.name} (${p.industry})`, "Industry", path, `
+SalnetHub's ${p.name}: a version of the ${parent.name} service built for ${p.industry.toLowerCase()} businesses.
+${p.hero.title}. ${p.hero.sub}
+
+Common problems for ${p.industry.toLowerCase()} teams:
+${p.pains.map((x) => `- ${x.title}: ${x.body}`).join("\n")}
+
+What it handles:
+${p.uses.map((x) => `- ${x.title}: ${x.body}`).join("\n")}
+
+Pricing: ${p.pricing}
+Example (illustrative): ${p.conversation.title}. ${p.conversation.outcome}
+Full service page: ${url(`/services/${parent.slug}`)}
+`, [p.slug, p.service, p.industry.toLowerCase(), "industry"]);
+  p.faqs.forEach((f, i) =>
+    add(`solution-${p.slug}-faq-${i + 1}`, `${p.name} FAQ: ${f.q}`, "FAQ", path, `
+Question about SalnetHub's ${p.name}: ${f.q}
+Answer: ${f.a}
+`, [p.slug, "faq", p.industry.toLowerCase()]),
   );
 }
 

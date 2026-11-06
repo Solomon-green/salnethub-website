@@ -4,7 +4,7 @@
   "updated": "2026-11-06",
   "source": "https://www.salnethub.com",
   "currency": "USD",
-  "documentCount": 102,
+  "documentCount": 116,
   "documents": [
     {
       "id": "company-overview",
@@ -854,6 +854,176 @@
         "faq"
       ],
       "content": "Question about SalnetHub's Web solutions service: Who hosts the website?\nAnswer: Your site is hosted in your own account, so you always own it. We can also manage it for you as part of a monthly plan."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate",
+      "title": "AI chatbot for real estate (Real estate)",
+      "category": "Industry",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "ai-chatbots",
+        "real estate",
+        "industry"
+      ],
+      "content": "SalnetHub's AI chatbot for real estate: a version of the AI chatbots for websites service built for real estate businesses.\nAn AI chatbot for real estate that books viewings while you show homes. Our AI chatbot for real estate agents answers questions about your listings on your website and WhatsApp, qualifies buyers and renters, and books viewings into your calendar, day or night. You pay per booked viewing, after a free 14-day pilot.\n\nCommon problems for real estate teams:\n- Enquiries arrive when you are busy: Buyers message in the evening, at weekends and while you are in a viewing. By the time you reply, they have booked with the agent who answered first.\n- The same five questions, every day: Is it still available? What is the price? Is there parking? When can I see it? Answering these by hand takes hours that should go to clients.\n- Not every lead is ready to buy: Some are browsing, some are renting, some need to sell first. Without a few quick questions, agents spend their time on the wrong conversations.\n\nWhat it handles:\n- Answers listing questions: Price, size, parking, pets, schools nearby: it answers from your listings and website, and says so when it does not know.\n- Qualifies buyers and renters: It asks about budget, area, timeline and mortgage status, the same questions your agents ask, and tags each lead.\n- Books viewings: It offers open slots from each agent's calendar and books the viewing, with a reminder the day before.\n- Works on WhatsApp and your website: The same assistant answers on your website chat and your WhatsApp Business number, where most buyers prefer to message.\n- Captures sellers too: Owners asking for a valuation are recognised and passed to the right agent with their address and timeline.\n- Hands over to an agent: Offers, negotiations and anything sensitive go straight to a person, with the full conversation attached.\n\nPricing: You pay per booked viewing or qualified seller lead. No setup fee, nothing up front, and a free 14-day pilot.\nExample (illustrative): What a buyer sees on WhatsApp. Viewing booked in Sarah's calendar. Buyer saved to the CRM as pre-approved, with the full chat attached.\nFull service page: https://www.salnethub.com/services/ai-chatbots"
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-1",
+      "title": "AI chatbot for real estate FAQ: How much does an AI chatbot for real estate cost?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: How much does an AI chatbot for real estate cost?\nAnswer: With SalnetHub there is no setup fee or monthly retainer. You pay per booked viewing or qualified seller lead, at a rate below what a booked viewing costs you today, after a free 14-day pilot. AI usage is billed at cost."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-2",
+      "title": "AI chatbot for real estate FAQ: Can the chatbot work on WhatsApp?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: Can the chatbot work on WhatsApp?\nAnswer: Yes. It connects to your WhatsApp Business number through the official WhatsApp Business API, and the same assistant can also run on your website chat."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-3",
+      "title": "AI chatbot for real estate FAQ: How does it know about my listings?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: How does it know about my listings?\nAnswer: We connect it to your listings page, feed or a simple spreadsheet. When a listing changes or sells, its answers change on the next sync, so it does not promise homes that are gone."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-4",
+      "title": "AI chatbot for real estate FAQ: Will it replace my agents?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: Will it replace my agents?\nAnswer: No. It handles the first reply, the routine questions and the booking. Your agents get qualified buyers in their calendar and spend their time on viewings and negotiations."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-5",
+      "title": "AI chatbot for real estate FAQ: Does it work with my CRM?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: Does it work with my CRM?\nAnswer: Yes, with most CRMs that have an API, such as HubSpot or Zoho, or with a Google Sheet. Every lead arrives with the full chat and their answers."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-6",
+      "title": "AI chatbot for real estate FAQ: Does it treat every enquiry fairly?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: Does it treat every enquiry fairly?\nAnswer: Yes. It answers every enquiry with the same information and qualifying questions, never steers people towards or away from areas, and you approve its wording before launch."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office",
+      "title": "AI receptionist for dental offices (Dental)",
+      "category": "Industry",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "ai-receptionist",
+        "dental",
+        "industry"
+      ],
+      "content": "SalnetHub's AI receptionist for dental offices: a version of the AI receptionist service built for dental businesses.\nAn AI receptionist for dental offices that books patients around the clock. Our AI receptionist for dental offices answers your practice line when the front desk is busy or closed. It books new patients and check-ups, handles common questions and flags urgent cases using your protocol. You pay per booked appointment, after a free 14-day pilot.\n\nCommon problems for dental teams:\n- The phone rings during check-in: Your front desk is greeting patients, taking payments and answering insurance questions. The call that goes to voicemail is often a new patient.\n- Toothaches do not wait for office hours: Patients in pain call in the evening and at weekends. If nobody answers, they book with the practice that does.\n- New patients are worth the most: A new patient can mean years of check-ups and treatment. Losing one call can cost far more than the appointment it would have been.\n\nWhat it handles:\n- Books new patients and check-ups: It collects the patient's details, offers open times and books cleanings, exams and consultations.\n- Follows your emergency protocol: It asks the questions you set, books urgent slots and sends serious cases to your on-call number. It never gives medical advice.\n- Answers front-desk questions: Opening hours, location, parking, accepted insurance plans and new-patient forms, all from information you approve.\n- Handles reschedules and cancellations: Patients can move or cancel appointments by phone at any hour, and the freed slot is offered to the next caller.\n- Logs every call: Caller, reason, urgency and booking go into a booking sheet or your practice software, ready for the front desk.\n- Covers the hours you choose: Run it after hours only, during lunch, or as overflow when the front desk is busy. Your number stays the same.\n\nPricing: You pay per booked appointment. No setup fee, nothing up front, and a free 14-day pilot on after-hours and missed calls.\nExample (illustrative): What a patient hears on a Saturday call. Emergency slot booked. The call, symptoms and booking are logged for the front desk to see first thing on Monday.\nFull service page: https://www.salnethub.com/services/ai-receptionist"
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-1",
+      "title": "AI receptionist for dental offices FAQ: How much does an AI dental receptionist cost?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: How much does an AI dental receptionist cost?\nAnswer: With SalnetHub there is no setup fee or monthly retainer. You pay per booked appointment, at a rate below what a new booking costs your practice today, after a free 14-day pilot. Phone and AI usage are billed at cost."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-2",
+      "title": "AI receptionist for dental offices FAQ: Is the AI receptionist HIPAA compliant?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: Is the AI receptionist HIPAA compliant?\nAnswer: For US practices we set it up as a HIPAA-ready system: providers that sign a Business Associate Agreement, call data kept in your own accounts and only the details needed to book. We agree the setup with you in writing before the pilot."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-3",
+      "title": "AI receptionist for dental offices FAQ: Does it work with Dentrix, Open Dental or Eaglesoft?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: Does it work with Dentrix, Open Dental or Eaglesoft?\nAnswer: Where your practice software allows a connection, we book straight into it. Where it does not, the receptionist books into a shared booking sheet and your front desk confirms each appointment in a few seconds."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-4",
+      "title": "AI receptionist for dental offices FAQ: What happens with dental emergencies?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: What happens with dental emergencies?\nAnswer: It follows the protocol you give us: it asks about pain, swelling and fever, books the first emergency slot, and sends serious cases to your on-call number. It never diagnoses or gives medical advice."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-5",
+      "title": "AI receptionist for dental offices FAQ: Will it replace my front desk?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: Will it replace my front desk?\nAnswer: No. It answers the calls your team cannot get to, such as after hours, at lunch and during busy check-ins. Your front desk keeps the patient relationships."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-6",
+      "title": "AI receptionist for dental offices FAQ: Can patients still talk to a person?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: Can patients still talk to a person?\nAnswer: Yes. Callers are told they are speaking with an AI assistant and can ask for a person at any time. During office hours the call is transferred; after hours, a call back is booked."
     },
     {
       "id": "pricing-overview",
