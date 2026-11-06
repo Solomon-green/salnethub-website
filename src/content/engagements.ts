@@ -1,59 +1,104 @@
-// All published prices live here. Change a number once and every page updates.
+// Results-based pricing. All pricing copy and numbers live here; change them once and every page updates.
 
-export const entryPoints = [
+export const pricing = {
+  pilotDays: 14,
+  pilotFee: "$250", // automation pilots only; refunded if the pilot misses its agreed target
+  savingsCap: 0.25, // monthly fee is never more than this share of the cost we remove
+  noticeDays: 30,
+};
+
+const capPct = `${Math.round(pricing.savingsCap * 100)}%`;
+const keepPct = `${100 - Math.round(pricing.savingsCap * 100)}%`;
+
+export const pricingHero = {
+  title: "You pay for results, not promises",
+  sub: `Most agencies ask for thousands up front and hope it works. We do it the other way round: we work out what the problem costs you today, prove we can fix it in a ${pricing.pilotDays}-day pilot, and price our work below what you are already losing.`,
+};
+
+export const pricingSteps = [
   {
-    name: "Discovery call",
-    price: "Free",
-    unit: "20 minutes",
-    body: "We map the problem, tell you honestly whether automation will help, and suggest where to start.",
-    points: ["Your current tools and process", "The first workflow worth automating", "A rough budget and timeline"],
+    name: "We find the leak and put a number on it",
+    body: "On a free 20-minute call we ask a few simple questions: where your customers come from, how many slip away, and what each one is worth. Together we work out what the problem costs you every month. You confirm every number.",
   },
   {
-    name: "Automation audit",
-    price: "$490",
-    unit: "credited to your build",
-    body: "A structured review of your tools and processes, ending in a written, ranked automation roadmap.",
-    points: ["Process and tool review", "Hours-saved estimate per opportunity", "A prioritised 90-day roadmap"],
+    name: `We prove it in a ${pricing.pilotDays}-day pilot`,
+    body: "We fix one problem first, small and fast. You see the results in your own calendar, inbox or reports before you commit to anything bigger.",
+  },
+  {
+    name: "You pay based on what it brings you",
+    body: "Once it works, our price follows the result: per booked appointment, or a small share of the time we save you. Always less than the problem was costing you.",
   },
 ];
 
-export const builds = [
-  { name: "Single workflow", price: "$1,500", time: "1 to 2 weeks", body: "One process automated end to end, such as lead capture to CRM or email to spreadsheet." },
-  { name: "Automation system", price: "$4,500", time: "3 to 6 weeks", body: "Several connected workflows across teams, with approvals, logging and reporting." },
-  { name: "AI chatbot", price: "$2,500", time: "3 to 4 weeks", body: "A website chatbot trained on your content, connected to your CRM and calendar." },
-  { name: "Custom AI agent", price: "$5,000", time: "4 to 6 weeks", body: "An agent that works across your tools with approval steps and a full activity log." },
-  { name: "RAG knowledge assistant", price: "$6,000", time: "4 to 6 weeks", body: "Answers from your documents with sources, access rules and measured accuracy." },
-  { name: "Website", price: "$2,500", time: "4 to 6 weeks", body: "A fast 5-page website with forms and booking connected to your CRM." },
+export const pricingModels = [
+  {
+    id: "result",
+    label: "Pay per result",
+    for: "Lead replies, chatbots, WhatsApp and SMS agents, call answering and old-lead reactivation",
+    headline: "Pay per booked appointment",
+    body: "You pay for each booked appointment or qualified lead we deliver. No setup fee and nothing up front. If it does not book, you do not pay.",
+    howWePrice:
+      "We take what one lead costs you and how many of your leads actually book. That shows what a booked appointment really costs you today. We charge less than that.",
+    points: ["No setup fee", `Free ${pricing.pilotDays}-day pilot`, "Every booking logged where you can see it"],
+  },
+  {
+    id: "savings",
+    label: "Pay from what you save",
+    for: "Workflow automation, CRM, reporting and back-office processes",
+    headline: `Never more than ${capPct} of the savings`,
+    body: `We measure how many hours a task takes your team each month and what those hours cost. Your monthly fee is never more than ${capPct} of the cost we remove, so you keep at least ${keepPct}.`,
+    howWePrice: `The pilot is ${pricing.pilotFee}, refunded in full if it misses the target we agree at the start. After that you pay one monthly fee, with monitoring and fixes included.`,
+    points: [`${pricing.pilotFee} pilot, refundable`, `Fee capped at ${capPct} of savings`, "Monitoring and fixes included"],
+  },
 ];
 
-export const carePlans = [
-  {
-    name: "Essential",
-    price: "$490",
-    body: "For teams with a few automations that must keep running.",
-    points: ["Monitoring and error alerts", "Fixes when tools or APIs change", "Monthly health report", "Email support, reply within 1 business day"],
-    featured: false,
-  },
-  {
-    name: "Growth",
-    price: "$1,500",
-    body: "For teams adding new automations every month.",
-    points: ["Everything in Essential", "Up to 10 hours of new builds and changes", "Monthly planning call", "Priority support, reply within 4 business hours"],
-    featured: true,
-  },
-  {
-    name: "Partner",
-    price: "$3,500",
-    body: "For businesses that want a dedicated automation team.",
-    points: ["Everything in Growth", "Up to 30 hours of builds each month", "Dedicated automation lead", "Quarterly roadmap and reporting review"],
-    featured: false,
-  },
+/** Worked examples shown on the pricing page. Illustrations only: real prices are set from your own numbers on the call. */
+export const leadExample = { costPerLead: 40, bookRate: 0.25, ourPrice: 90 };
+export const timeExample = { people: 3, hoursPerWeek: 6, rate: 25 };
+
+export const pricingPromises = [
+  { name: "No big payment before results", body: "Every engagement starts with a short pilot on one problem." },
+  { name: "Your numbers, not ours", body: "Prices come from figures you confirm on the call." },
+  { name: "You see every result", body: "Each booking, lead or saved hour is logged in a sheet or dashboard you can open any time." },
+  { name: "If it fails, you owe nothing", body: "If the pilot does not deliver, you walk away and owe nothing for the build." },
+  { name: "Leave any time", body: `Monthly billing with ${pricing.noticeDays} days' notice. No long contracts.` },
+];
+
+export const pricingLadder = [
+  { name: "One problem", body: "We start with your biggest leak, such as missed calls, slow lead replies or one manual process." },
+  { name: "Results speak", body: "You see appointments landing and hours coming back. That is usually when clients ask what else it can do." },
+  { name: "Grow when it pays", body: "We add the next system: CRM, reporting, AI assistants. Each one is priced the same way." },
 ];
 
 export const pricingFaqs = [
-  { q: "Why do you publish prices?", a: "So you can tell in a minute whether we fit your budget. Every project still gets a fixed written quote before work starts." },
-  { q: "What is not included in the build price?", a: "Third-party subscriptions such as Zapier, Make, your CRM, and AI usage. We estimate these up front and you pay the providers directly." },
-  { q: "How do payments work?", a: "Builds are usually 50% to start and 50% at launch. Care plans are billed monthly and can be cancelled with 30 days' notice." },
-  { q: "Do you offer refunds?", a: "If we cannot deliver what the written scope describes, we fix it at no cost or refund the unfinished part of the work." },
-  { q: "Can we start small?", a: "Yes. Most clients start with one workflow, see the result, then add more. The audit fee is credited to your first build." },
+  {
+    q: "Why don't you publish a fixed price list?",
+    a: "Because a fixed price ignores what the work is worth to you. A booked appointment is worth more to a dental clinic than to a café. We price from your numbers, so the deal always makes sense for you.",
+  },
+  {
+    q: "What counts as a result?",
+    a: "We agree it in writing before we start, for example a confirmed appointment in your calendar or a lead that meets your criteria. Spam, duplicates and bookings that fall through because of us are not charged.",
+  },
+  {
+    q: "Do I pay anything up front?",
+    a: `Not for pay-per-result services: the pilot is free. Automation pilots are ${pricing.pilotFee}, refunded in full if the pilot misses its agreed target. Third-party tools such as your CRM, Zapier or AI usage are paid directly to those providers, and we estimate them for you first.`,
+  },
+  {
+    q: "What if the pilot doesn't work?",
+    a: "Then you walk away and owe nothing for the build. We would rather lose a pilot than keep a client who is not getting value.",
+  },
+  {
+    q: "How do you bill?",
+    a: "Monthly. Pay-per-result services are billed from the results log you can see; automation fees are one fixed monthly amount. No surprises.",
+  },
+  {
+    q: "Can we still get a fixed quote?",
+    a: "Yes. For large one-off builds, such as a knowledge assistant or a company-wide system, we can give you a fixed written quote after the pilot if you prefer.",
+  },
 ];
+
+/** Short lines used on the home page, services and chat knowledge base. */
+export const pricingTeaser = {
+  title: "Pricing that follows results",
+  body: `No big invoice up front. We start with a ${pricing.pilotDays}-day pilot, show you the results, then charge per booked appointment or a small share of the time we save. Always less than the problem costs you now.`,
+};

@@ -9,7 +9,7 @@ export function demoReply(input: string): DemoReply {
   const q = input.toLowerCase();
   if (/(price|cost|how much|budget|quote|pricing)/.test(q)) {
     return {
-      text: "Every project gets a fixed written quote before any work starts, so there are no hourly surprises. Starting prices for automation, chatbots, agents and websites are on the pricing page.",
+      text: "You pay for results, not promises. We start with a 14-day pilot, then charge per booked appointment or a small share of the time we save you, always less than the problem costs you now. No big fee up front.",
       actions: [{ label: "See pricing", href: "/engagements" }, book],
     };
   }

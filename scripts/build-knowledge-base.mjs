@@ -14,12 +14,12 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { site } from "../src/content/site.ts";
 import { booking } from "../src/content/booking.ts";
-import { builds, carePlans, entryPoints, pricingFaqs } from "../src/content/engagements.ts";
+import { leadExample, pricing, pricingFaqs, pricingHero, pricingLadder, pricingModels, pricingPromises, pricingSteps, timeExample } from "../src/content/engagements.ts";
 import { principles, processSteps } from "../src/content/process.ts";
 import { integrationCategories, integrations } from "../src/content/integrations.ts";
 import { groups, services } from "../src/content/services.ts";
 import { outcomes } from "../src/content/outcomes.ts";
-import { calculator } from "../src/content/calculator.ts";
+import { calculator, leadCalculator } from "../src/content/calculator.ts";
 
 const OUT = "knowledge-base";
 const UPDATED = new Date().toISOString().slice(0, 10);
@@ -62,8 +62,8 @@ const pageCopy = {
       ["Onboarding a new client", "2 hours across 5 tools", "One trigger, under 5 minutes"],
     ],
     promises: [
-      ["Fixed price, in writing", "A written quote before work starts. No hourly meter."],
-      ["Our mistake, our cost", "If we miss the written scope, we fix it free or refund the rest."],
+      ["Pay for results", "Per booked appointment, or a capped share of the time we save you."],
+      ["If it fails, you owe nothing", "Every engagement starts with a pilot. No result, no bill for the build."],
       ["Live in weeks", "Your first workflow is usually live in 1 to 2 weeks."],
       ["Documented and handed over", "A written guide and recorded walkthrough for every build."],
     ],
@@ -71,12 +71,12 @@ const pageCopy = {
       ["What kind of businesses do you work with?", "Small-to-medium teams and businesses, usually 5 to 200 people, in services, e-commerce, property, logistics and professional firms. If your team copies data between tools, we can probably help."],
       ["Do we need to change the tools we use?", "No. We build on what you already run, such as Google Workspace, HubSpot or your accounting software, and add a connector like Make, Zapier or n8n only where needed."],
       ["How quickly will we see results?", "A single workflow is usually live within 1 to 2 weeks. Larger systems go live in stages, so you get value before the whole project is finished."],
-      ["What happens if an automation breaks?", "You get an alert, and we fix it. Our care plans include monitoring, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost."],
+      ["What happens if an automation breaks?", "You get an alert, and we fix it. Monitoring is included in your monthly fee, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost."],
     ],
   },
   howWeWork: {
     commitments: [
-      ["Fixed scope and price", "You get a written scope and a fixed price before any work starts. No hourly surprises."],
+      ["Pay for results", "We prove it in a 14-day pilot first, then charge per booking or a capped share of the time we save. No hourly surprises."],
       ["Weekly updates in plain words", "Every week you hear what was built, what is next and anything we need from you."],
       ["Built in a safe copy first", "We build and test away from live data, so your daily work is never interrupted."],
       ["You own everything", "Automations live in your accounts. If we part ways, everything keeps running."],
@@ -148,7 +148,7 @@ The best way to start with SalnetHub is a free ${booking.durationMinutes}-minute
 What happens:
 1. Pick a time that suits you. Times show in your own time zone.
 2. We look at your workflow: your tools and process, and the first workflow worth automating.
-3. A written scope. If it is a fit, you get a fixed price and timeline in writing. No obligation.
+3. A pilot plan. If it is a fit, you get a clear target, a 14-day pilot and a price based on your own numbers, in writing. No obligation.
 
 Booking details: calls are offered Monday to Friday, ${booking.dayStart} to ${booking.dayEnd} East Africa Time (EAT, UTC+3), with at least ${booking.minNoticeHours} hours' notice and up to ${booking.daysAhead} days ahead. You get a Google Meet link and a calendar invite by email straight away.
 
@@ -159,7 +159,7 @@ Prefer to write first? Use the contact form at ${url("/contact")} or email ${sit
 add("services-overview", "SalnetHub services at a glance", "Services", "/services", `
 SalnetHub offers ${services.length} services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.
 
-${Object.entries(groups).map(([g, info]) => `${info.name}: ${info.blurb}\n${services.filter((s) => s.group === g).map((s) => `- ${s.name} (from ${s.priceFrom}): ${s.short} ${url(`/services/${s.slug}`)}`).join("\n")}`).join("\n\n")}
+${Object.entries(groups).map(([g, info]) => `${info.name}: ${info.blurb}\n${services.filter((s) => s.group === g).map((s) => `- ${s.name} (${s.priceModel}): ${s.short} ${url(`/services/${s.slug}`)}`).join("\n")}`).join("\n\n")}
 
 Most projects combine two or three of these services. The automation audit ranks every opportunity by hours saved.
 `, ["services", "overview"]);
@@ -167,7 +167,7 @@ Most projects combine two or three of these services. The automation audit ranks
 add("services-by-problem", "Which SalnetHub service fits your problem", "Services", "/services", `
 Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.
 
-${pageCopy.problems.map(([p, slug]) => { const s = services.find((x) => x.slug === slug); return `- "${p}" → ${s.name} (from ${s.priceFrom}). ${url(`/services/${slug}`)}`; }).join("\n")}
+${pageCopy.problems.map(([p, slug]) => { const s = services.find((x) => x.slug === slug); return `- "${p}" → ${s.name} (${s.priceModel}). ${url(`/services/${slug}`)}`; }).join("\n")}
 
 By outcome:
 ${outcomes.map((o) => `- ${o.label}: ${o.title}. ${o.body} Services: ${o.services.map((slug) => services.find((s) => s.slug === slug)?.name).join(", ")}.`).join("\n")}
@@ -189,7 +189,7 @@ ${s.example.title}
 Before: ${s.example.before}
 After: ${s.example.after}
 
-Price: ${s.name} starts from ${s.priceFrom}, ${s.priceNote}
+How you pay for ${s.name}: ${s.priceModel}. ${s.priceNote}
 Every project gets a fixed written quote before work starts.
 `, [s.slug, s.group, "service", "price"]);
 
@@ -218,23 +218,42 @@ Answer: ${f.a}
 }
 
 // ---- Pricing ----
-add("pricing-overview", "SalnetHub pricing: where to start, builds and care plans", "Pricing", "/engagements", `
-SalnetHub publishes its prices up front. All prices are in US dollars. Start free, build with a fixed quote, then keep everything running with a monthly care plan.
+const usd = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
 
-Where to start:
-${entryPoints.map((e) => `- ${e.name}: ${e.price} (${e.unit}). ${e.body} Covers: ${e.points.join("; ")}.`).join("\n")}
+add("pricing-overview", "SalnetHub pricing: you pay for results, not promises", "Pricing", "/engagements", `
+${pricingHero.title}. ${pricingHero.sub}
 
-Fixed-price builds (starting prices for a typical scope; your written quote is fixed before work begins and includes 30 days of aftercare):
-${builds.map((b) => `- ${b.name}: from ${b.price}, ${b.time}. ${b.body}`).join("\n")}
+SalnetHub does not use a fixed price list. Every price is worked out from the client's own numbers, and is always below what the problem costs them today. All prices are in US dollars.
 
-Third-party subscriptions and AI usage are paid directly to the providers, at cost. SalnetHub estimates them up front.
-`, ["pricing", "cost", "quote", "audit"]);
+How pricing works:
+${pricingSteps.map((s, i) => `${i + 1}. ${s.name}. ${s.body}`).join("\n")}
 
-add("pricing-care-plans", "SalnetHub monthly care plans", "Pricing", "/engagements", `
-Tools change their APIs and your processes evolve. A SalnetHub care plan keeps your automations working and adds new ones each month. Care plans are billed monthly and can be cancelled with 30 days' notice.
+Third-party subscriptions and AI usage are paid directly to the providers, at cost. SalnetHub estimates them up front. For large one-off builds a fixed written quote is available after the pilot, if the client prefers.
+`, ["pricing", "cost", "price", "how much", "quote", "pilot"]);
 
-${carePlans.map((p) => `- ${p.name}: ${p.price} per month${p.featured ? " (most popular)" : ""}. ${p.body} Includes: ${p.points.join("; ")}.`).join("\n")}
-`, ["pricing", "care plan", "support", "maintenance", "monthly"]);
+add("pricing-models", "SalnetHub's two ways to charge: pay per result, or pay from what you save", "Pricing", "/engagements", `
+SalnetHub charges in one of two ways, depending on the result the work brings:
+
+${pricingModels.map((m) => `${m.label} (${m.headline}). Used for: ${m.for}. ${m.body} How the price is set: ${m.howWePrice} Includes: ${m.points.join("; ")}.`).join("\n\n")}
+
+Pilots: every engagement starts with a ${pricing.pilotDays}-day pilot. Pay-per-result pilots are free. Automation pilots cost ${pricing.pilotFee}, refunded in full if the pilot misses the target agreed at the start. If the pilot does not deliver, the client owes nothing for the build.
+`, ["pricing", "pay per result", "pay per booking", "performance", "savings", "pilot", "refund"]);
+
+add("pricing-examples", "Pricing examples: what a booked appointment and manual work really cost", "Pricing", "/engagements", `
+These are illustrations of how SalnetHub calculates a price. Real prices are set from the client's own numbers on the free call.
+
+Booked appointments: a business pays ${usd(leadExample.costPerLead)} per lead and 1 in ${Math.round(1 / leadExample.bookRate)} leads books. ${usd(leadExample.costPerLead)} ÷ ${leadExample.bookRate} = ${usd(leadExample.costPerLead / leadExample.bookRate)}: that is what one booked appointment really costs them. SalnetHub would charge about ${usd(leadExample.ourPrice)} per booked appointment, and only when it books.
+
+Manual work: ${timeExample.people} people × ${timeExample.hoursPerWeek} hours a week × 4 weeks × ${usd(timeExample.rate)} an hour = ${usd(timeExample.people * timeExample.hoursPerWeek * 4 * timeExample.rate)} a month. SalnetHub's monthly fee would be at most ${Math.round(pricing.savingsCap * 100)}% of that saving, ${usd(timeExample.people * timeExample.hoursPerWeek * 4 * timeExample.rate * pricing.savingsCap)}, so the client keeps the rest.
+`, ["pricing", "example", "cost per appointment", "roi"]);
+
+add("pricing-promises", "SalnetHub's pricing promises and how clients grow", "Pricing", "/engagements", `
+SalnetHub's pricing promises:
+${pricingPromises.map((p) => `- ${p.name}: ${p.body}`).join("\n")}
+
+Start small, grow with results:
+${pricingLadder.map((s, i) => `${i + 1}. ${s.name}: ${s.body}`).join("\n")}
+`, ["pricing", "guarantee", "refund", "contract", "cancel"]);
 
 pricingFaqs.forEach((f, i) =>
   add(`pricing-faq-${i + 1}`, `Pricing FAQ: ${f.q}`, "FAQ", "/engagements", `
@@ -243,8 +262,10 @@ Answer: ${f.a}
 `, ["pricing", "faq"]),
 );
 
-add("pricing-cost-calculator", "What manual work costs: the SalnetHub cost calculator", "Pricing", "/", `
-The SalnetHub home page has a cost calculator that shows what copy-paste work costs per year: people × hours per week each × ${calculator.weeks} working weeks × hourly rate. It then assumes, conservatively, that one automation project removes half of that time.
+add("pricing-cost-calculator", "The SalnetHub cost calculator: manual work and lead bookings", "Pricing", "/", `
+The SalnetHub home page has a calculator with two tabs.
+Manual work: what copy-paste work costs per year: people × hours per week each × ${calculator.weeks} working weeks × hourly rate. It assumes, conservatively, that automation removes half of that time, and shows SalnetHub's fee at most ${Math.round(pricing.savingsCap * 100)}% of the saving.
+Leads and bookings: what one lead costs ÷ the share of leads that book = what one booked appointment really costs. With SalnetHub the client pays less than that per booking, only when it books, with $0 up front. Default example: ${usd(leadCalculator.defaults.costPerLead)} per lead and ${leadCalculator.defaults.bookPct}% booking = ${usd(leadCalculator.defaults.costPerLead / (leadCalculator.defaults.bookPct / 100))} per booked appointment.
 Example with the default numbers: ${calculator.defaults.people} people × ${calculator.defaults.hours} hours a week × ${calculator.weeks} weeks × $${calculator.defaults.rate} an hour = $${(calculator.defaults.people * calculator.defaults.hours * calculator.weeks * calculator.defaults.rate).toLocaleString("en-US")} a year, of which about half could be saved.
 
 Typical outcomes from single-workflow projects:
@@ -253,7 +274,7 @@ ${pageCopy.home.before.map(([a, b, c]) => `- ${a}: before, ${b.toLowerCase()}; a
 
 // ---- Process ----
 add("process-steps", "How SalnetHub projects work: five steps", "Process", "/how-we-work", `
-SalnetHub follows a clear process with fixed prices, weekly updates and nothing installed on your side. Five steps, from first call to a system that keeps running. Each step ends with something concrete you can see, check and keep.
+SalnetHub follows a clear process with results-based pricing, weekly updates and nothing installed on your side. Five steps, from first call to a system that keeps running. Each step ends with something concrete you can see, check and keep.
 
 ${processSteps.map((p, i) => `${i + 1}. ${p.step}: ${p.title}. ${p.body} Output: ${p.output}.`).join("\n")}
 `, ["process", "how we work", "steps"]);

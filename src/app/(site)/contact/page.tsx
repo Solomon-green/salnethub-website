@@ -8,14 +8,14 @@ import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
   title: "Book a Free Automation Consultation Call",
-  description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would automate first, and the fixed price.",
+  description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would fix first, what it is costing you, and how a 14-day pilot would work.",
   alternates: { canonical: "/contact" },
 };
 
 const next = [
   { title: "Pick a time that suits you", body: `A free ${booking.durationMinutes}-minute video call. Times show in your own timezone.` },
   { title: "We look at your workflow", body: "Your tools and process, and the first workflow worth automating." },
-  { title: "A written scope", body: "If it is a fit, you get a fixed price and timeline in writing. No obligation." },
+  { title: "A pilot plan", body: "If it is a fit, you get a clear target, a 14-day pilot and a price based on your own numbers, in writing. No obligation." },
 ];
 
 export default function ContactPage() {

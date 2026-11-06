@@ -38,7 +38,7 @@ const sections: LegalSection[] = [
             <strong>Client work has its own agreement.</strong> Every project is governed by a written proposal, statement of work or services agreement, or by the contract terms of the marketplace where you hired us (such as Upwork). If those terms conflict with these Terms, the project agreement wins.
           </li>
           <li>
-            <strong>Prices are starting points.</strong> Prices on the <Link href="/engagements">Pricing</Link> page reflect a typical scope. Your written quote is the price that applies.
+            <strong>Pricing examples are illustrations.</strong> Figures on the <Link href="/engagements">Pricing</Link> page are examples of how we calculate a price. The price that applies, the result that counts, and the pilot target are the ones in your written agreement.
           </li>
           <li>
             <strong>We may decline work.</strong> We may decline a project we don&apos;t think we can deliver well, or that would break the law or a platform&apos;s rules.

@@ -73,7 +73,7 @@ export function GhostLink({ href, children }: { href: string; children: React.Re
 }
 
 // What happens on the call: reassurance at the moment a visitor decides to book.
-const callSteps = ["We look at how the work happens today", "We name the first workflow worth automating", "You get a fixed written quote. No obligation"];
+const callSteps = ["We look at how the work happens today", "We work out what the problem costs you", "You get a 14-day pilot plan. No obligation"];
 
 /** Closing call to action: the page's second deep moment, Ink with the Lime button against it. */
 export function CtaBand({
@@ -149,7 +149,7 @@ export function Faq({ items, title = "Questions we hear often" }: { items: { q: 
 }
 
 /** Service card: icon and name share one line, so cards do not read as the generic tile-above-heading template. */
-export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | "name" | "short" | "icon" | "priceFrom">; compact?: boolean }) {
+export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | "name" | "short" | "icon" | "priceModel">; compact?: boolean }) {
   return (
     <Link
       href={`/services/${s.slug}`}
@@ -168,7 +168,7 @@ export function ServiceCard({ s, compact = false }: { s: Pick<Service, "slug" | 
       <p className="mt-4 flex-1 pl-10 text-[15px] leading-relaxed text-slate">{s.short}</p>
       {!compact && (
         <p className="mt-7 pl-10 text-[14px] text-slate">
-          From <span className="font-bold text-fg">{s.priceFrom}</span>
+          <span className="font-bold text-fg">{s.priceModel}</span>
         </p>
       )}
       <span aria-hidden className="absolute left-0 top-0 h-[3px] w-0 bg-raised transition-[width] duration-500 ease-out group-hover:w-full" />

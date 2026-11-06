@@ -24,7 +24,7 @@ export type Service = {
   timeline: { phase: string; duration: string; body: string }[];
   safeguards?: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
-  priceFrom: string;
+  priceModel: string; // how this service is charged, e.g. "Pay per booking"
   priceNote: string;
 };
 
@@ -46,7 +46,7 @@ export const groups: Record<ServiceGroup, { name: string; blurb: string }> = {
 export const services: Service[] = [
   {
     slug: "marketing-crm-automation",
-    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. From $1,500." },
+    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "We automate CRM updates, follow-up sequences and deal stages in HubSpot, Zoho or Google Sheets, so every lead is tracked and followed up. Priced on time saved, after a 14-day pilot." },
     name: "Marketing & CRM automation",
     group: "automation",
     icon: "users",
@@ -117,12 +117,12 @@ export const services: Service[] = [
       { q: "What happens to our existing data?", a: "We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup." },
       { q: "Do we need to buy new software?", a: "Usually not. We build on the tools you already pay for, plus a connector like Make or Zapier if one is needed." },
     ],
-    priceFrom: "$1,500",
-    priceNote: "for one end-to-end workflow. Multi-workflow CRM projects start at $4,500.",
+    priceModel: "Pay from savings",
+    priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
     slug: "lead-acquisition-qualification",
-    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes. From $1,500." },
+    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them against your criteria and route them to the right rep with a reply in under 2 minutes. Pay per qualified lead, nothing up front." },
     name: "Lead acquisition & qualification",
     group: "automation",
     icon: "filter",
@@ -184,12 +184,12 @@ export const services: Service[] = [
       { q: "Can leads go to WhatsApp or SMS?", a: "Yes. Reps can be alerted by email, Slack-style chat, WhatsApp or SMS, depending on what your team actually checks." },
       { q: "What if a rep does not respond?", a: "We set a time limit. If the lead is not picked up, it moves to the next rep or a manager." },
     ],
-    priceFrom: "$1,500",
-    priceNote: "for capture and routing from one source. Full multi-source pipelines start at $4,500.",
+    priceModel: "Pay per lead",
+    priceNote: "Paid per qualified lead we deliver. No setup fee, nothing up front. Starts with a free 14-day pilot.",
   },
   {
     slug: "data-reporting-analytics",
-    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. From $1,500." },
+    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards that pull from your CRM, finance and ops tools, so the numbers are ready before the meeting. Priced on time saved, after a 14-day pilot." },
     name: "Data reporting & analytics",
     group: "automation",
     icon: "bar-chart-3",
@@ -251,12 +251,12 @@ export const services: Service[] = [
       { q: "Can you match our existing report?", a: "Yes. We start by rebuilding the report you already use, so you can check our numbers against it." },
       { q: "Is our data shared with anyone?", a: "No. Your data stays in your own accounts. We work with the access you grant us and remove it when the project ends if you prefer." },
     ],
-    priceFrom: "$1,500",
-    priceNote: "for one dashboard from up to 3 sources. Larger reporting systems start at $4,500.",
+    priceModel: "Pay from savings",
+    priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
     slug: "business-process-automation",
-    seo: { title: "Business Process Automation Services for Teams", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step. Fixed price from $4,500." },
+    seo: { title: "Business Process Automation Services for Teams", description: "We automate client onboarding, approvals, invoicing and documents across your tools, with an owner and an audit trail for every step. Priced on time saved, after a 14-day pilot." },
     name: "Business process automation",
     group: "automation",
     icon: "workflow",
@@ -318,12 +318,12 @@ export const services: Service[] = [
       { q: "Do we lose control over decisions?", a: "No. Anything that needs judgment stays with a person. The automation prepares the information and waits for their decision." },
       { q: "Can you work with tools we built in-house?", a: "Often yes, if they have an API, a database we can read, or even a spreadsheet export." },
     ],
-    priceFrom: "$4,500",
-    priceNote: "for a multi-step process across 3 or more tools.",
+    priceModel: "Pay from savings",
+    priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
     slug: "task-workflow-automation",
-    seo: { title: "Workflow Automation with Make, Zapier & n8n", description: "Automate data entry, reminders, file moves and status updates with Make, Zapier, n8n or Apps Script, and win back hours every week. From $1,500." },
+    seo: { title: "Workflow Automation with Make, Zapier & n8n", description: "Automate data entry, reminders, file moves and status updates with Make, Zapier, n8n or Apps Script, and win back hours every week. Priced on time saved, after a 14-day pilot." },
     name: "Task & workflow automation",
     group: "automation",
     icon: "zap",
@@ -382,15 +382,15 @@ export const services: Service[] = [
     faqs: [
       { q: "How small a task is worth automating?", a: "If it happens daily and follows the same steps, it is usually worth it. A 5-minute task done 10 times a day is 4 hours a week." },
       { q: "Make, Zapier or n8n?", a: "We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes." },
-      { q: "What if an automation fails?", a: "You get an alert with the details, and we fix it. Our care plans include monitoring so we usually see failures before you do." },
+      { q: "What if an automation fails?", a: "You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do." },
       { q: "Can we change the automations later?", a: "Yes. We document how each one works so your team can make small changes, and we handle the bigger ones." },
     ],
-    priceFrom: "$1,500",
-    priceNote: "for one automated task flow. Bundles of 3 to 5 tasks start at $3,500.",
+    priceModel: "Pay from savings",
+    priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
     slug: "ai-chatbots",
-    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your business website that answers from your own content, qualifies leads and books calls, then hands over to a person. From $2,500." },
+    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your business website that answers from your own content, qualifies leads and books calls, then hands over to a person. Pay per booked appointment, nothing up front." },
     name: "AI chatbots for websites",
     group: "ai",
     icon: "message-square",
@@ -458,12 +458,12 @@ export const services: Service[] = [
       { q: "Will it give wrong answers?", a: "We limit it to your content and test it heavily. When it is not sure, it hands over to a person instead of guessing." },
       { q: "Does it work on any website?", a: "Yes. It installs with a small code snippet on WordPress, Webflow, Shopify, Wix or a custom site." },
     ],
-    priceFrom: "$2,500",
-    priceNote: "for a chatbot trained on your content with CRM and booking connections. AI usage is billed at cost.",
+    priceModel: "Pay per booking",
+    priceNote: "Paid per booked appointment or qualified lead. No setup fee, nothing up front. Starts with a free 14-day pilot.",
   },
   {
     slug: "custom-ai-agents",
-    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. Fixed price from $5,000." },
+    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies across your tools, with approval steps where it matters. Priced on time saved, after a 14-day pilot." },
     name: "Custom AI agents",
     group: "ai",
     icon: "bot",
@@ -531,12 +531,12 @@ export const services: Service[] = [
       { q: "Where does the agent run?", a: "In your own accounts or a private server, using tools like n8n or a small custom app. You own it." },
       { q: "What does it cost to run?", a: "AI usage for most agents costs between $30 and $300 a month, depending on volume. We estimate it during scoping." },
     ],
-    priceFrom: "$5,000",
-    priceNote: "for one agent with approval steps and logging. AI usage is billed at cost.",
+    priceModel: "Pay from savings",
+    priceNote: "Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.",
   },
   {
     slug: "rag-systems",
-    seo: { title: "AI Knowledge Assistant (RAG) for Your Documents", description: "A private AI knowledge assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. Fixed price from $6,000." },
+    seo: { title: "AI Knowledge Assistant (RAG) for Your Documents", description: "A private AI knowledge assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. Starts with a 14-day pilot." },
     name: "RAG knowledge assistants",
     group: "ai",
     icon: "book-open",
@@ -604,12 +604,12 @@ export const services: Service[] = [
       { q: "Is our data used to train AI models?", a: "No. We use business API terms that exclude your data from model training, and your index is stored in your own account." },
       { q: "How accurate is it?", a: "We measure it on your own test questions before launch. Because every answer shows its source, errors are easy to spot and fix." },
     ],
-    priceFrom: "$6,000",
-    priceNote: "for an assistant over one document library with citations and access rules. AI usage is billed at cost.",
+    priceModel: "Pilot first",
+    priceNote: "Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you.",
   },
   {
     slug: "web-solutions",
-    seo: { title: "Business Websites Connected to Your CRM", description: "Fast business websites and landing pages where every form, booking and chat goes straight into your CRM and automations. Fixed-price builds from $2,500." },
+    seo: { title: "Business Websites Connected to Your CRM", description: "Fast business websites and landing pages where every form, booking and chat goes straight into your CRM and automations. Starts with a 14-day pilot." },
     name: "Web solutions",
     group: "web",
     icon: "globe",
@@ -669,10 +669,10 @@ export const services: Service[] = [
       { q: "Which platform do you build on?", a: "Usually Next.js for custom sites, or Webflow and WordPress when your team wants to edit everything themselves. We recommend one on the first call." },
       { q: "Can you redesign our existing site?", a: "Yes. We keep what works, especially pages that already rank in search, and rebuild the rest." },
       { q: "Do you write the copy?", a: "We structure every page and write the copy with you, based on how your customers describe their problems." },
-      { q: "Who hosts the website?", a: "Your site is hosted in your own account, so you always own it. We can manage it under a care plan." },
+      { q: "Who hosts the website?", a: "Your site is hosted in your own account, so you always own it. We can also manage it for you as part of a monthly plan." },
     ],
-    priceFrom: "$2,500",
-    priceNote: "for a focused 5-page website connected to your CRM.",
+    priceModel: "Pilot first",
+    priceNote: "Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you.",
   },
 ];
 

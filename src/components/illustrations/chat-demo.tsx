@@ -12,8 +12,8 @@ const script: Record<string, { reply: string; source?: string; lead?: boolean }>
     source: "Services overview",
   },
   "How much does a chatbot cost?": {
-    reply: "A website chatbot starts at $2,500, including CRM and calendar connections. AI usage is billed at cost, usually $20 to $150 a month.",
-    source: "Pricing, AI chatbot",
+    reply: "Nothing up front. After a free 14-day pilot you pay per booked appointment, always less than a booking costs you today. AI usage is billed at cost.",
+    source: "Pricing, pay per result",
   },
   "How long does a project take?": {
     reply: "A single workflow is usually live in 1 to 2 weeks. Larger systems take 3 to 6 weeks, and you see progress every week.",

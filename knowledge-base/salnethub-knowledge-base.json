@@ -1,10 +1,10 @@
 {
   "name": "SalnetHub Knowledge Base",
   "description": "Everything published on www.salnethub.com about SalnetHub: company, services, pricing, process, integrations, FAQs and policies. One self-contained document per topic, for retrieval by the SalnetHub chat assistant.",
-  "updated": "2026-11-03",
+  "updated": "2026-11-06",
   "source": "https://www.salnethub.com",
   "currency": "USD",
-  "documentCount": 87,
+  "documentCount": 90,
   "documents": [
     {
       "id": "company-overview",
@@ -54,7 +54,7 @@
         "call",
         "meeting"
       ],
-      "content": "The best way to start with SalnetHub is a free 20-minute discovery call on Google Meet. Book it at https://www.salnethub.com/contact#book.\n\nWhat happens:\n1. Pick a time that suits you. Times show in your own time zone.\n2. We look at your workflow: your tools and process, and the first workflow worth automating.\n3. A written scope. If it is a fit, you get a fixed price and timeline in writing. No obligation.\n\nBooking details: calls are offered Monday to Friday, 09:00 to 17:00 East Africa Time (EAT, UTC+3), with at least 12 hours' notice and up to 21 days ahead. You get a Google Meet link and a calendar invite by email straight away.\n\nPrefer to write first? Use the contact form at https://www.salnethub.com/contact or email info@salnethub.com. SalnetHub replies within 1 business day."
+      "content": "The best way to start with SalnetHub is a free 20-minute discovery call on Google Meet. Book it at https://www.salnethub.com/contact#book.\n\nWhat happens:\n1. Pick a time that suits you. Times show in your own time zone.\n2. We look at your workflow: your tools and process, and the first workflow worth automating.\n3. A pilot plan. If it is a fit, you get a clear target, a 14-day pilot and a price based on your own numbers, in writing. No obligation.\n\nBooking details: calls are offered Monday to Friday, 09:00 to 17:00 East Africa Time (EAT, UTC+3), with at least 12 hours' notice and up to 21 days ahead. You get a Google Meet link and a calendar invite by email straight away.\n\nPrefer to write first? Use the contact form at https://www.salnethub.com/contact or email info@salnethub.com. SalnetHub replies within 1 business day."
     },
     {
       "id": "services-overview",
@@ -65,7 +65,7 @@
         "services",
         "overview"
       ],
-      "content": "SalnetHub offers 9 services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.\n\nAutomation: Connect the tools you already pay for so work moves between them on its own.\n- Marketing & CRM automation (from $1,500): Keep your CRM accurate and your follow-ups on time without anyone updating records by hand. https://www.salnethub.com/services/marketing-crm-automation\n- Lead acquisition & qualification (from $1,500): Capture every lead, score it, and route the good ones to the right person in minutes. https://www.salnethub.com/services/lead-acquisition-qualification\n- Data reporting & analytics (from $1,500): Dashboards that update themselves, so the Monday report is ready before Monday. https://www.salnethub.com/services/data-reporting-analytics\n- Business process automation (from $4,500): Automate approvals, invoicing, onboarding and other processes that cross teams and tools. https://www.salnethub.com/services/business-process-automation\n- Task & workflow automation (from $1,500): Remove the small repetitive tasks that eat your team's day, from data entry to reminders. https://www.salnethub.com/services/task-workflow-automation\n\nAI solutions: Chatbots, agents and knowledge assistants that work from your data, with a human in control.\n- AI chatbots for websites (from $2,500): A website chatbot that answers questions, guides visitors and books calls, trained on your content. https://www.salnethub.com/services/ai-chatbots\n- Custom AI agents (from $5,000): AI agents that do real work in your tools, from email triage to CRM updates, with approval steps. https://www.salnethub.com/services/custom-ai-agents\n- RAG knowledge assistants (from $6,000): An AI assistant that answers from your own documents and shows the source for every answer. https://www.salnethub.com/services/rag-systems\n\nWeb: Websites that capture leads straight into your CRM and automations.\n- Web solutions (from $2,500): Fast, clear websites and landing pages wired straight into your CRM and automations. https://www.salnethub.com/services/web-solutions\n\nMost projects combine two or three of these services. The automation audit ranks every opportunity by hours saved."
+      "content": "SalnetHub offers 9 services in three groups. Automation is what we do most. AI and web projects build on the same foundation: your tools, connected, with clear owners and documentation.\n\nAutomation: Connect the tools you already pay for so work moves between them on its own.\n- Marketing & CRM automation (Pay from savings): Keep your CRM accurate and your follow-ups on time without anyone updating records by hand. https://www.salnethub.com/services/marketing-crm-automation\n- Lead acquisition & qualification (Pay per lead): Capture every lead, score it, and route the good ones to the right person in minutes. https://www.salnethub.com/services/lead-acquisition-qualification\n- Data reporting & analytics (Pay from savings): Dashboards that update themselves, so the Monday report is ready before Monday. https://www.salnethub.com/services/data-reporting-analytics\n- Business process automation (Pay from savings): Automate approvals, invoicing, onboarding and other processes that cross teams and tools. https://www.salnethub.com/services/business-process-automation\n- Task & workflow automation (Pay from savings): Remove the small repetitive tasks that eat your team's day, from data entry to reminders. https://www.salnethub.com/services/task-workflow-automation\n\nAI solutions: Chatbots, agents and knowledge assistants that work from your data, with a human in control.\n- AI chatbots for websites (Pay per booking): A website chatbot that answers questions, guides visitors and books calls, trained on your content. https://www.salnethub.com/services/ai-chatbots\n- Custom AI agents (Pay from savings): AI agents that do real work in your tools, from email triage to CRM updates, with approval steps. https://www.salnethub.com/services/custom-ai-agents\n- RAG knowledge assistants (Pilot first): An AI assistant that answers from your own documents and shows the source for every answer. https://www.salnethub.com/services/rag-systems\n\nWeb: Websites that capture leads straight into your CRM and automations.\n- Web solutions (Pilot first): Fast, clear websites and landing pages wired straight into your CRM and automations. https://www.salnethub.com/services/web-solutions\n\nMost projects combine two or three of these services. The automation audit ranks every opportunity by hours saved."
     },
     {
       "id": "services-by-problem",
@@ -77,7 +77,7 @@
         "recommendation",
         "problems"
       ],
-      "content": "Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.\n\n- \"Leads wait hours or days for a reply\" → Lead acquisition & qualification (from $1,500). https://www.salnethub.com/services/lead-acquisition-qualification\n- \"Our CRM is never up to date\" → Marketing & CRM automation (from $1,500). https://www.salnethub.com/services/marketing-crm-automation\n- \"Reports take a day to put together\" → Data reporting & analytics (from $1,500). https://www.salnethub.com/services/data-reporting-analytics\n- \"Onboarding and approvals keep stalling\" → Business process automation (from $4,500). https://www.salnethub.com/services/business-process-automation\n- \"The team spends hours copying data\" → Task & workflow automation (from $1,500). https://www.salnethub.com/services/task-workflow-automation\n- \"Visitors leave without asking anything\" → AI chatbots for websites (from $2,500). https://www.salnethub.com/services/ai-chatbots\n- \"Someone reads and routes every request\" → Custom AI agents (from $5,000). https://www.salnethub.com/services/custom-ai-agents\n- \"Nobody can find the right document\" → RAG knowledge assistants (from $6,000). https://www.salnethub.com/services/rag-systems\n- \"Our website does not bring in leads\" → Web solutions (from $2,500). https://www.salnethub.com/services/web-solutions\n\nBy outcome:\n- Sales & leads: Every lead answered in minutes, every deal in the CRM. Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does. Services: Lead acquisition & qualification, Marketing & CRM automation.\n- Reporting: Reports that build themselves. Live dashboards and a Monday report that is ready before Monday. Services: Data reporting & analytics.\n- Operations & admin: Admin that runs on its own. Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools. Services: Business process automation, Task & workflow automation.\n- AI agents & chatbots: AI that works from your data, with a person in control. Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters. Services: AI chatbots for websites, Custom AI agents, RAG knowledge assistants.\n- Websites: Websites that feed your pipeline. Fast, clear websites and landing pages wired straight into your CRM and automations, so every enquiry starts a workflow. Services: Web solutions.\n\nNot sure which one you need? Book a free call or start with the automation audit."
+      "content": "Start with the problem. Pick the sentence that sounds most like your week. That is usually the best first project.\n\n- \"Leads wait hours or days for a reply\" → Lead acquisition & qualification (Pay per lead). https://www.salnethub.com/services/lead-acquisition-qualification\n- \"Our CRM is never up to date\" → Marketing & CRM automation (Pay from savings). https://www.salnethub.com/services/marketing-crm-automation\n- \"Reports take a day to put together\" → Data reporting & analytics (Pay from savings). https://www.salnethub.com/services/data-reporting-analytics\n- \"Onboarding and approvals keep stalling\" → Business process automation (Pay from savings). https://www.salnethub.com/services/business-process-automation\n- \"The team spends hours copying data\" → Task & workflow automation (Pay from savings). https://www.salnethub.com/services/task-workflow-automation\n- \"Visitors leave without asking anything\" → AI chatbots for websites (Pay per booking). https://www.salnethub.com/services/ai-chatbots\n- \"Someone reads and routes every request\" → Custom AI agents (Pay from savings). https://www.salnethub.com/services/custom-ai-agents\n- \"Nobody can find the right document\" → RAG knowledge assistants (Pilot first). https://www.salnethub.com/services/rag-systems\n- \"Our website does not bring in leads\" → Web solutions (Pilot first). https://www.salnethub.com/services/web-solutions\n\nBy outcome:\n- Sales & leads: Every lead answered in minutes, every deal in the CRM. Capture leads from ads, forms and chat, score them, route them to the right person and reply before a competitor does. Services: Lead acquisition & qualification, Marketing & CRM automation.\n- Reporting: Reports that build themselves. Live dashboards and a Monday report that is ready before Monday. Services: Data reporting & analytics.\n- Operations & admin: Admin that runs on its own. Approvals, invoicing, onboarding and the small daily tasks that cross teams and tools. Services: Business process automation, Task & workflow automation.\n- AI agents & chatbots: AI that works from your data, with a person in control. Chatbots, agents and knowledge assistants that answer from your own content and hand over to your team when it matters. Services: AI chatbots for websites, Custom AI agents, RAG knowledge assistants.\n- Websites: Websites that feed your pipeline. Fast, clear websites and landing pages wired straight into your CRM and automations, so every enquiry starts a workflow. Services: Web solutions.\n\nNot sure which one you need? Book a free call or start with the automation audit."
     },
     {
       "id": "service-marketing-crm-automation",
@@ -90,7 +90,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nA CRM that updates itself. We connect your forms, inbox, ads and CRM so every contact, deal and follow-up is recorded the moment it happens.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nPrice: Marketing & CRM automation starts from $1,500, for one end-to-end workflow. Multi-workflow CRM projects start at $4,500.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nA CRM that updates itself. We connect your forms, inbox, ads and CRM so every contact, deal and follow-up is recorded the moment it happens.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nHow you pay for Marketing & CRM automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-marketing-crm-automation-details",
@@ -161,7 +161,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Lead acquisition & qualification (Automation).\nCapture every lead, score it, and route the good ones to the right person in minutes.\nEvery lead captured, scored and routed. Leads from forms, ads and chat are enriched, scored against your criteria and sent to the right rep before they go cold.\n\nWhy good leads get lost:\n- Too many sources: Website forms, Facebook lead ads, LinkedIn, referrals and chat all land in different places.\n- No clear priority: Reps treat a student enquiry and a 200-seat buyer the same way, so the best leads wait in line.\n- Slow first response: Most buyers choose the company that replies first. A reply the next day is often too late.\n\nExample: lead ads for a home-services company\nBefore: Facebook leads were downloaded as a spreadsheet each morning and split between 4 reps by hand.\nAfter: Each lead is scored and texted to the rep covering that area within 90 seconds, with a booking link sent to the customer.\n\nPrice: Lead acquisition & qualification starts from $1,500, for capture and routing from one source. Full multi-source pipelines start at $4,500.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Lead acquisition & qualification (Automation).\nCapture every lead, score it, and route the good ones to the right person in minutes.\nEvery lead captured, scored and routed. Leads from forms, ads and chat are enriched, scored against your criteria and sent to the right rep before they go cold.\n\nWhy good leads get lost:\n- Too many sources: Website forms, Facebook lead ads, LinkedIn, referrals and chat all land in different places.\n- No clear priority: Reps treat a student enquiry and a 200-seat buyer the same way, so the best leads wait in line.\n- Slow first response: Most buyers choose the company that replies first. A reply the next day is often too late.\n\nExample: lead ads for a home-services company\nBefore: Facebook leads were downloaded as a spreadsheet each morning and split between 4 reps by hand.\nAfter: Each lead is scored and texted to the rep covering that area within 90 seconds, with a booking link sent to the customer.\n\nHow you pay for Lead acquisition & qualification: Pay per lead. Paid per qualified lead we deliver. No setup fee, nothing up front. Starts with a free 14-day pilot.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-lead-acquisition-qualification-details",
@@ -232,7 +232,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Data reporting & analytics (Automation).\nDashboards that update themselves, so the Monday report is ready before Monday.\nReports that build themselves. We pull data from your CRM, finance and operations tools into live dashboards and scheduled reports your team can trust.\n\nWhat manual reporting costs you:\n- Hours of copy and paste: Someone exports 5 spreadsheets every week and stitches them together before the meeting.\n- Numbers nobody trusts: Different teams report different totals because each one pulls data a different way.\n- Decisions on old data: By the time the monthly report is ready, the month it describes is long gone.\n\nExample: weekly sales report for an online retailer\nBefore: The operations lead spent most of Monday morning exporting Shopify, ad and Sheets data into a slide deck.\nAfter: A Looker Studio dashboard refreshes every hour, and a summary email reaches the leadership team at 8 am each Monday.\n\nPrice: Data reporting & analytics starts from $1,500, for one dashboard from up to 3 sources. Larger reporting systems start at $4,500.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Data reporting & analytics (Automation).\nDashboards that update themselves, so the Monday report is ready before Monday.\nReports that build themselves. We pull data from your CRM, finance and operations tools into live dashboards and scheduled reports your team can trust.\n\nWhat manual reporting costs you:\n- Hours of copy and paste: Someone exports 5 spreadsheets every week and stitches them together before the meeting.\n- Numbers nobody trusts: Different teams report different totals because each one pulls data a different way.\n- Decisions on old data: By the time the monthly report is ready, the month it describes is long gone.\n\nExample: weekly sales report for an online retailer\nBefore: The operations lead spent most of Monday morning exporting Shopify, ad and Sheets data into a slide deck.\nAfter: A Looker Studio dashboard refreshes every hour, and a summary email reaches the leadership team at 8 am each Monday.\n\nHow you pay for Data reporting & analytics: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-data-reporting-analytics-details",
@@ -303,7 +303,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Business process automation (Automation).\nAutomate approvals, invoicing, onboarding and other processes that cross teams and tools.\nProcesses that run end to end. We automate the multi-step processes that cross teams, like client onboarding, approvals and invoicing, with clear owners at every step.\n\nWhere cross-team processes stall:\n- Work waits in inboxes: An approval sits in a manager's email for 3 days because nobody knew it was waiting.\n- The same data typed 4 times: A new client's details are entered into the CRM, the invoicing tool, the project board and a spreadsheet.\n- Steps depend on one person: When the person who knows the process is on leave, the process stops.\n\nExample: client onboarding for an accounting practice\nBefore: Each new client took about 2 hours of admin across 5 tools, and steps were often missed.\nAfter: A signed engagement letter triggers every setup step in under 5 minutes, with a checklist the partner can review.\n\nPrice: Business process automation starts from $4,500, for a multi-step process across 3 or more tools.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Business process automation (Automation).\nAutomate approvals, invoicing, onboarding and other processes that cross teams and tools.\nProcesses that run end to end. We automate the multi-step processes that cross teams, like client onboarding, approvals and invoicing, with clear owners at every step.\n\nWhere cross-team processes stall:\n- Work waits in inboxes: An approval sits in a manager's email for 3 days because nobody knew it was waiting.\n- The same data typed 4 times: A new client's details are entered into the CRM, the invoicing tool, the project board and a spreadsheet.\n- Steps depend on one person: When the person who knows the process is on leave, the process stops.\n\nExample: client onboarding for an accounting practice\nBefore: Each new client took about 2 hours of admin across 5 tools, and steps were often missed.\nAfter: A signed engagement letter triggers every setup step in under 5 minutes, with a checklist the partner can review.\n\nHow you pay for Business process automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-business-process-automation-details",
@@ -374,7 +374,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Task & workflow automation (Automation).\nRemove the small repetitive tasks that eat your team's day, from data entry to reminders.\nWin back hours every week. Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.\n\nSmall tasks, big cost:\n- Death by copy and paste: Moving order details from email into a spreadsheet takes 3 minutes. Forty times a day, that is 2 hours.\n- Reminders that rely on memory: Renewals, follow-ups and deadlines are tracked in someone's head or a sticky note.\n- Constant status questions: People ask where things are because there is no automatic update when something changes.\n\nExample: order handling for a wholesale supplier\nBefore: A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.\nAfter: Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.\n\nPrice: Task & workflow automation starts from $1,500, for one automated task flow. Bundles of 3 to 5 tasks start at $3,500.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Task & workflow automation (Automation).\nRemove the small repetitive tasks that eat your team's day, from data entry to reminders.\nWin back hours every week. Data entry, reminders, file moves and status updates quietly eat your team's day. We automate them so your people can do the work they were hired for.\n\nSmall tasks, big cost:\n- Death by copy and paste: Moving order details from email into a spreadsheet takes 3 minutes. Forty times a day, that is 2 hours.\n- Reminders that rely on memory: Renewals, follow-ups and deadlines are tracked in someone's head or a sticky note.\n- Constant status questions: People ask where things are because there is no automatic update when something changes.\n\nExample: order handling for a wholesale supplier\nBefore: A coordinator copied about 40 orders a day from email into a spreadsheet and replied to each customer by hand.\nAfter: Orders are added to Google Sheets as they arrive and customers get a confirmation automatically. That is about 6 hours a week back.\n\nHow you pay for Task & workflow automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-task-workflow-automation-details",
@@ -421,7 +421,7 @@
         "task-workflow-automation",
         "faq"
       ],
-      "content": "Question about SalnetHub's Task & workflow automation service: What if an automation fails?\nAnswer: You get an alert with the details, and we fix it. Our care plans include monitoring so we usually see failures before you do."
+      "content": "Question about SalnetHub's Task & workflow automation service: What if an automation fails?\nAnswer: You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do."
     },
     {
       "id": "service-task-workflow-automation-faq-4",
@@ -445,7 +445,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: AI chatbots for websites (AI solutions).\nA website chatbot that answers questions, guides visitors and books calls, trained on your content.\nA website chatbot that knows your business. It answers visitor questions from your own content, points people to the right page, qualifies leads and books calls. A person takes over when needed.\n\nWhy visitors leave without a word:\n- Questions go unanswered: Visitors have one question about price, timing or fit. If they cannot find the answer in 30 seconds, they leave.\n- Forms feel like work: A contact form with 8 fields gets skipped. A conversation gets answered.\n- After-hours traffic is wasted: Half your visits happen outside office hours, when nobody is there to reply.\n\nExample: a chatbot for a training provider\nBefore: Most enquiries asked the same 10 questions about dates, prices and certificates, answered by email the next day.\nAfter: The chatbot answers them instantly from the course catalogue and books a call when a company asks about group training.\n\nPrice: AI chatbots for websites starts from $2,500, for a chatbot trained on your content with CRM and booking connections. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: AI chatbots for websites (AI solutions).\nA website chatbot that answers questions, guides visitors and books calls, trained on your content.\nA website chatbot that knows your business. It answers visitor questions from your own content, points people to the right page, qualifies leads and books calls. A person takes over when needed.\n\nWhy visitors leave without a word:\n- Questions go unanswered: Visitors have one question about price, timing or fit. If they cannot find the answer in 30 seconds, they leave.\n- Forms feel like work: A contact form with 8 fields gets skipped. A conversation gets answered.\n- After-hours traffic is wasted: Half your visits happen outside office hours, when nobody is there to reply.\n\nExample: a chatbot for a training provider\nBefore: Most enquiries asked the same 10 questions about dates, prices and certificates, answered by email the next day.\nAfter: The chatbot answers them instantly from the course catalogue and books a call when a company asks about group training.\n\nHow you pay for AI chatbots for websites: Pay per booking. Paid per booked appointment or qualified lead. No setup fee, nothing up front. Starts with a free 14-day pilot.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-ai-chatbots-details",
@@ -516,7 +516,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Custom AI agents (AI solutions).\nAI agents that do real work in your tools, from email triage to CRM updates, with approval steps.\nAI agents that do the work, with you in control. An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.\n\nWork that rules alone cannot handle:\n- Every message is different: Simple automations need fixed rules. Real emails, requests and documents rarely follow them.\n- Judgment calls pile up: Someone has to read each request, decide what it is and route it, dozens of times a day.\n- Busy people do low-value reading: Senior staff spend hours reading and summarising before they can make a decision.\n\nExample: quote requests for a logistics firm\nBefore: A coordinator read each quote request, checked rates in a spreadsheet and typed a reply. Each one took about 20 minutes.\nAfter: An agent reads the request, checks the rate sheet and drafts the quote. The coordinator reviews and sends it in under 2 minutes.\n\nPrice: Custom AI agents starts from $5,000, for one agent with approval steps and logging. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Custom AI agents (AI solutions).\nAI agents that do real work in your tools, from email triage to CRM updates, with approval steps.\nAI agents that do the work, with you in control. An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.\n\nWork that rules alone cannot handle:\n- Every message is different: Simple automations need fixed rules. Real emails, requests and documents rarely follow them.\n- Judgment calls pile up: Someone has to read each request, decide what it is and route it, dozens of times a day.\n- Busy people do low-value reading: Senior staff spend hours reading and summarising before they can make a decision.\n\nExample: quote requests for a logistics firm\nBefore: A coordinator read each quote request, checked rates in a spreadsheet and typed a reply. Each one took about 20 minutes.\nAfter: An agent reads the request, checks the rate sheet and drafts the quote. The coordinator reviews and sends it in under 2 minutes.\n\nHow you pay for Custom AI agents: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-custom-ai-agents-details",
@@ -587,7 +587,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: RAG knowledge assistants (AI solutions).\nAn AI assistant that answers from your own documents and shows the source for every answer.\nAnswers from your documents, with sources. A knowledge assistant that searches your SOPs, contracts and help articles first, then answers with a link to the exact source.\n\nWhen knowledge is hard to find:\n- Answers live in 500 files: The answer exists somewhere in Drive, Notion or an old PDF. Finding it takes 20 minutes.\n- The same questions every day: New staff ask senior staff the same questions, pulling them away from their own work.\n- General AI makes things up: Public chatbots do not know your policies and will confidently guess when they are unsure.\n\nExample: an internal assistant for a property manager\nBefore: Staff searched 300+ Drive documents or asked the operations manager about lease terms and maintenance procedures.\nAfter: Staff ask the assistant in plain words and get the answer with a link to the exact clause or procedure.\n\nPrice: RAG knowledge assistants starts from $6,000, for an assistant over one document library with citations and access rules. AI usage is billed at cost.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: RAG knowledge assistants (AI solutions).\nAn AI assistant that answers from your own documents and shows the source for every answer.\nAnswers from your documents, with sources. A knowledge assistant that searches your SOPs, contracts and help articles first, then answers with a link to the exact source.\n\nWhen knowledge is hard to find:\n- Answers live in 500 files: The answer exists somewhere in Drive, Notion or an old PDF. Finding it takes 20 minutes.\n- The same questions every day: New staff ask senior staff the same questions, pulling them away from their own work.\n- General AI makes things up: Public chatbots do not know your policies and will confidently guess when they are unsure.\n\nExample: an internal assistant for a property manager\nBefore: Staff searched 300+ Drive documents or asked the operations manager about lease terms and maintenance procedures.\nAfter: Staff ask the assistant in plain words and get the answer with a link to the exact clause or procedure.\n\nHow you pay for RAG knowledge assistants: Pilot first. Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-rag-systems-details",
@@ -658,7 +658,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Web solutions (Web).\nFast, clear websites and landing pages wired straight into your CRM and automations.\nWebsites that feed your pipeline. We design and build fast websites and landing pages where every form, booking and chat goes straight into your CRM and automations.\n\nWhy many business websites underperform:\n- Pretty but disconnected: Form submissions go to an inbox nobody checks, so leads are lost after the click.\n- Slow and hard to update: Pages take 6 seconds to load, and every text change needs a developer.\n- No clear next step: Visitors cannot tell what you offer or what to do next, so they leave.\n\nExample: a services website rebuild\nBefore: A slow template site sent form submissions to a personal inbox and could only be edited by the original developer.\nAfter: A fast site with an easy editor, where every enquiry creates a CRM deal and gets an instant personal reply.\n\nPrice: Web solutions starts from $2,500, for a focused 5-page website connected to your CRM.\nEvery project gets a fixed written quote before work starts."
+      "content": "SalnetHub service: Web solutions (Web).\nFast, clear websites and landing pages wired straight into your CRM and automations.\nWebsites that feed your pipeline. We design and build fast websites and landing pages where every form, booking and chat goes straight into your CRM and automations.\n\nWhy many business websites underperform:\n- Pretty but disconnected: Form submissions go to an inbox nobody checks, so leads are lost after the click.\n- Slow and hard to update: Pages take 6 seconds to load, and every text change needs a developer.\n- No clear next step: Visitors cannot tell what you offer or what to do next, so they leave.\n\nExample: a services website rebuild\nBefore: A slow template site sent form submissions to a personal inbox and could only be edited by the original developer.\nAfter: A fast site with an easy editor, where every enquiry creates a CRM deal and gets an instant personal reply.\n\nHow you pay for Web solutions: Pilot first. Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you.\nEvery project gets a fixed written quote before work starts."
     },
     {
       "id": "service-web-solutions-details",
@@ -716,93 +716,135 @@
         "web-solutions",
         "faq"
       ],
-      "content": "Question about SalnetHub's Web solutions service: Who hosts the website?\nAnswer: Your site is hosted in your own account, so you always own it. We can manage it under a care plan."
+      "content": "Question about SalnetHub's Web solutions service: Who hosts the website?\nAnswer: Your site is hosted in your own account, so you always own it. We can also manage it for you as part of a monthly plan."
     },
     {
       "id": "pricing-overview",
-      "title": "SalnetHub pricing: where to start, builds and care plans",
+      "title": "SalnetHub pricing: you pay for results, not promises",
       "category": "Pricing",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "cost",
+        "price",
+        "how much",
         "quote",
-        "audit"
+        "pilot"
       ],
-      "content": "SalnetHub publishes its prices up front. All prices are in US dollars. Start free, build with a fixed quote, then keep everything running with a monthly care plan.\n\nWhere to start:\n- Discovery call: Free (20 minutes). We map the problem, tell you honestly whether automation will help, and suggest where to start. Covers: Your current tools and process; The first workflow worth automating; A rough budget and timeline.\n- Automation audit: $490 (credited to your build). A structured review of your tools and processes, ending in a written, ranked automation roadmap. Covers: Process and tool review; Hours-saved estimate per opportunity; A prioritised 90-day roadmap.\n\nFixed-price builds (starting prices for a typical scope; your written quote is fixed before work begins and includes 30 days of aftercare):\n- Single workflow: from $1,500, 1 to 2 weeks. One process automated end to end, such as lead capture to CRM or email to spreadsheet.\n- Automation system: from $4,500, 3 to 6 weeks. Several connected workflows across teams, with approvals, logging and reporting.\n- AI chatbot: from $2,500, 3 to 4 weeks. A website chatbot trained on your content, connected to your CRM and calendar.\n- Custom AI agent: from $5,000, 4 to 6 weeks. An agent that works across your tools with approval steps and a full activity log.\n- RAG knowledge assistant: from $6,000, 4 to 6 weeks. Answers from your documents with sources, access rules and measured accuracy.\n- Website: from $2,500, 4 to 6 weeks. A fast 5-page website with forms and booking connected to your CRM.\n\nThird-party subscriptions and AI usage are paid directly to the providers, at cost. SalnetHub estimates them up front."
+      "content": "You pay for results, not promises. Most agencies ask for thousands up front and hope it works. We do it the other way round: we work out what the problem costs you today, prove we can fix it in a 14-day pilot, and price our work below what you are already losing.\n\nSalnetHub does not use a fixed price list. Every price is worked out from the client's own numbers, and is always below what the problem costs them today. All prices are in US dollars.\n\nHow pricing works:\n1. We find the leak and put a number on it. On a free 20-minute call we ask a few simple questions: where your customers come from, how many slip away, and what each one is worth. Together we work out what the problem costs you every month. You confirm every number.\n2. We prove it in a 14-day pilot. We fix one problem first, small and fast. You see the results in your own calendar, inbox or reports before you commit to anything bigger.\n3. You pay based on what it brings you. Once it works, our price follows the result: per booked appointment, or a small share of the time we save you. Always less than the problem was costing you.\n\nThird-party subscriptions and AI usage are paid directly to the providers, at cost. SalnetHub estimates them up front. For large one-off builds a fixed written quote is available after the pilot, if the client prefers."
     },
     {
-      "id": "pricing-care-plans",
-      "title": "SalnetHub monthly care plans",
+      "id": "pricing-models",
+      "title": "SalnetHub's two ways to charge: pay per result, or pay from what you save",
       "category": "Pricing",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
-        "care plan",
-        "support",
-        "maintenance",
-        "monthly"
+        "pay per result",
+        "pay per booking",
+        "performance",
+        "savings",
+        "pilot",
+        "refund"
       ],
-      "content": "Tools change their APIs and your processes evolve. A SalnetHub care plan keeps your automations working and adds new ones each month. Care plans are billed monthly and can be cancelled with 30 days' notice.\n\n- Essential: $490 per month. For teams with a few automations that must keep running. Includes: Monitoring and error alerts; Fixes when tools or APIs change; Monthly health report; Email support, reply within 1 business day.\n- Growth: $1,500 per month (most popular). For teams adding new automations every month. Includes: Everything in Essential; Up to 10 hours of new builds and changes; Monthly planning call; Priority support, reply within 4 business hours.\n- Partner: $3,500 per month. For businesses that want a dedicated automation team. Includes: Everything in Growth; Up to 30 hours of builds each month; Dedicated automation lead; Quarterly roadmap and reporting review."
+      "content": "SalnetHub charges in one of two ways, depending on the result the work brings:\n\nPay per result (Pay per booked appointment). Used for: Lead replies, chatbots, WhatsApp and SMS agents, call answering and old-lead reactivation. You pay for each booked appointment or qualified lead we deliver. No setup fee and nothing up front. If it does not book, you do not pay. How the price is set: We take what one lead costs you and how many of your leads actually book. That shows what a booked appointment really costs you today. We charge less than that. Includes: No setup fee; Free 14-day pilot; Every booking logged where you can see it.\n\nPay from what you save (Never more than 25% of the savings). Used for: Workflow automation, CRM, reporting and back-office processes. We measure how many hours a task takes your team each month and what those hours cost. Your monthly fee is never more than 25% of the cost we remove, so you keep at least 75%. How the price is set: The pilot is $250, refunded in full if it misses the target we agree at the start. After that you pay one monthly fee, with monitoring and fixes included. Includes: $250 pilot, refundable; Fee capped at 25% of savings; Monitoring and fixes included.\n\nPilots: every engagement starts with a 14-day pilot. Pay-per-result pilots are free. Automation pilots cost $250, refunded in full if the pilot misses the target agreed at the start. If the pilot does not deliver, the client owes nothing for the build."
+    },
+    {
+      "id": "pricing-examples",
+      "title": "Pricing examples: what a booked appointment and manual work really cost",
+      "category": "Pricing",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "example",
+        "cost per appointment",
+        "roi"
+      ],
+      "content": "These are illustrations of how SalnetHub calculates a price. Real prices are set from the client's own numbers on the free call.\n\nBooked appointments: a business pays $40 per lead and 1 in 4 leads books. $40 ÷ 0.25 = $160: that is what one booked appointment really costs them. SalnetHub would charge about $90 per booked appointment, and only when it books.\n\nManual work: 3 people × 6 hours a week × 4 weeks × $25 an hour = $1,800 a month. SalnetHub's monthly fee would be at most 25% of that saving, $450, so the client keeps the rest."
+    },
+    {
+      "id": "pricing-promises",
+      "title": "SalnetHub's pricing promises and how clients grow",
+      "category": "Pricing",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "guarantee",
+        "refund",
+        "contract",
+        "cancel"
+      ],
+      "content": "SalnetHub's pricing promises:\n- No big payment before results: Every engagement starts with a short pilot on one problem.\n- Your numbers, not ours: Prices come from figures you confirm on the call.\n- You see every result: Each booking, lead or saved hour is logged in a sheet or dashboard you can open any time.\n- If it fails, you owe nothing: If the pilot does not deliver, you walk away and owe nothing for the build.\n- Leave any time: Monthly billing with 30 days' notice. No long contracts.\n\nStart small, grow with results:\n1. One problem: We start with your biggest leak, such as missed calls, slow lead replies or one manual process.\n2. Results speak: You see appointments landing and hours coming back. That is usually when clients ask what else it can do.\n3. Grow when it pays: We add the next system: CRM, reporting, AI assistants. Each one is priced the same way."
     },
     {
       "id": "pricing-faq-1",
-      "title": "Pricing FAQ: Why do you publish prices?",
+      "title": "Pricing FAQ: Why don't you publish a fixed price list?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "faq"
       ],
-      "content": "Question about SalnetHub pricing: Why do you publish prices?\nAnswer: So you can tell in a minute whether we fit your budget. Every project still gets a fixed written quote before work starts."
+      "content": "Question about SalnetHub pricing: Why don't you publish a fixed price list?\nAnswer: Because a fixed price ignores what the work is worth to you. A booked appointment is worth more to a dental clinic than to a café. We price from your numbers, so the deal always makes sense for you."
     },
     {
       "id": "pricing-faq-2",
-      "title": "Pricing FAQ: What is not included in the build price?",
+      "title": "Pricing FAQ: What counts as a result?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "faq"
       ],
-      "content": "Question about SalnetHub pricing: What is not included in the build price?\nAnswer: Third-party subscriptions such as Zapier, Make, your CRM, and AI usage. We estimate these up front and you pay the providers directly."
+      "content": "Question about SalnetHub pricing: What counts as a result?\nAnswer: We agree it in writing before we start, for example a confirmed appointment in your calendar or a lead that meets your criteria. Spam, duplicates and bookings that fall through because of us are not charged."
     },
     {
       "id": "pricing-faq-3",
-      "title": "Pricing FAQ: How do payments work?",
+      "title": "Pricing FAQ: Do I pay anything up front?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "faq"
       ],
-      "content": "Question about SalnetHub pricing: How do payments work?\nAnswer: Builds are usually 50% to start and 50% at launch. Care plans are billed monthly and can be cancelled with 30 days' notice."
+      "content": "Question about SalnetHub pricing: Do I pay anything up front?\nAnswer: Not for pay-per-result services: the pilot is free. Automation pilots are $250, refunded in full if the pilot misses its agreed target. Third-party tools such as your CRM, Zapier or AI usage are paid directly to those providers, and we estimate them for you first."
     },
     {
       "id": "pricing-faq-4",
-      "title": "Pricing FAQ: Do you offer refunds?",
+      "title": "Pricing FAQ: What if the pilot doesn't work?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "faq"
       ],
-      "content": "Question about SalnetHub pricing: Do you offer refunds?\nAnswer: If we cannot deliver what the written scope describes, we fix it at no cost or refund the unfinished part of the work."
+      "content": "Question about SalnetHub pricing: What if the pilot doesn't work?\nAnswer: Then you walk away and owe nothing for the build. We would rather lose a pilot than keep a client who is not getting value."
     },
     {
       "id": "pricing-faq-5",
-      "title": "Pricing FAQ: Can we start small?",
+      "title": "Pricing FAQ: How do you bill?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/engagements",
       "tags": [
         "pricing",
         "faq"
       ],
-      "content": "Question about SalnetHub pricing: Can we start small?\nAnswer: Yes. Most clients start with one workflow, see the result, then add more. The audit fee is credited to your first build."
+      "content": "Question about SalnetHub pricing: How do you bill?\nAnswer: Monthly. Pay-per-result services are billed from the results log you can see; automation fees are one fixed monthly amount. No surprises."
+    },
+    {
+      "id": "pricing-faq-6",
+      "title": "Pricing FAQ: Can we still get a fixed quote?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/engagements",
+      "tags": [
+        "pricing",
+        "faq"
+      ],
+      "content": "Question about SalnetHub pricing: Can we still get a fixed quote?\nAnswer: Yes. For large one-off builds, such as a knowledge assistant or a company-wide system, we can give you a fixed written quote after the pilot if you prefer."
     },
     {
       "id": "pricing-cost-calculator",
-      "title": "What manual work costs: the SalnetHub cost calculator",
+      "title": "The SalnetHub cost calculator: manual work and lead bookings",
       "category": "Pricing",
       "url": "https://www.salnethub.com/",
       "tags": [
@@ -811,7 +853,7 @@
         "calculator",
         "outcomes"
       ],
-      "content": "The SalnetHub home page has a cost calculator that shows what copy-paste work costs per year: people × hours per week each × 48 working weeks × hourly rate. It then assumes, conservatively, that one automation project removes half of that time.\nExample with the default numbers: 3 people × 6 hours a week × 48 weeks × $25 an hour = $21,600 a year, of which about half could be saved.\n\nTypical outcomes from single-workflow projects:\n- Replying to a new lead: before, the next working day; after, under 2 minutes, day or night.\n- The weekly sales report: before, half of every monday; after, in your inbox at 8 am.\n- Order details from email: before, copied by hand, 40 a day; after, added to the sheet as they arrive.\n- Onboarding a new client: before, 2 hours across 5 tools; after, one trigger, under 5 minutes."
+      "content": "The SalnetHub home page has a calculator with two tabs.\nManual work: what copy-paste work costs per year: people × hours per week each × 48 working weeks × hourly rate. It assumes, conservatively, that automation removes half of that time, and shows SalnetHub's fee at most 25% of the saving.\nLeads and bookings: what one lead costs ÷ the share of leads that book = what one booked appointment really costs. With SalnetHub the client pays less than that per booking, only when it books, with $0 up front. Default example: $40 per lead and 25% booking = $160 per booked appointment.\nExample with the default numbers: 3 people × 6 hours a week × 48 weeks × $25 an hour = $21,600 a year, of which about half could be saved.\n\nTypical outcomes from single-workflow projects:\n- Replying to a new lead: before, the next working day; after, under 2 minutes, day or night.\n- The weekly sales report: before, half of every monday; after, in your inbox at 8 am.\n- Order details from email: before, copied by hand, 40 a day; after, added to the sheet as they arrive.\n- Onboarding a new client: before, 2 hours across 5 tools; after, one trigger, under 5 minutes."
     },
     {
       "id": "process-steps",
@@ -823,7 +865,7 @@
         "how we work",
         "steps"
       ],
-      "content": "SalnetHub follows a clear process with fixed prices, weekly updates and nothing installed on your side. Five steps, from first call to a system that keeps running. Each step ends with something concrete you can see, check and keep.\n\n1. Discover: We learn how the work happens today. A 20-minute call, then a closer look at your tools and the people who use them. We find where time is lost and agree on the first workflow worth automating. Output: A written scope with a fixed price.\n2. Build: We build in a safe copy of your setup. Automations are built and tested away from live data. You see progress every week, in plain language, with nothing to install. Output: Working automations in a test setup.\n3. Test: We run real examples end to end. Your team pushes real cases through every path, including the odd ones. We fix every issue before anything touches live data. Output: A signed-off test checklist.\n4. Hand over: We launch and teach your team. We switch on in stages, watch the first days closely, and leave a written guide plus a recorded walkthrough. Output: Documentation your team can use.\n5. Support: We keep it running. Tools change their APIs and processes evolve. Care plans include monitoring, fixes and new builds, so automations keep working. Output: Monthly health report."
+      "content": "SalnetHub follows a clear process with results-based pricing, weekly updates and nothing installed on your side. Five steps, from first call to a system that keeps running. Each step ends with something concrete you can see, check and keep.\n\n1. Discover: We learn how the work happens today. A 20-minute call, then a closer look at your tools and the people who use them. We find where time is lost and agree on the first workflow worth automating. Output: A clear target and a 14-day pilot plan.\n2. Build: We build in a safe copy of your setup. Automations are built and tested away from live data. You see progress every week, in plain language, with nothing to install. Output: Working automations in a test setup.\n3. Test: We run real examples end to end. Your team pushes real cases through every path, including the odd ones. We fix every issue before anything touches live data. Output: A signed-off test checklist.\n4. Hand over: We launch and teach your team. We switch on in stages, watch the first days closely, and leave a written guide plus a recorded walkthrough. Output: Documentation your team can use.\n5. Support: We keep it running. Tools change their APIs and processes evolve. Your monthly fee includes monitoring and fixes, and we add new builds when they pay for themselves. Output: Monthly health report."
     },
     {
       "id": "process-commitments",
@@ -837,7 +879,7 @@
         "aftercare",
         "updates"
       ],
-      "content": "What you can count on when you work with SalnetHub:\n- Fixed scope and price: You get a written scope and a fixed price before any work starts. No hourly surprises.\n- Weekly updates in plain words: Every week you hear what was built, what is next and anything we need from you.\n- Built in a safe copy first: We build and test away from live data, so your daily work is never interrupted.\n- You own everything: Automations live in your accounts. If we part ways, everything keeps running.\n- Documentation included: Every build ships with a written guide and a recorded walkthrough.\n- 30 days of aftercare: We monitor and fix every new build for 30 days after launch at no extra cost.\n\nOur promises:\n- Fixed price, in writing: A written quote before work starts. No hourly meter.\n- Our mistake, our cost: If we miss the written scope, we fix it free or refund the rest.\n- Live in weeks: Your first workflow is usually live in 1 to 2 weeks.\n- Documented and handed over: A written guide and recorded walkthrough for every build.\n\nA typical project week. No long meetings. Short written updates you can read in two minutes, and a demo whenever there is something to see.\n- Monday: Short written update: progress, blockers, decisions needed.\n- Mid-week: Demo link or recording of what is working so far.\n- Friday: Plan for next week and any access or data we need."
+      "content": "What you can count on when you work with SalnetHub:\n- Pay for results: We prove it in a 14-day pilot first, then charge per booking or a capped share of the time we save. No hourly surprises.\n- Weekly updates in plain words: Every week you hear what was built, what is next and anything we need from you.\n- Built in a safe copy first: We build and test away from live data, so your daily work is never interrupted.\n- You own everything: Automations live in your accounts. If we part ways, everything keeps running.\n- Documentation included: Every build ships with a written guide and a recorded walkthrough.\n- 30 days of aftercare: We monitor and fix every new build for 30 days after launch at no extra cost.\n\nOur promises:\n- Pay for results: Per booked appointment, or a capped share of the time we save you.\n- If it fails, you owe nothing: Every engagement starts with a pilot. No result, no bill for the build.\n- Live in weeks: Your first workflow is usually live in 1 to 2 weeks.\n- Documented and handed over: A written guide and recorded walkthrough for every build.\n\nA typical project week. No long meetings. Short written updates you can read in two minutes, and a demo whenever there is something to see.\n- Monday: Short written update: progress, blockers, decisions needed.\n- Mid-week: Demo link or recording of what is working so far.\n- Friday: Plan for next week and any access or data we need."
     },
     {
       "id": "general-faq-1",
@@ -917,7 +959,7 @@
       "tags": [
         "faq"
       ],
-      "content": "Question about working with SalnetHub: What happens if an automation breaks?\nAnswer: You get an alert, and we fix it. Our care plans include monitoring, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost."
+      "content": "Question about working with SalnetHub: What happens if an automation breaks?\nAnswer: You get an alert, and we fix it. Monitoring is included in your monthly fee, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost."
     },
     {
       "id": "integrations-overview",

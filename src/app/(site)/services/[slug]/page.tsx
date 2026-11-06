@@ -47,7 +47,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
     serviceType: s.name,
     areaServed: "Worldwide",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    offers: { "@type": "Offer", priceCurrency: "USD", price: s.priceFrom.replace(/[^0-9]/g, ""), description: `From ${s.priceFrom}` },
+    offers: { "@type": "Offer", priceCurrency: "USD", description: `${s.priceModel}. ${s.priceNote}` },
   };
   const faqLd = {
     "@context": "https://schema.org",
@@ -72,8 +72,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             </div>
             <dl className="grid grid-cols-2 border-b border-line">
               <div className="border-r border-line p-6">
-                <dt className="text-[13px] text-slate">Starting price</dt>
-                <dd className="mt-1 text-[28px] font-bold tracking-tight">{s.priceFrom}</dd>
+                <dt className="text-[13px] text-slate">How you pay</dt>
+                <dd className="mt-1 text-[22px] font-bold leading-tight tracking-tight">{s.priceModel}</dd>
               </div>
               <div className="p-6">
                 <dt className="text-[13px] text-slate">Typical timeline</dt>

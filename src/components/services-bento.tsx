@@ -158,7 +158,7 @@ export function ServicesBento() {
                       >
                         {s.name}
                         <span className="flex shrink-0 items-center gap-3 text-[13px] font-normal text-slate">
-                          from {s.priceFrom}
+                          {s.priceModel}
                           <ArrowUpRight size={16} className="text-slate transition-colors group-hover:text-accent" />
                         </span>
                       </Link>

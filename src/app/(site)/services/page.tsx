@@ -68,7 +68,7 @@ export default function ServicesPage() {
                       <p className="mt-2 max-w-2xl text-[16px] text-slate">{list[0].short}</p>
                     </div>
                     <span className="link-arrow">
-                      From {list[0].priceFrom} <ArrowRight size={16} />
+                      {list[0].priceModel} <ArrowRight size={16} />
                     </span>
                   </Link>
                 ) : (

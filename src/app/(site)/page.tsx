@@ -8,7 +8,7 @@ import { CostCalculator } from "@/components/cost-calculator";
 import { hasTestimonials, Testimonials, UpworkProof } from "@/components/testimonials";
 import { CtaBand, Faq, PrimaryCta, SectionHead } from "@/components/ui";
 import { processSteps } from "@/content/process";
-import { entryPoints, builds } from "@/content/engagements";
+import { pricing, pricingModels, pricingTeaser } from "@/content/engagements";
 import { integrations } from "@/content/integrations";
 import { getCaseStudies } from "@/lib/case-studies";
 import { site } from "@/content/site";
@@ -23,10 +23,10 @@ const changes = [
   { area: "Onboarding a new client", before: "2 hours across 5 tools", after: "One trigger, under 5 minutes" },
 ];
 
-// Every promise here is one we already make in the pricing terms and FAQs.
+// Every promise here is one we already make on the pricing page and in the FAQs.
 const promises = [
-  { name: "Fixed price, in writing", body: "A written quote before work starts. No hourly meter." },
-  { name: "Our mistake, our cost", body: "If we miss the written scope, we fix it free or refund the rest." },
+  { name: "Pay for results", body: "Per booked appointment, or a capped share of the time we save you." },
+  { name: "If it fails, you owe nothing", body: "Every engagement starts with a pilot. No result, no bill for the build." },
   { name: "Live in weeks", body: "Your first workflow is usually live in 1 to 2 weeks." },
   { name: "Documented and handed over", body: "A written guide and recorded walkthrough for every build." },
 ];
@@ -35,11 +35,11 @@ const homeFaqs = [
   { q: "What kind of businesses do you work with?", a: "Small-to-medium teams and businesses, usually 5 to 200 people, in services, e-commerce, property, logistics and professional firms. If your team copies data between tools, we can probably help." },
   { q: "Do we need to change the tools we use?", a: "No. We build on what you already run, such as Google Workspace, HubSpot or your accounting software, and add a connector like Make, Zapier or n8n only where needed." },
   { q: "How quickly will we see results?", a: "A single workflow is usually live within 1 to 2 weeks. Larger systems go live in stages, so you get value before the whole project is finished." },
-  { q: "What happens if an automation breaks?", a: "You get an alert, and we fix it. Our care plans include monitoring, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost." },
+  { q: "What happens if an automation breaks?", a: "You get an alert, and we fix it. Monitoring is included in your monthly fee, so we usually spot problems before you do. When it is our mistake, we say so and fix it at no cost." },
 ];
 
 const hasUpwork = upwork.rating != null || upwork.jobSuccess != null || upwork.badge != null;
-const proofLine = [site.proof, `${integrations.length}+ tools connected`, "First workflow live in 1 to 2 weeks", "Fixed-price quotes"];
+const proofLine = [site.proof, `${integrations.length}+ tools connected`, "First workflow live in 1 to 2 weeks", "Pay for results, not promises"];
 
 export default async function Home() {
   const stories = await getCaseStudies();
@@ -104,10 +104,10 @@ export default async function Home() {
         <div className="container-x">
           <div className="max-w-3xl">
             <h2 className="t-h1" data-reveal>
-              What is copy-paste <span className="t-accent">costing you?</span>
+              What is the leak <span className="t-accent">costing you?</span>
             </h2>
             <p className="t-lead mt-5" data-reveal>
-              Move the sliders to match your team. Most businesses are surprised by the yearly number.
+              Manual work or lost leads: move the sliders to match your business. Most owners are surprised by the number, and our price is always below it.
             </p>
           </div>
           <div className="mt-12" data-reveal>
@@ -150,7 +150,7 @@ export default async function Home() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHead
               title="Pick the work you want off your plate"
-              body="Fixed-price builds on the tools you already pay for. Start with one workflow, then add more when it pays for itself."
+              body="Built on the tools you already pay for, and priced on the results they bring. Start with one problem, then add more when it pays for itself."
             />
             <Link href="/services" className="link-arrow shrink-0" data-reveal>
               Compare all services <ArrowRight size={16} />
@@ -212,31 +212,31 @@ export default async function Home() {
           <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div>
               <h2 className="t-h1" data-reveal>
-                Clear prices, published up front
+                {pricingTeaser.title}
               </h2>
               <p className="t-lead mt-5" data-reveal>
-                Every project gets a fixed written quote before work starts. Most clients begin with a single workflow.
+                {pricingTeaser.body}
               </p>
               <Link href="/engagements" className="btn btn-secondary mt-9" data-reveal>
-                See all pricing
+                See how pricing works
               </Link>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-              {[...entryPoints, builds[0], builds[2]].map((e, i) => (
+              {pricingModels.map((m, i) => (
                 <div
-                  key={e.name}
-                  className={`rounded-card border p-7 ${i === 2 ? "on-dark border-deep bg-deep text-white" : "border-line bg-surface"}`}
+                  key={m.id}
+                  className={`flex flex-col rounded-card border p-7 ${i === 0 ? "on-dark border-deep bg-deep text-white" : "border-line bg-surface"}`}
                   data-reveal
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-                    <p className="text-[15px] font-bold">{e.name}</p>
-                    {i === 2 && <span className="whitespace-nowrap rounded-full bg-white px-3 py-1 text-[12px] font-bold text-black">Most popular start</span>}
-                  </div>
-                  <p className="mt-4 text-[34px] font-bold leading-none tracking-tight">{"unit" in e ? e.price : `From ${e.price}`}</p>
-                  <p className={`mt-2 text-[13px] ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{"unit" in e ? e.unit : e.time}</p>
-                  <p className={`mt-5 text-[14px] leading-relaxed ${i === 2 ? "text-on-ink-muted" : "text-slate"}`}>{e.body}</p>
+                  <p className={`text-[13px] font-bold ${i === 0 ? "text-on-ink-muted" : "text-slate"}`}>{m.label}</p>
+                  <p className="mt-4 text-[24px] font-bold leading-tight tracking-tight">{m.headline}</p>
+                  <p className={`mt-4 text-[14px] leading-relaxed ${i === 0 ? "text-on-ink-muted" : "text-slate"}`}>{m.body}</p>
+                  <p className={`mt-auto pt-5 text-[13px] ${i === 0 ? "text-on-ink-muted" : "text-slate"}`}>For: {m.for}</p>
                 </div>
               ))}
+              <p className="text-[13px] text-slate sm:col-span-2">
+                Every engagement starts with a {pricing.pilotDays}-day pilot. Automation pilots are {pricing.pilotFee}, refunded if the pilot misses its target.
+              </p>
             </div>
           </div>
 

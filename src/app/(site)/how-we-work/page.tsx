@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const commitments = [
-  { title: "Fixed scope and price", body: "You get a written scope and a fixed price before any work starts. No hourly surprises." },
+  { title: "Pay for results", body: "We prove it in a 14-day pilot first, then charge per booking or a capped share of the time we save. No hourly surprises." },
   { title: "Weekly updates in plain words", body: "Every week you hear what was built, what is next and anything we need from you." },
   { title: "Built in a safe copy first", body: "We build and test away from live data, so your daily work is never interrupted." },
   { title: "You own everything", body: "Automations live in your accounts. If we part ways, everything keeps running." },
@@ -38,7 +38,7 @@ export default function HowWeWorkPage() {
       <JsonLd data={breadcrumbLd([{ name: "How we work", path: "/how-we-work" }])} />
       <PageHero
         title="How we work"
-        sub="A clear process with fixed prices, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
+        sub="A clear process with results-based pricing, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
       >
         <PrimaryCta tone="cta" />
       </PageHero>
