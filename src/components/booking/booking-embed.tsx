@@ -9,7 +9,7 @@ import { getJourney } from "@/lib/journey";
 //   ready   -> we answer with the visitor's journey (for the Leads sheet)
 //   height  -> we resize the iframe so it never shows its own scrollbar
 //   booked  -> we record the lead in analytics
-const BOOKING_URL = (process.env.NEXT_PUBLIC_BOOKING_URL || "https://salnethub-booking.netlify.app").replace(/\/$/, "");
+const BOOKING_URL = (process.env.NEXT_PUBLIC_BOOKING_URL || "https://book.salnethub.com").replace(/\/$/, "");
 const BOOKING_ORIGIN = new URL(BOOKING_URL).origin;
 const EVENT = "30min";
 
