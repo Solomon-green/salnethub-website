@@ -697,3 +697,426 @@ html.lenis body {
 .chat-scroll::-webkit-scrollbar {
   display: none;
 }
+
+/* Blog post blocks (src/components/blog/post-blocks.tsx) */
+.prose-post .post-callout {
+  margin: 2em 0;
+  padding: 22px 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+}
+.post-callout-body {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.post-callout-body > :last-child,
+.post-playbook-body > :last-child {
+  margin-bottom: 0;
+}
+.prose-post .post-pullquote {
+  margin: 2.4em 0;
+}
+.prose-post .post-pullquote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--color-fg);
+}
+.prose-post .post-pullquote blockquote::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-bottom: 18px;
+  background: var(--color-fg);
+}
+.post-pullquote figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--color-stone-deep);
+}
+.prose-post .post-playbook {
+  margin: 2.6em 0 1em;
+  padding: 26px 28px;
+  background: var(--color-deep);
+  color: #d9dde1;
+  border-radius: var(--radius-card);
+}
+.post-playbook-title {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.prose-post .post-playbook ul,
+.prose-post .post-playbook ol {
+  list-style: none;
+  padding-left: 0;
+}
+.prose-post .post-playbook li {
+  position: relative;
+  padding-left: 30px;
+  margin: 0.6em 0;
+}
+.prose-post .post-playbook li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.45em;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+.prose-post .post-playbook strong,
+.prose-post .post-playbook a {
+  color: #ffffff;
+}
+.prose-post .post-chart {
+  margin: 2.2em 0;
+  padding: 24px 26px 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+}
+.post-chart-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+.post-chart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: end;
+  margin-top: 18px;
+}
+.post-chart-bars {
+  display: flex;
+  gap: 18px;
+  height: 200px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--color-line);
+}
+.post-chart-col {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.post-chart-value {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-fg);
+  white-space: nowrap;
+}
+.post-chart-bar {
+  width: 100%;
+  max-width: 88px;
+  border-radius: 6px 6px 0 0;
+}
+.post-chart-bar.is-before {
+  background: repeating-linear-gradient(135deg, var(--color-mist-2) 0 6px, var(--color-raised) 6px 12px);
+}
+.post-chart-bar.is-after {
+  background: var(--color-fg);
+}
+.post-chart-label {
+  position: absolute;
+  bottom: -24px;
+  font-size: 13px;
+  color: var(--color-stone-deep);
+  white-space: nowrap;
+}
+.post-chart-pct {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-fg);
+}
+.post-chart-note {
+  margin: 10px 0 0 !important;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-slate);
+}
+@media (max-width: 520px) {
+  .post-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Run replay (src/components/illustrations/run-replay.tsx): one scene per step, driven by [data-step] */
+/* The app window is a light screen inside the dark band, so it points the tokens back to light */
+.rr-window {
+  --color-canvas: #eceef0;
+  --color-surface: #ffffff;
+  --color-raised: #e3e6e9;
+  --color-fg: #1a1c1e;
+  --color-line: #d9dde1;
+  --color-mist-2: #d9dde1;
+  --color-slate: #3c4044;
+  --color-stone-deep: #6b7076;
+  color-scheme: light;
+}
+.rr-scene {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.985);
+  transition: opacity 450ms var(--ease-out-quint), transform 600ms var(--ease-out-quint), visibility 0s 450ms;
+}
+.rr[data-step="0"] [data-scene="0"],.rr[data-step="1"] [data-scene="1"],.rr[data-step="2"] [data-scene="2"],.rr[data-step="3"] [data-scene="3"],.rr[data-step="4"] [data-scene="4"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.rr-pop,
+.rr-drop,
+.rr-type {
+  opacity: 0;
+}
+.rr[data-step="0"] [data-scene="0"] .rr-pop,.rr[data-step="1"] [data-scene="1"] .rr-pop,.rr[data-step="2"] [data-scene="2"] .rr-pop,.rr[data-step="3"] [data-scene="3"] .rr-pop,.rr[data-step="4"] [data-scene="4"] .rr-pop {
+  animation: rr-pop 500ms var(--ease-out-quint) 700ms both;
+}
+.rr[data-step="0"] [data-scene="0"] .rr-drop,.rr[data-step="1"] [data-scene="1"] .rr-drop,.rr[data-step="2"] [data-scene="2"] .rr-drop,.rr[data-step="3"] [data-scene="3"] .rr-drop,.rr[data-step="4"] [data-scene="4"] .rr-drop {
+  animation: rr-drop 700ms var(--ease-out-quint) 250ms both;
+}
+.rr[data-step="0"] [data-scene="0"] .rr-type,.rr[data-step="1"] [data-scene="1"] .rr-type,.rr[data-step="2"] [data-scene="2"] .rr-type,.rr[data-step="3"] [data-scene="3"] .rr-type,.rr[data-step="4"] [data-scene="4"] .rr-type {
+  animation: rr-type 1100ms ease-out 150ms both;
+}
+@keyframes rr-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rr-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-34px) rotate(-3deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(3px) rotate(0.5deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rr-type {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+.rr-row .st-run,
+.rr-row .st-done {
+  display: none;
+}
+.rr-row[data-state="running"] {
+  background: rgb(255 255 255 / 0.06);
+}
+.rr-row[data-state="running"] .st-idle,
+.rr-row[data-state="done"] .st-idle {
+  display: none;
+}
+.rr-row[data-state="running"] .st-run {
+  display: inline-flex;
+}
+.rr-row[data-state="done"] .st-done {
+  display: inline;
+}
+.rr-row[data-state="idle"] {
+  opacity: 0.55;
+}
+.rr-row {
+  transition: opacity 300ms, background-color 300ms;
+}
+.rr-complete {
+  opacity: 0.25;
+  transition: opacity 500ms var(--ease-out-quint);
+}
+.rr[data-complete] .rr-complete {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rr-scene {
+    transition: none !important;
+  }
+  .rr-pop,
+  .rr-drop,
+  .rr-type {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
+/* Feature tiles (src/components/feature-tiles.tsx) */
+.ft-runs {
+  animation: ft-scroll 46s linear infinite;
+}
+@keyframes ft-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ft-flag {
+  background: repeating-linear-gradient(135deg, rgb(255 255 255 / 0.9) 0 3px, rgb(255 255 255 / 0.25) 3px 6px);
+  outline: 1px solid rgb(255 255 255 / 0.9);
+  outline-offset: 2px;
+}
+.ft-live {
+  animation: ft-live 1.8s ease-in-out infinite;
+}
+@keyframes ft-live {
+  50% {
+    opacity: 0.25;
+  }
+}
+.ft-approve {
+  animation: ft-ring 2.6s var(--ease-out-quint) infinite;
+}
+@keyframes ft-ring {
+  0%,
+  35% {
+    box-shadow: 0 0 0 0 rgb(26 28 30 / 0.35);
+  }
+  80%,
+  100% {
+    box-shadow: 0 0 0 10px rgb(26 28 30 / 0);
+  }
+}
+.ft-cursor-a {
+  animation: ft-drift-a 7.5s ease-in-out infinite;
+}
+.ft-cursor-b {
+  animation: ft-drift-b 8.8s ease-in-out infinite;
+}
+@keyframes ft-drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  35% {
+    transform: translate(-60px, -10px);
+  }
+  65% {
+    transform: translate(-36px, 4px);
+  }
+}
+@keyframes ft-drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(70px, -6px);
+  }
+  70% {
+    transform: translate(96px, 2px);
+  }
+}
+.ft-toast {
+  opacity: 0;
+  transform: translateY(calc(-50% + 46px));
+  animation: ft-toast 9s var(--ease-out-quint) infinite;
+}
+@keyframes ft-toast {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-50% + 46px));
+  }
+  7%,
+  28% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  34%,
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-50% - 46px)) scale(0.96);
+  }
+}
+.ft-caret {
+  animation: ft-caret 1s steps(1) infinite;
+}
+@keyframes ft-caret {
+  50% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ft-runs,
+  .ft-live,
+  .ft-approve,
+  .ft-cursor-a,
+  .ft-cursor-b,
+  .ft-toast,
+  .ft-caret {
+    animation: none !important;
+  }
+  .ft-toast:first-child {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+/* Recipes (src/components/recipes.tsx): the flow line draws in on hover */
+.recipe-line-fill {
+  transform: scaleY(0.12);
+  transition: transform 700ms var(--ease-out-quint);
+}
+.recipe:hover .recipe-line-fill,
+.recipe:focus-within .recipe-line-fill {
+  transform: scaleY(1);
+}
+
+/* Blog images: text keeps its reading width, figures use the full column */
+div.prose-post {
+  max-width: none;
+}
+/* Markdoc wraps the body in its own <article> */
+.prose-post > article > * {
+  max-width: 68ch;
+}
+.prose-post > article > p:has(> .post-image),
+.prose-post > article > .post-chart {
+  max-width: none;
+}
+.prose-post .post-image {
+  display: block;
+  cursor: zoom-in;
+}
+.prose-post .post-image img {
+  transition: border-color 300ms var(--ease-out-quint);
+}
+.prose-post .post-image:hover img {
+  border-color: var(--color-stone);
+}

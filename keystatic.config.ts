@@ -1,4 +1,5 @@
 import { collection, config, fields } from "@keystatic/core";
+import { block, wrapper } from "@keystatic/core/content-components";
 import { services } from "./src/content/services";
 import { authors } from "./src/content/authors";
 
@@ -9,6 +10,41 @@ const storage =
   process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE === "github"
     ? ({ kind: "github", repo: { owner: "Solomon-green", name: "salnethub-website" } } as const)
     : ({ kind: "local" } as const);
+
+// Blocks for blog posts, inserted from the editor's "+" menu and rendered by src/components/blog/post-blocks.tsx.
+const postBlocks = {
+  Callout: wrapper({
+    label: "Callout",
+    description: "A boxed aside, usually a short definition such as \"What's a RAG system?\"",
+    schema: { title: fields.text({ label: "Label", description: "Short, shown in small capitals. E.g. What's a RAG system?" }) },
+  }),
+  PullQuote: block({
+    label: "Pull quote",
+    description: "One sentence worth remembering, set large. Use once or twice per post.",
+    schema: {
+      quote: fields.text({ label: "Quote", multiline: true, validation: { length: { min: 1 } } }),
+      cite: fields.text({ label: "Who said it (optional)" }),
+    },
+  }),
+  Playbook: wrapper({
+    label: "Playbook",
+    description: "The closing checklist. Put a short bullet list inside.",
+    schema: { title: fields.text({ label: "Title", defaultValue: "Playbook" }) },
+  }),
+  BeforeAfter: block({
+    label: "Before / after chart",
+    description: "Two bars and the % change, from real numbers only.",
+    schema: {
+      title: fields.text({ label: "Title", description: "What is measured, e.g. Average reply length", validation: { length: { min: 1 } } }),
+      unit: fields.text({ label: "Unit (optional)", description: "e.g. words, s, hours/week, $" }),
+      before: fields.number({ label: "Before value", validation: { isRequired: true } }),
+      after: fields.number({ label: "After value", validation: { isRequired: true } }),
+      beforeLabel: fields.text({ label: "Before label", defaultValue: "Before" }),
+      afterLabel: fields.text({ label: "After label", defaultValue: "After" }),
+      note: fields.text({ label: "Note under the % (optional)", multiline: true }),
+    },
+  }),
+};
 
 export default config({
   storage,
@@ -140,7 +176,8 @@ export default config({
         draft: fields.checkbox({ label: "Draft (hidden from the live site)", defaultValue: true }),
         body: fields.markdoc({
           label: "Post",
-          description: "Start with a direct answer. Use ## for sections (they build the table of contents) and ### for sub-sections.",
+          description: "Start with a direct answer. Use ## for sections (they build the table of contents) and ### for sub-sections. Callout, Pull quote, Playbook and Before / after chart are in the + menu.",
+          components: postBlocks,
         }),
       },
     }),

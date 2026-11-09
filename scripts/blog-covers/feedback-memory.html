@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .col {
+        position: absolute;
+        top: 200px;
+        width: 460px;
+      }
+      .run {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .when {
+        margin-top: 4px;
+        font-size: 18px;
+        color: #6b7076;
+      }
+      .draft {
+        margin-top: 22px;
+        padding: 24px 26px;
+        background: #fff;
+        border: 2px solid #d9dde1;
+        border-radius: 22px;
+        font-size: 20px;
+        line-height: 1.5;
+        box-shadow: 0 26px 50px -34px rgb(26 28 30 / 0.35);
+      }
+      .draft .lbl {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6b7076;
+      }
+      .draft p {
+        margin-top: 10px;
+      }
+      .bad {
+        text-decoration: underline wavy #1a1c1e;
+        text-underline-offset: 5px;
+      }
+      .good {
+        background: #e3e6e9;
+        padding: 0 5px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      .note {
+        margin-top: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .mem {
+        position: absolute;
+        left: 600px;
+        top: 430px;
+        width: 400px;
+        padding: 26px;
+        background: #1a1c1e;
+        color: #fff;
+        border-radius: 24px;
+        box-shadow: 0 40px 80px -40px rgb(26 28 30 / 0.6);
+      }
+      .mem .lbl {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #a6acb2;
+      }
+      .rule {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: #2c3034;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      .rule.new {
+        background: #2459e0;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="abs label" style="left: 90px; top: 92px">Memory in practice</p>
+    <div class="col" style="left: 90px">
+      <p class="run">Run 1</p>
+      <p class="when">Monday</p>
+      <div class="draft">
+        <span class="lbl">AI draft</span>
+        <p>Hi Dana, thanks for contacting <span class="bad">Northwind</span>. Our plans start at <span class="bad">$99</span>.</p>
+      </div>
+      <span class="note" style="border: 2px solid #1a1c1e">✏️ Corrected by Sarah</span>
+    </div>
+
+    <div class="mem">
+      <span class="lbl">Memory</span>
+      <p class="rule">Write the full name: "Northwind Dental".</p>
+      <p class="rule new">Never quote prices in a first reply. Offer a call.</p>
+    </div>
+
+    <div class="col" style="left: 1060px">
+      <p class="run">Run 2</p>
+      <p class="when">Thursday, next lead</p>
+      <div class="draft" style="border-color: #1a1c1e">
+        <span class="lbl">AI draft</span>
+        <p>Hi Lee, thanks for contacting <span class="good">Bayside Physio</span>. <span class="good">Happy to walk you through options on a short call.</span></p>
+      </div>
+      <span class="note" style="background: #1a1c1e; color: #fff">✓ Used 2 saved rules · no edits</span>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M300 500 C 300 560, 470 560, 592 552" />
+      <path class="arrow" d="M576 540 L594 552 L578 566" />
+      <path class="arrow blue" d="M1004 552 C 1060 552, 1080 520, 1080 512" />
+      <path class="arrow blue" d="M1068 526 L1080 510 L1094 524" />
+      <path class="spark" d="M770 388 l-6 -24 M806 392 l10 -22" />
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .card {
+        position: absolute;
+        width: 420px;
+        padding: 24px 26px;
+        background: #fff;
+        border: 2px solid #d9dde1;
+        border-radius: 22px;
+        box-shadow: 0 26px 50px -34px rgb(26 28 30 / 0.35);
+      }
+      .head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #6b7076;
+      }
+      .head svg {
+        width: 26px;
+        height: 26px;
+      }
+      .msg {
+        margin-top: 14px;
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 600;
+      }
+      .btns {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .btn {
+        padding: 8px 16px;
+        border: 2px solid #d9dde1;
+        border-radius: 999px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #3c4044;
+      }
+      .btn.on {
+        border-color: #2459e0;
+        background: #2459e0;
+        color: #fff;
+      }
+      .reply {
+        margin-top: 14px;
+        padding: 12px 16px;
+        border-left: 4px solid #1a1c1e;
+        background: #f6f7f8;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      del {
+        color: #a6acb2;
+      }
+      ins {
+        text-decoration: none;
+        background: #e3e6e9;
+        padding: 0 4px;
+        border-radius: 4px;
+      }
+      table {
+        width: 100%;
+        margin-top: 16px;
+        border-collapse: collapse;
+        font-size: 16px;
+      }
+      th {
+        text-align: left;
+        color: #6b7076;
+        font-weight: 700;
+        padding: 0 10px 10px 0;
+        border-bottom: 2px solid #e3e6e9;
+      }
+      td {
+        padding: 12px 10px 12px 0;
+        border-bottom: 1px solid #e3e6e9;
+        font-weight: 600;
+      }
+      .tag {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #e3e6e9;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="abs label" style="left: 90px; top: 52px">Where feedback comes from</p>
+
+    <div class="card" style="left: 90px; top: 110px">
+      <div class="head">{{icon:whatsapp}}Lead alert · WhatsApp</div>
+      <p class="msg">New lead: Dana Ortiz, score 86. Good lead?</p>
+      <div class="btns"><span class="btn on">👍 Yes</span><span class="btn">👎 No</span></div>
+    </div>
+
+    <div class="card" style="left: 90px; top: 360px">
+      <div class="head">{{icon:gmail}}Monday report · email</div>
+      <p class="msg">Revenue up 12% on last week.</p>
+      <p class="reply">"Ads spend is missing the Google account."</p>
+    </div>
+
+    <div class="card" style="left: 90px; top: 620px">
+      <div class="head">✏️ AI draft · edited before sending</div>
+      <p class="msg" style="font-weight: 500">Hi Dana, <del>Hope this finds you well.</del> <ins>Thanks for the details on your weekend calls.</ins></p>
+    </div>
+
+    <!-- arrows into the review sheet -->
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M520 190 C 700 190, 760 380, 900 400" />
+      <path class="arrow" d="M520 450 C 680 450, 760 450, 900 450" />
+      <path class="arrow" d="M520 700 C 700 700, 760 510, 900 500" />
+      <path class="arrow" d="M888 390 L902 400 L888 412 M888 440 L902 450 L888 462 M886 490 L902 500 L890 514" />
+      <path class="spark blue" d="M1530 196 l20 -16 M1536 228 l26 -2" />
+    </svg>
+
+    <div class="card" style="left: 920px; top: 210px; width: 590px; border-color: #1a1c1e">
+      <div class="head" style="color: #1a1c1e">{{icon:googlesheets}}Review sheet · this week</div>
+      <table>
+        <tr><th>From</th><th>Feedback</th><th>Status</th></tr>
+        <tr><td>Lead alert</td><td>👍 Good lead</td><td><span class="tag">Kept</span></td></tr>
+        <tr><td>Monday report</td><td>Google ads missing</td><td><span class="tag" style="background: #2459e0; color: #fff">To fix</span></td></tr>
+        <tr><td>AI draft</td><td>Opening line edited</td><td><span class="tag">Saved</span></td></tr>
+      </table>
+    </div>
+    <p class="abs" style="left: 920px; top: 560px; width: 590px; font-size: 20px; line-height: 1.45; color: #3c4044">
+      Every reaction lands in one place, with the run it came from. Nobody has to remember to pass it on.
+    </p>
+  </body>
+</html>

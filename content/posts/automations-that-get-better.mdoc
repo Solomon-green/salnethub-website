@@ -1,0 +1,102 @@
+---
+title: How to build automations that get better every week
+seoTitle: 'Automation Feedback Loops: Build Workflows That Improve'
+description: >-
+  Most automations are built once and slowly go stale. How to add a feedback loop so yours improve every week: one-tap feedback, memory and a 15-minute tune-up.
+primaryKeyword: automation feedback loop
+category: automation
+author: bwire-solomon
+cover: /blog/feedback-loops-for-automations.png
+coverAlt: >-
+  The feedback loop: an automation runs, results land in Gmail, WhatsApp and Sheets, people react in one tap, and the automation remembers for next time.
+relatedServices:
+  - custom-ai-agents
+  - business-process-automation
+  - rag-systems
+faq:
+  - q: What is a feedback loop in automation?
+    a: >-
+      It is a way for the people who use an automation's output to tell it what was right or wrong, and for that feedback to change how the automation runs next time. Without one, an automation only changes when someone remembers to rebuild it.
+  - q: Do I need AI for an automation to learn from feedback?
+    a: >-
+      No. Many fixes are plain rules: a missing field, a new price, a different person to notify. AI helps when the output is written text, such as email drafts or summaries, because saved corrections can be given to the model as examples.
+  - q: How much time does it take to maintain?
+    a: >-
+      About 15 minutes a week for one person, once the feedback is collected automatically. The time goes into reading what was flagged and making one small change, not into chasing people for opinions.
+  - q: Which tools can capture feedback?
+    a: >-
+      The ones your team already uses. Buttons on a WhatsApp or Slack message, replies to an email, and edits to a draft can all be captured by n8n, Make or Zapier and written to a Google Sheet.
+publishedAt: 2026-11-09
+draft: false
+---
+Most automations are at their best on the day they go live. Then the business moves: a new price, a new team member, a new tool, a customer type nobody planned for. The automation keeps doing exactly what it did on day one, and slowly becomes something people work around.
+
+The fix is not a rebuild every six months. It is a feedback loop: a cheap, routine way for the people who see the results to say "this was wrong", and for that to change the next run.
+
+{% Callout title="What's a feedback loop?" %}
+The output of each run goes to people, their reaction is captured automatically, and the reaction changes how the automation behaves next time. Four parts: **run, deliver, react, remember.**
+{% /Callout %}
+
+![Line chart: an automation built once drifts down in usefulness over six months, while one with a feedback loop climbs in small weekly steps. An illustration, not measured data.](/blog/feedback-chart.png)
+
+## 1. Capture feedback where the work lands
+
+Nobody opens a separate tool to give feedback on an automation. So the feedback has to happen in the place the result arrives, in one tap or one sentence:
+
+- **A button on the alert.** A new-lead message on WhatsApp ends with "Good lead? Yes / No".
+- **A reply to the report.** The Monday report email says "Reply if a number looks wrong", and replies are read by the workflow, not lost in an inbox.
+- **An edit to a draft.** When someone changes an AI-drafted email before sending it, the before and after are both kept.
+
+Every one of these lands in a single **review sheet**, with a link to the run it came from. The person giving feedback does nothing extra; the automation does the filing.
+
+![Feedback from a WhatsApp lead alert, a reply to the Monday report and an edited AI draft all flow into one review sheet with a status column.](/blog/feedback-sources.png)
+
+{% PullQuote quote="If giving feedback takes more than one tap, you will not get feedback." /%}
+
+## 2. Give the automation a memory
+
+Feedback that only a human reads helps once. Feedback the automation can read helps every run after it.
+
+For rule-based steps, memory is simple: a settings sheet the workflow reads at the start of each run. New price, new owner for a region, a word never to use in emails. Change the cell and the next run follows it.
+
+For AI steps, memory is a short list of saved corrections and approved examples that are added to the instructions. When Sarah fixes a draft on Monday, the correction becomes a rule, and Thursday's draft for a different lead gets it right without anyone touching it.
+
+![Run 1 on Monday produces a draft with a wrong company name and a price; Sarah corrects it, two rules are saved to memory, and Run 2 on Thursday uses both rules with no edits.](/blog/feedback-memory.png)
+
+Our own website chat works this way. Its knowledge lives in a Google Drive folder; when we update a document, the knowledge base rebuilds itself and the next answer uses it. We wrote up that build in [How we built a RAG chatbot with n8n and Pinecone](/blog/rag-chatbot-n8n-pinecone).
+
+### Keep memory small and visible
+
+Memory that nobody can read becomes a new kind of mystery. Keep it in a sheet or a document a person can open, keep each rule to one sentence, and delete rules that no longer apply. Twenty clear rules beat two hundred vague ones.
+
+## 3. A 15-minute tune-up, every week
+
+Some feedback cannot be turned into a rule automatically: a report that needs a new section, a lead source that stopped working. That is what a short weekly routine is for. Same time every week, one person, one sheet.
+
+![The 15-minute weekly tune-up: 5 minutes reading the flags, 5 minutes changing one thing, 2 minutes writing it down, 3 minutes checking last week's change.](/blog/feedback-weekly.png)
+
+Two rules make this work:
+
+- **Change one thing per week.** If you change five things and results get worse, you will not know which one did it.
+- **Check last week's change before making a new one.** Did the flags it targeted stop? If not, roll it back.
+
+The change log you build this way is worth more than it looks. After a few months it is the full history of why the automation behaves the way it does, which is exactly what a new team member, or your next automation partner, needs.
+
+## What this looks like on a real build
+
+We used the same loop on our own site chat in its first week. The first version gave accurate answers that were far too long. We only knew because every conversation is visible in n8n's execution log, which is our review sheet for that bot. One change to the instructions later, average replies went from 122 words to 41, and they came back faster too.
+
+That is the whole idea at a small scale: see the result, decide on one change, make it, check it.
+
+{% Playbook %}
+- **Put a one-tap reaction on every result** people receive: a button, a reply, or a kept edit.
+- **Send all feedback to one review sheet**, linked to the run it came from.
+- **Keep a memory the next run reads**: a settings sheet for rules, saved examples for AI steps.
+- **Hold a 15-minute tune-up each week** and change one thing at a time.
+- **Log every change** with the date and the reason.
+- **Delete rules that no longer apply**, so memory stays short and readable.
+{% /Playbook %}
+
+If you have automations that worked well at launch and have quietly drifted since, that is usually the cheapest thing to fix. [Book a free 20-minute call](/contact#book) and we will look at where a feedback loop would pay off first.
+
+*This post was prompted by Script.it's article on [feedback loops for automations](https://script.it/blog/feedback-loops-for-automations), which is worth reading for their take on the same problem.*

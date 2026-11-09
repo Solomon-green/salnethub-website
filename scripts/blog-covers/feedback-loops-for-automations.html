@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .step {
+        position: absolute;
+        width: 300px;
+        padding: 26px 28px;
+        background: #fff;
+        border: 2px solid #d9dde1;
+        border-radius: 24px;
+        box-shadow: 0 30px 60px -36px rgb(26 28 30 / 0.35);
+      }
+      .step.is-key {
+        border-color: #2459e0;
+      }
+      .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #1a1c1e;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .is-key .num {
+        background: #2459e0;
+      }
+      .t {
+        margin-top: 14px;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .d {
+        margin-top: 6px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #6b7076;
+      }
+      .icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .ic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 2px solid #e3e6e9;
+        border-radius: 14px;
+        background: #f6f7f8;
+        font-size: 22px;
+      }
+      .ic svg {
+        width: 24px;
+        height: 24px;
+      }
+      .center {
+        position: absolute;
+        left: 590px;
+        top: 330px;
+        width: 420px;
+        text-align: center;
+      }
+      .center .big {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+      }
+      .center .sub {
+        margin-top: 14px;
+        font-size: 19px;
+        color: #6b7076;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- the loop -->
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <ellipse cx="800" cy="450" rx="440" ry="300" fill="none" stroke="#c9ced3" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" />
+      <!-- arrowheads around the loop, clockwise -->
+      <path class="arrow" d="M1198.0 305.2 L1198.8 323.2 L1182.3 316.0" style="stroke-width:4" />
+      <path class="arrow blue" d="M1205.4 584.7 L1188.5 590.8 L1190.4 572.9" style="stroke-width:4" />
+      <path class="arrow" d="M413.4 608.7 L411.5 590.8 L428.4 597.0" style="stroke-width:4" />
+      <path class="arrow" d="M384.7 330.4 L401.2 323.2 L400.5 341.2" style="stroke-width:4" />
+      <path class="spark blue" d="M1352 556 l24 10 M1356 594 l22 -4" />
+      <path class="spark" d="M236 330 l-22 -10 M232 292 l-22 4" />
+    </svg>
+
+    <div class="step" style="left: 650px; top: 54px">
+      <span class="num">1</span>
+      <p class="t">The automation runs</p>
+      <p class="d">On a schedule, a webhook or an event.</p>
+    </div>
+    <div class="step" style="left: 1170px; top: 300px">
+      <span class="num">2</span>
+      <p class="t">Results land where you work</p>
+      <div class="icons"><span class="ic">{{icon:gmail}}</span><span class="ic">{{icon:whatsapp}}</span><span class="ic">{{icon:googlesheets}}</span></div>
+    </div>
+    <div class="step is-key" style="left: 650px; top: 640px">
+      <span class="num">3</span>
+      <p class="t">People react in one tap</p>
+      <div class="icons"><span class="ic">👍</span><span class="ic">👎</span><span class="ic">✏️</span></div>
+    </div>
+    <div class="step" style="left: 130px; top: 340px">
+      <span class="num">4</span>
+      <p class="t">It remembers for next time</p>
+      <p class="d">Corrections become rules and examples.</p>
+    </div>
+
+    <div class="center">
+      <p class="big">Better<br />every week</p>
+      <p class="sub">The feedback loop</p>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { HeroCost } from "@/components/illustrations/hero-cost";
-import { WorkflowCanvas } from "@/components/illustrations/workflow-canvas";
+import { RunReplay } from "@/components/illustrations/run-replay";
+import { FeatureTiles } from "@/components/feature-tiles";
+import { Recipes } from "@/components/recipes";
 import { ToolMarquee } from "@/components/tool-marquee";
 import { ServicesBento } from "@/components/services-bento";
 import { CostCalculator } from "@/components/cost-calculator";
@@ -162,6 +164,19 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Recipes: proven workflows, trigger → steps → outcome */}
+      <section className="border-t border-line py-24 lg:py-32">
+        <div className="container-x">
+          <SectionHead
+            title="Start from a proven recipe"
+            body="The workflows we build most often. Each one runs on the tools you already use, and we adapt it to how your team works."
+          />
+          <div className="mt-14">
+            <Recipes />
+          </div>
+        </div>
+      </section>
+
       {/* Workflow showcase: deep moment one */}
       <section className="band-glow on-dark relative overflow-hidden py-24 text-white lg:py-32">
         <div className="container-x relative">
@@ -170,18 +185,31 @@ export default async function Home() {
               One lead, five tools, zero copy-paste
             </h2>
             <p className="mt-5 text-[18px] leading-relaxed text-on-ink-muted" data-reveal>
-              This is what a typical lead workflow does in under two minutes, without anyone touching it. We build it in n8n, Make or Zapier, on
-              your accounts.
+              Watch one lead go from sign-up to a booked call in under two minutes, without anyone touching it. We build it in n8n, Make or
+              Zapier, on your accounts.
             </p>
           </div>
           <div className="mt-14" data-reveal>
-            <WorkflowCanvas />
+            <RunReplay />
+          </div>
+        </div>
+      </section>
+
+      {/* Built to run without you */}
+      <section className="py-24 lg:py-32">
+        <div className="container-x">
+          <SectionHead
+            title="Built to run without you"
+            body="Automations that keep working when you are busy, asleep or on leave, and that ask before doing anything risky."
+          />
+          <div className="mt-14">
+            <FeatureTiles />
           </div>
         </div>
       </section>
 
       {/* Process: one line of five steps; the detail lives on How we work */}
-      <section className="py-24 lg:py-32">
+      <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHead

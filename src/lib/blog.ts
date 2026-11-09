@@ -3,6 +3,7 @@ import Markdoc, { type Config, type Node } from "@markdoc/markdoc";
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../../keystatic.config";
 import { showSamples } from "@/lib/case-studies";
+import { BeforeAfter, Callout, Playbook, PullQuote } from "@/components/blog/post-blocks";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -58,6 +59,25 @@ function readingMinutes(ast: Node) {
 }
 
 const markdocConfig: Config = {
+  // Post blocks from the Keystatic editor (keystatic.config.ts → postBlocks).
+  tags: {
+    Callout: { render: "Callout", children: ["paragraph", "list", "tag", "inline"], attributes: { title: { type: String } } },
+    PullQuote: { render: "PullQuote", selfClosing: true, attributes: { quote: { type: String, required: true }, cite: { type: String } } },
+    Playbook: { render: "Playbook", children: ["paragraph", "list", "tag", "inline"], attributes: { title: { type: String } } },
+    BeforeAfter: {
+      render: "BeforeAfter",
+      selfClosing: true,
+      attributes: {
+        title: { type: String, required: true },
+        unit: { type: String },
+        before: { type: Number, required: true },
+        after: { type: Number, required: true },
+        beforeLabel: { type: String },
+        afterLabel: { type: String },
+        note: { type: String },
+      },
+    },
+  },
   nodes: {
     // h2/h3 get stable ids so the table of contents and shared links can jump to them.
     heading: {
@@ -65,6 +85,16 @@ const markdocConfig: Config = {
       attributes: { level: { type: Number, required: true, render: false } },
       transform(node, config) {
         return new Markdoc.Tag(`h${node.attributes.level}`, { id: slugify(headingText(node)) }, node.transformChildren(config));
+      },
+    },
+    // Images (infographics) open full size in a new tab, so small labels stay readable.
+    image: {
+      attributes: { src: { type: String, required: true }, alt: { type: String }, title: { type: String } },
+      transform(node) {
+        const { src, alt, title } = node.attributes;
+        return new Markdoc.Tag("a", { href: src, target: "_blank", rel: "noopener", className: "post-image", title: "Open full size" }, [
+          new Markdoc.Tag("img", { src, alt: alt ?? "", title, loading: "lazy" }),
+        ]);
       },
     },
     // External links open in a new tab; internal links stay in place.
@@ -91,7 +121,9 @@ export function renderPost(body: { node: unknown }) {
       toc.push({ id: slugify(text), text, level: n.attributes.level });
     }
   }
-  const content = Markdoc.renderers.react(Markdoc.transform(ast, markdocConfig), React);
+  const content = Markdoc.renderers.react(Markdoc.transform(ast, markdocConfig), React, {
+    components: { Callout, PullQuote, Playbook, BeforeAfter },
+  });
   return { content, toc, readingMinutes: readingMinutes(ast) };
 }
 

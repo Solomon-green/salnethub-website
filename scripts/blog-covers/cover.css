@@ -1,0 +1,108 @@
+/* House style for blog covers: a product-style diagram on a faint grid.
+   Graphite and silver, real tool logos in their own colours, one royal-blue highlight per cover,
+   short "spark" strokes to point at the important part. 1600 x 900. */
+@font-face {
+  font-family: "Heros";
+  src: url("../../src/app/fonts/heros-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Heros";
+  src: url("../../src/app/fonts/heros-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+}
+body {
+  position: relative;
+  font-family: "Instrument Sans", "Heros", Helvetica, Arial, sans-serif;
+  color: #1a1c1e;
+  background-color: #eceef0;
+  background-image:
+    linear-gradient(rgb(26 28 30 / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(26 28 30 / 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: -1px -1px;
+}
+.abs {
+  position: absolute;
+}
+.panel {
+  background: #fff;
+  border: 2px solid #d9dde1;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -36px rgb(26 28 30 / 0.35);
+}
+.node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 150px;
+  height: 150px;
+  background: #f6f7f8;
+  border: 2px solid #d9dde1;
+  border-radius: 22px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #3c4044;
+}
+.node svg {
+  width: 52px;
+  height: 52px;
+}
+.node.is-key {
+  border-color: #1a1c1e;
+  background: #fff;
+}
+.label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7076;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #fff;
+  border: 2px solid #d9dde1;
+  border-radius: 999px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #3c4044;
+}
+.chip svg {
+  width: 24px;
+  height: 24px;
+}
+.arrow {
+  stroke: #1a1c1e;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.arrow.dashed {
+  stroke-dasharray: 10 10;
+}
+.spark {
+  stroke: #1a1c1e;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.blue {
+  color: #2459e0;
+  stroke: #2459e0;
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .title {
+        position: absolute;
+        left: 90px;
+        top: 120px;
+        font-size: 54px;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+      }
+      .title span {
+        color: #2459e0;
+      }
+      .sub {
+        position: absolute;
+        left: 92px;
+        top: 254px;
+        font-size: 21px;
+        color: #6b7076;
+      }
+      .bar {
+        position: absolute;
+        left: 90px;
+        right: 90px;
+        top: 340px;
+        height: 22px;
+        display: flex;
+        gap: 6px;
+      }
+      .seg {
+        border-radius: 6px;
+        background: #1a1c1e;
+      }
+      .seg.mid {
+        background: #6b7076;
+      }
+      .seg.light {
+        background: #a6acb2;
+      }
+      .seg.blue {
+        background: #2459e0;
+      }
+      .stp {
+        position: absolute;
+        top: 410px;
+        width: 320px;
+        padding: 26px;
+        background: #fff;
+        border: 2px solid #d9dde1;
+        border-radius: 22px;
+        box-shadow: 0 26px 50px -34px rgb(26 28 30 / 0.35);
+      }
+      .min {
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .min small {
+        font-size: 20px;
+        color: #6b7076;
+        letter-spacing: 0;
+      }
+      .h {
+        margin-top: 8px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+      }
+      .p {
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 1.45;
+        color: #3c4044;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">The 15-minute <span>weekly tune-up</span></p>
+    <p class="sub">Same time every week. One person. One sheet.</p>
+
+    <div class="bar">
+      <span class="seg" style="flex: 5"></span>
+      <span class="seg mid" style="flex: 5"></span>
+      <span class="seg light" style="flex: 2"></span>
+      <span class="seg blue" style="flex: 3"></span>
+    </div>
+
+    <div class="stp" style="left: 90px">
+      <p class="min">5 <small>min</small></p>
+      <p class="h">Read the flags</p>
+      <p class="p">Open the review sheet. Sort by "To fix". Ignore the one-offs.</p>
+    </div>
+    <div class="stp" style="left: 450px">
+      <p class="min">5 <small>min</small></p>
+      <p class="h">Change one thing</p>
+      <p class="p">A rule, a prompt line, a missing field. One change per week is enough.</p>
+    </div>
+    <div class="stp" style="left: 810px">
+      <p class="min">2 <small>min</small></p>
+      <p class="h">Write it down</p>
+      <p class="p">Date, what changed, why. The change log is the automation's history.</p>
+    </div>
+    <div class="stp" style="left: 1170px; border-color: #2459e0">
+      <p class="min">3 <small>min</small></p>
+      <p class="h">Check last week's change</p>
+      <p class="p">Did the flags it targeted stop? If not, roll it back.</p>
+    </div>
+    <p class="abs" style="left: 92px; top: 720px; font-size: 21px; color: #3c4044">Log it in the review sheet. After a month you have a written record of every improvement.</p>
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="spark blue" d="M1488 392 l14 -20 M1516 402 l22 -10" />
+    </svg>
+  </body>
+</html>

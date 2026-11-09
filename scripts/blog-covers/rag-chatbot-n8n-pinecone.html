@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .vec {
+        width: 52px;
+        height: 52px;
+      }
+      .chat {
+        left: 1040px;
+        top: 96px;
+        width: 470px;
+        height: 600px;
+        background: #1a1c1e;
+        border-radius: 30px;
+        box-shadow: 0 40px 80px -40px rgb(26 28 30 / 0.6);
+        color: #fff;
+        overflow: hidden;
+      }
+      .chat-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 26px 28px;
+        background: #24272a;
+        font-size: 21px;
+        font-weight: 700;
+      }
+      .dot {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #3c4044;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dot span {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        background: #fff;
+      }
+      .bubble {
+        position: absolute;
+        max-width: 330px;
+        padding: 18px 22px;
+        border-radius: 22px;
+        font-size: 21px;
+        line-height: 1.4;
+        font-weight: 500;
+      }
+      .q {
+        right: 28px;
+        top: 130px;
+        background: #3c4044;
+        border-top-right-radius: 6px;
+      }
+      .a {
+        left: 28px;
+        top: 250px;
+        background: #2459e0;
+        border-top-left-radius: 6px;
+      }
+      .src {
+        left: 28px;
+        top: 432px;
+        display: flex;
+        gap: 10px;
+      }
+      .src span {
+        padding: 9px 14px;
+        border: 1.5px solid #3c4044;
+        border-radius: 999px;
+        font-size: 16px;
+        color: #c9ced3;
+      }
+      .composer {
+        left: 28px;
+        right: 28px;
+        bottom: 26px;
+        height: 58px;
+        border: 1.5px solid #3c4044;
+        border-radius: 999px;
+        color: #6b7076;
+        font-size: 18px;
+        padding: 17px 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Knowledge sync: Drive folder → n8n → Pinecone -->
+    <div class="abs panel" style="left: 90px; top: 96px; width: 830px; height: 300px">
+      <p class="abs label" style="left: 32px; top: 26px">Knowledge sync</p>
+      <div class="abs node" style="left: 60px; top: 100px">{{icon:googledrive}}Drive</div>
+      <div class="abs node" style="left: 340px; top: 100px">{{icon:n8n}}n8n</div>
+      <div class="abs node is-key" style="left: 620px; top: 100px">
+        <svg class="vec" viewBox="0 0 52 52" fill="none" stroke="#1a1c1e" stroke-width="3">
+          <ellipse cx="26" cy="11" rx="18" ry="6" />
+          <path d="M8 11v15c0 3.3 8 6 18 6s18-2.7 18-6V11" />
+          <path d="M8 26v15c0 3.3 8 6 18 6s18-2.7 18-6V26" />
+        </svg>
+        Pinecone
+      </div>
+      <svg class="abs" style="left: 0; top: 0" width="830" height="300">
+        <path class="arrow" d="M222 175 H330 M318 165 L330 175 L318 185" />
+        <path class="arrow" d="M502 175 H610 M598 165 L610 175 L598 185" />
+      </svg>
+    </div>
+
+    <!-- AI agent: webhook → agent with memory and the knowledge tool -->
+    <div class="abs panel" style="left: 230px; top: 520px; width: 690px; height: 290px">
+      <p class="abs label" style="left: 32px; top: 26px">AI agent</p>
+      <div class="abs node" style="left: 60px; top: 96px">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#3c4044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 14 7 26l11 12M34 14l11 12-11 12" />
+        </svg>
+        Webhook
+      </div>
+      <div class="abs node is-key" style="left: 300px; top: 96px">{{icon:anthropic}}Agent</div>
+      <div class="abs node" style="left: 540px; top: 96px; width: 120px">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#3c4044" stroke-width="3.5" stroke-linecap="round">
+          <rect x="9" y="9" width="34" height="34" rx="7" />
+          <path d="M17 20h18M17 27h18M17 34h11" />
+        </svg>
+        Memory
+      </div>
+      <svg class="abs" style="left: 0; top: 0" width="690" height="290">
+        <path class="arrow" d="M222 171 H290 M278 161 L290 171 L278 181" />
+        <path class="arrow dashed" d="M462 171 H530" />
+      </svg>
+    </div>
+
+    <!-- Retrieval: Pinecone → agent, agent → chat -->
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow dashed blue" d="M780 400 C 780 460, 640 470, 620 610" />
+      <path class="arrow blue" d="M608 598 L620 612 L632 598" />
+      <path class="arrow" d="M922 650 C 975 650, 990 560, 1030 520" />
+      <path class="arrow" d="M1014 522 L1030 518 L1026 534" />
+      <!-- sparks -->
+      <path class="spark" d="M690 66 l10 -22 M722 76 l20 -14" />
+      <path class="spark blue" d="M1528 312 l22 -10 M1534 352 l24 4" />
+      <path class="spark" d="M196 512 l-14 -18 M226 500 l-4 -22" />
+    </svg>
+
+    <!-- Website chat -->
+    <div class="abs chat">
+      <div class="chat-head"><div class="dot"><span></span></div>SalnetHub Assistant</div>
+      <div class="bubble q">How much does a chatbot cost?</div>
+      <div class="bubble a">AI chatbots start from $2,500, with a fixed written quote before work starts.</div>
+      <div class="abs src"><span>Pricing</span><span>AI chatbots</span></div>
+      <div class="abs composer">Write a message…</div>
+    </div>
+
+    <!-- Stack -->
+    <div class="abs" style="left: 1040px; top: 730px; display: flex; gap: 12px; flex-wrap: wrap; width: 480px">
+      <span class="chip">{{icon:googlegemini}}Gemini embeddings</span>
+      <span class="chip">{{icon:claude}}Claude</span>
+    </div>
+  </body>
+</html>

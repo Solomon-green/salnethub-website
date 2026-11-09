@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      body {
+        background-image: none;
+        background-color: #ffffff;
+      }
+      .title {
+        position: absolute;
+        left: 110px;
+        top: 70px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .sub {
+        position: absolute;
+        left: 112px;
+        top: 128px;
+        font-size: 20px;
+        color: #6b7076;
+      }
+      .lab {
+        font-size: 21px;
+        font-weight: 700;
+        fill: #1a1c1e;
+        font-family: "Instrument Sans", sans-serif;
+      }
+      .lab-sub {
+        font-size: 17px;
+        fill: #6b7076;
+        font-family: "Instrument Sans", sans-serif;
+      }
+      .ax {
+        font-size: 17px;
+        fill: #6b7076;
+        font-family: "Instrument Sans", sans-serif;
+      }
+      .legend {
+        position: absolute;
+        right: 110px;
+        top: 82px;
+        display: flex;
+        gap: 28px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #3c4044;
+      }
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .note {
+        position: absolute;
+        left: 112px;
+        bottom: 46px;
+        font-size: 16px;
+        color: #6b7076;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Built once vs. built with a feedback loop</p>
+    <p class="sub">How useful an automation stays in the months after launch</p>
+    <div class="legend">
+      <span><svg width="34" height="6"><line x1="0" y1="3" x2="34" y2="3" stroke="#6b7076" stroke-width="3" stroke-dasharray="7 6" /></svg>Built once</span>
+      <span><svg width="34" height="6"><line x1="0" y1="3" x2="34" y2="3" stroke="#2459e0" stroke-width="3" /></svg>With a feedback loop</span>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <!-- recessive grid -->
+      <g stroke="#e3e6e9" stroke-width="1">
+        <line x1="160" y1="260" x2="1480" y2="260" />
+        <line x1="160" y1="420" x2="1480" y2="420" />
+        <line x1="160" y1="580" x2="1480" y2="580" />
+      </g>
+      <line x1="160" y1="740" x2="1480" y2="740" stroke="#a6acb2" stroke-width="2" />
+      <text class="ax" x="160" y="776">Launch</text>
+      <text class="ax" x="1480" y="776" text-anchor="end">Month 6</text>
+      <text class="ax" x="142" y="268" text-anchor="end">More</text>
+      <text class="ax" x="142" y="746" text-anchor="end">Less</text>
+      <text class="ax" x="66" y="500" transform="rotate(-90 66 500)" text-anchor="middle">Useful output</text>
+
+      <!-- built once: starts the same, drifts as the business changes -->
+      <path d="M160 450 C 320 445, 420 470, 560 500 S 820 560, 980 590 S 1300 650, 1480 680" fill="none" stroke="#6b7076" stroke-width="3" stroke-dasharray="10 9" stroke-linecap="round" />
+      <!-- feedback loop: small weekly steps upward -->
+      <path
+        d="M160 450 L 260 446 L 270 430 L 380 424 L 390 404 L 520 398 L 530 380 L 680 372 L 690 352 L 840 344 L 850 326 L 1010 318 L 1020 302 L 1190 294 L 1200 280 L 1380 272 L 1390 262 L 1480 258"
+        fill="none"
+        stroke="#2459e0"
+        stroke-width="3"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+      />
+      <circle cx="1480" cy="258" r="7" fill="#2459e0" stroke="#fff" stroke-width="3" />
+      <circle cx="1480" cy="680" r="7" fill="#6b7076" stroke="#fff" stroke-width="3" />
+
+      <!-- direct labels -->
+      <text class="lab" x="1180" y="232">Each step: one fix from feedback</text>
+      <path d="M1196 234 L1196 276" stroke="#2459e0" stroke-width="2" stroke-dasharray="3 4" />
+      <text class="lab" x="1040" y="694">Prices, tools and team change;</text>
+      <text class="lab-sub" x="1040" y="718">the automation does not</text>
+    </svg>
+    <p class="note">Illustration of the pattern, not measured data.</p>
+  </body>
+</html>
