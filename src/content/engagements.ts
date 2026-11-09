@@ -18,7 +18,7 @@ export const pricingHero = {
 export const pricingSteps = [
   {
     name: "We find the leak and put a number on it",
-    body: "On a free 20-minute call we ask a few simple questions: where your customers come from, how many slip away, and what each one is worth. Together we work out what the problem costs you every month. You confirm every number.",
+    body: "On a free 30-minute call we ask a few simple questions: where your customers come from, how many slip away, and what each one is worth. Together we work out what the problem costs you every month. You confirm every number.",
   },
   {
     name: `We prove it in a ${pricing.pilotDays}-day pilot`,

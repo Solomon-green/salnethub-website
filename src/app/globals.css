@@ -115,7 +115,7 @@
   color-scheme: dark;
 }
 
-/* Call band: the closing "20-minute call" section, the only large block of colour on the page */
+/* Call band: the closing "30-minute call" section, the only large block of colour on the page */
 .band-cta {
   background: var(--color-cta);
   --color-stone-deep: #dce5fd;

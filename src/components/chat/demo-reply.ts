@@ -15,7 +15,7 @@ export function demoReply(input: string): DemoReply {
   }
   if (/(book|call|meet|talk|demo|schedule)/.test(q)) {
     return {
-      text: "Happy to set that up. Pick a free 20-minute slot and you'll get a Google Meet link straight away.",
+      text: "Happy to set that up. Pick a free 30-minute slot and you'll get a Google Meet link straight away.",
       actions: [book],
     };
   }

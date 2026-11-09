@@ -183,7 +183,7 @@ export function Header({ menu, hasWork = false, hasBlog = false }: { menu: MenuI
               <div className="rounded-card on-dark mt-auto bg-raised p-6 text-white">
                 <p className="text-[15px] font-bold">Not sure where to start?</p>
                 <p className="mt-1 text-[13px] leading-relaxed text-on-ink-muted">
-                  A 20-minute call is enough to find the first workflow worth automating.
+                  A 30-minute call is enough to find the first workflow worth automating.
                 </p>
                 <Link href="/services" className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-accent hover:text-white">
                   Compare all services <ArrowRight size={16} />

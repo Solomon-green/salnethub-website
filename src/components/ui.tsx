@@ -79,7 +79,7 @@ const callSteps = ["We look at how the work happens today", "We work out what th
 export function CtaBand({
   title = "Find the first workflow",
   accent = "worth automating",
-  body = "A 20-minute call is enough. We tell you plainly what we would automate first, and what it would cost.",
+  body = "A 30-minute call is enough. We tell you plainly what we would automate first, and what it would cost.",
 }: {
   title?: string;
   accent?: string;
@@ -118,7 +118,7 @@ export function CtaBand({
               </li>
             ))}
           </ol>
-          <p className="mt-6 border-t border-white/10 pt-5 text-[14px] text-on-ink-muted">Free, 20 minutes, on Google Meet.</p>
+          <p className="mt-6 border-t border-white/10 pt-5 text-[14px] text-on-ink-muted">Free, 30 minutes, on Google Meet.</p>
         </div>
       </div>
     </section>

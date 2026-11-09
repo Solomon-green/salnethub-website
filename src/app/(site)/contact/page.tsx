@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { BookingWidget } from "@/components/booking/booking-widget";
+import { BookingEmbed } from "@/components/booking/booking-embed";
 import { ContactForm } from "@/components/contact-form";
 import { booking } from "@/content/booking";
 import { services } from "@/content/services";
@@ -8,7 +8,7 @@ import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
   title: "Book a Free Automation Consultation Call",
-  description: "Book a free 20-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would fix first, what it is costing you, and how a 14-day pilot would work.",
+  description: "Book a free 30-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would fix first, what it is costing you, and how a 14-day pilot would work.",
   alternates: { canonical: "/contact" },
 };
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
             <h2 className="t-h2">Choose a time</h2>
             <p className="mt-2 text-[15px] text-slate">Free {booking.durationMinutes}-minute call on Google Meet.</p>
             <div className="mt-8">
-              <BookingWidget email={site.email} />
+              <BookingEmbed />
             </div>
           </div>
         </div>

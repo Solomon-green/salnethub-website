@@ -73,7 +73,7 @@ export default async function Home() {
                 </Link>
               )}
             </div>
-            <p className="mt-4 text-[13px] text-slate">Free 20-minute call on Google Meet. No obligation.</p>
+            <p className="mt-4 text-[13px] text-slate">Free 30-minute call on Google Meet. No obligation.</p>
             <ul className="mt-9 grid max-w-xl gap-x-6 gap-y-2.5 text-[14px] text-slate sm:grid-cols-2" aria-label="Why teams choose SalnetHub">
               {hasUpwork && (
                 <li className="text-fg sm:col-span-2">

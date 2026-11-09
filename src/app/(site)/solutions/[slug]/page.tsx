@@ -245,7 +245,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
         </div>
       </section>
 
-      <CtaBand title="Start with a free" accent="14-day pilot" body="A 20-minute call is enough. We look at where your enquiries or calls slip away, and what each booking is worth to you." />
+      <CtaBand title="Start with a free" accent="14-day pilot" body="A 30-minute call is enough. We look at where your enquiries or calls slip away, and what each booking is worth to you." />
     </>
   );
 }

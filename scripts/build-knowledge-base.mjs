@@ -174,7 +174,7 @@ ${pageCopy.problems.map(([p, slug]) => { const s = services.find((x) => x.slug =
 By outcome:
 ${outcomes.map((o) => `- ${o.label}: ${o.title}. ${o.body} Services: ${o.services.map((slug) => services.find((s) => s.slug === slug)?.name).join(", ")}.`).join("\n")}
 
-Not sure which one you need? Book a free 20-minute call and we will work out which problem costs you most.
+Not sure which one you need? Book a free 30-minute call and we will work out which problem costs you most.
 `, ["services", "recommendation", "problems"]);
 
 for (const s of services) {

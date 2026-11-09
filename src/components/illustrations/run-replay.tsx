@@ -181,7 +181,7 @@ export function RunReplay() {
               <p className="text-[12.5px] text-stone-deep">To: dana@northwind.dental</p>
               <p className="mt-1 text-[16px] font-bold">Re: Missed weekend calls</p>
               <p className="rr-type mt-4 text-[14px] leading-relaxed text-slate">
-                Hi Dana, thanks for getting in touch. Missed weekend calls are exactly what we fix. Here are three times for a 20-minute call…
+                Hi Dana, thanks for getting in touch. Missed weekend calls are exactly what we fix. Here are three times for a 30-minute call…
               </p>
               <p className="rr-pop mt-5 inline-flex items-center gap-2 text-[13px] font-bold">
                 <Check size={15} strokeWidth={3} /> Sent 1 min 48 s after sign-up

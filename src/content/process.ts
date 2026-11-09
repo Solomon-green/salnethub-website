@@ -2,7 +2,7 @@ export const processSteps = [
   {
     step: "Discover",
     title: "We learn how the work happens today",
-    body: "A 20-minute call, then a closer look at your tools and the people who use them. We find where time is lost and agree on the first workflow worth automating.",
+    body: "A 30-minute call, then a closer look at your tools and the people who use them. We find where time is lost and agree on the first workflow worth automating.",
     output: "A clear target and a 14-day pilot plan",
   },
   {
