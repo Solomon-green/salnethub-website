@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="workflow.css" />
+    <style>
+      .card { background: #fff; border: 2px solid #d9dde1; border-radius: 24px; box-shadow: 0 30px 60px -40px rgb(26 28 30 / 0.35); }
+      .filters { display: flex; gap: 10px; }
+      .filters span { padding: 10px 16px; border-radius: 999px; background: #fff; border: 2px solid #d9dde1; font-size: 16px; font-weight: 600; color: #3c4044; }
+      .filters span.on { background: #1a1c1e; border-color: #1a1c1e; color: #fff; }
+      .funnel { display: grid; grid-template-columns: repeat(9, 1fr); gap: 8px; }
+      .funnel div { padding: 14px 12px; border-radius: 14px; background: #f6f7f8; }
+      .funnel div.hot { background: #2459e0; color: #fff; }
+      .funnel p { font-size: 13px; font-weight: 600; color: #6b7076; white-space: nowrap; }
+      .funnel .hot p { color: rgb(255 255 255 / 0.8); }
+      .funnel b { display: block; margin-top: 8px; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+      .funnel small { font-size: 13px; color: #6b7076; }
+      .funnel .hot small { color: rgb(255 255 255 / 0.8); }
+      .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .kpis div { padding: 14px; border-radius: 14px; background: #f6f7f8; }
+      .kpis p { font-size: 14px; color: #6b7076; }
+      .kpis b { display: block; margin-top: 6px; font-size: 28px; font-weight: 700; }
+      .kpis .tick { width: 56px; height: 8px; margin-top: 10px; border-radius: 4px; background: #d9dde1; }
+      .bars { display: flex; align-items: flex-end; gap: 16px; height: 190px; }
+      .bars div { flex: 1; border-radius: 8px 8px 0 0; background: #c9ced3; }
+      .bars div.b { background: #3c4044; }
+      .months { display: flex; gap: 16px; margin-top: 8px; font-size: 13px; color: #6b7076; }
+      .months span { flex: 1; text-align: center; }
+      .src { display: grid; gap: 10px; }
+      .src div { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: #3c4044; }
+      .src i { display: block; height: 14px; border-radius: 7px; background: #3c4044; }
+    </style>
+  </head>
+  <body>
+    <div class="abs head" style="top: 54px">
+      <p class="label">Google Sheets + Apps Script</p>
+      <h1 style="font-size: 40px">Business health dashboard</h1>
+    </div>
+    <div class="abs filters" style="right: 80px; top: 86px">
+      <span>Year</span><span class="on">Month</span><span>Week</span><span>Custom range</span>
+    </div>
+
+    <div class="abs card" style="left: 80px; top: 170px; width: 1440px; height: 200px; padding: 26px 28px">
+      <p class="label">Client acquisition pipeline</p>
+      <div class="funnel" style="margin-top: 18px">
+        <div><p>Leads</p><b>240</b><small>100%</small></div>
+        <div><p>Qualified</p><b>150</b><small>63%</small></div>
+        <div><p>Invite sent</p><b>90</b><small>38%</small></div>
+        <div class="hot"><p>Intro booked</p><b>38</b><small>16%</small></div>
+        <div><p>Intro no-show</p><b>5</b><small>2%</small></div>
+        <div><p>Demo booked</p><b>22</b><small>9%</small></div>
+        <div><p>Pitched</p><b>18</b><small>8%</small></div>
+        <div><p>Deposit paid</p><b>9</b><small>4%</small></div>
+        <div><p>Closed</p><b>7</b><small>3%</small></div>
+      </div>
+    </div>
+
+    <div class="abs card" style="left: 80px; top: 400px; width: 700px; height: 210px; padding: 26px 28px">
+      <p class="label">Clients</p>
+      <div class="kpis" style="margin-top: 18px">
+        <div><p>Active</p><b>42</b></div>
+        <div><p>New</p><b>7</b></div>
+        <div><p>Trialling</p><b>3</b></div>
+        <div><p>Churned</p><b>1</b></div>
+      </div>
+    </div>
+    <div class="abs card" style="left: 80px; top: 640px; width: 700px; height: 210px; padding: 26px 28px">
+      <p class="label">Revenue and retention</p>
+      <div class="kpis" style="margin-top: 18px">
+        <div><p>Total revenue</p><div class="tick"></div></div>
+        <div><p>MRR</p><div class="tick"></div></div>
+        <div><p>Retention</p><div class="tick"></div></div>
+        <div><p>Churn rate</p><div class="tick"></div></div>
+      </div>
+    </div>
+
+    <div class="abs card" style="left: 810px; top: 400px; width: 330px; height: 450px; padding: 26px 28px">
+      <p class="label">Lead sources</p>
+      <div class="src" style="margin-top: 22px">
+        <div>Upwork<i style="width: 100%"></i></div>
+        <div>Cold email<i style="width: 80%"></i></div>
+        <div>Referral<i style="width: 45%"></i></div>
+        <div>LinkedIn<i style="width: 30%"></i></div>
+        <div>Facebook<i style="width: 20%"></i></div>
+        <div>Other<i style="width: 10%"></i></div>
+      </div>
+      <p style="margin-top: 28px; font-size: 15px; color: #6b7076; line-height: 1.4">Each source shows its leads, meetings and closed deals.</p>
+    </div>
+
+    <div class="abs card" style="left: 1170px; top: 400px; width: 350px; height: 450px; padding: 26px 28px">
+      <p class="label">Revenue trend</p>
+      <div class="bars" style="margin-top: 40px">
+        <div style="height: 18%"></div><div style="height: 26%"></div><div class="b" style="height: 70%"></div><div class="b" style="height: 74%"></div><div class="b" style="height: 78%"></div><div class="b" style="height: 82%"></div>
+      </div>
+      <div class="months"><span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span></div>
+      <p style="margin-top: 26px; font-size: 15px; color: #6b7076; line-height: 1.4">By client, weekly, monthly or quarterly.</p>
+    </div>
+
+    <p class="abs" style="left: 80px; top: 866px; font-size: 14px; color: #6b7076">Redrawn for this page. Figures are illustrative; client names and revenue removed.</p>
+  </body>
+</html>

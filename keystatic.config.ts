@@ -98,6 +98,17 @@ export default config({
           }),
           { label: "Gallery", itemLabel: (props) => props.fields.caption.value || "Image" },
         ),
+        visual: fields.select({
+          label: "Illustrations",
+          description: "Animated diagrams shown under the story (built in code, see src/components/stories).",
+          options: [
+            { label: "None", value: "none" },
+            { label: "Agency: lead follow-up, setter attribution, reporting", value: "agency-sales-ops" },
+            { label: "Contractor: AI lead intake, RAG triage, routing", value: "contractor-intake" },
+            { label: "Telegram coaching bot: n8n router, four brains", value: "telegram-coach" },
+          ],
+          defaultValue: "none",
+        }),
         videoUrl: fields.url({ label: "Video link (optional)", description: "YouTube, Loom or Vimeo link to a walkthrough." }),
         quote: fields.object(
           {

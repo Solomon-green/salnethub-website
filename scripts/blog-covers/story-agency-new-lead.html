@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="workflow.css" />
+  </head>
+  <body>
+    <div class="abs head">
+      <p class="label">GoHighLevel workflow</p>
+      <h1>New lead: reply within 5 minutes</h1>
+    </div>
+
+    <!-- Main path -->
+    <div class="abs step trigger" style="left: 80px; top: 230px"><i>⟳</i><div><b>Trigger</b><small>Deal enters “New lead”</small></div></div>
+    <div class="abs step cond" style="left: 80px; top: 360px"><i>{ }</i><div><b>Check the source</b><small>Other sources: deal created, then rejoin</small></div></div>
+    <div class="abs step" style="left: 80px; top: 490px"><i class="g">☎</i><div><b>Call the admin</b><small>Phone alert, straight away</small></div></div>
+    <div class="abs step" style="left: 80px; top: 620px"><i class="f">f</i><div><b>Add to ad audience</b><small>Facebook custom audience</small></div></div>
+    <div class="abs step" style="left: 80px; top: 750px"><i>🔔</i><div><b>Internal alert</b><small>App notification</small></div></div>
+
+    <div class="abs step wait" style="left: 560px; top: 230px"><i>◷</i><div><b>Wait 5 minutes</b></div></div>
+    <div class="abs step cond" style="left: 560px; top: 360px"><i>{ }</i><div><b>Still “New lead”?</b><small>Nobody has replied yet</small></div></div>
+    <div class="abs step key" style="left: 560px; top: 490px"><i class="s">#</i><div><b>Slack: reply now</b><small>“Reply within 5 minutes”</small></div></div>
+    <div class="abs step wait" style="left: 560px; top: 620px"><i>◷</i><div><b>Wait 2 minutes</b></div></div>
+    <div class="abs step cond" style="left: 560px; top: 750px"><i>{ }</i><div><b>Still no reply?</b><small>Next reminder goes out</small></div></div>
+
+    <div class="abs note" style="left: 1040px; top: 230px">
+      <p class="label">Why it works</p>
+      <p>Every new lead gets a person on the phone or in Slack within minutes, and the clock is logged for speed-to-lead reporting.</p>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M270 328 V352 M260 342 L270 354 L280 342" />
+      <path class="arrow" d="M270 458 V482 M260 472 L270 484 L280 472" />
+      <path class="arrow" d="M270 588 V612 M260 602 L270 614 L280 602" />
+      <path class="arrow" d="M270 718 V742 M260 732 L270 744 L280 732" />
+      <path class="arrow" d="M460 800 C 510 800, 500 280, 552 280 M540 270 L552 280 L540 290" />
+      <path class="arrow" d="M750 328 V352 M740 342 L750 354 L760 342" />
+      <path class="arrow blue" d="M750 458 V482 M740 472 L750 484 L760 472" />
+      <path class="arrow" d="M750 588 V612 M740 602 L750 614 L760 602" />
+      <path class="arrow" d="M750 718 V742 M740 732 L750 744 L760 732" />
+      <path class="spark blue" d="M948 470 l18 -12 M952 506 l22 2" />
+    </svg>
+  </body>
+</html>

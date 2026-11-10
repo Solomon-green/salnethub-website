@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="workflow.css" />
+    <style>
+      .n { position: absolute; width: 210px; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 0 20px; background: #fff; border: 2px solid #d9dde1; border-radius: 18px; font-size: 18px; font-weight: 700; }
+      .n small { margin-top: 4px; font-size: 13px; font-weight: 500; color: #6b7076; line-height: 1.3; }
+      .n.key { border: 2.5px solid #1a1c1e; }
+      .n.on { background: #2459e0; border-color: #2459e0; color: #fff; }
+      .n.on small { color: rgb(255 255 255 / .85); }
+      .n.dark { background: #1a1c1e; border-color: #1a1c1e; color: #fff; }
+      .n.dark small { color: #c9ced3; }
+      .n.err { border-color: #b42318; }
+      .t { display: inline-block; margin: 0 6px 8px 0; padding: 8px 14px; border-radius: 999px; background: #f6f7f8; border: 2px solid #d9dde1; font-size: 15px; font-weight: 600; color: #3c4044; font-family: ui-monospace, Menlo, monospace; }
+    </style>
+  </head>
+  <body>
+    <div class="abs head" style="top: 46px">
+      <p class="label">n8n · 7 workflows</p>
+      <h1 style="font-size: 38px">One router, four brains, one way out</h1>
+    </div>
+
+    <div class="n" style="left: 80px; top: 190px">Telegram trigger<small>message or button tap</small></div>
+    <div class="n key" style="left: 330px; top: 190px">Save once<small>ON CONFLICT DO NOTHING</small></div>
+    <div class="n" style="left: 580px; top: 190px">LLM classifier<small>temp 0 · last 15 messages</small></div>
+    <div class="n" style="left: 830px; top: 190px">Validate JSON<small>1 repair retry · fallback</small></div>
+    <div class="n key" style="left: 1080px; top: 190px">Decide route<small>sessions · wellbeing wins</small></div>
+
+    <div class="n" style="left: 1310px; top: 330px">Numbers<small>deterministic · 19:00 nudge</small></div>
+    <div class="n" style="left: 1310px; top: 445px">Coach<small>LLM · loan guard</small></div>
+    <div class="n on" style="left: 1310px; top: 560px">Care<small>templates · human flag</small></div>
+    <div class="n" style="left: 1310px; top: 675px">Help<small>menu · 4 buttons</small></div>
+
+    <div class="n dark" style="left: 780px; top: 500px; width: 340px">Send Reply<small>every brain replies here · 60 words · 429 retry · never twice</small></div>
+    <div class="n err" style="left: 330px; top: 400px">Error branch<small>fallback reply · error_log · failed</small></div>
+    <div class="n err" style="left: 330px; top: 560px">Error Trigger<small>admin alert on Telegram</small></div>
+
+    <div class="abs panel" style="left: 80px; top: 720px; width: 1180px; height: 130px; padding: 22px 26px">
+      <p class="label" style="margin-bottom: 14px">Supabase Postgres</p>
+      <span class="t">users</span><span class="t">messages · unique update + reply</span><span class="t">routing_history</span><span class="t">sessions</span><span class="t">daily_records · Kampala date</span><span class="t">error_log</span>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M292 240 H322 M312 232 L322 240 L312 248" />
+      <path class="arrow" d="M542 240 H572 M562 232 L572 240 L562 248" />
+      <path class="arrow" d="M792 240 H822 M812 232 L822 240 L812 248" />
+      <path class="arrow" d="M1042 240 H1072 M1062 232 L1072 240 L1062 248" />
+      <path class="arrow" d="M1185 292 V 725" />
+      <path class="arrow" d="M1185 380 H1300 M1290 372 L1300 380 L1290 388" />
+      <path class="arrow" d="M1185 495 H1300 M1290 487 L1300 495 L1290 503" />
+      <path class="arrow blue" d="M1185 610 H1300 M1290 602 L1300 610 L1290 618" />
+      <path class="arrow" d="M1185 725 H1300 M1290 717 L1300 725 L1290 733" />
+      <path class="arrow dashed" d="M685 292 C 685 380, 600 450, 550 450" />
+      <path class="arrow" d="M542 450 C 680 450, 700 550, 772 550 M760 540 L772 550 L760 560" />
+    </svg>
+  </body>
+</html>

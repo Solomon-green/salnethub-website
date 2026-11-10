@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="workflow.css" />
+    <style>
+      .n { position: absolute; width: 200px; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: #fff; border: 2px solid #d9dde1; border-radius: 20px; font-size: 17px; font-weight: 700; color: #1a1c1e; text-align: center; line-height: 1.2; }
+      .n small { font-size: 13px; font-weight: 500; color: #6b7076; }
+      .n svg { width: 30px; height: 30px; }
+      .n.key { border-color: #1a1c1e; border-width: 2.5px; }
+      .n.on { background: #2459e0; border-color: #2459e0; color: #fff; }
+      .n.on small { color: rgb(255 255 255 / 0.85); }
+      .sub { position: absolute; padding: 10px 16px; background: #f6f7f8; border: 2px solid #d9dde1; border-radius: 999px; font-size: 15px; font-weight: 600; color: #3c4044; }
+      .lane { position: absolute; left: 60px; right: 60px; border: 2px dashed #c9ced3; border-radius: 28px; }
+    </style>
+  </head>
+  <body>
+    <div class="abs head" style="top: 50px">
+      <p class="label">n8n workflow</p>
+      <h1 style="font-size: 40px">Two pipelines in sync: one learns, one acts</h1>
+    </div>
+
+    <div class="lane" style="top: 160px; height: 220px"></div>
+    <p class="abs label" style="left: 90px; top: 180px">1 · Knowledge sync</p>
+    <div class="n" style="left: 110px; top: 230px">{{icon:googledrive}}File added<small>Drive trigger</small></div>
+    <div class="n" style="left: 400px; top: 230px">Download<small>file contents</small></div>
+    <div class="n" style="left: 690px; top: 230px">Data loader<small>split into chunks</small></div>
+    <div class="n" style="left: 980px; top: 230px">OpenAI<small>embeddings</small></div>
+    <div class="n key" style="left: 1270px; top: 230px">Pinecone<small>company knowledge</small></div>
+
+    <div class="lane" style="top: 420px; height: 440px"></div>
+    <p class="abs label" style="left: 90px; top: 440px">2 · Intake and routing</p>
+    <div class="n" style="left: 110px; top: 520px"><svg viewBox="0 0 24 24" fill="none" stroke="#3c4044" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>New enquiry<small>web form or email</small></div>
+    <div class="n key" style="left: 400px; top: 520px">{{icon:n8n}}AI agent<small>chat model + memory</small></div>
+    <div class="n" style="left: 690px; top: 520px">To JSON<small>type, score, details</small></div>
+    <div class="n" style="left: 980px; top: 520px">Route<small>by type and score</small></div>
+    <div class="n on" style="left: 1270px; top: 470px">{{icon:zapier}}Zapier<small>JobTread, tasks, invoices</small></div>
+    <div class="n" style="left: 1270px; top: 620px">{{icon:googlesheets}}Follow-up<small>service questions</small></div>
+    <div class="sub" style="left: 380px; top: 720px">Tool: search company knowledge</div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M312 285 H392 M380 275 L392 285 L380 295" />
+      <path class="arrow" d="M602 285 H682 M670 275 L682 285 L670 295" />
+      <path class="arrow" d="M892 285 H972 M960 275 L972 285 L960 295" />
+      <path class="arrow" d="M1182 285 H1262 M1250 275 L1262 285 L1250 295" />
+      <path class="arrow" d="M312 575 H392 M380 565 L392 575 L380 585" />
+      <path class="arrow" d="M602 575 H682 M670 565 L682 575 L670 585" />
+      <path class="arrow" d="M892 575 H972 M960 565 L972 575 L960 585" />
+      <path class="arrow blue" d="M1182 560 C 1225 560, 1220 525, 1262 525 M1250 515 L1262 525 L1250 535" />
+      <path class="arrow" d="M1182 590 C 1225 590, 1220 675, 1262 675 M1250 665 L1262 675 L1250 685" />
+      <path class="arrow dashed" d="M500 632 V 712" />
+      <path class="arrow dashed blue" d="M650 742 C 900 800, 1440 800, 1505 760 V 300 Q 1505 285, 1490 285 H 1478 M1490 275 L1478 285 L1490 295" />
+    </svg>
+    <p class="abs" style="left: 90px; top: 870px; font-size: 14px; color: #6b7076">Redrawn from the client's n8n workflow. Credentials, URLs and client data removed.</p>
+  </body>
+</html>

@@ -14,6 +14,28 @@ export type Testimonial = {
 
 // Paste Upwork feedback here (with the client's permission to quote it).
 export const testimonials: Testimonial[] = [
+  {
+    quote: "Solomon took a complex brief, with a router, four separate brains, Luganda and English, and wellbeing safeguards, and delivered a bot that works exactly as we hoped. We were thrilled with the result and are already planning the next phase with him.",
+    name: "Edith",
+    role: "US-based youth coaching team, Uganda",
+    result: "Live Telegram AI coach in n8n",
+    source: "Upwork",
+  },
+  {
+    quote: "Bwire does a great job for our company and we have used him multiple times. Great hire! I suggest you do the same!",
+    name: "CEO",
+    role: "Defence and commercial construction contractor",
+    result: "Hired for a second build",
+    source: "Upwork",
+  },
+  {
+    quote:
+      "Solomon is a fantastic person who will get the job done with integrity. Not only will he deliver, but he will also think about optimising your current workflow for efficiency. His communication skills are great, and he is great at keeping deadlines. I would not hesitate to hire him anytime we need an automation specialist.",
+    name: "CEO",
+    role: "Retention marketing agency for Shopify brands",
+    result: "Meetings booked: 15–30 → 30–45 a month",
+    source: "Upwork",
+  },
   // SAMPLE reviews for the design preview (sample: true hides them on the live site). Replace with real Upwork feedback.
   {
     quote: "Every enquiry now gets a reply in minutes and lands in HubSpot without anyone touching it. Our front desk finally has time for patients.",

@@ -94,12 +94,12 @@ export default async function CustomerStoriesPage() {
                           />
                         )}
                         {/* Dark fade at the foot keeps white text readable on any cover, without tinting it */}
-                        <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent" />
+                        <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/20" />
                         <span className="relative">
                           <span className={`block font-bold leading-tight tracking-tight ${i === 0 ? "text-[clamp(2rem,3.4vw,2.8rem)]" : "text-[26px]"}`}>
-                            {entry.client}
+                            {entry.title}
                           </span>
-                          <span className="mt-2 block max-w-[46ch] text-[15px] leading-relaxed text-on-ink-muted">{entry.title}</span>
+                          <span className="mt-2 block max-w-[46ch] text-[15px] leading-relaxed text-white/80">{entry.client}</span>
                           <span className="mt-5 inline-flex items-center gap-1 text-[14px] font-bold text-accent">
                             Read their story <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
                           </span>

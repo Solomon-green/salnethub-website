@@ -1,5 +1,5 @@
 // Renders a blog cover from scripts/blog-covers/<name>.html to public/blog/<name>.png (1600 x 900).
-// Usage: node scripts/blog-covers/render.mjs <name>
+// Usage: node scripts/blog-covers/render.mjs <name> [output dir, default public/blog]
 // In the HTML, {{icon:slug}} becomes that Simple Icons logo in its brand colour (e.g. {{icon:n8n}}).
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync, copyFileSync } from "node:fs";
@@ -40,7 +40,7 @@ try {
     `--screenshot=${shot}`,
     pathToFileURL(page).href,
   ], { stdio: "ignore" });
-  const dest = join(root, "public/blog", `${name}.png`);
+  const dest = join(root, process.argv[3] || "public/blog", `${process.argv[4] || name}.png`);
   copyFileSync(shot, dest);
   console.log(`Cover written to ${dest}`);
 } finally {

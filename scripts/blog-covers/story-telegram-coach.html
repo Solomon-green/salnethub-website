@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .phone { left: 90px; top: 80px; width: 460px; height: 740px; background: #1a1c1e; border-radius: 44px; padding: 18px; box-shadow: 0 50px 90px -50px rgb(26 28 30 / .7); }
+      .screen { width: 100%; height: 100%; background: #eceef0; border-radius: 30px; overflow: hidden; position: relative; }
+      .bar { display: flex; align-items: center; gap: 14px; padding: 22px 24px; background: #fff; border-bottom: 2px solid #d9dde1; font-size: 21px; font-weight: 700; }
+      .bar svg { width: 38px; height: 38px; }
+      .bar small { display: block; font-size: 14px; font-weight: 500; color: #6b7076; }
+      .b { position: absolute; max-width: 330px; padding: 14px 18px; border-radius: 20px; font-size: 18px; line-height: 1.4; font-weight: 500; }
+      .me { right: 18px; background: #fff; border-top-right-radius: 6px; }
+      .bot { left: 18px; background: #1a1c1e; color: #fff; border-top-left-radius: 6px; }
+      .bot.blue { background: #2459e0; }
+      .btns { position: absolute; left: 18px; right: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .btns span { padding: 12px; border-radius: 14px; background: #fff; border: 2px solid #d9dde1; font-size: 15px; font-weight: 700; text-align: center; color: #3c4044; }
+      .brain { width: 240px; height: 96px; padding: 0 22px; display: flex; flex-direction: column; justify-content: center; background: #fff; border: 2px solid #d9dde1; border-radius: 20px; font-size: 21px; font-weight: 700; }
+      .brain small { margin-top: 4px; font-size: 15px; font-weight: 500; color: #6b7076; }
+      .brain.on { background: #2459e0; border-color: #2459e0; color: #fff; }
+      .brain.on small { color: rgb(255 255 255 / .85); }
+      .router { width: 250px; padding: 26px; background: #fff; border: 2.5px solid #1a1c1e; border-radius: 26px; }
+      .router svg { width: 42px; height: 42px; }
+      .router b { display: block; margin-top: 12px; font-size: 25px; }
+      .router small { display: block; margin-top: 6px; font-size: 15px; color: #6b7076; line-height: 1.4; }
+      .send { width: 560px; height: 84px; padding: 0 26px; display: flex; align-items: center; justify-content: space-between; background: #1a1c1e; color: #fff; border-radius: 20px; font-size: 21px; font-weight: 700; }
+      .send small { font-size: 15px; font-weight: 500; color: #c9ced3; }
+    </style>
+  </head>
+  <body>
+    <div class="abs phone"><div class="screen">
+      <div class="bar">{{icon:telegram}}<div>Omulimu<small>business coach</small></div></div>
+      <div class="b me" style="top: 110px">Leero natunze 120k, expenses 45,000</div>
+      <div class="b bot" style="top: 205px">Today: sales UGX 120,000, expenses UGX 45,000, profit UGX 75,000.</div>
+      <div class="b me" style="top: 340px">How do I get more customers for my chapati stand?</div>
+      <div class="b bot blue" style="top: 450px">Offer a loyalty card: the 10th chapati free. Regulars come back…</div>
+      <div class="btns" style="bottom: 22px"><span>Record numbers</span><span>Ask a question</span><span>Today's record</span><span>How it works</span></div>
+    </div></div>
+
+    <div class="abs router" style="left: 640px; top: 300px">{{icon:n8n}}<b>AI router</b><small>Classifies every message, validates the JSON</small></div>
+
+    <div class="abs brain" style="left: 1010px; top: 90px">Numbers<small>profit, 7 pm reminder</small></div>
+    <div class="abs brain" style="left: 1010px; top: 206px">Coach<small>60 words, no loans</small></div>
+    <div class="abs brain on" style="left: 1010px; top: 322px">Care<small>wellbeing always wins</small></div>
+    <div class="abs brain" style="left: 1010px; top: 438px">Help<small>menu + buttons</small></div>
+    <div class="abs send" style="left: 820px; top: 640px">Send Reply<small>one sender · never twice · 429 retries</small></div>
+    <div class="abs chip" style="left: 1290px; top: 90px">{{icon:supabase}}Postgres</div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M552 400 H630 M618 390 L630 400 L618 410" />
+      <path class="arrow" d="M892 360 C 950 360, 950 138, 1000 138" />
+      <path class="arrow" d="M892 380 C 950 380, 950 254, 1000 254" />
+      <path class="arrow blue" d="M892 400 C 950 400, 950 370, 1000 370 M988 360 L1000 370 L988 380" />
+      <path class="arrow" d="M892 420 C 950 420, 950 486, 1000 486" />
+      <path class="arrow dashed" d="M1252 520 C 1300 580, 1300 600, 1200 632" />
+      <path class="arrow" d="M820 682 C 700 682, 640 700, 552 700 M564 690 L552 700 L564 710" />
+      <path class="spark blue" d="M1268 330 l20 -10 M1272 364 l22 2" />
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="workflow.css" />
+  </head>
+  <body>
+    <div class="abs head">
+      <p class="label">GoHighLevel workflow</p>
+      <h1>No lead left waiting: the 1-hour follow-up</h1>
+    </div>
+
+    <div class="abs step trigger" style="left: 80px; top: 250px"><i>⟳</i><div><b>Trigger</b><small>Deal moved to “Follow up in 1 h”</small></div></div>
+    <div class="abs step" style="left: 80px; top: 390px"><i>⊘</i><div><b>Stop older workflows</b><small>No double messages</small></div></div>
+    <div class="abs step wait" style="left: 80px; top: 530px"><i>◷</i><div><b>Wait 1 hour</b></div></div>
+    <div class="abs step cond" style="left: 80px; top: 650px"><i>{ }</i><div><b>Still in this stage?</b><small>Nobody followed up yet</small></div></div>
+
+    <div class="abs step key" style="left: 610px; top: 560px"><i class="s">#</i><div><b>Slack reminder</b><small>To the setter who owns the lead</small></div></div>
+    <div class="abs step" style="left: 610px; top: 700px"><i>✓</i><div><b>Create a task</b><small>Due today, linked to the deal</small></div></div>
+    <div class="abs step end" style="left: 610px; top: 420px">Already followed up → end</div>
+
+    <div class="abs note" style="left: 1090px; top: 250px">
+      <p class="label">Why it works</p>
+      <p>Follow-ups no longer depend on memory. If a setter has not acted within the hour, Slack and the task list both say so.</p>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="arrow" d="M270 348 V382 M260 372 L270 384 L280 372" />
+      <path class="arrow" d="M270 488 V522 M260 512 L270 524 L280 512" />
+      <path class="arrow" d="M270 606 V642 M260 632 L270 644 L280 632" />
+      <path class="arrow blue" d="M460 700 C 540 700, 530 610, 602 610 M590 600 L602 610 L590 620" />
+      <path class="arrow dashed" d="M460 690 C 540 690, 530 448, 602 448" />
+      <path class="arrow" d="M800 658 V692 M790 682 L800 694 L810 682" />
+      <path class="spark blue" d="M1000 540 l18 -12 M1004 578 l22 2" />
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cover.css" />
+    <style>
+      .mono {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #1a1c1e;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .node {
+        width: 170px;
+      }
+      .stage {
+        padding: 18px 22px;
+        border-radius: 18px;
+        border: 2px solid #d9dde1;
+        background: #f6f7f8;
+        font-size: 20px;
+        font-weight: 600;
+        color: #3c4044;
+      }
+      .stage.on {
+        background: #2459e0;
+        border-color: #2459e0;
+        color: #fff;
+      }
+      .stage small {
+        display: block;
+        margin-top: 4px;
+        font-size: 15px;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+      .alert {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        padding: 18px 22px;
+        background: #fff;
+        border: 2px solid #d9dde1;
+        border-radius: 18px;
+        font-size: 18px;
+        color: #3c4044;
+      }
+      .alert b {
+        color: #1a1c1e;
+      }
+      .alert svg {
+        width: 30px;
+        height: 30px;
+        flex: none;
+      }
+      .bar {
+        position: absolute;
+        left: 40px;
+        height: 56px;
+        border-radius: 14px;
+      }
+      .bar span {
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        transform: translate(100%, -50%);
+        font-size: 26px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Lead pipeline -->
+    <div class="abs panel" style="left: 70px; top: 80px; width: 1000px; height: 330px">
+      <p class="abs label" style="left: 32px; top: 26px">Lead to booked meeting</p>
+      <div class="abs node" style="left: 40px; top: 110px"><div class="mono">SL</div>Store Leads</div>
+      <div class="abs node" style="left: 280px; top: 110px">{{icon:make}}Make</div>
+      <div class="abs node" style="left: 520px; top: 110px"><div class="mono">C</div>Clay</div>
+      <div class="abs node" style="left: 760px; top: 110px"><div class="mono">I</div>Instantly</div>
+      <svg class="abs" style="left: 0; top: 0" width="1000" height="330">
+        <path class="arrow" d="M214 195 H270 M258 185 L270 195 L258 205" />
+        <path class="arrow" d="M454 195 H510 M498 185 L510 195 L498 205" />
+        <path class="arrow" d="M694 195 H750 M738 185 L750 195 L738 205" />
+      </svg>
+      <p class="abs" style="left: 520px; top: 278px; font-size: 16px; color: #6b7076">Waterfall qualification</p>
+    </div>
+
+    <!-- GoHighLevel pipeline -->
+    <div class="abs panel" style="left: 70px; top: 480px; width: 1000px; height: 340px">
+      <p class="abs label" style="left: 32px; top: 26px">GoHighLevel pipeline</p>
+      <div class="abs node is-key" style="left: 40px; top: 96px">{{icon:zapier}}Reply</div>
+      <div class="abs stage" style="left: 270px; top: 96px; width: 210px">New lead<small>Follow-up running</small></div>
+      <div class="abs stage" style="left: 270px; top: 200px; width: 210px">Intro booked<small>Setter tagged</small></div>
+      <div class="abs stage on" style="left: 520px; top: 148px; width: 220px">Demo booked<small>Source + setter logged</small></div>
+      <div class="abs alert" style="left: 780px; top: 96px; width: 190px"><b>Slack</b> CEO notified</div>
+      <div class="abs alert" style="left: 780px; top: 206px; width: 190px">{{icon:googlecalendar}}<b>Added</b></div>
+      <svg class="abs" style="left: 0; top: 0" width="1000" height="340">
+        <path class="arrow" d="M214 170 H260 M248 160 L260 170 L248 180" />
+        <path class="arrow blue" d="M482 260 C 500 260, 500 200, 512 200 M500 190 L512 200 L500 210" />
+        <path class="arrow" d="M742 190 C 760 190, 760 140, 772 140" />
+        <path class="arrow" d="M742 210 C 760 210, 760 250, 772 250" />
+      </svg>
+    </div>
+
+    <!-- Result -->
+    <div class="abs panel" style="left: 1130px; top: 80px; width: 400px; height: 740px">
+      <p class="abs label" style="left: 32px; top: 26px">Meetings booked a month</p>
+      <p class="abs" style="left: 40px; top: 120px; font-size: 18px; color: #6b7076">Before</p>
+      <div class="bar" style="top: 156px; width: 140px; background: #d9dde1"><span>15–30</span></div>
+      <p class="abs" style="left: 40px; top: 270px; font-size: 18px; color: #6b7076">After</p>
+      <div class="bar" style="top: 306px; width: 233px; background: #2459e0"><span class="blue">30–45</span></div>
+      <div class="abs" style="left: 40px; top: 450px; right: 40px; border-top: 2px solid #d9dde1"></div>
+      <p class="abs label" style="left: 40px; top: 486px">Reports</p>
+      <p class="abs" style="left: 40px; top: 526px; font-size: 26px; font-weight: 700; line-height: 1.3">1–2 days by hand<br />→ every Monday, or<br />one click</p>
+      <div class="abs chip" style="left: 40px; top: 670px">{{icon:googleappsscript}}Apps Script</div>
+    </div>
+
+    <svg class="abs" style="left: 0; top: 0" width="1600" height="900">
+      <path class="spark blue" d="M640 612 l-6 -22 M676 616 l14 -18" />
+    </svg>
+  </body>
+</html>

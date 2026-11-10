@@ -1,0 +1,27 @@
+/* Shared pieces for redrawn workflow and dashboard screenshots (customer stories). */
+.head { left: 80px; top: 70px; }
+.head h1 { margin-top: 10px; font-size: 46px; font-weight: 700; letter-spacing: -0.03em; }
+.step {
+  display: flex; align-items: center; gap: 18px;
+  width: 380px; height: 98px; padding: 0 24px;
+  background: #fff; border: 2px solid #d9dde1; border-radius: 22px;
+  box-shadow: 0 20px 40px -32px rgb(26 28 30 / 0.4);
+}
+.step i {
+  flex: none; display: grid; place-items: center; width: 46px; height: 46px;
+  border-radius: 13px; background: #eceef0; font-style: normal; font-size: 20px; font-weight: 700; color: #3c4044;
+}
+.step i.g { background: #e5f4ea; color: #1f7a3d; }
+.step i.f { background: #e7eefc; color: #1877f2; font-family: Arial, sans-serif; }
+.step i.s { background: #1a1c1e; color: #fff; }
+.step b { display: block; font-size: 21px; font-weight: 700; }
+.step small { display: block; margin-top: 3px; font-size: 16px; color: #6b7076; }
+.step.trigger { border-color: #1a1c1e; }
+.step.cond i { background: #fff; border: 2px solid #d9dde1; }
+.step.wait { height: 76px; width: 380px; background: #f6f7f8; }
+.step.key { border-color: #2459e0; background: #2459e0; color: #fff; }
+.step.key small { color: rgb(255 255 255 / 0.8); }
+.step.end { width: auto; height: 56px; border-radius: 999px; background: #f6f7f8; font-size: 17px; font-weight: 700; color: #6b7076; }
+.note { width: 440px; padding: 28px 30px; background: #fff; border: 2px solid #d9dde1; border-radius: 22px; font-size: 20px; line-height: 1.45; color: #3c4044; }
+.note .label { margin-bottom: 10px; }
+.tag { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #eceef0; font-size: 15px; font-weight: 700; color: #3c4044; }

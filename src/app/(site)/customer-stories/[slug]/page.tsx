@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
 import { ArrowLeft, PlayCircle } from "lucide-react";
 import { CtaBand } from "@/components/ui";
+import { StoryVisual } from "@/components/stories";
 import { getCaseStudies, getCaseStudy } from "@/lib/case-studies";
 import { services } from "@/content/services";
 import { JsonLd, breadcrumbLd } from "@/lib/schema";
@@ -126,14 +127,17 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
         </div>
       </section>
 
+      <StoryVisual id={e.visual} />
+
       {e.gallery.length > 0 && (
         <section className="border-t border-line bg-canvas py-20">
-          <div className="container-x grid gap-6 md:grid-cols-2">
+          <div className="container-x grid gap-12">
+            <h2 className="t-h2">Inside the build</h2>
             {e.gallery.map((g, i) =>
               g.image ? (
                 <figure key={i}>
-                  <div className="rounded-card relative aspect-[16/10] overflow-hidden border border-line bg-surface">
-                    <Image src={g.image} alt={g.caption || ""} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+                  <div className="rounded-card relative aspect-[16/9] overflow-hidden border border-line bg-surface">
+                    <Image src={g.image} alt={g.caption || ""} fill sizes="(min-width: 1320px) 1240px, 100vw" className="object-cover" />
                   </div>
                   {g.caption && <figcaption className="mt-3 text-[14px] text-slate">{g.caption}</figcaption>}
                 </figure>
