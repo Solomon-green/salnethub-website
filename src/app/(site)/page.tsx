@@ -9,6 +9,7 @@ import { ServicesBento } from "@/components/services-bento";
 import { CostCalculator } from "@/components/cost-calculator";
 import { hasTestimonials, Testimonials, UpworkProof } from "@/components/testimonials";
 import { CtaBand, Faq, PrimaryCta, SectionHead } from "@/components/ui";
+import { JsonLd, faqLd } from "@/lib/schema";
 import { processSteps } from "@/content/process";
 import { pricing, pricingModels, pricingTeaser } from "@/content/engagements";
 import { integrations } from "@/content/integrations";
@@ -48,6 +49,7 @@ export default async function Home() {
 
   return (
     <>
+      <JsonLd data={faqLd(homeFaqs)} />
       {/* Hero */}
       <section className="hero-light relative overflow-hidden pt-28 lg:pt-32">
         <div className="container-x relative grid items-center gap-14 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pb-24">
@@ -56,7 +58,7 @@ export default async function Home() {
               Systems that run your business <span className="t-accent">while you grow it.</span>
             </h1>
             <p className="mt-7 max-w-xl text-[clamp(1.075rem,1.4vw,1.25rem)] leading-relaxed text-slate">
-              We design and build automations and AI agents across your whole operation: sales, marketing, admin, finance, reporting and customer
+              We are an AI automation agency for small businesses. We design and build automations and AI agents across your whole operation: sales, marketing, admin, finance, reporting and customer
               support. Your tools finally work as one system, and your team gets back to the work that moves the business forward.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">

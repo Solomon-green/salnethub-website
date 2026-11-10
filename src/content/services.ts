@@ -46,14 +46,14 @@ export const groups: Record<ServiceGroup, { name: string; blurb: string }> = {
 export const services: Service[] = [
   {
     slug: "crm-automation-services",
-    seo: { title: "CRM Automation Services for HubSpot & Zoho", description: "CRM and marketing automation services for HubSpot, Zoho and Google Sheets: every lead logged, followed up and tracked. Pay from savings after a 14-day pilot." },
+    seo: { title: "CRM Automation Services & Marketing Automation", description: "CRM automation services and marketing automation services for small businesses on HubSpot, Zoho or Sheets: every lead logged and followed up. 14-day pilot." },
     name: "Marketing & CRM automation",
     group: "automation",
     icon: "users",
     short: "Keep your CRM accurate and your follow-ups on time without anyone updating records by hand.",
     hero: {
       title: "CRM automation services: a CRM that updates itself",
-      sub: "Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens, in HubSpot, Zoho or Google Sheets.",
+      sub: "Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens. We offer HubSpot automation services, plus Zoho and Google Sheets setups for smaller teams.",
     },
     problem: {
       title: "Where CRM work usually breaks",
@@ -114,6 +114,8 @@ export const services: Service[] = [
     faqs: [
       { q: "What is CRM automation?", a: "CRM automation is software doing the routine CRM work for you: creating contacts from forms and emails, sending follow-ups on schedule, moving deals between stages and keeping records clean. Your team only steps in for the conversations." },
       { q: "What do your marketing automation services include?", a: "Lead capture from forms and ads, follow-up email sequences, contact tagging by source and interest, and campaign attribution so you can see which channel brings paying customers. All of it runs inside the CRM and email tools you already use." },
+      { q: "Is marketing automation worth it for small businesses?", a: "Usually yes, once you get more leads than you can follow up by hand. Marketing automation for small businesses does not need an enterprise platform: a CRM you already pay for, a few follow-up sequences and source tracking cover most of the value. We start with the follow-ups you miss today." },
+      { q: "Do you offer HubSpot automation services?", a: "Yes. HubSpot is the CRM we work in most: workflows, lead scoring, deal pipelines, sequences and connections to the forms, ads and tools outside HubSpot. We also work with Zoho and Google Sheets based CRMs." },
       { q: "Which CRMs do you work with?", a: "Mostly HubSpot, Zoho and Google Sheets based CRMs. If your CRM has an API, we can usually connect it. We confirm this on the first call." },
       { q: "Will this replace my sales team's work?", a: "No. It removes the copying, chasing and data entry so your team spends their time on conversations." },
       { q: "What happens to our existing data?", a: "We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup." },
@@ -124,14 +126,14 @@ export const services: Service[] = [
   },
   {
     slug: "lead-acquisition-qualification",
-    seo: { title: "Lead Capture, Scoring & Routing Automation", description: "Capture leads from forms, ads and chat, score them and route them to the right rep with a reply in under 2 minutes. Pay per qualified lead, nothing up front." },
+    seo: { title: "Lead Follow-Up Automation & Missed Call Text Back", description: "An automated lead follow up system: missed call text back, lead scoring and routing, and a reply in under 2 minutes. Pay per qualified lead, nothing up front." },
     name: "Lead acquisition & qualification",
     group: "automation",
     icon: "filter",
     short: "Capture every lead, score it, and route the good ones to the right person in minutes.",
     hero: {
-      title: "Every lead captured, scored and routed",
-      sub: "Leads from forms, ads and chat are enriched, scored against your criteria and sent to the right rep before they go cold.",
+      title: "Automated lead follow-up: every lead captured, scored and routed",
+      sub: "Leads from forms, ads, chat and missed calls are enriched, scored against your criteria and sent to the right rep before they go cold. Speed to lead is handled by AI, so the first reply goes out in minutes, day or night.",
     },
     problem: {
       title: "Why good leads get lost",
@@ -147,6 +149,7 @@ export const services: Service[] = [
       { title: "Scoring", body: "Each lead is scored against rules you agree with us, such as budget, team size or service requested." },
       { title: "Routing", body: "Leads go to the right rep by territory, product or round robin, with a backup if nobody picks them up." },
       { title: "Instant replies", body: "A personal first reply and a booking link go out within 2 minutes, day or night." },
+      { title: "Missed call text back", body: "When a call goes unanswered, the caller gets a text within seconds with a reply and a booking link, so they do not ring the next company on the list." },
       { title: "Disqualification", body: "Poor-fit leads get a polite automated reply and stay out of your reps' queue." },
     ],
     workflow: {
@@ -181,6 +184,9 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Week 4", body: "We go live and tune the scoring after the first 2 weeks of real leads." },
     ],
     faqs: [
+      { q: "What is a missed call text back service?", a: "When someone calls and nobody picks up, they get an automatic text a few seconds later: a short reply, an answer to the usual question and a link to book. The lead stays in a conversation with you instead of calling a competitor. We set it up on your existing number and log every reply in your CRM." },
+      { q: "What is speed to lead, and how does AI help?", a: "Speed to lead is the time between a lead reaching out and your first real reply. The faster it is, the more of those leads turn into conversations. AI makes the first reply instant at any hour: it answers, asks the qualifying questions and books a call, then hands the lead to a person." },
+      { q: "How does lead distribution automation work?", a: "Each lead is routed by rules you choose, such as territory, product, deal size or round robin. If the rep does not pick it up within a set time, it moves to the next person, so no lead sits unanswered." },
       { q: "Can you work with our ad accounts?", a: "Yes. We connect Facebook and Instagram lead ads, Google Ads lead forms and most form tools through their official integrations." },
       { q: "Who decides the scoring rules?", a: "You do. We propose a starting model from your past deals and adjust it with your sales lead." },
       { q: "Can leads go to WhatsApp or SMS?", a: "Yes. Reps can be alerted by email, Slack-style chat, WhatsApp or SMS, depending on what your team actually checks." },
@@ -191,7 +197,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-reporting-analytics",
-    seo: { title: "Automated Business Reporting & Live Dashboards", description: "Automated reports and live dashboards from your CRM, finance and ops tools, ready before the meeting. Priced on time saved, after a 14-day pilot." },
+    seo: { title: "Automated Reporting & Live Business Dashboards", description: "Automated reporting for your team and your clients: live dashboards from your CRM, finance and ops tools, ready before the meeting. 14-day pilot first." },
     name: "Data reporting & analytics",
     group: "automation",
     icon: "bar-chart-3",
@@ -248,6 +254,7 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Week 4", body: "We schedule the reports, set the alerts and walk your team through it." },
     ],
     faqs: [
+      { q: "Can you automate reports we send to our clients?", a: "Yes. Automated reporting for clients is one of our most common builds: each client gets their own report or Looker Studio dashboard, filled from your tools and sent on a schedule, so your team stops building them by hand every month." },
       { q: "Do we need a data warehouse?", a: "Most small-to-medium businesses do not. Google Sheets and Looker Studio handle a lot. We suggest a warehouse only when your data volume needs one." },
       { q: "How fresh is the data?", a: "It depends on the source. Most dashboards refresh between every 15 minutes and every hour." },
       { q: "Can you match our existing report?", a: "Yes. We start by rebuilding the report you already use, so you can check our numbers against it." },
@@ -258,14 +265,14 @@ export const services: Service[] = [
   },
   {
     slug: "business-process-automation",
-    seo: { title: "Business Process Automation Services for Teams", description: "Business process automation services for onboarding, approvals, invoicing and documents, with an audit trail. Priced on time saved after a 14-day pilot." },
+    seo: { title: "Business Process Automation Services", description: "Business process automation services for customer onboarding, approvals, invoicing and documents, with an audit trail. Priced on time saved, 14-day pilot." },
     name: "Business process automation",
     group: "automation",
     icon: "workflow",
     short: "Automate approvals, invoicing, onboarding and other processes that cross teams and tools.",
     hero: {
-      title: "Processes that run end to end",
-      sub: "We automate the multi-step processes that cross teams, like client onboarding, approvals and invoicing, with clear owners at every step.",
+      title: "Business process automation services: processes that run end to end",
+      sub: "As a business process automation company, we automate the multi-step work that crosses teams, like customer onboarding, approvals and invoicing, with clear owners at every step and an audit trail behind every run.",
     },
     problem: {
       title: "Where cross-team processes stall",
@@ -315,6 +322,9 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Weeks 5 to 6", body: "We switch over in stages so nothing breaks during the change." },
     ],
     faqs: [
+      { q: "What does a business process automation company do?", a: "We map how a process runs today, find the steps where people copy data or wait on each other, and automate those steps in the tools you already use. People keep the decisions; the automation does the moving, typing and chasing. You get documentation and monitoring, not just a build." },
+      { q: "Can you automate customer onboarding?", a: "Yes. Customer onboarding automation is our most common process build: a signed contract or paid invoice creates the client folder, project board, invoice schedule, welcome email and kickoff booking in one go." },
+      { q: "Do you offer invoice automation services?", a: "Yes. Invoices can be created from completed work or signed quotes, sent from your accounting tool, matched to payments and followed by polite reminders on a schedule. Anything unusual goes to a person to approve." },
       { q: "Which processes are worth automating first?", a: "The ones that happen often, follow the same steps each time and involve copying data between tools. We help you rank them on the first call." },
       { q: "What if our process has exceptions?", a: "We build the normal path first and route exceptions to a person with all the context attached." },
       { q: "Do we lose control over decisions?", a: "No. Anything that needs judgment stays with a person. The automation prepares the information and waits for their decision." },
@@ -325,7 +335,7 @@ export const services: Service[] = [
   },
   {
     slug: "n8n-workflow-automation",
-    seo: { title: "n8n Automation Services & Workflow Automation", description: "n8n automation services and workflow automation on Make or Zapier: data entry, reminders and status updates done for you. Pay from savings after a 14-day pilot." },
+    seo: { title: "n8n Automation Services & Workflow Automation", description: "n8n automation services and workflow automation services for small business, plus Zapier and Make: data entry, reminders and updates done for you. 14-day pilot." },
     name: "Task & workflow automation",
     group: "automation",
     icon: "zap",
@@ -385,6 +395,7 @@ export const services: Service[] = [
       { q: "What do your n8n automation services include?", a: "We map the task, build the n8n workflow, test it on your real data, add error alerts and hand it over with a written guide. Monitoring and fixes are included in the monthly fee, so the workflows keep running when your tools change." },
       { q: "Can n8n run in our own account?", a: "Yes. We build in your own n8n Cloud account or on a self-hosted n8n server you control, so the workflows and your data stay yours. If we part ways, everything keeps running." },
       { q: "How small a task is worth automating?", a: "If it happens daily and follows the same steps, it is usually worth it. A 5-minute task done 10 times a day is 4 hours a week." },
+      { q: "Do you also offer Zapier automation services?", a: "Yes. If your team already uses Zapier, we build there, and we tell you when moving a workflow to n8n or Make would cut your monthly bill. Many small businesses run a mix of the three." },
       { q: "Make, Zapier or n8n?", a: "We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes and AI steps at the lowest running cost." },
       { q: "What if an automation fails?", a: "You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do." },
       { q: "Can we change the automations later?", a: "Yes. We document how each one works so your team can make small changes, and we handle the bigger ones." },
@@ -394,14 +405,14 @@ export const services: Service[] = [
   },
   {
     slug: "ai-chatbots",
-    seo: { title: "Custom AI Chatbot for Your Business Website", description: "A custom AI chatbot for your website that answers from your own content, qualifies leads and books calls. Pay per booked appointment, nothing up front." },
+    seo: { title: "AI Chatbot for Small Business Websites & WhatsApp", description: "A custom AI chatbot for small business websites and WhatsApp that answers from your content, qualifies leads and books appointments. Pay per booking." },
     name: "AI chatbots for websites",
     group: "ai",
     icon: "message-square",
     short: "A website chatbot that answers questions, guides visitors and books calls, trained on your content.",
     hero: {
-      title: "A website chatbot that knows your business",
-      sub: "It answers visitor questions from your own content, points people to the right page, qualifies leads and books calls. A person takes over when needed.",
+      title: "An AI chatbot for small business, trained on your own content",
+      sub: "It answers visitor questions on your website and WhatsApp from your own content, points people to the right page, qualifies leads and books appointments in your calendar. A person takes over when needed.",
     },
     problem: {
       title: "Why visitors leave without a word",
@@ -458,7 +469,9 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: "Which AI models do you use?", a: "We use leading models from providers such as OpenAI and Anthropic, chosen for accuracy and cost. You can switch providers later." },
-      { q: "What does it cost to run each month?", a: "Running costs depend on traffic. Most small-to-medium sites spend between $20 and $150 a month on AI usage. We estimate it before we build." },
+      { q: "How much does an AI chatbot for a small business cost?", a: "With SalnetHub there is no setup fee: you pay per booked appointment or qualified lead after a free 14-day pilot. AI usage is billed at cost and depends on traffic; most small-to-medium sites spend between $20 and $150 a month. We estimate it before we build." },
+      { q: "Can the chatbot work on WhatsApp?", a: "Yes. WhatsApp automation for business runs through the official WhatsApp Business API, so the same assistant can answer on your website and your WhatsApp number, book appointments and hand over to your team in the same thread." },
+      { q: "Can it book appointments?", a: "Yes. As an AI chatbot for appointment booking, it offers open times from your Google Calendar, Calendly or booking tool, books the slot, sends a confirmation and saves the lead to your CRM." },
       { q: "Will it give wrong answers?", a: "We limit it to your content and test it heavily. When it is not sure, it hands over to a person instead of guessing." },
       { q: "Does it work on any website?", a: "Yes. It installs with a small code snippet on WordPress, Webflow, Shopify, Wix or a custom site." },
     ],
@@ -538,20 +551,21 @@ export const services: Service[] = [
       { q: "Will callers know they are talking to AI?", a: "Yes. The receptionist says it is an AI assistant, and callers can ask for a person at any time. The voice is natural, so most callers simply carry on and book." },
       { q: "Do I need a new phone number?", a: "No. Your customers keep calling your existing number. We set up call forwarding so calls reach the AI receptionist only when you want, for example after hours or when the line is busy." },
       { q: "Can it book into my existing calendar?", a: "Yes, if your calendar or booking tool can be connected, such as Google Calendar or Calendly. If not, it books into a shared sheet and your team confirms the appointment." },
-      { q: "Is it suitable for medical and dental offices?", a: "Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice." },
+      { q: "Can I use an AI receptionist for a medical office?", a: "Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice. See our pages for medical offices and dental offices for the details." },
+      { q: "Is it an AI appointment booking system?", a: "It is the phone side of one. Callers book, move or cancel appointments by voice, and the bookings land in your calendar or booking tool. Pair it with our website and WhatsApp chatbot and every channel books into the same calendar." },
     ],
     priceModel: "Pay per booking",
     priceNote: "Paid per booked appointment. No setup fee, nothing up front. Starts with a free 14-day pilot on after-hours and missed calls.",
   },
   {
     slug: "custom-ai-agents",
-    seo: { title: "Custom AI Agents for Business Automation", description: "Custom AI agents that triage email, update your CRM and draft replies, with approval steps where it matters. Priced on time saved after a 14-day pilot." },
+    seo: { title: "Custom AI Agents for Small Business", description: "Custom AI agents for small business that triage email, update your CRM and draft replies, with approval steps where it matters. Priced on time saved." },
     name: "Custom AI agents",
     group: "ai",
     icon: "bot",
     short: "AI agents that do real work in your tools, from email triage to CRM updates, with approval steps.",
     hero: {
-      title: "AI agents that do the work, with you in control",
+      title: "Custom AI agents for small business, with you in control",
       sub: "An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.",
     },
     problem: {
@@ -608,6 +622,7 @@ export const services: Service[] = [
       { title: "Shadow mode first", body: "The agent proves itself on suggestions before it is allowed to act." },
     ],
     faqs: [
+      { q: "What is the best AI agent for a small business?", a: "The best one does one job you can measure, inside the tools you already use. Off-the-shelf agents are general; a custom agent knows your rules, your data and where it must stop for approval. We usually start with email triage, quote drafting or CRM updates, because the time saved is easy to see." },
       { q: "How is an agent different from an automation?", a: "An automation follows fixed rules. An agent can read unstructured information, decide what it means and choose the next step, within limits you set." },
       { q: "Can the agent make mistakes?", a: "Yes, which is why we use approval steps, shadow mode and logs. Sensitive actions never happen without a person." },
       { q: "Where does the agent run?", a: "In your own accounts or a private server, using tools like n8n or a small custom app. You own it." },
@@ -618,14 +633,14 @@ export const services: Service[] = [
   },
   {
     slug: "rag-systems",
-    seo: { title: "AI Knowledge Assistant (RAG) for Your Documents", description: "A private AI knowledge assistant that answers from your SOPs, contracts and help docs and cites the exact source for every answer. Starts with a 14-day pilot." },
+    seo: { title: "AI Knowledge Base Chatbot for Your Documents", description: "A private AI knowledge base chatbot (RAG) that answers from your SOPs, contracts and help docs and cites the exact source for every answer. 14-day pilot." },
     name: "RAG knowledge assistants",
     group: "ai",
     icon: "book-open",
     short: "An AI assistant that answers from your own documents and shows the source for every answer.",
     hero: {
-      title: "Answers from your documents, with sources",
-      sub: "A knowledge assistant that searches your SOPs, contracts and help articles first, then answers with a link to the exact source.",
+      title: "An AI knowledge base that answers from your documents, with sources",
+      sub: "An AI knowledge base chatbot that searches your SOPs, contracts and help articles first, then answers with a link to the exact source. Use it as an internal knowledge base for staff or as customer support.",
     },
     problem: {
       title: "When knowledge is hard to find",
@@ -682,6 +697,7 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: "What does RAG mean?", a: "Retrieval-augmented generation. The AI first retrieves relevant passages from your documents, then writes an answer based only on them." },
+      { q: "Can it be an internal knowledge base AI for our staff?", a: "Yes, that is the most common use. Staff ask about policies, processes and products in plain words and get the answer with its source, and people only see answers from documents they are allowed to open." },
       { q: "Which documents can it use?", a: "Google Docs, Sheets, PDFs, Word files, Notion pages, help centre articles and web pages. Scanned documents can be converted to text first." },
       { q: "Is our data used to train AI models?", a: "No. We use business API terms that exclude your data from model training, and your index is stored in your own account." },
       { q: "How accurate is it?", a: "We measure it on your own test questions before launch. Because every answer shows its source, errors are easy to spot and fix." },
@@ -691,7 +707,7 @@ export const services: Service[] = [
   },
   {
     slug: "web-solutions",
-    seo: { title: "Business Websites Connected to Your CRM", description: "Fast business websites and landing pages where every form, booking and chat goes straight into your CRM and automations. Starts with a 14-day pilot." },
+    seo: { title: "Business Websites with CRM Integration", description: "Fast business websites with CRM integration: every form, booking and chat goes straight into your CRM and starts your follow-up automation. 14-day pilot." },
     name: "Web solutions",
     group: "web",
     icon: "globe",
@@ -748,6 +764,7 @@ export const services: Service[] = [
       { phase: "Launch", duration: "Week 6", body: "We test on real devices, launch and track the first month of results." },
     ],
     faqs: [
+      { q: "Can you add CRM integration to our existing website?", a: "Yes. Website CRM integration often needs no redesign: we connect your current forms, booking tool and chat so every enquiry creates a CRM record and starts your follow-up, on WordPress, Webflow, Wix, Shopify or a custom site." },
       { q: "Which platform do you build on?", a: "Usually Next.js for custom sites, or Webflow and WordPress when your team wants to edit everything themselves. We recommend one on the first call." },
       { q: "Can you redesign our existing site?", a: "Yes. We keep what works, especially pages that already rank in search, and rebuild the rest." },
       { q: "Do you write the copy?", a: "We structure every page and write the copy with you, based on how your customers describe their problems." },

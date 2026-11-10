@@ -37,7 +37,7 @@ export default function HowWeWorkPage() {
     <>
       <JsonLd data={breadcrumbLd([{ name: "How we work", path: "/how-we-work" }])} />
       <PageHero
-        title="How we work"
+        title="How our automation projects work"
         sub="A clear process with results-based pricing, weekly updates and nothing installed on your side. You always know what is happening and what comes next."
       >
         <PrimaryCta tone="cta" />

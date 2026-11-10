@@ -1,10 +1,10 @@
 {
   "name": "SalnetHub Knowledge Base",
   "description": "Everything published on www.salnethub.com about SalnetHub: company, services, pricing, process, integrations, FAQs and policies. One self-contained document per topic, for retrieval by the SalnetHub chat assistant.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "source": "https://www.salnethub.com",
   "currency": "USD",
-  "documentCount": 116,
+  "documentCount": 142,
   "documents": [
     {
       "id": "company-overview",
@@ -90,7 +90,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nCRM automation services: a CRM that updates itself. Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens, in HubSpot, Zoho or Google Sheets.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nHow you pay for Marketing & CRM automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
+      "content": "SalnetHub service: Marketing & CRM automation (Automation).\nKeep your CRM accurate and your follow-ups on time without anyone updating records by hand.\nCRM automation services: a CRM that updates itself. Our CRM and marketing automation services connect your forms, inbox, ads and CRM, so every contact, deal and follow-up is recorded the moment it happens. We offer HubSpot automation services, plus Zoho and Google Sheets setups for smaller teams.\n\nWhere CRM work usually breaks:\n- Records go stale: Sales reps update the CRM at the end of the week, if at all. Reports are only as good as the last manual entry.\n- Follow-ups slip: A lead fills in a form on Friday evening and hears back on Tuesday. By then they have spoken to two competitors.\n- Marketing and sales disagree: Campaign data sits in one tool and deal data in another, so nobody can say which channel brings paying customers.\n\nExample: inbound enquiries for a 12-person services firm\nBefore: Enquiries landed in a shared inbox. Someone copied them into HubSpot twice a day and replies took 6 to 24 hours.\nAfter: Every enquiry creates a HubSpot contact and deal, gets a personal reply within 2 minutes and a task for the right rep.\n\nHow you pay for Marketing & CRM automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
     },
     {
       "id": "service-crm-automation-services-details",
@@ -130,6 +130,28 @@
     },
     {
       "id": "service-crm-automation-services-faq-3",
+      "title": "Marketing & CRM automation FAQ: Is marketing automation worth it for small businesses?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
+      "tags": [
+        "crm-automation-services",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: Is marketing automation worth it for small businesses?\nAnswer: Usually yes, once you get more leads than you can follow up by hand. Marketing automation for small businesses does not need an enterprise platform: a CRM you already pay for, a few follow-up sequences and source tracking cover most of the value. We start with the follow-ups you miss today."
+    },
+    {
+      "id": "service-crm-automation-services-faq-4",
+      "title": "Marketing & CRM automation FAQ: Do you offer HubSpot automation services?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/crm-automation-services",
+      "tags": [
+        "crm-automation-services",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Marketing & CRM automation service: Do you offer HubSpot automation services?\nAnswer: Yes. HubSpot is the CRM we work in most: workflows, lead scoring, deal pipelines, sequences and connections to the forms, ads and tools outside HubSpot. We also work with Zoho and Google Sheets based CRMs."
+    },
+    {
+      "id": "service-crm-automation-services-faq-5",
       "title": "Marketing & CRM automation FAQ: Which CRMs do you work with?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/crm-automation-services",
@@ -140,7 +162,7 @@
       "content": "Question about SalnetHub's Marketing & CRM automation service: Which CRMs do you work with?\nAnswer: Mostly HubSpot, Zoho and Google Sheets based CRMs. If your CRM has an API, we can usually connect it. We confirm this on the first call."
     },
     {
-      "id": "service-crm-automation-services-faq-4",
+      "id": "service-crm-automation-services-faq-6",
       "title": "Marketing & CRM automation FAQ: Will this replace my sales team's work?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/crm-automation-services",
@@ -151,7 +173,7 @@
       "content": "Question about SalnetHub's Marketing & CRM automation service: Will this replace my sales team's work?\nAnswer: No. It removes the copying, chasing and data entry so your team spends their time on conversations."
     },
     {
-      "id": "service-crm-automation-services-faq-5",
+      "id": "service-crm-automation-services-faq-7",
       "title": "Marketing & CRM automation FAQ: What happens to our existing data?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/crm-automation-services",
@@ -162,7 +184,7 @@
       "content": "Question about SalnetHub's Marketing & CRM automation service: What happens to our existing data?\nAnswer: We clean it before we automate on top of it. Nothing is deleted without your approval, and we keep a backup."
     },
     {
-      "id": "service-crm-automation-services-faq-6",
+      "id": "service-crm-automation-services-faq-8",
       "title": "Marketing & CRM automation FAQ: Do we need to buy new software?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/crm-automation-services",
@@ -183,7 +205,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Lead acquisition & qualification (Automation).\nCapture every lead, score it, and route the good ones to the right person in minutes.\nEvery lead captured, scored and routed. Leads from forms, ads and chat are enriched, scored against your criteria and sent to the right rep before they go cold.\n\nWhy good leads get lost:\n- Too many sources: Website forms, Facebook lead ads, LinkedIn, referrals and chat all land in different places.\n- No clear priority: Reps treat a student enquiry and a 200-seat buyer the same way, so the best leads wait in line.\n- Slow first response: Most buyers choose the company that replies first. A reply the next day is often too late.\n\nExample: lead ads for a home-services company\nBefore: Facebook leads were downloaded as a spreadsheet each morning and split between 4 reps by hand.\nAfter: Each lead is scored and texted to the rep covering that area within 90 seconds, with a booking link sent to the customer.\n\nHow you pay for Lead acquisition & qualification: Pay per lead. Paid per qualified lead we deliver. No setup fee, nothing up front. Starts with a free 14-day pilot."
+      "content": "SalnetHub service: Lead acquisition & qualification (Automation).\nCapture every lead, score it, and route the good ones to the right person in minutes.\nAutomated lead follow-up: every lead captured, scored and routed. Leads from forms, ads, chat and missed calls are enriched, scored against your criteria and sent to the right rep before they go cold. Speed to lead is handled by AI, so the first reply goes out in minutes, day or night.\n\nWhy good leads get lost:\n- Too many sources: Website forms, Facebook lead ads, LinkedIn, referrals and chat all land in different places.\n- No clear priority: Reps treat a student enquiry and a 200-seat buyer the same way, so the best leads wait in line.\n- Slow first response: Most buyers choose the company that replies first. A reply the next day is often too late.\n\nExample: lead ads for a home-services company\nBefore: Facebook leads were downloaded as a spreadsheet each morning and split between 4 reps by hand.\nAfter: Each lead is scored and texted to the rep covering that area within 90 seconds, with a booking link sent to the customer.\n\nHow you pay for Lead acquisition & qualification: Pay per lead. Paid per qualified lead we deliver. No setup fee, nothing up front. Starts with a free 14-day pilot."
     },
     {
       "id": "service-lead-acquisition-qualification-details",
@@ -197,10 +219,43 @@
         "deliverables",
         "timeline"
       ],
-      "content": "What SalnetHub's Lead acquisition & qualification service includes:\n- Lead capture: Forms, ad platforms, chat and email feed into one pipeline with the source recorded.\n- Enrichment: Company size, industry and location are added from public data so reps know who they are talking to.\n- Scoring: Each lead is scored against rules you agree with us, such as budget, team size or service requested.\n- Routing: Leads go to the right rep by territory, product or round robin, with a backup if nobody picks them up.\n- Instant replies: A personal first reply and a booking link go out within 2 minutes, day or night.\n- Disqualification: Poor-fit leads get a polite automated reply and stay out of your reps' queue.\n\nFrom click to qualified conversation: A strong lead reaches a rep's phone in minutes. A weak one never takes up their time.\nSteps: Lead captured (Form, ad or chat) → Enriched (Company data added) → Scored (Against your rules) → Routed (Right rep, instantly) → Call booked (Calendar link sent)\n\nDeliverables:\n- A lead scoring model written down and agreed with your sales lead\n- Connected capture from every lead source you use\n- Routing rules, reply templates and booking links\n- A live view of lead volume, speed to reply and conversion\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Map (Week 1): We list every lead source and agree what makes a lead worth a call.\n- Build (Weeks 2 to 3): We connect the sources, scoring, routing and replies in a test setup.\n- Test (Week 3): We push sample leads through every path, including the edge cases.\n- Launch (Week 4): We go live and tune the scoring after the first 2 weeks of real leads.\n\nTools we typically use for Lead acquisition & qualification: Typeform, Google Forms, Meta lead ads, HubSpot, Google Sheets, Calendly, WhatsApp, Make."
+      "content": "What SalnetHub's Lead acquisition & qualification service includes:\n- Lead capture: Forms, ad platforms, chat and email feed into one pipeline with the source recorded.\n- Enrichment: Company size, industry and location are added from public data so reps know who they are talking to.\n- Scoring: Each lead is scored against rules you agree with us, such as budget, team size or service requested.\n- Routing: Leads go to the right rep by territory, product or round robin, with a backup if nobody picks them up.\n- Instant replies: A personal first reply and a booking link go out within 2 minutes, day or night.\n- Missed call text back: When a call goes unanswered, the caller gets a text within seconds with a reply and a booking link, so they do not ring the next company on the list.\n- Disqualification: Poor-fit leads get a polite automated reply and stay out of your reps' queue.\n\nFrom click to qualified conversation: A strong lead reaches a rep's phone in minutes. A weak one never takes up their time.\nSteps: Lead captured (Form, ad or chat) → Enriched (Company data added) → Scored (Against your rules) → Routed (Right rep, instantly) → Call booked (Calendar link sent)\n\nDeliverables:\n- A lead scoring model written down and agreed with your sales lead\n- Connected capture from every lead source you use\n- Routing rules, reply templates and booking links\n- A live view of lead volume, speed to reply and conversion\n- Handover guide and 30 days of monitoring\n\nTimeline:\n- Map (Week 1): We list every lead source and agree what makes a lead worth a call.\n- Build (Weeks 2 to 3): We connect the sources, scoring, routing and replies in a test setup.\n- Test (Week 3): We push sample leads through every path, including the edge cases.\n- Launch (Week 4): We go live and tune the scoring after the first 2 weeks of real leads.\n\nTools we typically use for Lead acquisition & qualification: Typeform, Google Forms, Meta lead ads, HubSpot, Google Sheets, Calendly, WhatsApp, Make."
     },
     {
       "id": "service-lead-acquisition-qualification-faq-1",
+      "title": "Lead acquisition & qualification FAQ: What is a missed call text back service?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: What is a missed call text back service?\nAnswer: When someone calls and nobody picks up, they get an automatic text a few seconds later: a short reply, an answer to the usual question and a link to book. The lead stays in a conversation with you instead of calling a competitor. We set it up on your existing number and log every reply in your CRM."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-2",
+      "title": "Lead acquisition & qualification FAQ: What is speed to lead, and how does AI help?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: What is speed to lead, and how does AI help?\nAnswer: Speed to lead is the time between a lead reaching out and your first real reply. The faster it is, the more of those leads turn into conversations. AI makes the first reply instant at any hour: it answers, asks the qualifying questions and books a call, then hands the lead to a person."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-3",
+      "title": "Lead acquisition & qualification FAQ: How does lead distribution automation work?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
+      "tags": [
+        "lead-acquisition-qualification",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Lead acquisition & qualification service: How does lead distribution automation work?\nAnswer: Each lead is routed by rules you choose, such as territory, product, deal size or round robin. If the rep does not pick it up within a set time, it moves to the next person, so no lead sits unanswered."
+    },
+    {
+      "id": "service-lead-acquisition-qualification-faq-4",
       "title": "Lead acquisition & qualification FAQ: Can you work with our ad accounts?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
@@ -211,7 +266,7 @@
       "content": "Question about SalnetHub's Lead acquisition & qualification service: Can you work with our ad accounts?\nAnswer: Yes. We connect Facebook and Instagram lead ads, Google Ads lead forms and most form tools through their official integrations."
     },
     {
-      "id": "service-lead-acquisition-qualification-faq-2",
+      "id": "service-lead-acquisition-qualification-faq-5",
       "title": "Lead acquisition & qualification FAQ: Who decides the scoring rules?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
@@ -222,7 +277,7 @@
       "content": "Question about SalnetHub's Lead acquisition & qualification service: Who decides the scoring rules?\nAnswer: You do. We propose a starting model from your past deals and adjust it with your sales lead."
     },
     {
-      "id": "service-lead-acquisition-qualification-faq-3",
+      "id": "service-lead-acquisition-qualification-faq-6",
       "title": "Lead acquisition & qualification FAQ: Can leads go to WhatsApp or SMS?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
@@ -233,7 +288,7 @@
       "content": "Question about SalnetHub's Lead acquisition & qualification service: Can leads go to WhatsApp or SMS?\nAnswer: Yes. Reps can be alerted by email, Slack-style chat, WhatsApp or SMS, depending on what your team actually checks."
     },
     {
-      "id": "service-lead-acquisition-qualification-faq-4",
+      "id": "service-lead-acquisition-qualification-faq-7",
       "title": "Lead acquisition & qualification FAQ: What if a rep does not respond?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/lead-acquisition-qualification",
@@ -272,6 +327,17 @@
     },
     {
       "id": "service-data-reporting-analytics-faq-1",
+      "title": "Data reporting & analytics FAQ: Can you automate reports we send to our clients?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/data-reporting-analytics",
+      "tags": [
+        "data-reporting-analytics",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Data reporting & analytics service: Can you automate reports we send to our clients?\nAnswer: Yes. Automated reporting for clients is one of our most common builds: each client gets their own report or Looker Studio dashboard, filled from your tools and sent on a schedule, so your team stops building them by hand every month."
+    },
+    {
+      "id": "service-data-reporting-analytics-faq-2",
       "title": "Data reporting & analytics FAQ: Do we need a data warehouse?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/data-reporting-analytics",
@@ -282,7 +348,7 @@
       "content": "Question about SalnetHub's Data reporting & analytics service: Do we need a data warehouse?\nAnswer: Most small-to-medium businesses do not. Google Sheets and Looker Studio handle a lot. We suggest a warehouse only when your data volume needs one."
     },
     {
-      "id": "service-data-reporting-analytics-faq-2",
+      "id": "service-data-reporting-analytics-faq-3",
       "title": "Data reporting & analytics FAQ: How fresh is the data?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/data-reporting-analytics",
@@ -293,7 +359,7 @@
       "content": "Question about SalnetHub's Data reporting & analytics service: How fresh is the data?\nAnswer: It depends on the source. Most dashboards refresh between every 15 minutes and every hour."
     },
     {
-      "id": "service-data-reporting-analytics-faq-3",
+      "id": "service-data-reporting-analytics-faq-4",
       "title": "Data reporting & analytics FAQ: Can you match our existing report?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/data-reporting-analytics",
@@ -304,7 +370,7 @@
       "content": "Question about SalnetHub's Data reporting & analytics service: Can you match our existing report?\nAnswer: Yes. We start by rebuilding the report you already use, so you can check our numbers against it."
     },
     {
-      "id": "service-data-reporting-analytics-faq-4",
+      "id": "service-data-reporting-analytics-faq-5",
       "title": "Data reporting & analytics FAQ: Is our data shared with anyone?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/data-reporting-analytics",
@@ -325,7 +391,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Business process automation (Automation).\nAutomate approvals, invoicing, onboarding and other processes that cross teams and tools.\nProcesses that run end to end. We automate the multi-step processes that cross teams, like client onboarding, approvals and invoicing, with clear owners at every step.\n\nWhere cross-team processes stall:\n- Work waits in inboxes: An approval sits in a manager's email for 3 days because nobody knew it was waiting.\n- The same data typed 4 times: A new client's details are entered into the CRM, the invoicing tool, the project board and a spreadsheet.\n- Steps depend on one person: When the person who knows the process is on leave, the process stops.\n\nExample: client onboarding for an accounting practice\nBefore: Each new client took about 2 hours of admin across 5 tools, and steps were often missed.\nAfter: A signed engagement letter triggers every setup step in under 5 minutes, with a checklist the partner can review.\n\nHow you pay for Business process automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
+      "content": "SalnetHub service: Business process automation (Automation).\nAutomate approvals, invoicing, onboarding and other processes that cross teams and tools.\nBusiness process automation services: processes that run end to end. As a business process automation company, we automate the multi-step work that crosses teams, like customer onboarding, approvals and invoicing, with clear owners at every step and an audit trail behind every run.\n\nWhere cross-team processes stall:\n- Work waits in inboxes: An approval sits in a manager's email for 3 days because nobody knew it was waiting.\n- The same data typed 4 times: A new client's details are entered into the CRM, the invoicing tool, the project board and a spreadsheet.\n- Steps depend on one person: When the person who knows the process is on leave, the process stops.\n\nExample: client onboarding for an accounting practice\nBefore: Each new client took about 2 hours of admin across 5 tools, and steps were often missed.\nAfter: A signed engagement letter triggers every setup step in under 5 minutes, with a checklist the partner can review.\n\nHow you pay for Business process automation: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
     },
     {
       "id": "service-business-process-automation-details",
@@ -343,6 +409,39 @@
     },
     {
       "id": "service-business-process-automation-faq-1",
+      "title": "Business process automation FAQ: What does a business process automation company do?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: What does a business process automation company do?\nAnswer: We map how a process runs today, find the steps where people copy data or wait on each other, and automate those steps in the tools you already use. People keep the decisions; the automation does the moving, typing and chasing. You get documentation and monitoring, not just a build."
+    },
+    {
+      "id": "service-business-process-automation-faq-2",
+      "title": "Business process automation FAQ: Can you automate customer onboarding?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: Can you automate customer onboarding?\nAnswer: Yes. Customer onboarding automation is our most common process build: a signed contract or paid invoice creates the client folder, project board, invoice schedule, welcome email and kickoff booking in one go."
+    },
+    {
+      "id": "service-business-process-automation-faq-3",
+      "title": "Business process automation FAQ: Do you offer invoice automation services?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/business-process-automation",
+      "tags": [
+        "business-process-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Business process automation service: Do you offer invoice automation services?\nAnswer: Yes. Invoices can be created from completed work or signed quotes, sent from your accounting tool, matched to payments and followed by polite reminders on a schedule. Anything unusual goes to a person to approve."
+    },
+    {
+      "id": "service-business-process-automation-faq-4",
       "title": "Business process automation FAQ: Which processes are worth automating first?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/business-process-automation",
@@ -353,7 +452,7 @@
       "content": "Question about SalnetHub's Business process automation service: Which processes are worth automating first?\nAnswer: The ones that happen often, follow the same steps each time and involve copying data between tools. We help you rank them on the first call."
     },
     {
-      "id": "service-business-process-automation-faq-2",
+      "id": "service-business-process-automation-faq-5",
       "title": "Business process automation FAQ: What if our process has exceptions?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/business-process-automation",
@@ -364,7 +463,7 @@
       "content": "Question about SalnetHub's Business process automation service: What if our process has exceptions?\nAnswer: We build the normal path first and route exceptions to a person with all the context attached."
     },
     {
-      "id": "service-business-process-automation-faq-3",
+      "id": "service-business-process-automation-faq-6",
       "title": "Business process automation FAQ: Do we lose control over decisions?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/business-process-automation",
@@ -375,7 +474,7 @@
       "content": "Question about SalnetHub's Business process automation service: Do we lose control over decisions?\nAnswer: No. Anything that needs judgment stays with a person. The automation prepares the information and waits for their decision."
     },
     {
-      "id": "service-business-process-automation-faq-4",
+      "id": "service-business-process-automation-faq-7",
       "title": "Business process automation FAQ: Can you work with tools we built in-house?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/business-process-automation",
@@ -447,6 +546,17 @@
     },
     {
       "id": "service-n8n-workflow-automation-faq-4",
+      "title": "Task & workflow automation FAQ: Do you also offer Zapier automation services?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/n8n-workflow-automation",
+      "tags": [
+        "n8n-workflow-automation",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Task & workflow automation service: Do you also offer Zapier automation services?\nAnswer: Yes. If your team already uses Zapier, we build there, and we tell you when moving a workflow to n8n or Make would cut your monthly bill. Many small businesses run a mix of the three."
+    },
+    {
+      "id": "service-n8n-workflow-automation-faq-5",
       "title": "Task & workflow automation FAQ: Make, Zapier or n8n?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/n8n-workflow-automation",
@@ -457,7 +567,7 @@
       "content": "Question about SalnetHub's Task & workflow automation service: Make, Zapier or n8n?\nAnswer: We pick the tool that fits your volume and budget. Zapier is simplest, Make handles complex logic at lower cost, and n8n suits high volumes and AI steps at the lowest running cost."
     },
     {
-      "id": "service-n8n-workflow-automation-faq-5",
+      "id": "service-n8n-workflow-automation-faq-6",
       "title": "Task & workflow automation FAQ: What if an automation fails?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/n8n-workflow-automation",
@@ -468,7 +578,7 @@
       "content": "Question about SalnetHub's Task & workflow automation service: What if an automation fails?\nAnswer: You get an alert with the details, and we fix it. Monitoring is included in your monthly fee, so we usually see failures before you do."
     },
     {
-      "id": "service-n8n-workflow-automation-faq-6",
+      "id": "service-n8n-workflow-automation-faq-7",
       "title": "Task & workflow automation FAQ: Can we change the automations later?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/n8n-workflow-automation",
@@ -489,7 +599,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: AI chatbots for websites (AI solutions).\nA website chatbot that answers questions, guides visitors and books calls, trained on your content.\nA website chatbot that knows your business. It answers visitor questions from your own content, points people to the right page, qualifies leads and books calls. A person takes over when needed.\n\nWhy visitors leave without a word:\n- Questions go unanswered: Visitors have one question about price, timing or fit. If they cannot find the answer in 30 seconds, they leave.\n- Forms feel like work: A contact form with 8 fields gets skipped. A conversation gets answered.\n- After-hours traffic is wasted: Half your visits happen outside office hours, when nobody is there to reply.\n\nExample: a chatbot for a training provider\nBefore: Most enquiries asked the same 10 questions about dates, prices and certificates, answered by email the next day.\nAfter: The chatbot answers them instantly from the course catalogue and books a call when a company asks about group training.\n\nHow you pay for AI chatbots for websites: Pay per booking. Paid per booked appointment or qualified lead. No setup fee, nothing up front. Starts with a free 14-day pilot."
+      "content": "SalnetHub service: AI chatbots for websites (AI solutions).\nA website chatbot that answers questions, guides visitors and books calls, trained on your content.\nAn AI chatbot for small business, trained on your own content. It answers visitor questions on your website and WhatsApp from your own content, points people to the right page, qualifies leads and books appointments in your calendar. A person takes over when needed.\n\nWhy visitors leave without a word:\n- Questions go unanswered: Visitors have one question about price, timing or fit. If they cannot find the answer in 30 seconds, they leave.\n- Forms feel like work: A contact form with 8 fields gets skipped. A conversation gets answered.\n- After-hours traffic is wasted: Half your visits happen outside office hours, when nobody is there to reply.\n\nExample: a chatbot for a training provider\nBefore: Most enquiries asked the same 10 questions about dates, prices and certificates, answered by email the next day.\nAfter: The chatbot answers them instantly from the course catalogue and books a call when a company asks about group training.\n\nHow you pay for AI chatbots for websites: Pay per booking. Paid per booked appointment or qualified lead. No setup fee, nothing up front. Starts with a free 14-day pilot."
     },
     {
       "id": "service-ai-chatbots-details",
@@ -518,17 +628,39 @@
     },
     {
       "id": "service-ai-chatbots-faq-2",
-      "title": "AI chatbots for websites FAQ: What does it cost to run each month?",
+      "title": "AI chatbots for websites FAQ: How much does an AI chatbot for a small business cost?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/ai-chatbots",
       "tags": [
         "ai-chatbots",
         "faq"
       ],
-      "content": "Question about SalnetHub's AI chatbots for websites service: What does it cost to run each month?\nAnswer: Running costs depend on traffic. Most small-to-medium sites spend between $20 and $150 a month on AI usage. We estimate it before we build."
+      "content": "Question about SalnetHub's AI chatbots for websites service: How much does an AI chatbot for a small business cost?\nAnswer: With SalnetHub there is no setup fee: you pay per booked appointment or qualified lead after a free 14-day pilot. AI usage is billed at cost and depends on traffic; most small-to-medium sites spend between $20 and $150 a month. We estimate it before we build."
     },
     {
       "id": "service-ai-chatbots-faq-3",
+      "title": "AI chatbots for websites FAQ: Can the chatbot work on WhatsApp?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: Can the chatbot work on WhatsApp?\nAnswer: Yes. WhatsApp automation for business runs through the official WhatsApp Business API, so the same assistant can answer on your website and your WhatsApp number, book appointments and hand over to your team in the same thread."
+    },
+    {
+      "id": "service-ai-chatbots-faq-4",
+      "title": "AI chatbots for websites FAQ: Can it book appointments?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-chatbots",
+      "tags": [
+        "ai-chatbots",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI chatbots for websites service: Can it book appointments?\nAnswer: Yes. As an AI chatbot for appointment booking, it offers open times from your Google Calendar, Calendly or booking tool, books the slot, sends a confirmation and saves the lead to your CRM."
+    },
+    {
+      "id": "service-ai-chatbots-faq-5",
       "title": "AI chatbots for websites FAQ: Will it give wrong answers?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/ai-chatbots",
@@ -539,7 +671,7 @@
       "content": "Question about SalnetHub's AI chatbots for websites service: Will it give wrong answers?\nAnswer: We limit it to your content and test it heavily. When it is not sure, it hands over to a person instead of guessing."
     },
     {
-      "id": "service-ai-chatbots-faq-4",
+      "id": "service-ai-chatbots-faq-6",
       "title": "AI chatbots for websites FAQ: Does it work on any website?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/ai-chatbots",
@@ -633,14 +765,25 @@
     },
     {
       "id": "service-ai-receptionist-faq-6",
-      "title": "AI receptionist FAQ: Is it suitable for medical and dental offices?",
+      "title": "AI receptionist FAQ: Can I use an AI receptionist for a medical office?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/ai-receptionist",
       "tags": [
         "ai-receptionist",
         "faq"
       ],
-      "content": "Question about SalnetHub's AI receptionist service: Is it suitable for medical and dental offices?\nAnswer: Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice."
+      "content": "Question about SalnetHub's AI receptionist service: Can I use an AI receptionist for a medical office?\nAnswer: Yes, for booking, reminders and common questions. It never gives medical advice, and we set data handling and call recording to match the rules that apply to your practice. See our pages for medical offices and dental offices for the details."
+    },
+    {
+      "id": "service-ai-receptionist-faq-7",
+      "title": "AI receptionist FAQ: Is it an AI appointment booking system?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/ai-receptionist",
+      "tags": [
+        "ai-receptionist",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's AI receptionist service: Is it an AI appointment booking system?\nAnswer: It is the phone side of one. Callers book, move or cancel appointments by voice, and the bookings land in your calendar or booking tool. Pair it with our website and WhatsApp chatbot and every channel books into the same calendar."
     },
     {
       "id": "service-custom-ai-agents",
@@ -653,7 +796,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: Custom AI agents (AI solutions).\nAI agents that do real work in your tools, from email triage to CRM updates, with approval steps.\nAI agents that do the work, with you in control. An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.\n\nWork that rules alone cannot handle:\n- Every message is different: Simple automations need fixed rules. Real emails, requests and documents rarely follow them.\n- Judgment calls pile up: Someone has to read each request, decide what it is and route it, dozens of times a day.\n- Busy people do low-value reading: Senior staff spend hours reading and summarising before they can make a decision.\n\nExample: quote requests for a logistics firm\nBefore: A coordinator read each quote request, checked rates in a spreadsheet and typed a reply. Each one took about 20 minutes.\nAfter: An agent reads the request, checks the rate sheet and drafts the quote. The coordinator reviews and sends it in under 2 minutes.\n\nHow you pay for Custom AI agents: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
+      "content": "SalnetHub service: Custom AI agents (AI solutions).\nAI agents that do real work in your tools, from email triage to CRM updates, with approval steps.\nCustom AI agents for small business, with you in control. An agent reads, decides and acts across your tools: it sorts email, updates records and drafts replies, then waits for approval where it matters.\n\nWork that rules alone cannot handle:\n- Every message is different: Simple automations need fixed rules. Real emails, requests and documents rarely follow them.\n- Judgment calls pile up: Someone has to read each request, decide what it is and route it, dozens of times a day.\n- Busy people do low-value reading: Senior staff spend hours reading and summarising before they can make a decision.\n\nExample: quote requests for a logistics firm\nBefore: A coordinator read each quote request, checked rates in a spreadsheet and typed a reply. Each one took about 20 minutes.\nAfter: An agent reads the request, checks the rate sheet and drafts the quote. The coordinator reviews and sends it in under 2 minutes.\n\nHow you pay for Custom AI agents: Pay from savings. Priced on time saved: your monthly fee is never more than 25% of what the work costs you today. Starts with a $250 pilot, refunded if it misses its target."
     },
     {
       "id": "service-custom-ai-agents-details",
@@ -671,6 +814,17 @@
     },
     {
       "id": "service-custom-ai-agents-faq-1",
+      "title": "Custom AI agents FAQ: What is the best AI agent for a small business?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/custom-ai-agents",
+      "tags": [
+        "custom-ai-agents",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Custom AI agents service: What is the best AI agent for a small business?\nAnswer: The best one does one job you can measure, inside the tools you already use. Off-the-shelf agents are general; a custom agent knows your rules, your data and where it must stop for approval. We usually start with email triage, quote drafting or CRM updates, because the time saved is easy to see."
+    },
+    {
+      "id": "service-custom-ai-agents-faq-2",
       "title": "Custom AI agents FAQ: How is an agent different from an automation?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/custom-ai-agents",
@@ -681,7 +835,7 @@
       "content": "Question about SalnetHub's Custom AI agents service: How is an agent different from an automation?\nAnswer: An automation follows fixed rules. An agent can read unstructured information, decide what it means and choose the next step, within limits you set."
     },
     {
-      "id": "service-custom-ai-agents-faq-2",
+      "id": "service-custom-ai-agents-faq-3",
       "title": "Custom AI agents FAQ: Can the agent make mistakes?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/custom-ai-agents",
@@ -692,7 +846,7 @@
       "content": "Question about SalnetHub's Custom AI agents service: Can the agent make mistakes?\nAnswer: Yes, which is why we use approval steps, shadow mode and logs. Sensitive actions never happen without a person."
     },
     {
-      "id": "service-custom-ai-agents-faq-3",
+      "id": "service-custom-ai-agents-faq-4",
       "title": "Custom AI agents FAQ: Where does the agent run?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/custom-ai-agents",
@@ -703,7 +857,7 @@
       "content": "Question about SalnetHub's Custom AI agents service: Where does the agent run?\nAnswer: In your own accounts or a private server, using tools like n8n or a small custom app. You own it."
     },
     {
-      "id": "service-custom-ai-agents-faq-4",
+      "id": "service-custom-ai-agents-faq-5",
       "title": "Custom AI agents FAQ: What does it cost to run?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/custom-ai-agents",
@@ -724,7 +878,7 @@
         "service",
         "price"
       ],
-      "content": "SalnetHub service: RAG knowledge assistants (AI solutions).\nAn AI assistant that answers from your own documents and shows the source for every answer.\nAnswers from your documents, with sources. A knowledge assistant that searches your SOPs, contracts and help articles first, then answers with a link to the exact source.\n\nWhen knowledge is hard to find:\n- Answers live in 500 files: The answer exists somewhere in Drive, Notion or an old PDF. Finding it takes 20 minutes.\n- The same questions every day: New staff ask senior staff the same questions, pulling them away from their own work.\n- General AI makes things up: Public chatbots do not know your policies and will confidently guess when they are unsure.\n\nExample: an internal assistant for a property manager\nBefore: Staff searched 300+ Drive documents or asked the operations manager about lease terms and maintenance procedures.\nAfter: Staff ask the assistant in plain words and get the answer with a link to the exact clause or procedure.\n\nHow you pay for RAG knowledge assistants: Pilot first. Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you."
+      "content": "SalnetHub service: RAG knowledge assistants (AI solutions).\nAn AI assistant that answers from your own documents and shows the source for every answer.\nAn AI knowledge base that answers from your documents, with sources. An AI knowledge base chatbot that searches your SOPs, contracts and help articles first, then answers with a link to the exact source. Use it as an internal knowledge base for staff or as customer support.\n\nWhen knowledge is hard to find:\n- Answers live in 500 files: The answer exists somewhere in Drive, Notion or an old PDF. Finding it takes 20 minutes.\n- The same questions every day: New staff ask senior staff the same questions, pulling them away from their own work.\n- General AI makes things up: Public chatbots do not know your policies and will confidently guess when they are unsure.\n\nExample: an internal assistant for a property manager\nBefore: Staff searched 300+ Drive documents or asked the operations manager about lease terms and maintenance procedures.\nAfter: Staff ask the assistant in plain words and get the answer with a link to the exact clause or procedure.\n\nHow you pay for RAG knowledge assistants: Pilot first. Starts with a $250 pilot, refunded if it misses its target. Then a fixed quote or a monthly fee, whichever suits you."
     },
     {
       "id": "service-rag-systems-details",
@@ -753,6 +907,17 @@
     },
     {
       "id": "service-rag-systems-faq-2",
+      "title": "RAG knowledge assistants FAQ: Can it be an internal knowledge base AI for our staff?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/rag-systems",
+      "tags": [
+        "rag-systems",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's RAG knowledge assistants service: Can it be an internal knowledge base AI for our staff?\nAnswer: Yes, that is the most common use. Staff ask about policies, processes and products in plain words and get the answer with its source, and people only see answers from documents they are allowed to open."
+    },
+    {
+      "id": "service-rag-systems-faq-3",
       "title": "RAG knowledge assistants FAQ: Which documents can it use?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/rag-systems",
@@ -763,7 +928,7 @@
       "content": "Question about SalnetHub's RAG knowledge assistants service: Which documents can it use?\nAnswer: Google Docs, Sheets, PDFs, Word files, Notion pages, help centre articles and web pages. Scanned documents can be converted to text first."
     },
     {
-      "id": "service-rag-systems-faq-3",
+      "id": "service-rag-systems-faq-4",
       "title": "RAG knowledge assistants FAQ: Is our data used to train AI models?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/rag-systems",
@@ -774,7 +939,7 @@
       "content": "Question about SalnetHub's RAG knowledge assistants service: Is our data used to train AI models?\nAnswer: No. We use business API terms that exclude your data from model training, and your index is stored in your own account."
     },
     {
-      "id": "service-rag-systems-faq-4",
+      "id": "service-rag-systems-faq-5",
       "title": "RAG knowledge assistants FAQ: How accurate is it?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/rag-systems",
@@ -813,6 +978,17 @@
     },
     {
       "id": "service-web-solutions-faq-1",
+      "title": "Web solutions FAQ: Can you add CRM integration to our existing website?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/services/web-solutions",
+      "tags": [
+        "web-solutions",
+        "faq"
+      ],
+      "content": "Question about SalnetHub's Web solutions service: Can you add CRM integration to our existing website?\nAnswer: Yes. Website CRM integration often needs no redesign: we connect your current forms, booking tool and chat so every enquiry creates a CRM record and starts your follow-up, on WordPress, Webflow, Wix, Shopify or a custom site."
+    },
+    {
+      "id": "service-web-solutions-faq-2",
       "title": "Web solutions FAQ: Which platform do you build on?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/web-solutions",
@@ -823,7 +999,7 @@
       "content": "Question about SalnetHub's Web solutions service: Which platform do you build on?\nAnswer: Usually Next.js for custom sites, or Webflow and WordPress when your team wants to edit everything themselves. We recommend one on the first call."
     },
     {
-      "id": "service-web-solutions-faq-2",
+      "id": "service-web-solutions-faq-3",
       "title": "Web solutions FAQ: Can you redesign our existing site?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/web-solutions",
@@ -834,7 +1010,7 @@
       "content": "Question about SalnetHub's Web solutions service: Can you redesign our existing site?\nAnswer: Yes. We keep what works, especially pages that already rank in search, and rebuild the rest."
     },
     {
-      "id": "service-web-solutions-faq-3",
+      "id": "service-web-solutions-faq-4",
       "title": "Web solutions FAQ: Do you write the copy?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/web-solutions",
@@ -845,7 +1021,7 @@
       "content": "Question about SalnetHub's Web solutions service: Do you write the copy?\nAnswer: We structure every page and write the copy with you, based on how your customers describe their problems."
     },
     {
-      "id": "service-web-solutions-faq-4",
+      "id": "service-web-solutions-faq-5",
       "title": "Web solutions FAQ: Who hosts the website?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/services/web-solutions",
@@ -906,6 +1082,30 @@
     },
     {
       "id": "solution-ai-chatbot-for-real-estate-faq-4",
+      "title": "AI chatbot for real estate FAQ: How does speed to lead work in real estate?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: How does speed to lead work in real estate?\nAnswer: Buyers often enquire with several agents at once and go with the first one who replies properly. The chatbot replies in seconds at any hour, answers the listing questions and books the viewing, so your speed to lead no longer depends on whether an agent is free."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-5",
+      "title": "AI chatbot for real estate FAQ: Can it do marketing automation for real estate too?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
+      "tags": [
+        "ai-chatbot-for-real-estate",
+        "faq",
+        "real estate"
+      ],
+      "content": "Question about SalnetHub's AI chatbot for real estate: Can it do marketing automation for real estate too?\nAnswer: Yes. The same setup can follow up buyers who did not book, send new listings that match their budget and area, and remind past clients about valuations. It is AI automation for real estate agents built around the leads you already get."
+    },
+    {
+      "id": "solution-ai-chatbot-for-real-estate-faq-6",
       "title": "AI chatbot for real estate FAQ: Will it replace my agents?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
@@ -917,7 +1117,7 @@
       "content": "Question about SalnetHub's AI chatbot for real estate: Will it replace my agents?\nAnswer: No. It handles the first reply, the routine questions and the booking. Your agents get qualified buyers in their calendar and spend their time on viewings and negotiations."
     },
     {
-      "id": "solution-ai-chatbot-for-real-estate-faq-5",
+      "id": "solution-ai-chatbot-for-real-estate-faq-7",
       "title": "AI chatbot for real estate FAQ: Does it work with my CRM?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
@@ -929,7 +1129,7 @@
       "content": "Question about SalnetHub's AI chatbot for real estate: Does it work with my CRM?\nAnswer: Yes, with most CRMs that have an API, such as HubSpot or Zoho, or with a Google Sheet. Every lead arrives with the full chat and their answers."
     },
     {
-      "id": "solution-ai-chatbot-for-real-estate-faq-6",
+      "id": "solution-ai-chatbot-for-real-estate-faq-8",
       "title": "AI chatbot for real estate FAQ: Does it treat every enquiry fairly?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/solutions/ai-chatbot-for-real-estate",
@@ -1003,6 +1203,18 @@
     },
     {
       "id": "solution-ai-receptionist-for-dental-office-faq-5",
+      "title": "AI receptionist for dental offices FAQ: What other AI automation do you do for dental clinics?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
+      "tags": [
+        "ai-receptionist-for-dental-office",
+        "faq",
+        "dental"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for dental offices: What other AI automation do you do for dental clinics?\nAnswer: Besides the receptionist: appointment reminders and recall messages for check-ups, new-patient forms sent before the visit, review requests after treatment and a daily summary of calls for the front desk."
+    },
+    {
+      "id": "solution-ai-receptionist-for-dental-office-faq-6",
       "title": "AI receptionist for dental offices FAQ: Will it replace my front desk?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
@@ -1014,7 +1226,7 @@
       "content": "Question about SalnetHub's AI receptionist for dental offices: Will it replace my front desk?\nAnswer: No. It answers the calls your team cannot get to, such as after hours, at lunch and during busy check-ins. Your front desk keeps the patient relationships."
     },
     {
-      "id": "solution-ai-receptionist-for-dental-office-faq-6",
+      "id": "solution-ai-receptionist-for-dental-office-faq-7",
       "title": "AI receptionist for dental offices FAQ: Can patients still talk to a person?",
       "category": "FAQ",
       "url": "https://www.salnethub.com/solutions/ai-receptionist-for-dental-office",
@@ -1024,6 +1236,91 @@
         "dental"
       ],
       "content": "Question about SalnetHub's AI receptionist for dental offices: Can patients still talk to a person?\nAnswer: Yes. Callers are told they are speaking with an AI assistant and can ask for a person at any time. During office hours the call is transferred; after hours, a call back is booked."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office",
+      "title": "AI receptionist for medical offices (Medical)",
+      "category": "Industry",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "ai-receptionist",
+        "medical",
+        "industry"
+      ],
+      "content": "SalnetHub's AI receptionist for medical offices: a version of the AI receptionist service built for medical businesses.\nAn AI receptionist for medical offices that clears the morning phone queue. Our AI receptionist for medical offices answers when every line is busy or the clinic is closed. It books, moves and cancels appointments, answers practical questions and sends anything clinical to the right person on your team. You pay per booked appointment, after a free 14-day pilot.\n\nCommon problems for medical teams:\n- Every line rings at 8 am: Patients call the moment you open. Callers sit on hold, give up and try again later, and your staff start the day already behind.\n- Half the calls are not bookings: Test results, prescription refills, opening hours and directions all arrive on the same line, and each one pulls a person away from the patients in front of them.\n- Empty slots from no-shows: Patients forget, or cannot get through to cancel. The slot goes unused while someone else waits weeks for an appointment.\n\nWhat it handles:\n- Takes the opening rush: It answers every caller at once, so nobody waits on hold for a routine booking at 8 am.\n- Books, moves and cancels visits: Patients book, reschedule or cancel by phone at any hour, and freed slots are offered to the next caller.\n- Routes clinical requests: Test results, refills and symptom questions become messages for the right staff member. It never gives medical advice or reads out results.\n- Sends reminders: Appointment reminders by text, with an easy way to cancel, so slots are freed up instead of wasted.\n- Answers practical questions: Opening hours, location, parking, accepted insurance and what to bring, all from information you approve.\n- Escalates urgent calls: If a caller describes an emergency, it tells them to call emergency services and alerts your team, using the wording you approve.\n\nPricing: You pay per booked appointment. No setup fee, nothing up front, and a free 14-day pilot on the morning rush, after-hours and missed calls.\nExample (illustrative): What a patient hears at 7:45 on a Monday. Appointment booked. Refill request logged for the nurse team with the patient's details. No one on staff had to pick up the phone.\nFull service page: https://www.salnethub.com/services/ai-receptionist"
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-1",
+      "title": "AI receptionist for medical offices FAQ: How much does an AI receptionist for a medical office cost?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: How much does an AI receptionist for a medical office cost?\nAnswer: With SalnetHub there is no setup fee or monthly retainer. You pay per booked appointment, at a rate below what a booking costs your practice today, after a free 14-day pilot. Phone and AI usage are billed at cost."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-2",
+      "title": "AI receptionist for medical offices FAQ: Is it HIPAA compliant?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: Is it HIPAA compliant?\nAnswer: For US practices we set it up as a HIPAA-ready system: providers that sign a Business Associate Agreement, call data kept in your own accounts and only the details needed to book or pass on a request. We agree the setup with you in writing before the pilot."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-3",
+      "title": "AI receptionist for medical offices FAQ: Does it give medical advice?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: Does it give medical advice?\nAnswer: No. It books, reschedules and answers practical questions. Anything clinical, such as symptoms, results or medication, is taken as a message for your staff, and emergencies are told to call emergency services."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-4",
+      "title": "AI receptionist for medical offices FAQ: Does it work with our practice management or EHR system?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: Does it work with our practice management or EHR system?\nAnswer: Where your scheduling system allows a connection, we book straight into it. Where it does not, the receptionist books into a shared booking sheet and your staff confirm each appointment in a few seconds."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-5",
+      "title": "AI receptionist for medical offices FAQ: Which kinds of clinics is it for?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: Which kinds of clinics is it for?\nAnswer: Family and primary care practices, specialist clinics, physiotherapy, chiropractic and other outpatient clinics that book by phone. For dental practices, see our AI receptionist for dental offices."
+    },
+    {
+      "id": "solution-ai-receptionist-for-medical-office-faq-6",
+      "title": "AI receptionist for medical offices FAQ: Can patients still talk to a person?",
+      "category": "FAQ",
+      "url": "https://www.salnethub.com/solutions/ai-receptionist-for-medical-office",
+      "tags": [
+        "ai-receptionist-for-medical-office",
+        "faq",
+        "medical"
+      ],
+      "content": "Question about SalnetHub's AI receptionist for medical offices: Can patients still talk to a person?\nAnswer: Yes. Callers are told they are speaking with an AI assistant and can ask for a person at any time. During office hours the call is transferred; after hours, a call back is booked."
     },
     {
       "id": "pricing-overview",

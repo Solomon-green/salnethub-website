@@ -15,9 +15,9 @@ import {
 import { JsonLd, breadcrumbLd, faqLd } from "@/lib/schema";
 
 export const metadata = {
-  title: "Results-Based Pricing for Automation & AI",
+  title: "Pay Per Appointment & Pay Per Lead Pricing",
   description:
-    "No big fee up front. SalnetHub starts with a 14-day pilot, then charges per booked appointment or a capped share of the time we save you. If the pilot fails, you owe nothing.",
+    "Performance-based pricing: pay per booked appointment, pay per lead, or a capped share of what we save you. 14-day pilot; if it fails, you owe nothing.",
   alternates: { canonical: "/engagements" },
 };
 

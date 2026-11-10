@@ -8,7 +8,7 @@ import { JsonLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata = {
   title: "Book a Free Automation Consultation Call",
-  description: "Book a free 30-minute call with SalnetHub. We look at how the work happens today and tell you plainly what we would fix first, what it is costing you, and how a 14-day pilot would work.",
+  description: "Book a free 30-minute automation consultation. We look at how your work runs today, what it costs you, and what a 14-day pilot would fix first.",
   alternates: { canonical: "/contact" },
 };
 

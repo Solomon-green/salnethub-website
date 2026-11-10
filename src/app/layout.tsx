@@ -28,7 +28,7 @@ const displaySans = Instrument_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Business Automation Agency for Small Businesses | SalnetHub",
+    default: "AI Automation Agency for Small Businesses | SalnetHub",
     template: "%s | SalnetHub",
   },
   description: site.description,
