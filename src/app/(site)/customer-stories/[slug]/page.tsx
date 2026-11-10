@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/ui";
 import { StoryVisual } from "@/components/stories";
 import { getCaseStudies, getCaseStudy } from "@/lib/case-studies";
 import { services } from "@/content/services";
-import { JsonLd, breadcrumbLd } from "@/lib/schema";
+import { JsonLd, breadcrumbLd, caseStudyLd } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -23,7 +23,14 @@ export async function generateMetadata({ params }: PageProps<"/customer-stories/
   const { slug } = await params;
   const e = await getCaseStudy(slug);
   if (!e) return { robots: { index: false } };
-  return { title: e.title, description: e.summary, alternates: { canonical: `/customer-stories/${slug}` } };
+  const title = e.seoTitle || e.title;
+  const description = e.seoDescription || e.summary;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/customer-stories/${slug}` },
+    openGraph: { type: "article", title: `${title} | SalnetHub`, description, url: `/customer-stories/${slug}`, ...(e.cover ? { images: [{ url: e.cover }] } : {}) },
+  };
 }
 
 export default async function CaseStudyPage({ params }: PageProps<"/customer-stories/[slug]">) {
@@ -37,7 +44,20 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
 
   return (
     <>
-      <JsonLd data={breadcrumbLd([{ name: "Customer stories", path: "/customer-stories" }, { name: e.client, path: `/customer-stories/${slug}` }])} />
+      <JsonLd
+        data={[
+          breadcrumbLd([{ name: "Customer stories", path: "/customer-stories" }, { name: e.client, path: `/customer-stories/${slug}` }]),
+          caseStudyLd({
+            slug,
+            title: e.seoTitle || e.title,
+            description: e.seoDescription || e.summary,
+            image: e.cover,
+            publishedAt: e.publishedAt,
+            about: serviceNames.map((s) => s!.name),
+            keywords: e.tools.join(", "),
+          }),
+        ]}
+      />
       <section className="hero-light relative overflow-hidden pt-28 lg:pt-36">
         <div className="container-x relative pb-16">
           <Link href="/customer-stories" className="link-arrow text-[14px]">
@@ -65,7 +85,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/customer-sto
       {e.cover && (
         <div className="container-x pt-14">
           <div className="rounded-card relative aspect-[16/9] overflow-hidden border border-line">
-            <Image src={e.cover} alt={`${e.title} cover`} fill priority sizes="(min-width: 1320px) 1240px, 100vw" className="object-cover" />
+            <Image src={e.cover} alt={e.coverAlt || e.title} fill priority sizes="(min-width: 1320px) 1240px, 100vw" className="object-cover" />
           </div>
         </div>
       )}

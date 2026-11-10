@@ -11,6 +11,7 @@ import { solutionsFor } from "@/content/solutions";
 import { getIntegration } from "@/content/integrations";
 import { site } from "@/content/site";
 import { JsonLd, breadcrumbLd } from "@/lib/schema";
+import { StoryProof } from "@/components/story-proof";
 
 export const dynamicParams = false;
 
@@ -246,6 +247,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         </div>
       </section>
+
+      <StoryProof service={s.slug} />
 
       <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">

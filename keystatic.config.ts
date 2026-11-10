@@ -60,6 +60,8 @@ export default config({
       schema: {
         title: fields.slug({ name: { label: "Title", description: "Lead with the result, e.g. 'Lead replies in 2 minutes, not 2 days'" } }),
         summary: fields.text({ label: "Summary", description: "One or two sentences shown on the Customer stories page.", multiline: true, validation: { length: { min: 20, max: 280 } } }),
+        seoTitle: fields.text({ label: "SEO title (optional)", description: "Search title, 45-50 characters before ' | SalnetHub', with the target keyword. Falls back to Title." }),
+        seoDescription: fields.text({ label: "SEO description (optional)", description: "Meta description, 140-160 characters, keyword early. Falls back to Summary.", multiline: true }),
         client: fields.text({ label: "Client", description: "Company name, or a description such as '12-person accounting firm' if anonymous." }),
         industry: fields.text({ label: "Industry" }),
         logo: fields.image({
@@ -91,6 +93,7 @@ export default config({
           directory: "public/case-studies",
           publicPath: "/case-studies/",
         }),
+        coverAlt: fields.text({ label: "Cover alt text", description: "Describe what the cover shows, with the keyword where it fits." }),
         gallery: fields.array(
           fields.object({
             image: fields.image({ label: "Image", directory: "public/case-studies", publicPath: "/case-studies/" }),

@@ -38,6 +38,34 @@ export function faqLd(items: { q: string; a: string }[]) {
 }
 
 /** BlogPosting with its author (Person) and publisher (Organization). */
+export function caseStudyLd(p: {
+  slug: string;
+  title: string;
+  description: string;
+  image?: string | null;
+  publishedAt?: string | null;
+  about: string[];
+  keywords?: string;
+}) {
+  const url = `${site.url}/customer-stories/${p.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    articleSection: "Customer stories",
+    headline: p.title,
+    description: p.description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: p.image ? `${site.url}${p.image}` : `${site.url}/opengraph-image`,
+    datePublished: p.publishedAt ?? undefined,
+    dateModified: p.publishedAt ?? undefined,
+    author: { "@type": "Person", name: "Bwire Solomon", jobTitle: "Founder", url: `${site.url}/about` },
+    publisher: { "@type": "Organization", name: site.name, url: site.url, logo: { "@type": "ImageObject", url: `${site.url}/email/salnethub-icon.png` } },
+    about: p.about.map((name) => ({ "@type": "Service", name, provider: { "@type": "Organization", name: site.name } })),
+    ...(p.keywords ? { keywords: p.keywords } : {}),
+  };
+}
+
 export function blogPostingLd(p: {
   slug: string;
   title: string;

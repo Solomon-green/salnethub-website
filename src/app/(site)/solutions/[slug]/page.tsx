@@ -9,6 +9,7 @@ import { getSolution, solutions } from "@/content/solutions";
 import { pricing } from "@/content/engagements";
 import { site } from "@/content/site";
 import { JsonLd, breadcrumbLd, faqLd } from "@/lib/schema";
+import { StoryProof } from "@/components/story-proof";
 
 export const dynamicParams = false;
 
@@ -216,6 +217,8 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
           </div>
         </div>
       </section>
+
+      <StoryProof service={p.service} />
 
       <section className="border-t border-line py-24 lg:py-32">
         <div className="container-x">
